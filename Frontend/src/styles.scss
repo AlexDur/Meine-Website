@@ -1,1 +1,55 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  height: 100%;
+  margin-left: 200px;
+  margin-right: 200px;
+  font-family: "Calibri", sans-serif;
+}
+
+
+/*Branding-Komponente*/
+
+.branding-component {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+  bottom:0;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/*Header-Komponente*/
+
+.header-component {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+
+}
+
+.header-component a {
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+
+/*.header-component .p-menubar-item {
+  text-decoration: none;
+  color: #333;
+}*/
+
+
+.header-component a:last-child {
+  float: right;
+  margin-right: 0;
+}
+
+/*Basic-Container-Komponente*/
+
+.basic-container-component {
+  height:300px;
+  background-color:red;
+}
+
+
