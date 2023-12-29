@@ -7,6 +7,7 @@ import { MenuItem } from 'primeng/api';
 })
 export class HeaderComponent implements OnInit {
   items: MenuItem[] | undefined;
+  activeItem: string | undefined;
 
   ngOnInit() {
     this.items = [
@@ -16,5 +17,9 @@ export class HeaderComponent implements OnInit {
       {label: 'Projekte', url: '/projekte'},
       {label: 'Kontakt', url: '/kontakt'},
     ]
+  }
+
+  setActiveItem(url: string | undefined) {
+    this.activeItem = url;
   }
 }

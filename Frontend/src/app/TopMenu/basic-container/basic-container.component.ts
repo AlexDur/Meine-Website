@@ -16,6 +16,6 @@ export class BasicContainerComponent implements OnInit{
   constructor(private translateService: TranslateService) { }
 
   ngOnInit() {
-    this.translateService.use('de');
+    this.translateService.use('de').subscribe();
   }
 }

@@ -31,4 +31,5 @@ export class TranslateService {
       map(lang => this.translations[lang] ? this.translations[lang][key] || key : key)
     );
   }
+
 }

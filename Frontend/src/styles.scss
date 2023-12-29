@@ -1,8 +1,8 @@
 body {
   height: 100%;
-  margin-left: 200px;
-  margin-right: 200px;
   font-family: "Calibri", sans-serif;
+  background-color: bisque;
+  margin: 0;
 }
 
 
@@ -10,6 +10,7 @@ body {
 
 .branding-component {
   display: flex;
+  margin: 0;
   justify-content: center;
   width: 100%;
   position: absolute;
@@ -23,33 +24,34 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top:10px;
   margin-bottom: 100px;
-
 }
 
 .header-component a {
   padding: 10px;
   text-decoration: none;
   color: #333;
+  display: inline-block;
 }
-
-
-/*.header-component .p-menubar-item {
-  text-decoration: none;
-  color: #333;
-}*/
-
 
 .header-component a:last-child {
   float: right;
   margin-right: 0;
 }
 
+.header-component .active-menu-item {
+  border-bottom: 2px solid #000;
+}
+
+
 /*Basic-Container-Komponente*/
 
 .basic-container-component {
   height:300px;
-  background-color:red;
+  margin-left: 200px;
+  margin-right: 200px;
+  background-color: bisque;
 }
 
 

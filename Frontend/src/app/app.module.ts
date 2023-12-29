@@ -30,7 +30,7 @@ import {ProjekteComponent} from "./TopMenu/projekte/projekte.component";
     SharedModule,
     BasicContainerComponent,
     BrandingComponent,
-AboutComponent,
+    AboutComponent,
     ServicesComponent,
     KontaktComponent,
     ProjekteComponent,
