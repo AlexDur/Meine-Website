@@ -13,7 +13,7 @@ export class HeaderComponent implements OnInit {
       {label: 'Home', url: '/'},
       {label: 'About', url: '/about'},
       {label: 'Services', url: '/services'},
-      {label: 'Portfolio', url: '/portfolio'},
+      {label: 'Projekte', url: '/projekte'},
       {label: 'Kontakt', url: '/kontakt'},
     ]
   }

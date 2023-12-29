@@ -1,5 +1,7 @@
+<!-- header.component.html -->
 <div class="header-component">
-  <a *ngFor="let item of items" href="{{ item.url }}">
+  <a *ngFor="let item of items" [routerLink]="item.routerLink">
     {{ item.label }}
   </a>
 </div>
+

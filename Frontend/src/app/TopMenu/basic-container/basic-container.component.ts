@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {BasicContainerService} from "../services/basic-container.service";
-import {async} from "rxjs";
-import {SharedModule} from "../shared/shared.module";
+
+import {SharedModule} from "../../shared/shared.module";
+import {TranslateService} from "../../shared/services/translate.service";
 
 @Component({
   selector: 'app-basic-container',
@@ -13,12 +13,9 @@ import {SharedModule} from "../shared/shared.module";
   styleUrl: './basic-container.component.scss'
 })
 export class BasicContainerComponent implements OnInit{
-  basicContainer: any;
-
-  constructor(private basicContainerService: BasicContainerService) { }
+  constructor(private translateService: TranslateService) { }
 
   ngOnInit() {
-    this.basicContainer = this.basicContainerService.getBasicContainer();
+    this.translateService.use('de');
   }
-
 }
