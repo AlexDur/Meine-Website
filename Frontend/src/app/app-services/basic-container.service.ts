@@ -5,13 +5,13 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root',
 })
-export class BasicContainerService {
+export class HomeService {
   private dataUrl = 'Frontend/src/assets/de.json';
 
   constructor(private http: HttpClient) {}
 
 
-  getBasicContainer(): Observable<any> {
+  getHome(): Observable<any> {
     return this.http.get<any>(this.dataUrl);
   }
 

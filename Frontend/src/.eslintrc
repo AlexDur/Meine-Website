@@ -1,0 +1,32 @@
+{
+  "rules": {
+    "require-jsdoc": [
+      "error",
+      {
+        "require": {
+          "FunctionDeclaration": true,
+          "MethodDefinition": true,
+          "ClassDeclaration": true
+        }
+      }
+    ],
+    "no-unused-vars": "warn",
+    "no-undef": "error",
+    "no-console": "warn",
+    "no-debugger": "error",
+    "eqeqeq": "error",
+    "curly": "error",
+    "complexity": ["warn", 10],
+    "max-params": ["warn", 4],
+    "no-magic-numbers": "off",
+    "prefer-const": "error",
+    "indent": ["error", 2],
+    "quotes": ["error", "single"],
+    "semi": ["error", "always"],
+    "prefer-arrow-callback": "error",
+    "no-var": "error",
+    "prefer-template": "error",
+    "no-duplicate-imports": "error",
+    "import/no-unresolved": "error"
+  }
+}

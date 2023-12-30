@@ -9,7 +9,9 @@ export class TranslateService {
   private currentLang = new BehaviorSubject<string>('de');
   private translations: any = {};
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+
+  }
 
   use(lang: string): Observable<any> {
     this.currentLang.next(lang);
@@ -28,7 +30,19 @@ export class TranslateService {
 
   translate(key: string): Observable<string> {
     return this.currentLang.asObservable().pipe(
-      map(lang => this.translations[lang] ? this.translations[lang][key] || key : key)
+      map(lang => {
+        // Zugriff auf die Übersetzung für verschachtelten Schlüssel
+        const keys = key.split('.');
+        let translation = this.translations[lang];
+
+        for (const k of keys) {
+          translation = translation?.[k];
+          if (!translation) break;
+        }
+
+        // Fallback, wenn keine Übersetzung gefunden wird
+        return translation || `N. gefundene Übersetzung: ${key}`;
+      })
     );
   }
 

@@ -6,6 +6,16 @@ body {
 }
 
 
+/*RouterOutlet*/
+
+.router-outlet-container {
+  padding: 20px;
+  border: 1px solid #ccc;
+  margin-left: 200px;
+  margin-right: 200px;
+}
+
+
 /*Branding-Komponente*/
 
 .branding-component {
@@ -45,13 +55,18 @@ body {
 }
 
 
-/*Basic-Container-Komponente*/
+/*home-Komponente*/
 
-.basic-container-component {
+.home-component {
   height:300px;
-  margin-left: 200px;
-  margin-right: 200px;
   background-color: bisque;
 }
 
+/*contact-Komponente*/
 
+.contact-component {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

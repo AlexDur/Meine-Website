@@ -1,0 +1,9 @@
+<!--Inhalte der Komponente wird erst gezeigt, wenn translationLoaded =true-->
+<div class="home-component" *ngIf="translationsLoaded; else loading">
+  <p style="font-size: 30px;">{{ 'home.title' | translate | async }}</p>
+  <p style="font-size: 15px;">{{ 'home.description' | translate | async }}</p>
+</div>
+
+<ng-template #loading>
+  <p>Lädt...</p>
+</ng-template>

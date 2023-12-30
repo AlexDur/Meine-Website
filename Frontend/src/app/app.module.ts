@@ -7,19 +7,19 @@ import {MenubarModule} from "primeng/menubar";
 import {HeaderComponent} from "./header/header.component";
 import {TabViewModule} from "primeng/tabview";
 import {SharedModule} from "primeng/api";
-import {BasicContainerComponent} from "./TopMenu/basic-container/basic-container.component";
+import {HomeComponent} from "./TopMenu/home/home.component";
 import {BrandingComponent} from "./branding/branding.component";
 import {HttpClientModule} from "@angular/common/http";
 import {AboutComponent} from "./TopMenu/about/about.component";
 import {ServicesComponent} from "./TopMenu/services/services.component";
 import {KontaktComponent} from "./TopMenu/kontakt/kontakt.component";
 import {ProjekteComponent} from "./TopMenu/projekte/projekte.component";
-
+import {InputTextModule} from "primeng/inputtext";
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -28,14 +28,17 @@ import {ProjekteComponent} from "./TopMenu/projekte/projekte.component";
     MenubarModule,
     TabViewModule,
     SharedModule,
-    BasicContainerComponent,
+    HomeComponent,
     BrandingComponent,
     AboutComponent,
     ServicesComponent,
     KontaktComponent,
     ProjekteComponent,
+    InputTextModule
   ],
   providers: [],
+  exports: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

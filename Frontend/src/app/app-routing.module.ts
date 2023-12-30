@@ -1,17 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {BasicContainerComponent} from "./TopMenu/basic-container/basic-container.component";
+import {HomeComponent} from "./TopMenu/home/home.component";
 import {AboutComponent} from "./TopMenu/about/about.component";
 import {ServicesComponent} from "./TopMenu/services/services.component";
 import {ProjekteComponent} from "./TopMenu/projekte/projekte.component";
 import {KontaktComponent} from "./TopMenu/kontakt/kontakt.component";
 
 const routes: Routes = [
-  { path: '', component: BasicContainerComponent },
+  { path: '', component: HomeComponent },
+  { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'services', component: ServicesComponent },
-  { path: 'projekte', component: ProjekteComponent },
-  { path: 'kontakt', component: KontaktComponent },
+  { path: 'projects', component: ProjekteComponent },
+  { path: 'contact', component: KontaktComponent },
 ];
 
 @NgModule({

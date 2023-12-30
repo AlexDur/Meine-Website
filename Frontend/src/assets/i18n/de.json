@@ -1,4 +1,14 @@
 {
-  "basic-container.title": "Modernste Web-Entwicklung für Kleinunternehmen",
-  "basic-container.description": "Wir entwickeln moderne Webseiten für Kleinunternehmen. Dabei setzen wir auf die neuesten Technologien und Standards, um Ihnen eine Webseite zu bieten, die nicht nur gut aussieht, sondern auch schnell und sicher ist."
+  "home": {
+    "title": "Modernste Web-Entwicklung für Kleinunternehmen",
+    "description": "Ich entwickele moderne Webseiten für Kleinunternehmen. Dabei setze ich auf die neuesten Technologien und Standards, um Ihnen eine Webseite zu bieten, die nicht nur gut aussieht, sondern auch schnell und sicher ist."
+  },
+  "menu": {
+    "home": "Home",
+    "about": "Über mich",
+    "services": "Services",
+    "projects": "Projekte",
+    "contact": "Kontakt"
+  }
 }
+
