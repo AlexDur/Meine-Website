@@ -10,11 +10,15 @@ import {TranslateService} from "../shared/services/translate.service";
 export class HeaderComponent implements OnInit {
   items: MenuItem[] = [];
   activeItem: string | undefined;
+  translationsLoaded = false;
 
   constructor(private translateService: TranslateService) {}
 
   ngOnInit() {
-    this.initializeMenuItems();
+    this.translateService.use('de').subscribe(() => {
+      this.translationsLoaded = true;
+      this.initializeMenuItems();
+    });
   }
 
   private initializeMenuItems() {
