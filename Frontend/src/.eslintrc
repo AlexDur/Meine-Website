@@ -1,5 +1,6 @@
 {
   "rules": {
+
     "require-jsdoc": [
       "error",
       {
@@ -28,5 +29,10 @@
     "prefer-template": "error",
     "no-duplicate-imports": "error",
     "import/no-unresolved": "error"
-  }
+  },
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module"
+  },
+  "parser": "@typescript-eslint/parser"
 }

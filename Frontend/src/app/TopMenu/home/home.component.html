@@ -1,7 +1,28 @@
-<!--Inhalte der Komponente wird erst gezeigt, wenn translationLoaded =true-->
+<!--Inhalt der Komponente wird erst gezeigt, wenn translationLoaded =true-->
 <div class="home-component" *ngIf="translationsLoaded; else loading">
-  <p style="font-size: 30px;">{{ 'home.title' | translate | async }}</p>
-  <p style="font-size: 15px;">{{ 'home.description' | translate | async }}</p>
+  <div class="square-block-home">
+    <p style="font-size: 30px;">{{ 'home.title' | translate | async }}</p>
+    <p style="font-size: 15px;">{{ 'home.description' | translate | async }}</p>
+  </div>
+  <div class="square-block-home">
+    <p>Abbildung</p>
+    <!--TODO: Foto von Anwendung-->
+  </div>
+</div>
+<div>
+<app-code-prinzipien></app-code-prinzipien>
+</div>
+<div>
+  <!--  Leistungsversprechen-->
+</div>
+<div>
+<!--  Projekte-->
+</div>
+<div>
+  <!--  Preise-->
+</div>
+<div>
+  <app-footer></app-footer>
 </div>
 
 <ng-template #loading>

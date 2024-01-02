@@ -1,14 +1,56 @@
 {
   "home": {
     "title": "Modernste Web-Entwicklung für Kleinunternehmen",
-    "description": "Ich entwickele moderne Webseiten für Kleinunternehmen. Dabei setze ich auf die neuesten Technologien und Standards, um Ihnen eine Webseite zu bieten, die nicht nur gut aussieht, sondern auch schnell und sicher ist."
+    "description": "Ich entwickle moderne Webseiten für Kleinunternehmen. Dabei setze ich auf die neuesten Technologien und Standards, um Ihnen eine Webseite zu bieten, die nicht nur gut aussieht, sondern auch schnell und sicher ist."
   },
   "menu": {
     "home": "Home",
     "about": "Über mich",
     "services": "Services",
-    "projects": "Projekte",
+    "portfolio": "Portfolio",
     "contact": "Kontakt"
+  },
+  "contact": {
+    "name": "Name",
+    "business": "Firma",
+    "email": "E-Mail-Adresse",
+    "phone": "Telefonnummer",
+    "message": "Schreiben Sie Ihre Nachricht hier...",
+    "send": "Senden"
+  },
+  "about": {
+    "title": "About",
+    "company": "DURACHAL WEB ENTWICKLUNG",
+    "description-title": "Moderne und starke Anwendungsentwicklung für das Web",
+    "description": "Ich bin Web-Entwickler aus dem Raum Bonn. Ursprüngliche komme ich aus der Nähe von Offenburg im Schwarzwald. Während meiner dreijährigen beruflichen Tätigkeit also Softwareentwickler habe ich mich auf die Entwicklung von Webseiten- und anwendungen spezialisiert. \n\n Weitere",
+    "skills": {
+      "title": "Meine Fähigkeiten",
+      "frontend": "Frontend-Entwicklung",
+      "backend": "Backend-Entwicklung",
+      "design": "Webdesign",
+      "seo": "SEO",
+      "responsive": "Responsive Design",
+      "performance": "Performance-Optimierung",
+      "security": "Sicherheit"
+    }
+  },
+
+  "services": {
+    "title": "Meine Services",
+    "description-title": "Moderne und starke Anwendungsentwicklung für das Web",
+    "description": "Ich biete Ihnen eine Vielzahl von Services rund um die Entwicklung von Webseiten und Webanwendungen. Dabei setze ich auf die neuesten Technologien und Standards, um Ihnen eine Webseite zu bieten, die nicht nur gut aussieht, sondern auch schnell und sicher ist.",
+    "web-development": {
+      "title": "Web-Entwicklung",
+      "description": "Ich entwickle moderne Webseiten und Webanwendungen für Kleinunternehmen. Dabei setze ich auf die neuesten Technologien und Standards, um Ihnen eine Webseite zu bieten, die nicht nur gut aussieht, sondern auch schnell und sicher ist."
+    },
+    "web-design": {
+      "title": "Webdesign",
+      "description": "Ich entwickle moderne Webseiten und Webanwendungen für Kleinunternehmen. Dabei setze ich auf die neuesten Technologien und Standards, um Ihnen eine Webseite zu bieten, die nicht nur gut aussieht, sondern auch schnell und sicher ist."
+    }
+  },
+
+  "portfolio": {
+    "title": "Portfolio",
+    "description": "....."
   }
 }
-

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
-import {TranslateService} from "../shared/services/translate.service";
+import {TranslateService} from '../shared/services/translate.service';
 
 
 @Component({
@@ -10,11 +10,12 @@ import {TranslateService} from "../shared/services/translate.service";
 export class HeaderComponent implements OnInit {
   items: MenuItem[] = [];
   activeItem: string | undefined;
-  translationsLoaded = false;
+  translationsLoaded: boolean = false;
 
   constructor(private translateService: TranslateService) {}
 
   ngOnInit() {
+    this.activeItem = '/home';
     this.translateService.use('de').subscribe(() => {
       this.translationsLoaded = true;
       this.initializeMenuItems();
@@ -22,7 +23,7 @@ export class HeaderComponent implements OnInit {
   }
 
   private initializeMenuItems() {
-    const menuKeys = ['home', 'about', 'services', 'projects', 'contact'];
+    const menuKeys = ['home', 'about', 'services', 'portfolio', 'contact'];
 
     menuKeys.forEach(key => {
       this.translateService.translate(`menu.${key}`).subscribe(translation => {

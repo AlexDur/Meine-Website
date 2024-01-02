@@ -1,1 +1,23 @@
-<p>projekte works!</p>
+<div *ngIf="translationsLoaded; else loading">
+  <div>
+    <h1>{{ 'portfolio.title' | translate | async }}</h1>
+  </div>
+
+  <div class="portfolio-component">
+  <p-card *ngFor="let card of cards"  class="custom-card">
+    <img src="{{card.image}}" alt="{{card.title}}" class="card-image">
+    <h3>{{card.title}}</h3>
+    <h4>{{card.header}}</h4>
+    <p>{{card.content}}</p>
+    <div class="card flex justify-content-center">
+      <p-button [label]="card.button.text" styleClass="custom-button"></p-button>
+    </div>
+    <!--< <p-button [label]="card.button.text" (onClick)="navigateTo(card.button.link)" styleClass="custom-button"></p-button>-->
+  </p-card>
+  </div>
+
+</div>
+
+  <ng-template #loading>
+    <p>Lädt...</p>
+  </ng-template>

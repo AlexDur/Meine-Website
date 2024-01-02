@@ -1,8 +1,37 @@
+:root {
+  --base-font-size: 16px;
+}
+
+h1{
+  font-size: 36px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 0;
+}
+
+ul li a {
+  color: black;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  text-decoration: underline; /* Fügt eine Unterstreichung beim Hover hinzu, optional */
+}
+
+
+
 body {
   height: 100%;
   font-family: "Calibri", sans-serif;
   background-color: bisque;
   margin: 0;
+  font-size: var(--base-font-size);
 }
 
 
@@ -11,8 +40,8 @@ body {
 .router-outlet-container {
   padding: 20px;
   border: 1px solid #ccc;
-  margin-left: 200px;
-  margin-right: 200px;
+  margin-left: 250px;
+  margin-right: 250px;
 }
 
 
@@ -23,7 +52,7 @@ body {
   margin: 0;
   justify-content: center;
   width: 100%;
-  position: absolute;
+  position: fixed;
   bottom:0;
   background-color: rgba(0, 0, 0, 0.05);
 }
@@ -58,9 +87,38 @@ body {
 /*home-Komponente*/
 
 .home-component {
-  height:300px;
-  background-color: bisque;
+  display: flex;
+  justify-content: space-between;
+
+  .square-block-home {
+    flex: 1;
+    in-height: 100vh;
+    flex-direction: column;
+    margin: 10px;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
 }
+
+.code-prinzipen-component{
+
+  .content-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .content-block {
+    text-align: center;
+    in-height: 100vh;
+    margin: 10px;
+    flex: 0 1 calc(33.33% - 20px); /* Flex-Wachstum, um den verfügbaren Raum zu füllen */
+  }
+}
+
 
 /*contact-Komponente*/
 
@@ -69,4 +127,104 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-bottom: 3rem;
+}
+
+/*about-Komponente*/
+
+.about-component {
+  display: flex;
+  justify-content: space-between;
+
+  .square-block{
+    flex: 1;
+    flex-direction: column;
+    margin: 10px;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+}
+
+/*services-Komponente*/
+
+.services-component{
+  display: flex;
+  justify-content: space-between;
+
+  .square-block{
+    flex: 1;
+    flex-direction: column;
+    margin: 10px;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+}
+
+/*Portfolio-Komponente*/
+.portfolio-component {
+  display: flex;
+  justify-content: space-between;
+  text-align:left
+}
+
+.portfolio-component .custom-card {
+  flex: 1 0 20%;
+  padding:10px;
+  margin: 15px;
+  background-color: #f0f0f0;
+  padding:50px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+}
+
+.portfolio-component .custom-card .card-image {
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+}
+
+/*TODO: Kann verschlankt werden, wenn p-button richtig funktioniert*/
+
+.portfolio-component .custom-card .custom-button {
+  background-color: #007bff; // Beispielfarbe für den Hintergrund
+  color: white; // Textfarbe
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+
+  &:hover {
+    background-color: #0056b3; // Farbänderung beim Hover
+  }
+}
+
+
+
+/*Footer-Komponente*/
+
+.footer-component{
+  display: flex;
+  justify-content: space-between;
+
+
+  .box {
+    flex: 1;
+    margin: 5px;
+  }
+
+  .listing ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .listing li {
+    margin-bottom: 10px;
+  }
 }

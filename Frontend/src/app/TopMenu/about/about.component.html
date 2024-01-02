@@ -1,1 +1,16 @@
-<p>about works!</p>
+<div class="about-component" *ngIf="translationsLoaded; else loading">
+  <p style="font-size: 30px;">{{ 'about.title' | translate | async }}</p>
+  <div class="square-block">
+    <!--TODO: Foto von mir-->
+  </div>
+  <div class="square-block">
+    <p style="color: black;">{{ 'about.company' | translate | async }}</p>
+    <p style="font-size: 30px;">{{ 'about.description-title' | translate | async }}</p>
+    <p style="white-space: pre-line;">{{ 'about.description' | translate | async }}</p>
+  </div>
+</div>
+
+
+<ng-template #loading>
+  <p>Lädt...</p>
+</ng-template>
