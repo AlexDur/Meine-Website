@@ -20,6 +20,7 @@ import {FooterComponent} from './footer/footer.component';
 import {ButtonModule} from 'primeng/button';
 import {KurzVorstellungComponent} from './TopMenu/home/kurz-vorstellung/kurz-vorstellung.component';
 import {BadgeModule} from 'primeng/badge';
+import {CommonModule} from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import {BadgeModule} from 'primeng/badge';
     HeaderComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,

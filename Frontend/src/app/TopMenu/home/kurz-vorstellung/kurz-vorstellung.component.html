@@ -1,5 +1,5 @@
 <div class="kurzvorstellung-component">
-  <div class="square-block">
+  <div class="tab-menu">
     <p-tabMenu [model]="items">
       <ng-template pTemplate="item" let-item let-i="index">
         <a (click)="onTabChange(i)" class="p-menuitem-link flex justify-content-between align-items-center p-3">
@@ -11,12 +11,18 @@
       </ng-template>
     </p-tabMenu>
   </div>
-  <div class="tab-content">
-    <div class="content-box-left" *ngIf="activeTabIndex === 0">
-      <img src="../src/logo1_pixel.png" alt="Logo">
+
+  <ng-container *ngIf="getActiveTabContent() as activeContent">
+    <div class="tab-content">
+      <div *ngIf="activeContent.left === 'image'">
+        <img [src]="activeContent?.imageUrl" alt="Bild">
+      </div>
+      <div *ngIf="activeContent.right === 'title'">
+        <p>{{ activeContent?.title }}</p>
+        <p>{{ activeContent?.text }}</p>
+      </div>
     </div>
-    <div class="content-box-right">
-      <div [innerHTML]="getActiveTabContent()"></div>
-    </div>
-  </div>
+
+  </ng-container>
+
 </div>

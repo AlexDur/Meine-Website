@@ -15,7 +15,6 @@ export class HeaderComponent implements OnInit {
   constructor(private translateService: TranslateService) {}
 
   ngOnInit() {
-    this.activeItem = '/home';
     this.translateService.use('de').subscribe(() => {
       this.translationsLoaded = true;
       this.initializeMenuItems();

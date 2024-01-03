@@ -398,3 +398,5 @@ NFrontend/src/app/TopMenu/home/kurz-vorstellung/kurz-vorstellung.component.html
 NFrontend/src/app/TopMenu/home/kurz-vorstellung/kurz-vorstellung.component.scss,4\1\413e33b42050307c5f5cbfc6e0cf322e3238f04e
 |
 LFrontend/src/app/TopMenu/home/kurz-vorstellung/kurz-vorstellung.component.ts,b\d\bdc5cbf75100b67ca5550a91a90ed2bba6185ce9
+C
+Frontend/.gitignore,6\6\663059bfd1b29d4d14f841241270ae94c4065a6b

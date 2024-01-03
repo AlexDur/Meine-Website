@@ -11,7 +11,9 @@
     "contact": "Kontakt"
   },
   "contact": {
-    "name": "Name",
+    "title": "Kontakt",
+    "first_name": "Vorname",
+    "last_name": "Nachname",
     "business": "Firma",
     "email": "E-Mail-Adresse",
     "phone": "Telefonnummer",
@@ -34,7 +36,6 @@
       "security": "Sicherheit"
     }
   },
-
   "services": {
     "title": "Meine Services",
     "description-title": "Moderne und starke Anwendungsentwicklung für das Web",
@@ -60,6 +61,24 @@
       "what": "Was mache ich?",
       "whatdone": "Was habe ich gemacht?",
       "location": "Mein Standort"
+    },
+    "tabs": {
+      "tab1": {
+        "title": "Wer bin ich?",
+        "text": "Inhalt für Tab 1"
+      },
+      "tab2": {
+        "title": "Was mache ich?",
+        "text": "Inhalt für Tab 2"
+      },
+      "tab3": {
+        "title": "Was habe ich gemacht?",
+        "text": "Inhalt für Tab 3"
+      },
+      "tab4": {
+        "title": "Mein Standort",
+        "text": "Inhalt für Tab 4"
+      }
     }
   }
 }

@@ -1,9 +1,10 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {TranslateService} from '../../shared/services/translate.service';
 import {AsyncPipe, NgIf} from '@angular/common';
 import {SharedModule} from '../../shared/shared.module';
 import {CardModule} from 'primeng/card';
 import {ButtonModule} from 'primeng/button';
+import {Subscription} from 'rxjs';
 
 @Component({
   selector: 'app-projekte',
@@ -19,8 +20,9 @@ import {ButtonModule} from 'primeng/button';
   styleUrl: './projekte.component.scss'
 })
 
-export class ProjekteComponent implements OnInit{
+export class ProjekteComponent implements OnInit, OnDestroy{
   translationsLoaded: boolean = false;
+  private subscription: Subscription | null = null;
 
   cards = [
     {
@@ -53,16 +55,20 @@ export class ProjekteComponent implements OnInit{
         link: '/link-zu-card-3'
       }
     }
-
-
   ];
 
   constructor(private translateService: TranslateService) {
   }
 
   ngOnInit() {
-    this.translateService.use('de').subscribe(() => {
+    this.subscription = this.translateService.use('de').subscribe(() => {
       this.translationsLoaded = true;
     });
+  }
+
+  ngOnDestroy() {
+    if(this.subscription){
+      this.subscription.unsubscribe();
+    }
   }
 }

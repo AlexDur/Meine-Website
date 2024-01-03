@@ -112,6 +112,8 @@ body {
   }
 }
 
+/*Code-Prinzipen-Komponente*/
+
 .code-prinzipen-component{
 
   .content-container {
@@ -125,19 +127,60 @@ body {
     text-align: center;
     in-height: 100vh;
     margin: 10px;
-    flex: 0 1 calc(33.33% - 20px); /* Flex-Wachstum, um den verfügbaren Raum zu füllen */
+    flex: 0 1 calc(33.33% - 20px);
   }
 }
 
-
-/*contact-Komponente*/
+/*Kontakt-Komponente*/
 
 .contact-component {
   display: flex;
-  flex-direction: column;
+  margin-top:100px;
   justify-content: center;
   align-items: center;
   padding-bottom: 3rem;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+
+  .custom-input {
+    width: 100%;
+    height: 40px;
+    padding:10px
+  }
+
+  .custom-textarea{
+    width: 100%;
+    height: 120px;
+    padding-bottom:70px;
+    padding-left:10px;
+  }
+
+  .p-col {
+    flex: 1;
+    margin-right: 10px;
+  }
+
+  .p-col:last-child {
+    margin-right: 0;
+  }
+
+  .input-row {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+
+  .input-single {
+    width: 100%;
+    max-width: 800px; /* Konsistente Breite für alle Inputfelder */
+    display: flex;
+    justify-content: center;
+    margin-top:10px;
+    margin-bottom: 10px;
+  }
 }
 
 /*about-Komponente*/
@@ -227,7 +270,7 @@ body {
   height: 50vh;
   flex-direction: column;
 
-  .square-block {
+  .tab-menu {
     flex: 1;
     margin: 10px;
     margin-right: 20px;

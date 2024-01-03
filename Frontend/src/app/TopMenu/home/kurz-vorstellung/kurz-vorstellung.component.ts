@@ -3,13 +3,17 @@ import {TranslateService} from '../../../shared/services/translate.service';
 import {TabMenuModule} from 'primeng/tabmenu';
 import {MenuItem} from 'primeng/api';
 import {BadgeModule} from 'primeng/badge';
+import {CommonModule} from '@angular/common';
+import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-kurz-vorstellung',
   standalone: true,
   imports: [
+    CommonModule,
     TabMenuModule,
     BadgeModule
+
   ],
   templateUrl: './kurz-vorstellung.component.html',
   styleUrl: './kurz-vorstellung.component.scss'
@@ -18,7 +22,14 @@ export class KurzVorstellungComponent implements OnInit{
   translationsLoaded: boolean = false;
   items: MenuItem[] | undefined;
   activeItem: MenuItem | undefined;
-  activeTabIndex: number = 0;
+  activeTabIndex: number = 1;
+
+  tabContents = [
+    { left: 'image', right: 'text', imageUrl: '...', titleKey: 'tabs.tab1.title', textKey: 'tabs.tab1.text' },
+    { left: 'text', right: 'image', imageUrl: '...', titleKey: 'tabs.tab2.title', textKey: 'tabs.tab2.text' },
+    { left: 'image', right: 'text', imageUrl: '...', titleKey: 'tabs.tab3.title', textKey: 'tabs.tab3.text' },
+    { left: 'text', right: 'image', imageUrl: '...', titleKey: 'tabs.tab4.title', textKey: 'tabs.tab4.text' },
+  ];
 
   constructor(private translateService: TranslateService) {}
 
@@ -46,19 +57,14 @@ export class KurzVorstellungComponent implements OnInit{
     }
   }
 
-  //  `activeTabIndex`, um den Inhalt des aktiven Tabs anzuzeigen.
-  getActiveTabContent() {
-    switch (this.activeTabIndex) {
-    case 0:
-      return '<img src="../src/logo1_pixel.png" alt="Ein Bild" class="content-image"><p>Inhalt für Tab 1</p>';
-    case 1:
-      return 'Inhalt für Tab 2';
-    case 2:
-      return 'Inhalt für Tab 3';
-    case 3:
-      return 'Inhalt für Tab 4';
-    default:
-      return null;
-    }
+  getTranslation(key: string): Observable<string> {
+    return this.translateService.translate(key);
   }
+
+  //  `activeTabIndex`, um den Inhalt des aktiven Tabs anzuzeigen.
+  getActiveTabContent(): any {
+    // Logik, um den aktiven Tab-Inhalt zu bestimmen
+    return this.tabContents[0]; // Beispiel
+  }
+
 }
