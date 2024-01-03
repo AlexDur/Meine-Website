@@ -52,5 +52,14 @@
   "portfolio": {
     "title": "Portfolio",
     "description": "....."
+  },
+
+  "kurzvorsellung": {
+    "tabmenu": {
+      "who": "Wer bin ich?",
+      "what": "Was mache ich?",
+      "whatdone": "Was habe ich gemacht?",
+      "location": "Mein Standort"
+    }
   }
 }

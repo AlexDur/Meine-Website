@@ -5,9 +5,8 @@
       "error",
       {
         "require": {
-          "FunctionDeclaration": true,
-          "MethodDefinition": true,
-          "ClassDeclaration": true
+          "FunctionDeclaration": true
+
         }
       }
     ],
@@ -28,7 +27,7 @@
     "no-var": "error",
     "prefer-template": "error",
     "no-duplicate-imports": "error",
-    "import/no-unresolved": "error"
+    "brace-style": ["off", { "allowSingleLine": true }]
   },
   "parserOptions": {
     "ecmaVersion": 2020,

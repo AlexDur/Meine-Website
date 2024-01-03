@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {MenubarModule} from 'primeng/menubar';
@@ -19,6 +18,8 @@ import {InputTextareaModule} from 'primeng/inputtextarea';
 import {CodePrinzipienComponent} from './TopMenu/home/code-prinzipien/code-prinzipien.component';
 import {FooterComponent} from './footer/footer.component';
 import {ButtonModule} from 'primeng/button';
+import {KurzVorstellungComponent} from './TopMenu/home/kurz-vorstellung/kurz-vorstellung.component';
+import {BadgeModule} from 'primeng/badge';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,9 @@ import {ButtonModule} from 'primeng/button';
     InputTextareaModule,
     CodePrinzipienComponent,
     FooterComponent,
-    ButtonModule
+    ButtonModule,
+    KurzVorstellungComponent,
+    BadgeModule
   ],
   providers: [],
   exports: [

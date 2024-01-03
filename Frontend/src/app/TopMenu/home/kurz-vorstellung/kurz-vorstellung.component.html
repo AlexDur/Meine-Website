@@ -1,0 +1,22 @@
+<div class="kurzvorstellung-component">
+  <div class="square-block">
+    <p-tabMenu [model]="items">
+      <ng-template pTemplate="item" let-item let-i="index">
+        <a (click)="onTabChange(i)" class="p-menuitem-link flex justify-content-between align-items-center p-3">
+          <div>
+            <span [class]="item.icon"></span>
+            <span class="ml-5">{{ item.label }}</span>
+          </div>
+        </a>
+      </ng-template>
+    </p-tabMenu>
+  </div>
+  <div class="tab-content">
+    <div class="content-box-left" *ngIf="activeTabIndex === 0">
+      <img src="../src/logo1_pixel.png" alt="Logo">
+    </div>
+    <div class="content-box-right">
+      <div [innerHTML]="getActiveTabContent()"></div>
+    </div>
+  </div>
+</div>

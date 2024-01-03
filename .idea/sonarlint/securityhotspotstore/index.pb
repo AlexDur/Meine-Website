@@ -35,8 +35,6 @@ Q.idea/sonarlint/securityhotspotstore/7/6/763da524fefd3681f4047bf6c08bf2387cbb13
 +Frontend/src/app/footer/footer.component.ts,8\1\8196bc82151f9a99e50c63a811f8fd571c6048ab
 w
 G.idea/sonarlint/issuestore/7/6/763da524fefd3681f4047bf6c08bf2387cbb1383,7\c\7cf6db73f4c449257dbd202b78513804c6c93a75
-`
-0Frontend/src/app/footer/footer.component.spec.ts,2\d\2d68e99044db0b8837ae7409877f0741222d4cc2
 w
 G.idea/sonarlint/issuestore/e/3/e3b1510510aaae421a7a8f7aaadd18b5bb94cc81,7\b\7bcf81dbeea8f0ee291bec74cc156b9020eb3b28
 a
@@ -163,8 +161,6 @@ G.idea/sonarlint/issuestore/d/5/d5eb3ead59fdd27cdd79da478b21ea295ad5379f,3\9\39
 w
 G.idea/sonarlint/issuestore/1/0/10e2b4ae451bde161c5e69dd1e95258082a33e64,0\c\0cd6980b05b691cdb44bb0d9417c81f46034464b
 w
-G.idea/sonarlint/issuestore/2/d/2d68e99044db0b8837ae7409877f0741222d4cc2,e\d\ed0cc7d6fc149fc90c3c85f3b84a9370d00b46c0
-w
 G.idea/sonarlint/issuestore/e/c/eccf43faea75524e15347c67d5e70a9fe7a8c4f0,0\c\0c4ac37f610a76c223724489d74b68cc9b6f317b
 w
 G.idea/sonarlint/issuestore/f/1/f1b7f69c1dd9ce015cf5b16eb7b1970817acf5ab,0\3\0379a7148f5b0fd7dc46196056f86f60075081ae
@@ -270,8 +266,6 @@ w
 G.idea/sonarlint/issuestore/9/4/946da5e7515bb5fc917310f2c7ec4b870bb3d8a3,b\1\b1bb02487c8770b72834d1e4828a2c327d53d917
 Å
 Q.idea/sonarlint/securityhotspotstore/a/f/af730504b116556c824ea49afb3182ee1a6e97e1,2\1\21d687261c9db1b521b280d98f4256ff9e096565
-Å
-Q.idea/sonarlint/securityhotspotstore/2/d/2d68e99044db0b8837ae7409877f0741222d4cc2,d\f\dfd39f989eb2b88c6fe24144615119b68d86ec3a
 w
 G.idea/sonarlint/issuestore/5/4/5484ff871f17506ab19f0af92d5eb1632fc4b2ed,6\9\691496a2f3e663c9b2043292fb3110357f6de160
 w
@@ -398,3 +392,9 @@ j
 LFrontend/src/app/TopMenu/home/code-prinzipien/code-prinzipien.component.html,b\e\bee89760c96032990073ebd4dc952e9eef23ebc7
 |
 LFrontend/src/app/TopMenu/home/code-prinzipien/code-prinzipien.component.scss,6\c\6cbfd2b2f4a5b169ff57d03cb00048272f5e0c0e
+~
+NFrontend/src/app/TopMenu/home/kurz-vorstellung/kurz-vorstellung.component.html,3\e\3ece9803a09970bc3d968b1242ab481930204fa4
+~
+NFrontend/src/app/TopMenu/home/kurz-vorstellung/kurz-vorstellung.component.scss,4\1\413e33b42050307c5f5cbfc6e0cf322e3238f04e
+|
+LFrontend/src/app/TopMenu/home/kurz-vorstellung/kurz-vorstellung.component.ts,b\d\bdc5cbf75100b67ca5550a91a90ed2bba6185ce9

@@ -25,7 +25,7 @@ export class ProjekteComponent implements OnInit{
   cards = [
     {
       image: 'assets/images/dishlist1.png',
-      header: 'Card 1',
+      header: 'Desktop/mobile App',
       title: 'DishList',
       content: 'Eine Webanwendung mit der man alle Rezepte, die man im Web findet, in einer Sammlung anlegen kann.',
       button: {
@@ -35,7 +35,7 @@ export class ProjekteComponent implements OnInit{
     },
     {
       image: 'assets/images/komprimiert_beetgott1.png',
-      header: 'Card 2',
+      header: 'Mobile App',
       title: 'Beetgott',
       content: 'Eine mobile App, mit deren Hilfe das eigene Beet so geplant werden kann, dass der Anbau einen höheren Ertrag liefert.',
       button: {
