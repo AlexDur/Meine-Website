@@ -4,7 +4,7 @@ import {TabMenuModule} from 'primeng/tabmenu';
 import {MenuItem} from 'primeng/api';
 import {BadgeModule} from 'primeng/badge';
 import {CommonModule} from '@angular/common';
-import {Observable} from "rxjs";
+
 
 @Component({
   selector: 'app-kurz-vorstellung',
@@ -23,13 +23,6 @@ export class KurzVorstellungComponent implements OnInit{
   items: MenuItem[] | undefined;
   activeItem: MenuItem | undefined;
   activeTabIndex: number = 1;
-
-  tabContents = [
-    { left: 'image', right: 'text', imageUrl: '...', titleKey: 'tabs.tab1.title', textKey: 'tabs.tab1.text' },
-    { left: 'text', right: 'image', imageUrl: '...', titleKey: 'tabs.tab2.title', textKey: 'tabs.tab2.text' },
-    { left: 'image', right: 'text', imageUrl: '...', titleKey: 'tabs.tab3.title', textKey: 'tabs.tab3.text' },
-    { left: 'text', right: 'image', imageUrl: '...', titleKey: 'tabs.tab4.title', textKey: 'tabs.tab4.text' },
-  ];
 
   constructor(private translateService: TranslateService) {}
 
@@ -50,21 +43,27 @@ export class KurzVorstellungComponent implements OnInit{
     this.activeItem = this.items[0];
   }
 
+  tabContents = [
+    { left: 'image', right: 'text', imageUrl: '...', title: 'tabs.tab1.title', description: 'tabs.tab1.text' },
+    { left: 'text', right: 'image', imageUrl: '...', title: 'tabs.tab2.title', description: 'tabs.tab2.text' },
+    { left: 'image', right: 'text', imageUrl: '...', title: 'tabs.tab3.title', description: 'tabs.tab3.text' },
+    { left: 'text', right: 'image', imageUrl: '...', title: 'tabs.tab4.title', description: 'tabs.tab4.text' },
+  ];
+
   onTabChange(event: any) {
-    this.activeTabIndex = event;
     if (this.items) {
+      this.activeTabIndex = event.index;
+      console.log('Aktiver Tab-Index geändert:', this.activeTabIndex);
       this.activeItem = this.items[this.activeTabIndex];
     }
   }
 
-  getTranslation(key: string): Observable<string> {
-    return this.translateService.translate(key);
-  }
-
   //  `activeTabIndex`, um den Inhalt des aktiven Tabs anzuzeigen.
   getActiveTabContent(): any {
-    // Logik, um den aktiven Tab-Inhalt zu bestimmen
-    return this.tabContents[0]; // Beispiel
+    const content = this.tabContents[this.activeTabIndex];
+    console.log('Aktiver Tab-Inhalt:', content);
+    return content;
   }
+
 
 }

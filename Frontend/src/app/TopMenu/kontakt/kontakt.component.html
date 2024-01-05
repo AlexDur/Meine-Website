@@ -5,6 +5,10 @@
 
   <div class="contact-component">
     <!-- Umhüllung für die ersten beiden Inputfelder -->
+    <div class="container">
+      <div class="box-links">
+        <h2>Kontaktieren Sie mich</h2>
+        <h4>Gerne heute noch</h4>
     <div class="input-row">
       <div class="p-col">
         <p-inputGroup>
@@ -35,9 +39,20 @@
           <input type="text" pInputText placeholder="{{'contact.message' | translate | async }}" class="custom-textarea"/>
         </p-inputGroup>
       </div>
+
+      </div>
+        <div class="box-rechts">
+          <div>
+            <h3>Telefon</h3>
+            <p>01573 0755 475</p>
+          </div>
+          <h3>E-Mail</h3>
+          <p>alexdurach&#64;hotmail.de</p>
+        </div>
+
   </div>
 </div>
-
+</div>
 <ng-template #loading>
   <p>Lädt...</p>
 </ng-template>

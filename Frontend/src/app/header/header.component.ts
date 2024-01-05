@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 import {TranslateService} from '../shared/services/translate.service';
 
-
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html'
@@ -11,6 +10,7 @@ export class HeaderComponent implements OnInit {
   items: MenuItem[] = [];
   activeItem: string | undefined;
   translationsLoaded: boolean = false;
+  checked: boolean = false;
 
   constructor(private translateService: TranslateService) {}
 
@@ -35,5 +35,10 @@ export class HeaderComponent implements OnInit {
 
   setActiveItem(url: string | undefined) {
     this.activeItem = url;
+  }
+
+  onToggle(event: any) {
+    this.checked = event.checked;
+    console.log('Toggle-Button geändert:', this.checked);
   }
 }

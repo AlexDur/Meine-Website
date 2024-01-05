@@ -21,6 +21,8 @@ import {ButtonModule} from 'primeng/button';
 import {KurzVorstellungComponent} from './TopMenu/home/kurz-vorstellung/kurz-vorstellung.component';
 import {BadgeModule} from 'primeng/badge';
 import {CommonModule} from '@angular/common';
+import {ToggleButtonModule} from 'primeng/togglebutton';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -47,7 +49,10 @@ import {CommonModule} from '@angular/common';
     FooterComponent,
     ButtonModule,
     KurzVorstellungComponent,
-    BadgeModule
+    BadgeModule,
+    ToggleButtonModule,
+    FormsModule,
+
   ],
   providers: [],
   exports: [

@@ -22,6 +22,7 @@ import {Subscription} from 'rxjs';
 export class KontaktComponent implements OnInit, OnDestroy {
   value!: string;
   translationsLoaded: boolean = false;
+
   private subscription: Subscription | null = null;
 
   constructor(private translateService: TranslateService) {
@@ -32,6 +33,7 @@ export class KontaktComponent implements OnInit, OnDestroy {
       this.translationsLoaded = true;
     });
   }
+
 
   ngOnDestroy() {
     if (this.subscription) {

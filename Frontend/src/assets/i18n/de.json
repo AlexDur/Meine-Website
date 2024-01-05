@@ -1,7 +1,7 @@
 {
   "home": {
-    "title": "Modernste Web-Entwicklung für Kleinunternehmen",
-    "description": "Ich entwickle moderne Webseiten für Kleinunternehmen. Dabei setze ich auf die neuesten Technologien und Standards, um Ihnen eine Webseite zu bieten, die nicht nur gut aussieht, sondern auch schnell und sicher ist."
+    "title": "Vollumfängliche Entwicklung von Webseiten und mobilen Anwendungen",
+    "description": "Keine Page Builder oder WordPress - Wir bieten 100% handcodierte Websites mit hervorragenden Ergebnissen"
   },
   "menu": {
     "home": "Home",
@@ -23,8 +23,9 @@
   "about": {
     "title": "About",
     "company": "DURACHAL WEB ENTWICKLUNG",
-    "description-title": "Moderne und starke Anwendungsentwicklung für das Web",
-    "description": "Ich bin Web-Entwickler aus dem Raum Bonn. Ursprüngliche komme ich aus der Nähe von Offenburg im Schwarzwald. Während meiner dreijährigen beruflichen Tätigkeit also Softwareentwickler habe ich mich auf die Entwicklung von Webseiten- und anwendungen spezialisiert. \n\n Weitere",
+    "description-title": "Ihr Partner für innovative Softwarelösungen",
+    "description-intro": "Hallo und willkommen! Ich bin Alexander Durach, ein leidenschaftlicher und erfahrener Softwareentwickler, spezialisiert auf Web-Entwicklung und Mobile Apps. Seit 2020 helfe ich Unternehmen und Einzelpersonen dabei, ihre technologischen Wünsche zu verwirklichen.",
+    "description-attitude": "In einer Welt, die sich ständig weiterentwickelt, ist es meine volle Überzeugung, dass die Entwicklung von Software mehr ist als nur das Schreiben von Code. Es geht darum, innovative Lösungen zu schaffen, die Menschen in ihrem Alltag unterstützen und Unternehmen dabei helfen, effizienter zu werden. Mein Ziel ist es, Technologie nicht nur zugänglich, sondern auch sinnvoll zu machen. Wesentlicher Baustein zum Gelingen ist meiner Erfahrung nach eine klare und präzise Kommunikation.",
     "skills": {
       "title": "Meine Fähigkeiten",
       "frontend": "Frontend-Entwicklung",
