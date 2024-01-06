@@ -23,12 +23,14 @@ export class KurzVorstellungComponent implements OnInit{
   items: MenuItem[] | undefined;
   activeItem: MenuItem | undefined;
   activeTabIndex: number = 1;
+  activeTabContent: any;
 
   constructor(private translateService: TranslateService) {}
 
   ngOnInit() {
     this.translateService.use('de').subscribe(() => {
       this.translationsLoaded = true;
+      this.updateActiveTabContent();
     });
 
 
@@ -50,11 +52,16 @@ export class KurzVorstellungComponent implements OnInit{
     { left: 'text', right: 'image', imageUrl: '...', title: 'tabs.tab4.title', description: 'tabs.tab4.text' },
   ];
 
+  updateActiveTabContent() {
+    this.activeTabContent = this.getActiveTabContent();
+  }
+
   onTabChange(event: any) {
     if (this.items) {
       this.activeTabIndex = event.index;
       console.log('Aktiver Tab-Index geändert:', this.activeTabIndex);
       this.activeItem = this.items[this.activeTabIndex];
+      this.updateActiveTabContent();
     }
   }
 

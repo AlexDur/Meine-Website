@@ -10,7 +10,6 @@ export class TranslateService {
   private translations: any = {};
 
   constructor(private http: HttpClient) {
-
   }
 
   use(lang: string): Observable<any> {

@@ -1,24 +1,13 @@
-<div class="kurzvorstellung-container">
-  <div class="kurzvorstellung-component">
-    <!-- Tab Menu -->
-    <div class="tab-menu">
-      <p-tabMenu [model]="items" [(activeItem)]="activeItem" (click)="onTabChange($event)">
-        <!-- Template für die Tabs -->
-      </p-tabMenu>
-    </div>
-
-    <!-- Tab Content -->
-    <div class="tab-content">
-      <div class="content-box-left">
-        <!-- Anzeigen des Bildes, wenn 'left' 'image' ist -->
-        <img *ngIf="getActiveTabContent()?.left === 'image'" [src]="getActiveTabContent()?.imageUrl">
-        <p *ngIf="getActiveTabContent()?.left === 'text'">{{ getActiveTabContent()?.description }}</p>
-      </div>
-      <div class="content-box-right">
-        <!-- Anzeigen des Bildes, wenn 'right' 'image' ist -->
-        <img *ngIf="getActiveTabContent()?.right === 'image'" [src]="getActiveTabContent()?.imageUrl">
-        <p *ngIf="getActiveTabContent()?.right === 'text'">{{ getActiveTabContent()?.description }}</p>
-      </div>
-    </div>
-</div>
+<!-- Tab Content -->
+<div (change)="onTabChange($event)">
+  <div class="content-box-left">
+    <!-- Anzeigen des Bildes, wenn 'left' 'image' ist -->
+    <img *ngIf="activeTabContent?.left === 'image'" [src]="activeTabContent?.imageUrl">
+    <p *ngIf="activeTabContent?.left === 'text'">{{ activeTabContent?.description }}</p>
+  </div>
+  <div class="content-box-right">
+    <!-- Anzeigen des Bildes, wenn 'right' 'image' ist -->
+    <img *ngIf="activeTabContent?.right === 'image'" [src]="activeTabContent?.imageUrl">
+    <p *ngIf="activeTabContent?.right === 'text'">{{ activeTabContent?.description }}</p>
+  </div>
 </div>

@@ -1,6 +1,6 @@
 <!--Inhalt der Komponente wird erst gezeigt, wenn translationLoaded =true-->
 <div class="home-component" *ngIf="translationsLoaded; else loading">
-  < <div class="square-block-home box-rechts">
+  <div class="square-block-home box-rechts">
     <p style="font-size: 35px;">{{ 'home.title' | translate | async }}</p>
     <p style="font-size: 15px;">{{ 'home.description' | translate | async }}</p>
   <p-button label="Kontaktieren Sie mich" (onClick)="navigateToContact()" class="home-button"></p-button>
