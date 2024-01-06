@@ -1,23 +1,26 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import { MenuItem } from 'primeng/api';
 import {TranslateService} from '../shared/services/translate.service';
+import {Subscription} from "rxjs";
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html'
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnInit, OnDestroy {
   items: MenuItem[] = [];
   activeItem: string | undefined;
-  translationsLoaded: boolean = false;
+  loaded: boolean = false;
   checked: boolean = false;
+  private subscription: Subscription | null = null;
 
   constructor(private translateService: TranslateService) {}
 
   ngOnInit() {
-    this.translateService.use('de').subscribe(() => {
-      this.translationsLoaded = true;
-      this.initializeMenuItems();
+    this.subscription = this.translateService.areTranslationsLoaded().subscribe(loaded => {
+      if (loaded) {
+        this.initializeMenuItems();
+      }
     });
   }
 
@@ -37,8 +40,14 @@ export class HeaderComponent implements OnInit {
     this.activeItem = url;
   }
 
-  onToggle(event: any) {
+/*  onToggle(event: any) {
     this.checked = event.checked;
     console.log('Toggle-Button geändert:', this.checked);
+  }*/
+
+  ngOnDestroy() {
+    if (this.subscription) {
+      this.subscription.unsubscribe();
+    }
   }
 }

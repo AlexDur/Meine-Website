@@ -1,9 +1,10 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {TranslateService} from '../../../shared/services/translate.service';
 import {TabMenuModule} from 'primeng/tabmenu';
 import {MenuItem} from 'primeng/api';
 import {BadgeModule} from 'primeng/badge';
 import {CommonModule} from '@angular/common';
+import {Subscription} from 'rxjs';
 
 
 @Component({
@@ -18,19 +19,21 @@ import {CommonModule} from '@angular/common';
   templateUrl: './kurz-vorstellung.component.html',
   styleUrl: './kurz-vorstellung.component.scss'
 })
-export class KurzVorstellungComponent implements OnInit{
-  translationsLoaded: boolean = false;
+export class KurzVorstellungComponent implements OnInit, OnDestroy{
+  loaded: boolean = false;
   items: MenuItem[] | undefined;
   activeItem: MenuItem | undefined;
   activeTabIndex: number = 1;
   activeTabContent: any;
+  private subscription: Subscription | null = null;
 
   constructor(private translateService: TranslateService) {}
 
   ngOnInit() {
-    this.translateService.use('de').subscribe(() => {
-      this.translationsLoaded = true;
-      this.updateActiveTabContent();
+    this.subscription = this.translateService.areTranslationsLoaded().subscribe(loaded => {
+      if (loaded) {
+        this.updateActiveTabContent();
+      }
     });
 
 
@@ -72,5 +75,10 @@ export class KurzVorstellungComponent implements OnInit{
     return content;
   }
 
+  ngOnDestroy() {
+    if(this.subscription){
+      this.subscription.unsubscribe();
+    }
+  }
 
 }

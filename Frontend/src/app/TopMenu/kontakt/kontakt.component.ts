@@ -21,16 +21,15 @@ import {Subscription} from 'rxjs';
 })
 export class KontaktComponent implements OnInit, OnDestroy {
   value!: string;
-  translationsLoaded: boolean = false;
-
+  loaded: boolean = false;
   private subscription: Subscription | null = null;
 
   constructor(private translateService: TranslateService) {
   }
 
-  ngOnInit(): void {
-    this.subscription =this.translateService.use('de').subscribe(() => {
-      this.translationsLoaded = true;
+  ngOnInit() {
+    this.subscription = this.translateService.areTranslationsLoaded().subscribe(loaded => {
+      this.loaded = loaded;
     });
   }
 

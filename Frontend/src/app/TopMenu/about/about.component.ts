@@ -1,7 +1,8 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {AsyncPipe} from '@angular/common';
 import {SharedModule} from '../../shared/shared.module';
 import {TranslateService} from '../../shared/services/translate.service';
+import {Subscription} from "rxjs";
 
 @Component({
   selector: 'app-about',
@@ -17,15 +18,20 @@ import {TranslateService} from '../../shared/services/translate.service';
 /**
  * Komponente zur Darstellung der About-Seite der Webseite.
  */
-export class AboutComponent implements OnInit {
-  translationsLoaded: boolean = false;
+export class AboutComponent implements OnInit, OnDestroy {
+  loaded: boolean = false;
+  private subscription: Subscription | null = null;
 
   constructor(private translateService: TranslateService) {
   }
 
   ngOnInit() {
-    this.translateService.use('de').subscribe(() => {
-      this.translationsLoaded = true;
-    });
+    this.translateService.areTranslationsLoaded().subscribe();
+  }
+
+  ngOnDestroy() {
+    if (this.subscription) {
+      this.subscription.unsubscribe();
+    }
   }
 }

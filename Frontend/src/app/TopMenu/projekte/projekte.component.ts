@@ -21,7 +21,7 @@ import {Subscription} from 'rxjs';
 })
 
 export class ProjekteComponent implements OnInit, OnDestroy{
-  translationsLoaded: boolean = false;
+  loaded: boolean = false;
   private subscription: Subscription | null = null;
 
   cards = [
@@ -62,7 +62,7 @@ export class ProjekteComponent implements OnInit, OnDestroy{
 
   ngOnInit() {
     this.subscription = this.translateService.use('de').subscribe(() => {
-      this.translationsLoaded = true;
+      this.loaded = true;
     });
   }
 

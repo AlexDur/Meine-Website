@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 
 import {SharedModule} from '../../shared/shared.module';
 import {TranslateService} from '../../shared/services/translate.service';
@@ -9,6 +9,7 @@ import {KurzVorstellungComponent} from './kurz-vorstellung/kurz-vorstellung.comp
 import {BrandingComponent} from '../../branding/branding.component';
 import {ButtonModule} from 'primeng/button';
 import {Router} from '@angular/router';
+import {Subscription} from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -29,20 +30,27 @@ import {Router} from '@angular/router';
 /**
 *Komponente zur Darstellung der Startseite der Webseite.
 */
-export class HomeComponent implements OnInit {
-  translationsLoaded: boolean = false;
+export class HomeComponent implements OnInit, OnDestroy {
+  loaded: boolean = false;
+  private subscription: Subscription | null = null;
 
 
   constructor(private translateService: TranslateService, private router: Router) {
   }
 
   ngOnInit() {
-    this.translateService.use('de').subscribe(() => {
-      this.translationsLoaded = true;
+    this.subscription = this.translateService.areTranslationsLoaded().subscribe(loaded => {
+      this.loaded = loaded;
     });
   }
 
   navigateToContact() {
     this.router.navigateByUrl('/contact');
+  }
+
+  ngOnDestroy() {
+    if (this.subscription) {
+      this.subscription.unsubscribe();
+    }
   }
 }

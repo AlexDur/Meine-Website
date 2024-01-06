@@ -16,7 +16,7 @@ import {Subscription} from 'rxjs';
   styleUrl: './services.component.scss'
 })
 export class ServicesComponent implements OnInit, OnDestroy {
-  translationsLoaded: boolean = false;
+  loaded: boolean = false;
   private subscription: Subscription | null = null;
 
 
@@ -24,11 +24,11 @@ export class ServicesComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    this.subscription = this.translateService.use('de').subscribe(() => {
-      this.translationsLoaded = true;
-      console.log('Translations loaded', this.translateService);
+    this.subscription = this.translateService.areTranslationsLoaded().subscribe(loaded => {
+      this.loaded = loaded;
     });
   }
+
 
 
   ngOnDestroy() {
