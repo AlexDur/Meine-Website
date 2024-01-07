@@ -29,7 +29,7 @@ export class ProjekteComponent implements OnInit, OnDestroy{
       image: 'assets/images/dishlist1.png',
       header: 'Desktop/mobile App',
       title: 'DishList',
-      content: 'Eine Webanwendung mit der man alle Rezepte, die man im Web findet, in einer Sammlung anlegen kann.',
+      content: 'Eine Webanwendung mit der Rezepte, die man im Web findet, in einer Sammlung anlegen und mit zusätzlichen Information beschreiben kann.',
       button: {
         text: 'Mehr erfahren',
         link: '/dishlist'
@@ -49,7 +49,7 @@ export class ProjekteComponent implements OnInit, OnDestroy{
       image: 'assets/images/dishlist1.png',
       header: 'Card 3',
       title: 'Überschrift 3',
-      content: 'Content of Card 3',
+      content: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam',
       button: {
         text: 'Mehr Informationen',
         link: '/link-zu-card-3'
@@ -57,8 +57,7 @@ export class ProjekteComponent implements OnInit, OnDestroy{
     }
   ];
 
-  constructor(private translateService: TranslateService) {
-  }
+  constructor(private translateService: TranslateService) {}
 
   ngOnInit() {
     this.subscription = this.translateService.use('de').subscribe(() => {

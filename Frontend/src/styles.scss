@@ -295,8 +295,9 @@ body, html {
 
 /*Portfolio-Komponente*/
 .portfolio-component {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 15px;
   text-align:left;
   align-items: stretch;
   margin-top:100px;
@@ -305,11 +306,15 @@ body, html {
 .portfolio-component .custom-card {
   display: flex;
   flex-direction: column;
+  height: 300px;
   justify-content: space-between;
-  flex: 1 0 20%;
-  margin: 15px;
   background-color: #f0f0f0;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.custom-card .p-card-body{
+  flex-grow: 1;
+  overflow: auto;
 }
 
 .portfolio-component .custom-card .card-image {
@@ -333,6 +338,8 @@ body, html {
   &:hover {
     background-color: #0056b3;
   }
+
+
 }
 
 
@@ -341,15 +348,17 @@ body, html {
 
 .kurzvorstellung-container{
   background-color: burlywood;
+  height:50vh;
   margin-top:50px;
   margin-bottom:100px;
 }
 
 .kurzvorstellung-component {
+  margin-top:600px;
   display: flex;
   justify-content: space-between;
   text-align: left;
-  height: 50vh;
+  height: 20vh;
   flex-direction: column;
 
   .tab-menu {
@@ -372,18 +381,23 @@ body, html {
     flex: 1 1 auto;
   }
 
+  .content-container{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    height: 300px;
+  }
+
   .content-box-left, .content-box-right {
     flex: 1;
   }
 
-  /* Optional: Zur besseren Trennung und Anordnung */
-  .content-box-left {
-    margin-right: 20px;
-    border: 1px solid black;
+  .content-box-right {
+    border: 1px solid green;
   }
 
   .content-box-left {
-    margin-left: 20px;
     border: 1px solid red;
   }
 }
