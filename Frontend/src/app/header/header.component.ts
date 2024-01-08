@@ -1,20 +1,23 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit, ViewChild, ElementRef} from '@angular/core';
 import { MenuItem } from 'primeng/api';
 import {TranslateService} from '../shared/services/translate.service';
-import {Subscription} from "rxjs";
+import {Subscription} from 'rxjs';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html'
 })
 export class HeaderComponent implements OnInit, OnDestroy {
+  @ViewChild('emailButton', { static: false }) emailButton: ElementRef;
   items: MenuItem[] = [];
   activeItem: string | undefined;
   loaded: boolean = false;
   checked: boolean = false;
   private subscription: Subscription | null = null;
 
-  constructor(private translateService: TranslateService) {}
+  constructor(private translateService: TranslateService) {
+    this.emailButton = new ElementRef(null);
+  }
 
   ngOnInit() {
     this.subscription = this.translateService.areTranslationsLoaded().subscribe(loaded => {
@@ -23,6 +26,8 @@ export class HeaderComponent implements OnInit, OnDestroy {
       }
     });
   }
+
+
 
   private initializeMenuItems() {
     const menuKeys = ['home', 'about', 'services', 'portfolio', 'contact'];
@@ -40,10 +45,13 @@ export class HeaderComponent implements OnInit, OnDestroy {
     this.activeItem = url;
   }
 
-/*  onToggle(event: any) {
-    this.checked = event.checked;
-    console.log('Toggle-Button geändert:', this.checked);
-  }*/
+  openEmailClient() {
+    // Erstellen Sie eine E-Mail-Adresse
+    const email = 'alexdurach@hotmail.de';
+
+    // Öffnen Sie ein E-Mail-Fach mit der E-Mail-Adresse als Empfänger
+    window.location.href = `mailto:${  email}`;
+  }
 
   ngOnDestroy() {
     if (this.subscription) {
