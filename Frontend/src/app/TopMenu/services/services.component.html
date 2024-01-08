@@ -1,0 +1,21 @@
+<!--TODO: Hier Angaben zur Softwareauswahl (Tech Stack) unterbringen-->
+
+<div *ngIf="loaded; else loading">
+  <div>
+    <h1>{{ 'services.title' | translate | async }}</h1>
+  </div>
+<div class="services-component" >
+
+  <div class="square-block">
+    <!--TODO: Grafik einfügen-->
+  </div>
+  <div class="square-block">
+    <p style="font-size: 30px;">{{ 'services.description-title' | translate | async }}</p>
+    <p style="font-size: 15px;">{{ 'services.description' | translate | async }}</p>
+  </div>
+</div>
+</div>
+
+<ng-template #loading>
+  <p>Lädt...</p>
+</ng-template>

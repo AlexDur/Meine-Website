@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "lint": "eslint . --ext .ts"
   },
   "private": true,
   "dependencies": {
@@ -19,6 +20,7 @@
     "@angular/platform-browser-dynamic": "^17.0.8",
     "@angular/router": "^17.0.8",
     "primeflex": "^3.3.1",
+    "primeicons": "^6.0.1",
     "primeng": "^17.2.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
@@ -29,6 +31,9 @@
     "@angular/cli": "^17.0.8",
     "@angular/compiler-cli": "^17.0.8",
     "@types/jasmine": "~4.3.0",
+    "@typescript-eslint/eslint-plugin": "^6.16.0",
+    "@typescript-eslint/parser": "^6.16.0",
+    "eslint": "^8.56.0",
     "jasmine-core": "~4.6.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",

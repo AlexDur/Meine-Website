@@ -1,5 +1,18 @@
 <div class="header-component">
-  <a *ngFor="let item of items" href="{{ item.url }}">
-    {{ item.label }}
-  </a>
+  <div class="logo">
+    <img src="assets/images/lurch_1.png" alt="Logo">
+  </div> <!-- Schließendes Tag hinzugefügt -->
+  <div class="items">
+    <a class="header-font" *ngFor="let item of items" [routerLink]="item.url"
+       (click)="setActiveItem(item.url)"
+       [ngClass]="{'active-menu-item': activeItem === item.url}">
+      {{ item.label }}
+    </a>
+  </div>
+  <div>
+    <p-toggleButton [(ngModel)]="checked"
+                    pTooltip="Language switching feature is currently under development"
+                    tooltipPosition="right" onLabel="EN" offLabel="DE">
+    </p-toggleButton>
+  </div>
 </div>

@@ -1,0 +1,23 @@
+<div class="kurzvorstellung-container">
+  <div class="kurzvorstellung-component">
+    <!-- Tab Menu -->
+    <div class="tab-menu">
+      <p-tabMenu [model]="items" [(activeItem)]="activeItem" (activeItemChange)="onTabChange($event)">
+      </p-tabMenu>
+    </div>
+    <div>
+      <div class="content-container">
+      <div class="content-box-left">
+        <!-- Anzeigen des Bildes, wenn 'left' 'image' ist -->
+        <img *ngIf="activeTabContent?.left === 'image'" [src]="activeTabContent?.imageUrl">
+        <p *ngIf="activeTabContent?.left === 'text'">{{ activeTabContent?.description }}</p>
+      </div>
+      <div class="content-box-right">
+        <!-- Anzeigen des Bildes, wenn 'right' 'image' ist -->
+        <img *ngIf="activeTabContent?.right === 'image'" [src]="activeTabContent?.imageUrl">
+        <p *ngIf="activeTabContent?.right === 'text'">{{ activeTabContent?.description }}</p>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>

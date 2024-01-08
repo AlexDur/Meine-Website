@@ -1,0 +1,20 @@
+<div *ngIf="loaded; else loading">
+  <div>
+    <h1 style="font-size: 30px;">{{ 'about.title' | translate | async }}</h1>
+  </div>
+  <div class="about-component">
+  <div class="square-block">
+    <img src="dishlist1.png" alt="Logo Beschreibung">
+  </div>
+  <div class="square-block">
+    <p style="color: black;">{{ 'about.company' | translate | async }}</p>
+    <p style="font-size: 30px;">{{ 'about.description-title' | translate | async }}</p>
+    <p style="white-space: pre-line;">{{ 'about.description-intro' | translate | async }}</p>
+    <p style="white-space: pre-line;">{{ 'about.description-attitude' | translate | async }}</p>
+  </div>
+</div>
+</div>
+
+<ng-template #loading>
+  <p>Lädt...</p>
+</ng-template>

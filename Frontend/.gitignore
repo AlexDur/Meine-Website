@@ -37,6 +37,11 @@ yarn-error.log
 testem.log
 /typings
 
+# SonarLint-spezifische Dateien
+sonarlint/
+sonar-report.json
+
+
 # System files
 .DS_Store
 Thumbs.db
