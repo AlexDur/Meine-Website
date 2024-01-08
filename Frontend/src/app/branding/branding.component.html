@@ -1,6 +1,10 @@
 <div class="branding-component">
- <p>
-   Copyright © 2023 | durachal web development | All Rights Reserved
- </p>
+  <div class="field">
+   © 2023 • Alexander Durach
+</div>
+  <div class="field">Feld 2</div>
+  <div class="field field-fixed" *ngIf="showScrollButton">
+    <button (click)="scrollToTop()" class="scroll-top-button" [ngClass]="{'scroll-top-button-fade-out': fadeOutButton}">↑</button>
+  </div>
 </div>
 

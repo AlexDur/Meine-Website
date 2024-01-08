@@ -29,6 +29,9 @@
     "no-duplicate-imports": "error",
     "brace-style": ["off", { "allowSingleLine": true }]
   },
+  "env": {
+    "browser": true
+  },
   "parserOptions": {
     "ecmaVersion": 2020,
     "sourceType": "module"

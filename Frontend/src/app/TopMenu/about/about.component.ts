@@ -26,7 +26,9 @@ export class AboutComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    this.translateService.areTranslationsLoaded().subscribe();
+    this.subscription = this.translateService.areTranslationsLoaded().subscribe(loaded => {
+      this.loaded = loaded;
+    });
   }
 
   ngOnDestroy() {
