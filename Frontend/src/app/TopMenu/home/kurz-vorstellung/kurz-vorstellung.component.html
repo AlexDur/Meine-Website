@@ -9,15 +9,29 @@
       <div class="content-container">
       <div class="content-box-left">
         <!-- Anzeigen des Bildes, wenn 'left' 'image' ist -->
+        <div class="content-box image">
         <img *ngIf="activeTabContent?.left === 'image'" [src]="activeTabContent?.imageUrl">
+        </div>
         <p *ngIf="activeTabContent?.left === 'text'">{{ activeTabContent?.description }}</p>
       </div>
       <div class="content-box-right">
         <!-- Anzeigen des Bildes, wenn 'right' 'image' ist -->
+        <div class="content-box image">
         <img *ngIf="activeTabContent?.right === 'image'" [src]="activeTabContent?.imageUrl">
-        <p *ngIf="activeTabContent?.right === 'text'">{{ activeTabContent?.description }}</p>
       </div>
+        <p *ngIf="activeTabContent?.right === 'text'">{{ activeTabContent?.description }}</p>
+        <iframe *ngIf="activeTabContent?.right === 'map'"
+                [src]="activeTabContent?.mapUrl"
+                safeUrl
+                width="600"
+                height="450"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy">
+        </iframe>
       </div>
     </div>
   </div>
 </div>
+
+<!-- width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">-->

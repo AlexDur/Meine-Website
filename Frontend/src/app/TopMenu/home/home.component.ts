@@ -10,6 +10,7 @@ import {BrandingComponent} from '../../branding/branding.component';
 import {ButtonModule} from 'primeng/button';
 import {Router} from '@angular/router';
 import {Subscription} from 'rxjs';
+import {IntroComponent} from './intro/intro.component';
 
 @Component({
   selector: 'app-home',
@@ -21,7 +22,8 @@ import {Subscription} from 'rxjs';
     ProjekteComponent,
     KurzVorstellungComponent,
     BrandingComponent,
-    ButtonModule
+    ButtonModule,
+    IntroComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'

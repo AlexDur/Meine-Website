@@ -23,6 +23,7 @@ import {BadgeModule} from 'primeng/badge';
 import {CommonModule} from '@angular/common';
 import {ToggleButtonModule} from 'primeng/togglebutton';
 import {FormsModule} from '@angular/forms';
+import {IntroComponent} from './TopMenu/home/intro/intro.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,7 @@ import {FormsModule} from '@angular/forms';
     BadgeModule,
     ToggleButtonModule,
     FormsModule,
-
+    IntroComponent
   ],
   providers: [],
   exports: [

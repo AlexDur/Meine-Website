@@ -45,7 +45,7 @@ ul li a:hover {
 body, html {
   height: 100%;
   font-family: "Calibri", sans-serif;
-  background: linear-gradient(to bottom, #4452fd, #5b6bff);
+  background: linear-gradient(to bottom, #1cbc9b, #3cbc9b);
   /*background-color: #4d5cff;*/
   margin: 0;
   font-size: var(--base-font-size);
@@ -152,18 +152,20 @@ body, html {
 
   .logo {
     display: flex;
+    margin-right:50px;
     align-items:  start;
   }
 
   .logo img {
-    width: 60px;
-    height: 60px;
+    width: 160px;
+    height: 110px;
   }
 
   .custom-button {
     padding: 10px 20px;
     border: 1px solid white;
     color: white;
+    font-weight:bold;
     border-radius: 50px !important;
     background-color: transparent;
     transition: background-color 0.3s ease;
@@ -176,25 +178,12 @@ body, html {
     background-color: #fff;
     color: black;
     border: 1px solid black;
-
   }
 
-/*  .custom-button::before  {
-    content: "\2709";
-    display: none;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: -25px;
-    margin-left: 5px;
+  .custom-tooltip {
+    background-color: black !important;
+    color: white !important;
   }
-
-  .custom-button:hover::before {
-    content: "\2709";
-    display: inline-block;
-    margin-left: 5px;
-    font-size: 18px;
-  }*/
 
 
   .p-toggleButton {
@@ -204,14 +193,21 @@ body, html {
 
   .p-toggleButton .p-button {
     border-radius: 50px !important;
+
+  }
+
+  .p-toggleButton:hover {
+    border: 1px solid black;
   }
 
   .p-togglebutton.p-button.p-highlight {
-    background-color: orangered !important;
-    border-color: orangered !important;
+    background-color: orangered;
+    border: 1px solid black;
+    color:black;
   }
 
   .p-button:focus {
+    border: 1px solid black;
     outline: 0 none;
     outline-offset: 0;
     box-shadow: none;
@@ -224,13 +220,12 @@ body, html {
   display: inline-block;
 }
 
-.header-component a:last-child {
-  float: right;
-  margin-right: 0;
-}
+
 
 .header-component .active-menu-item {
-  border-bottom: 2px solid #000;
+  border-bottom: 2px solid white;
+  padding:0px;
+  padding-bottom:2px;
 }
 
 
@@ -239,28 +234,39 @@ body, html {
 .home-component {
   display: flex;
   justify-content: space-between;
+}
 
+/*Intro-Komponente*/
 
-.square-block-home {
-  border: 3px solid black;
-  min-height: 60vh;
-  flex-direction: column;
-  padding: 10px;
+.intro-component{
   display: flex;
-  align-items: flex-start;
-  justify-content: right;
-  margin-bottom:100px;
-}
+  justify-content: space-between;
 
-.box-links {
-  flex: 3;
-}
 
-.box-rechts {
-  flex: 1;
-}
-}
+  .square-block-intro {
+    border: 3px solid black;
+    min-height: 60vh;
+    flex-direction: column;
+    padding: 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: right;
+    margin-bottom:100px;
+  }
 
+  .box-links {
+    flex: 0 0 60%;
+  }
+
+  .box-rechts {
+    flex: 0 0 40%;
+  }
+
+  .intro-button{
+    background-color: orangered;
+    margin-top:70px;
+  }
+}
 
 /*Code-Prinzipen-Komponente*/
 
@@ -437,7 +443,7 @@ body, html {
 
 .kurzvorstellung-container{
   background-color: aquamarine;
-  height:50vh;
+  height:80vh;
   margin-top:50px;
   margin-bottom:100px;
 }
@@ -452,7 +458,8 @@ body, html {
 
   .tab-menu {
     flex: 0 0 auto;
-    padding-top: 100px;
+    padding-top: 50px;
+    padding-bottom:100px;
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -479,7 +486,9 @@ body, html {
   }
 
   .content-box-left, .content-box-right {
+
     flex: 1;
+    height:450px;
   }
 
   .content-box-right {
@@ -488,6 +497,12 @@ body, html {
 
   .content-box-left {
     border: 1px solid red;
+  }
+
+  .content-box.image{
+    display:flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 

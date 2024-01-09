@@ -1,14 +1,6 @@
 <!--Inhalt der Komponente wird erst gezeigt, wenn translationLoaded =true-->
 <div class="home-component" *ngIf="loaded; else loading">
-  <div class="square-block-home box-rechts">
-    <p style="font-size: 35px;">{{ 'home.title' | translate | async }}</p>
-    <p style="font-size: 15px;">{{ 'home.description' | translate | async }}</p>
-  <p-button label="Kontaktieren Sie mich" (onClick)="navigateToContact()" class="home-button"></p-button>
-</div>
-  <div class="square-block-home box-rechts">
-    <img src="assets/images/logo1_pixel.png" alt="Logo">
-  </div>
-
+<app-intro></app-intro>
 </div>
 <div>
 <app-code-prinzipien></app-code-prinzipien>
