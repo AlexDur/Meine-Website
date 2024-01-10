@@ -1,3 +1,14 @@
+$primary-color: #1cbc9b;
+$primary-color-light: #4eb199;
+
+$tertiary-color: #ffa219;
+
+.button-tertiary {
+  @extend .intro-button;
+  background-color: $tertiary-color;
+  color: black;
+}
+
 :root {
   --base-font-size: 16px;
 }
@@ -45,8 +56,20 @@ ul li a:hover {
 body, html {
   height: 100%;
   font-family: "Calibri", sans-serif;
-  background: linear-gradient(to bottom, #1cbc9b, #3cbc9b);
-  /*background-color: #4d5cff;*/
+  background: linear-gradient(
+      to bottom,
+      $primary-color 0%,       /* Start der ersten Farbe */
+      $primary-color-light 16.5%,      /* Ende der ersten Farbe bei 100vh (25% von 400vh) */
+      black 16.5%,        /* Start der zweiten Farbe an derselben Stelle */
+      black 39%,      /* Ende der zweiten Farbe bei 50vh (37.5% von 400vh) */
+      $primary-color 39%,    /* Start der ersten Farbe an derselben Stelle */
+      $primary-color 49%,    /* Ende der ersten Farbe bei weiteren 100vh */
+      black 49%,      /* Start der zweiten Farbe an derselben Stelle */
+      black 70%,        /* Ende der zweiten Farbe bei weiteren 100vh */
+      #ffa219 60%,    /* Start der ersten Farbe an derselben Stelle */
+      #ffa219 100%
+  );
+  background-size: 100% 600vh;
   margin: 0;
   font-size: var(--base-font-size);
 }
@@ -56,7 +79,7 @@ body, html {
 
 .router-outlet-container {
   padding: 20px;
-  border: 1px solid #ccc;
+  /*border: 1px solid #ccc;*/
   margin-left: 275px;
   margin-right: 275px;
   display: flex;
@@ -103,7 +126,7 @@ body, html {
 
 
 .scroll-top-button-fade-out {
-  animation: fadeOut 0.5s ease forwards;
+  animation: fadeOut 1s ease forwards;
 }
 
 @keyframes fadeOut {
@@ -118,7 +141,7 @@ body, html {
 }
 
 .scroll-top-button:hover {
-  background: turquoise;
+  background: $primary-color;
 }
 
 .field-fixed {
@@ -144,10 +167,11 @@ body, html {
   .header-font {
     color: #ffffff;
     margin-right: 30px;
+    font-size:20px;
   }
 
   .items {
-    margin-right: 250px;
+    margin-right: 100px;
   }
 
   .logo {
@@ -188,7 +212,7 @@ body, html {
 
   .p-toggleButton {
     border-radius: 50px !important;
-    margin-right: 250px;
+    margin-right: 150px;
   }
 
   .p-toggleButton .p-button {
@@ -201,9 +225,9 @@ body, html {
   }
 
   .p-togglebutton.p-button.p-highlight {
-    background-color: orangered;
+    background-color: black;
     border: 1px solid black;
-    color:black;
+    color:white;
   }
 
   .p-button:focus {
@@ -238,286 +262,323 @@ body, html {
 
 /*Intro-Komponente*/
 
-.intro-component{
+.intro-component {
   display: flex;
   justify-content: space-between;
 
-
   .square-block-intro {
-    border: 3px solid black;
+    /* border: 3px solid black;*/
     min-height: 60vh;
+    padding: 50px;
+    padding-left:0;
     flex-direction: column;
-    padding: 10px;
     display: flex;
     align-items: flex-start;
     justify-content: right;
-    margin-bottom:100px;
+    margin-bottom: 100px;
   }
 
   .box-links {
-    flex: 0 0 60%;
+    flex: 0 0 2;
   }
 
   .box-rechts {
-    flex: 0 0 40%;
+    flex: 0 0 1;
   }
 
-  .intro-button{
-    background-color: orangered;
-    margin-top:70px;
-  }
-}
+  .intro-button {
+    margin-top: 20px;
+    width:200px;
+    height:50px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
 
-/*Code-Prinzipen-Komponente*/
-
-.code-prinzipen-component{
-
-  .content-container {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 20px;
-  }
-
-  .content-block {
-    text-align: center;
-    in-height: 100vh;
-    margin: 10px;
-    flex: 0 1 calc(33.33% - 20px);
+    &:hover {
+      background-color: darken($tertiary-color, 10%);
+    }
   }
 }
 
-/*Kontakt-Komponente*/
+  /*Code-Prinzipen-Komponente*/
 
-.contact-component {
-  display: flex;
-  margin-top:100px;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 3rem;
-  width: 100%;
-  flex-direction: column;
-  align-items: center;
+  .code-prinzipen-component {
 
-  .custom-input {
-    width: 100%;
-    height: 40px;
-    padding:10px
+    .content-container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 20px;
+      margin-top: 50px;
+    }
+
+    .content-block {
+      max-width: 300px;
+      text-align: center;
+      in-height: 100vh;
+      margin-right: 100px;
+      flex: 0 1 calc(33.33% - 50px);
+      color: white;
+      line-height: 1.5;
+
+    .img {
+      width: 100px;
+      height: 100%;
+      object-fit: cover;
+    }
+    }
   }
 
-  .custom-textarea{
-    width: 100%;
-    height: 120px;
-    padding-bottom:70px;
-    padding-left:10px;
-  }
+  /*Kontakt-Komponente*/
 
-  .p-col {
-    flex: 1;
-    margin-right: 10px;
-  }
-
-  .p-col:last-child {
-    margin-right: 0;
-  }
-
-  .input-row {
-    width: 100%;
-    max-width: 800px;
+  .contact-component {
     display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-  }
-
-  .input-single {
-    width: 100%;
-    max-width: 900px; /* Konsistente Breite für alle Inputfelder */
-    display: flex;
-    margin-top:10px;
-    margin-bottom: 10px;
-  }
-
-  .container{
-    display: flex;
-    width:80%;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top: 100px;
+    padding-bottom: 3rem;
+    width: 100%;
+    align-items: center;
+
+    .custom-input {
+      width: 100%;
+      height: 40px;
+      padding: 10px
+    }
+
+    .custom-textarea {
+      width: 100%;
+      height: 120px;
+      padding-bottom: 70px;
+      padding-left: 10px;
+    }
+
+    .p-col {
+      flex: 1;
+      margin-right: 10px;
+    }
+
+    .p-col:last-child {
+      margin-right: 0;
+    }
+
+    .input-row {
+      width: 100%;
+      max-width: 800px;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+
+    .input-single {
+      width: 100%;
+      max-width: 900px; /* Konsistente Breite für alle Inputfelder */
+      display: flex;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    .container {
+      display: flex;
+      width: 80%;
+      height: 80vh;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .box-links {
+      border: 3px solid black;
+      width: 40%;
+      margin-right: 75px;
+      background-color: black;
+      padding: 50px;
+    }
+
+    .box-rechts {
+      border-left: 3px solid #ffa219;
+      width: 30%;
+      padding-left: 25px;
+    }
   }
 
-  .box-links{
-    border: 3px solid black;
-    width:40%;
-    margin-right:75px;
-  }
+  /*about-Komponente*/
 
-  .box-rechts{
-    border: 3px solid red;
-    width:30%;
-  }
-}
-
-/*about-Komponente*/
-
-.about-component {
-  display: flex;
-  justify-content: space-between;
-
-  .square-block{
-    flex: 1;
-    flex-direction: column;
-    margin: 10px;
-    aspect-ratio: 1 / 1;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-  }
-}
-
-/*services-Komponente*/
-
-.services-component{
-  display: flex;
-  justify-content: space-between;
-
-  .square-block{
-    flex: 1;
-    flex-direction: column;
-    margin: 10px;
-    aspect-ratio: 1 / 1;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-  }
-}
-
-/*Portfolio-Komponente*/
-.portfolio-component {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 15px;
-  text-align:left;
-  align-items: stretch;
-  margin-top:100px;
-}
-
-.portfolio-component .custom-card {
-  display: flex;
-  flex-direction: column;
-  height: 300px;
-  justify-content: space-between;
-  background-color: #f0f0f0;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
-
-.custom-card .p-card-body{
-  flex-grow: 1;
-  overflow: auto;
-}
-
-.portfolio-component .custom-card .card-image {
-  border-radius: 30px;
-  width: 100%;
-  height: auto;
-}
-
-/*TODO: Kann verschlankt werden, wenn p-button richtig funktioniert*/
-
-.portfolio-component .custom-card .custom-button {
-  background-color: #007bff; // Beispielfarbe für den Hintergrund
-  color: white; // Textfarbe
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin-top: auto;
-
-  &:hover {
-    background-color: #0056b3;
-  }
-}
-
-
-
-/*Kurzvorstellung-Komponente*/
-
-.kurzvorstellung-container{
-  background-color: aquamarine;
-  height:80vh;
-  margin-top:50px;
-  margin-bottom:100px;
-}
-
-.kurzvorstellung-component {
-  margin-top:600px;
-  display: flex;
-  justify-content: space-between;
-  text-align: left;
-  height: 20vh;
-  flex-direction: column;
-
-  .tab-menu {
-    flex: 0 0 auto;
-    padding-top: 50px;
-    padding-bottom:100px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-  }
-
-  .p-tabmenu .p-tabmenu-nav .p-tabmenuitem {
-    margin-right: 20px;
-  }
-
-  .tab-content {
+  .about-component {
     display: flex;
     justify-content: space-between;
-    flex-direction: row;
-    border: 3px solid black;
-    flex: 1 1 auto;
+
+    .square-block {
+      flex: 1;
+      flex-direction: column;
+      margin: 10px;
+      aspect-ratio: 1 / 1;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+    }
   }
 
-  .content-container{
+  /*services-Komponente*/
+
+  .services-component {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 20px;
+    justify-content: space-between;
+
+    .square-block {
+      flex: 1;
+      flex-direction: column;
+      margin: 10px;
+      aspect-ratio: 1 / 1;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+    }
+  }
+
+  /*Portfolio-Komponente*/
+  .portfolio-component {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 25px;
+    text-align: left;
+    align-items: stretch;
+    margin-top: 100px;
+  }
+
+  .portfolio-component .custom-card {
+    display: flex;
+    flex-direction: column;
     height: 300px;
+    justify-content: space-between;
+    background-color: #f0f0f0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   }
 
-  .content-box-left, .content-box-right {
-
-    flex: 1;
-    height:450px;
+  .custom-card .p-card-body {
+    flex-grow: 1;
+    overflow: auto;
   }
 
-  .content-box-right {
-    border: 1px solid green;
+  .portfolio-component .custom-card .card-image {
+    border-radius: 30px;
+    width: 100%;
+    height: auto;
   }
 
-  .content-box-left {
-    border: 1px solid red;
+  /*TODO: Kann verschlankt werden, wenn p-button richtig funktioniert*/
+
+  .portfolio-component .custom-card .custom-button {
+    background-color: $primary-color;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: auto;
+
+    &:hover {
+      background-color: #0056b3;
+    }
   }
 
-  .content-box.image{
-    display:flex;
-    justify-content: center;
-    align-items: center;
+
+  /*Kurzvorstellung-Komponente*/
+
+
+  .kurzvorstellung-component {
+    margin-top: 450px;
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    flex-direction: column;
+
+    .kurzvorstellung-container {
+      margin-top: -300px;
+      margin-bottom: 100px;
+      position: relative;
+    }
+
+    .tab-menu {
+      flex: 0 0 auto;
+      padding-top: 50px;
+      padding-bottom: 100px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    .custom-tabmenu .p-tabmenu .p-tabmenu-nav .p-tabmenuitem {
+      margin-right: 30px; /* Änderung des Abstands */
+      background-color: blue; /* Änderung der Hintergrundfarbe */
+    }
+
+
+    .mcustom-tabmenu .p-tabmenu .p-tabmenu-nav .p-tabmenuitem:hover {
+      background-color: green;
+    }
+
+    .p-tabmenu .p-tabmenu-nav .p-tabmenuitem {
+      margin-right: 20px;
+    }
+
+    .tab-content {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      border: 3px solid black;
+      flex: 1 1 auto;
+    }
+
+    .content-container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 20px;
+      color: white;
+
+    }
+
+    .content-box-left, .content-box-right {
+      flex: 1;
+      height: 450px;
+    }
+
+    .content-box-right {
+    /*  background-color: $primary-color;*/
+      border: 5px solid $primary-color;
+      padding:50px;
+    }
+
+    .content-box-left {
+     /* background-color: $tertiary-color;*/
+      border: 5px solid $tertiary-color;
+      padding:50px;
+    }
+
+    .content-box.image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
-}
 
   /*Footer-Komponente*/
 
-.footer-component {
-  display: flex;
-  z-index:1;
-  margin-top: 200px;
-  margin-left: 250px;
-  margin-right: 250px;
-  height:20vh;
-  justify-content: center;
-  background-color: rgba(0, 0, 0, 0.05);
-}
+  .footer-component {
+    display: flex;
+    z-index: 1;
+    margin-top: 200px;
+    margin-left: 250px;
+    margin-right: 250px;
+    height: 20vh;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.05);
+  }
 
   .box {
     margin: 5px;
@@ -530,18 +591,18 @@ body, html {
     width: 40%;
   }
 
-    .listing ul {
-      list-style-type: none;
-      padding: 0;
-    }
+  .listing ul {
+    list-style-type: none;
+    padding: 0;
+  }
 
-    .listing li {
-      margin-bottom: 10px;
-    }
+  .listing li {
+    margin-bottom: 10px;
+  }
 
-    .box > * {
-      margin-left: 20px;
-    }
+  .box > * {
+    margin-left: 20px;
+  }
 
   .pi {
     font-size: 2rem;
@@ -563,9 +624,10 @@ body, html {
 
 
   div > .pi {
-      margin-top:10px;
-      margin-right: 15px;
-    }
+    margin-top: 10px;
+    margin-right: 15px;
+  }
+
 
 
 

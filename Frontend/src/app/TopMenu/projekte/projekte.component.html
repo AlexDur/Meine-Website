@@ -1,13 +1,13 @@
 <div *ngIf="loaded; else loading">
   <div>
-    <h1 style="margin-top:200px;">{{ 'portfolio.title' | translate | async }}</h1>
+    <h1 style="margin-top:200px;color:white;">{{ 'portfolio.title' | translate | async }}</h1>
   </div>
 
   <div class="portfolio-component">
   <p-card *ngFor="let card of cards"  class="custom-card">
     <img src="{{card.image}}" alt="{{card.title}}" class="card-image">
-    <h3>{{card.title}}</h3>
-    <h4>{{card.header}}</h4>
+    <h3 style="color:black;">{{card.title}}</h3>
+    <h4 style="color:#1cbc9b;">{{card.header}}</h4>
     <p>{{card.content}}</p>
     <div>
       <p-button [label]="card.button.text" styleClass="custom-button"></p-button>

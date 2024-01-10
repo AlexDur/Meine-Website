@@ -930,3 +930,9 @@ w
 G.idea/sonarlint/issuestore/9/c/9c458cc15db78432194f81b1babf0575f5181d6b,4\1\41512a482260e2976791b81bf25e251730d18065
 Å
 Q.idea/sonarlint/securityhotspotstore/e/0/e0df737ce814ecd5327f6345d595d2ac628de165,f\7\f7791b14d8def5d2643a21c380d405e6700f69a6
+f
+6Frontend/src/app/TopMenu/home/intro/intro.component.ts,5\5\558d88ad482bf3dfbf63bfc8d530c4105c36dba6
+h
+8Frontend/src/app/TopMenu/home/intro/intro.component.html,7\f\7fbe7cc801bcf2d427d7637b0dbed894edd79e45
+h
+8Frontend/src/app/TopMenu/home/intro/intro.component.scss,a\6\a6aa2c8532f0237628a91e64b183b84d4b85516e

@@ -1,7 +1,7 @@
 {
   "home": {
     "title": "Vollumfängliche Entwicklung von Webseiten und mobilen Anwendungen",
-    "description": "Keine Page Builder oder WordPress - Wir bieten 100% handcodierte Websites mit hervorragenden Ergebnissen"
+    "description": "Keine Page Builder oder WordPress - LavaLurch Webdev bietet 100% handcodierte Websites mit hervorragenden Ergebnissen"
   },
   "menu": {
     "home": "Home",
@@ -50,12 +50,10 @@
       "description": "Ich entwickle moderne Webseiten und Webanwendungen für Kleinunternehmen. Dabei setze ich auf die neuesten Technologien und Standards, um Ihnen eine Webseite zu bieten, die nicht nur gut aussieht, sondern auch schnell und sicher ist."
     }
   },
-
   "portfolio": {
     "title": "Portfolio",
     "description": "....."
   },
-
   "kurzvorsellung": {
     "tabmenu": {
       "who": "Wer bin ich?",
@@ -81,5 +79,9 @@
         "text": "Inhalt für Tab 4"
       }
     }
+  },
+  "code-principles": {
+    "offer": "Mein Angebot",
+    "description": "Ich habe mich auf Webdesign und -entwicklung für kleine Unternehmen im deutsch- und englischsprachigem Raum spezialisiert. Jede Zeile des Codes wird von Hand geschrieben, um die beste Leistung zu gewährleisten, die dazu beiträgt, mehr Kunden auf Ihre Website zu bringen und mehr Einnahmen für Ihr Unternehmen zu erzielen."
   }
 }

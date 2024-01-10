@@ -8,7 +8,7 @@ import {SharedModule} from '../../../shared/shared.module';
 @Component({
   selector: 'app-intro',
   standalone: true,
-  imports: [SharedModule, ButtonModule, SharedModule, SharedModule],
+  imports: [SharedModule, ButtonModule],
   templateUrl: './intro.component.html',
   styleUrl: './intro.component.scss'
 })
