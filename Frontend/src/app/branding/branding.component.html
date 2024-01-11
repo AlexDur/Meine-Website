@@ -1,10 +1,24 @@
 <div class="branding-component">
-  <div class="field">
-   © 2023 • Alexander Durach
-</div>
-  <div class="field">Feld 2</div>
-  <div class="field field-fixed" *ngIf="showScrollButton">
-    <button (click)="scrollToTop()" class="scroll-top-button" [ngClass]="{'scroll-top-button-fade-out': fadeOutButton}">↑</button>
+  <div class="field left-field">
+    © 2023 • Alexander Durach
+  </div>
+
+  <div class="field right-field">
+    <div class="listing">
+      <ul>
+        <li><a routerLink="/home">Home</a></li>
+        <li><a routerLink="/about">About</a></li>
+        <li><a routerLink="/services">Services</a></li>
+        <li><a routerLink="/portfolio">Portfolio</a></li>
+        <li><a routerLink="/contact">Kontakt</a></li>
+      </ul>
+    </div>
   </div>
 </div>
+
+
+<div class="field field-fixed" *ngIf="showScrollButton">
+    <button (click)="scrollToTop()" class="scroll-top-button" [ngClass]="{'scroll-top-button-fade-out': fadeOutButton}">↑</button>
+  </div>
+
 

@@ -24,6 +24,7 @@ import {CommonModule} from '@angular/common';
 import {ToggleButtonModule} from 'primeng/togglebutton';
 import {FormsModule} from '@angular/forms';
 import {IntroComponent} from './TopMenu/home/intro/intro.component';
+import {TechstackComponent} from './TopMenu/home/techstack/techstack.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import {IntroComponent} from './TopMenu/home/intro/intro.component';
     BadgeModule,
     ToggleButtonModule,
     FormsModule,
-    IntroComponent
+    IntroComponent,
+    TechstackComponent
   ],
   providers: [],
   exports: [

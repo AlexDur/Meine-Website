@@ -1,15 +1,17 @@
 <div class="header-component">
+  <div class="header-content">
   <div class="logo">
-    <img src="assets/images/lavalurch2.png" alt="Logo">
-  </div> <!-- Schließendes Tag hinzugefügt -->
-  <div class="items">
-    <a class="header-font" *ngFor="let item of items" [routerLink]="item.url"
-       (click)="setActiveItem(item.url)"
-       [ngClass]="{'active-menu-item': activeItem === item.url}">
-      {{ item.label }}
-    </a>
+    <img src="../../assets/images/logo_gruen.png" alt="Logo">
   </div>
-  <button id="emailButton" (click)="openEmailClient()" class="custom-button">Kostenlose Beratung anfordern</button>
+  <div class="items-und-toggle">
+    <div>
+      <a class="header-font" *ngFor="let item of items" [routerLink]="item.url"
+         (click)="setActiveItem(item.url)"
+         [ngClass]="{'active-menu-item': activeItem === item.url}">
+        {{ item.label }}
+      </a>
+    </div>
+<!--  <button id="emailButton" (click)="openEmailClient()" class="custom-button">Kostenlose Beratung anfordern</button>
   <script>
     document.getElementById('emailButton').addEventListener('click', function() {
       // Erstellen Sie eine E-Mail-Adresse
@@ -18,11 +20,13 @@
       // Öffnen Sie ein E-Mail-Fach mit der E-Mail-Adresse als Empfänger
       window.location.href = 'mailto:' + email;
     });
-  </script>
-  <div>
-    <p-toggleButton [(ngModel)]="checked"
-                    pTooltip="Language switching feature is currently under development"
-                    tooltipPosition="right" onLabel="EN" offLabel="DE" class="custom-tooltip">
-    </p-toggleButton>
+  </script>-->
+    <div>
+      <p-toggleButton [(ngModel)]="checked"
+                      pTooltip="Language switching feature is currently under development"
+                      tooltipPosition="right" onLabel="EN" offLabel="DE" class="custom-tooltip">
+      </p-toggleButton>
+    </div>
+  </div>
   </div>
 </div>

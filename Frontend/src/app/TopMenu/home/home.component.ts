@@ -11,6 +11,7 @@ import {ButtonModule} from 'primeng/button';
 import {Router} from '@angular/router';
 import {Subscription} from 'rxjs';
 import {IntroComponent} from './intro/intro.component';
+import {TechstackComponent} from './techstack/techstack.component';
 
 @Component({
   selector: 'app-home',
@@ -23,7 +24,8 @@ import {IntroComponent} from './intro/intro.component';
     KurzVorstellungComponent,
     BrandingComponent,
     ButtonModule,
-    IntroComponent
+    IntroComponent,
+    TechstackComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
