@@ -8,7 +8,8 @@ $text-color-text:#898989;
 
 /*Text-Colors festlegen für Schrift vor dunkleren Hintergrund*/
 $text-color-ueberschrift-dunkel:#333333;
-$text-color-unterueberschrift-dunkel:#838383;
+$text-color-unterueberschrift-dunkel:#757575;
+$text-color-text-dunkel:#7f7f7f;
 
 .button-tertiary {
   @extend .intro-button;
@@ -22,7 +23,7 @@ $text-color-unterueberschrift-dunkel:#838383;
 }
 
 body, html {
-  height: 100%;
+  height: 200%;
   font-family: "Calibri", sans-serif;
   margin:0;
   /*  margin-left:150px;
@@ -42,6 +43,7 @@ body, html {
   );
   background-size: 100% 600vh;
   font-size: var(--base-font-size);
+  font-family: "Calibri","proxima nova light", "Helvetica Neue", "Swiss 7","Verdana", sans-serif;
 }
 
 body::after {
@@ -52,39 +54,38 @@ body::after {
   left: 0;
   right: 0;
   height: 10px;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
-h1{
-  font-size: 36px;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-  color:#424242;
-}
+h1{}
 
-h2{
-  margin: 0;
-}
+h2{}
 
-h3{
-  font-size: 24px;
-  padding-bottom: 0;
-  margin-bottom: 0;
+h3{}
 
-}
-
-h4{
-  margin: 0;
-  padding: 0;
-  color:#383838;
-}
+h4{}
 
 p {
   margin-top: 10px;
   margin-bottom: 10px;
   padding: 0;
 }
+
+.ueberschrift-dunkel{
+  color: $text-color-ueberschrift-dunkel;
+  font-weight:initial;
+
+}
+
+.unterueberschrift-dunkel{
+  color: $text-color-unterueberschrift-dunkel;
+}
+
+.text-dunkel{
+  color: $text-color-text-dunkel;
+}
+
+
 
 ul li a {
   color: black;
@@ -222,8 +223,12 @@ ul li a:hover {
   /* margin-bottom: 60px;
    margin-right: 275px;*/
   background-color: $primary-color;
+  position: sticky;
+  top: 0;
+  z-index: 9000;
 
   .header-content {
+
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -405,6 +410,7 @@ ul li a:hover {
   height: 100%;
   position: absolute;
   top: 0;
+
 }
 
 .half-circle::before {
@@ -419,12 +425,18 @@ ul li a:hover {
 
 .half-circle-left {
   left: 0;
-  background-color: #ff1979;
+  font-weight:bold;
+  clip-path: circle(50% at 100% 50%);
+  /*clip-path: ellipse(50% 100% at 50%);*/
+  background-image: linear-gradient(to top, #57ba84, #01b497, #00a597, #019392);
 }
 
 .half-circle-right {
   right: 0;
-  background-color: #fe935f;
+  font-weight:bold;
+  clip-path: circle(50% at 0% 50%);
+  /*clip-path: ellipse(50% 100% at  50%);*/
+  background-image: linear-gradient(to bottom, #f77d28, #f27a2e, #f08527, #eb9532, #b44840)
 }
 
 .logo-container {
@@ -489,10 +501,8 @@ ul li a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 100px;
     padding-bottom: 3rem;
     width: 100%;
-    align-items: center;
 
     .custom-input {
       width: 100%;
@@ -507,9 +517,12 @@ ul li a:hover {
       padding-left: 10px;
     }
 
+
     .p-col {
       flex: 1;
       margin-right: 10px;
+      display: flex;
+      flex-direction: column;
     }
 
     .p-col:last-child {
@@ -542,7 +555,7 @@ ul li a:hover {
 
     .box-links {
       border: 3px solid black;
-      width: 40%;
+      flex:1;
       margin-right: 75px;
       background-color: black;
       padding: 50px;
@@ -550,8 +563,20 @@ ul li a:hover {
 
     .box-rechts {
       border-left: 3px solid #ffa219;
-      width: 30%;
+      flex:1;
       padding-left: 25px;
+    }
+
+    .p-inputGroup {
+      display: flex;
+      flex-direction: column; /* Sorgt dafür, dass die Elemente vertikal gestapelt werden */
+      align-items: flex-start; /* Richtet die Elemente linksbündig aus */
+      width: 100%; /* Stellt sicher, dass die Gruppe die volle Breite einnimmt */
+    }
+
+    .p-inputGroup label {
+      margin-bottom: 8px; /* Abstand zwischen Label und Eingabefeld */
+      /* Weitere Label-Stile nach Bedarf */
     }
   }
 
@@ -599,29 +624,64 @@ ul li a:hover {
     margin-top: 100px;
   }
 
-  .portfolio-component .custom-card {
+
+  .portfolio-header{
+    display: flex;
+    align-items: center;
+    margin-top: 200px;
+    heigh:300px;
+  }
+
+.portfolio-header h1 {
+  display: flex;
+  color: #606060;
+  margin: 0;
+  white-space: nowrap;
+  align-items: center;
+}
+
+/*  .portfolio-component .custom-card {
     display: flex;
     flex-direction: column;
     height: 300px;
+    margin:0;
+    padding:10px;
     justify-content: space-between;
     background-color: #f0f0f0;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  }
+  }*/
 
-  .custom-card .p-card-body {
+/*  .custom-card .p-card-body {
     flex-grow: 1;
     overflow: auto;
-  }
+  }*/
+
+.portfolio-header .header-line {
+  flex-grow: 1;
+  border: .3px solid;
+  height: 2px;
+  background-color: #000;
+  margin-left: 10px;
+}
+
+.p-card-content{
+  padding-top:0;
+  padding-bottom:0;
+}
 
   .portfolio-component .custom-card .card-image {
-    border-radius: 30px;
+    display:flex;
+    justify-content: center;
+    border-radius: 5px;
     width: 100%;
     height: auto;
+    cursor:pointer;
+    padding-top: 5px;
   }
 
   /*TODO: Kann verschlankt werden, wenn p-button richtig funktioniert*/
 
-  .portfolio-component .custom-card .custom-button {
+/*  .portfolio-component .custom-card .custom-button {
     background-color: $primary-color;
     color: white;
     border: none;
@@ -634,7 +694,7 @@ ul li a:hover {
     &:hover {
       background-color: #0056b3;
     }
-  }
+  }*/
 
 
   /*Kurzvorstellung-Komponente*/

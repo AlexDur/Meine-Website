@@ -1,17 +1,19 @@
 <div *ngIf="loaded; else loading">
-  <div>
-    <h1 style="margin-top:200px;color:white;">{{ 'portfolio.title' | translate | async }}</h1>
+  <div class="portfolio-header">
+    <h1>{{ 'portfolio.title' | translate | async }}</h1>
+    <hr class="header-line" />
   </div>
 
   <div class="portfolio-component">
   <p-card *ngFor="let card of cards"  class="custom-card">
     <img src="{{card.image}}" alt="{{card.title}}" class="card-image">
-    <h3 style="color:black;">{{card.title}}</h3>
-    <h4 style="color:#1cbc9b;">{{card.header}}</h4>
-    <p>{{card.content}}</p>
-    <div>
+    <div style="color:black; padding:5px;">{{card.title}}</div>
+    <div style="color:#1cbc9b; padding-left:5px;">{{card.header}}</div>
+
+ <!--   <p>{{card.content}}</p>-->
+<!--    <div>
       <p-button [label]="card.button.text" styleClass="custom-button"></p-button>
-    </div>
+    </div>-->
     <!--< <p-button [label]="card.button.text" (onClick)="navigateTo(card.button.link)" styleClass="custom-button"></p-button>-->
   </p-card>
   </div>
