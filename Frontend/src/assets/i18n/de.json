@@ -1,7 +1,10 @@
 {
   "home": {
     "title": "Ich bin Webentwickler wohnhaft in Bonn",
-    "description": "Seit 2020 greife ich regelmäßig eigene Ideen aus dem Alltag auf und setze sie programmatisch in Form von Webseiten und mobilen Anwendungen um. Das macht großen Spaß."
+    "description": "Seit 2020 setze ich regelmäßig die Ideen meiner Kunden für ihre individuellen Geschäftsziele um.",
+    "description_two": "Mein Aufgabe ist es, eine Vision in eine ansprechende sowie nutzerfreundliche Webseite und bzw. oder mobile Anwendung zu verwandeln.",
+    "description_three": "Was schwebt Ihnen vor?",
+    "button": "Kontaktieren Sie mich"
   },
   "menu": {
     "home": "Home",
@@ -17,7 +20,7 @@
     "business": "Firma",
     "email": "E-Mail-Adresse",
     "phone": "Telefonnummer",
-    "message": "Schreiben Sie Ihre Nachricht hier...",
+    "message": "Nachricht",
     "send": "Senden"
   },
   "about": {
@@ -51,7 +54,7 @@
     }
   },
   "portfolio": {
-    "title": "Portfolio",
+    "title": "Was ich bisher programmiert habe",
     "description": "....."
   },
   "kurzvorsellung": {

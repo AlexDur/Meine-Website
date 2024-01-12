@@ -1,6 +1,6 @@
 <div *ngIf="loaded; else loading">
   <div>
-    <h1>{{ 'contact.title' | translate | async }}</h1>
+    <p style="margin-top:150px; font-size:90px; font-weight:bold;margin:0; color:#333333">{{ 'contact.title' | translate | async }}</p>
   </div>
 
   <div class="contact-component">
@@ -17,44 +17,29 @@
         </div>
 
       <div class="box-rechts">
-        <h2 style="color: white;"> Kontaktieren Sie mich</h2>
-        <h4>Gerne heute noch</h4>
+        <h2 style="font-size: 30px; color:#757575;margin-bottom:20px;">Senden Sie mir eine E-Mail</h2>
         <div>
-          <div class="p-col">
-            <p-inputGroup>
-              <label for="firstName">{{'contact.first_name' | translate | async }}</label>
-              <input id="firstName" type="text" pInputText class="custom-input" />
-            </p-inputGroup>
+          <div class="contact-col">
+              <label for="firstName" style="color:#898989;">{{'contact.first_name' | translate | async }}</label>
+            <input id="firstName" name="name" type="text" pInputText class="custom-input" required ngModel />
           </div>
-          <div class="p-col">
-            <p-inputGroup>
-              <label for="lastName">{{'contact.last_name' | translate | async }}</label>
-              <input id="lastName" type="text" pInputText class="custom-input" />
-            </p-inputGroup>
+<!--          <div class="p-col">
+              <label for="lastName" style="color:#898989;">{{'contact.last_name' | translate | async }}</label>
+              <input id="lastName" name="lastName" type="text" pInputText class="custom-input" required ngModel />
+          </div>-->
+          <div class="contact-col">
+              <label for="email" style="color:#898989;">{{'contact.email' | translate | async }}</label>
+              <input id="email" name="email" type="text" pInputText class="custom-input" required ngModel/>
           </div>
-
-          <!-- Einzelne Inputfelder -->
-          <div class="p-col">
-            <p-inputGroup>
-              <label for="email">{{'contact.email' | translate | async }}</label>
-              <input id="email" type="text" pInputText class="custom-input"/>
-            </p-inputGroup>
+      <!--    <div class="p-col">
+              <label for="phone" style="color:#898989;">{{'contact.phone' | translate | async }}</label>
+              <input id="phone" name="phone" type="text" pInputText class="custom-input" ngModel/>
+          </div>-->
+          <div class="contact-col">
+              <label for="message" name="message" style="color:#898989;">{{'contact.message' | translate | async }}</label>
+              <input id="message" type="text" pInputText class="custom-textarea" required ngModel/>
           </div>
-          <div class="p-col">
-            <p-inputGroup>
-              <label for="phone">{{'contact.phone' | translate | async }}</label>
-              <input id="phone" type="text" pInputText class="custom-input"/>
-            </p-inputGroup>
-          </div>
-
-          <div class="input-single">
-            <p-inputGroup>
-              <label for="message">{{'contact.message' | translate | async }}</label>
-              <input id="message" type="text" pInputText class="custom-textarea"/>
-            </p-inputGroup>
-          </div>
-
-
+<p-button></p-button>
       </div>
       </div>
 

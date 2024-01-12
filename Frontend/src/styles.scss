@@ -32,13 +32,17 @@ body, html {
       to bottom,
       $tertiary-color 0%,
       $tertiary-color 16.5%,
-      $secondary-color 16.5%,
-      $secondary-color 39%,
-      $tertiary-color 39%,
+      #d2cece 16.53%,
+      $secondary-color 16.56%,
+      $secondary-color 31.5%,
+      #d2cece 31.53%,
+      $tertiary-color 31.56%,
       $tertiary-color 49%,
-      $secondary-color 49%,
+      #d2cece 49.03%,
+      $secondary-color 49.06%,
       $secondary-color 70%,
-      $tertiary-color 60%,
+      #d2cece 70.03%,
+      $tertiary-color 70.06%,
       $tertiary-color 100%
   );
   background-size: 100% 600vh;
@@ -85,8 +89,6 @@ p {
   color: $text-color-text-dunkel;
 }
 
-
-
 ul li a {
   color: black;
   text-decoration: none;
@@ -96,20 +98,16 @@ ul li a:hover {
   text-decoration: underline;
 }
 
-
-
-
 /*RouterOutlet*/
 
 .router-outlet-container {
   padding: 20px;
   /*border: 1px solid #ccc;*/
-  margin-left: 400px;
-  margin-right: 400px;
+  margin-left: 350px;
+  margin-right: 350px;
   display: flex;
   flex-direction: column;
   min-height: 100%;
-
 }
 
 
@@ -202,6 +200,7 @@ ul li a:hover {
 
 .scroll-top-button:hover {
   background: $primary-color;
+  color:$secondary-color;
 }
 
 .field-fixed {
@@ -216,12 +215,8 @@ ul li a:hover {
 /*Header-Komponente*/
 
 .header-component {
-  /*  display: flex;*/
-  /*  justify-content: center;*/
   align-items: center;
   width: 100%;
-  /* margin-bottom: 60px;
-   margin-right: 275px;*/
   background-color: $primary-color;
   position: sticky;
   top: 0;
@@ -235,12 +230,11 @@ ul li a:hover {
     flex-direction: row;
     padding-top: 10px;
     padding-bottom: 10px;
-    padding-left: 25rem;
-    padding-right: 25rem;
+    padding-left: 22rem;
+    padding-right: 22rem;
     /*    margin-right: 250px;*/
   }
 }
-
 
   .header-font {
     color: #d9d9d9;
@@ -292,8 +286,8 @@ ul li a:hover {
   }
 
   .custom-tooltip {
-    background-color: black !important;
-    color: white !important;
+    background-color: black;
+    color: white ;
   }
 
 
@@ -319,7 +313,7 @@ ul li a:hover {
   }
 
 .active-menu-item {
-  border-bottom: 2px solid white;
+  color:white;
   padding:0px;
   padding-bottom:2px;
 }
@@ -361,8 +355,8 @@ ul li a:hover {
 
   .box-rechts img {
     width: 100%;
-    max-width: 500px; /* verhindert, dass das Bild breiter als 200px wird */
-    height: auto; /* hält das Seitenverhältnis des Bildes aufrecht */
+    max-width: 500px;
+    height: auto;
   }
 
   .intro-button {
@@ -374,6 +368,8 @@ ul li a:hover {
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
+    color:$tertiary-color;
+    background-color:#3e57cd;
     transition: background-color 0.3s, color 0.3s;
 
     &:hover {
@@ -390,7 +386,7 @@ ul li a:hover {
   justify-items: center;
   align-items: center;
   gap: 80px;
-  margin-top: 300px;
+  margin-top: 350px;
   height: 400px;
 }
 
@@ -436,7 +432,7 @@ ul li a:hover {
   font-weight:bold;
   clip-path: circle(50% at 0% 50%);
   /*clip-path: ellipse(50% 100% at  50%);*/
-  background-image: linear-gradient(to bottom, #f77d28, #f27a2e, #f08527, #eb9532, #b44840)
+  background-image: linear-gradient(to bottom, #f77d28, #f27a2e, #f08527, #eb9532, #f77d18)
 }
 
 .logo-container {
@@ -450,19 +446,13 @@ ul li a:hover {
 
 .logo-container.left {
   grid-column: 1;
+  margin-right:-50px;
 }
 
 .logo-container.right {
   grid-column: 3;
+  margin-left:50px;
 }
-
-/*.logo-container.show {
-  opacity: 1;
-  transform: translateX(0%);
-
-}*/
-
-
 
 
   /*Code-Prinzipen-Komponente*/
@@ -507,7 +497,8 @@ ul li a:hover {
     .custom-input {
       width: 100%;
       height: 40px;
-      padding: 10px
+      padding: 10px;
+      border-radius:5px;
     }
 
     .custom-textarea {
@@ -515,17 +506,20 @@ ul li a:hover {
       height: 120px;
       padding-bottom: 70px;
       padding-left: 10px;
+      border-radius:5px;
     }
 
 
-    .p-col {
+    .contact-col {
       flex: 1;
+      margin-top:10px;
+      width:335px;
       margin-right: 10px;
       display: flex;
       flex-direction: column;
     }
 
-    .p-col:last-child {
+    .contact-col:last-child {
       margin-right: 0;
     }
 
@@ -539,7 +533,7 @@ ul li a:hover {
 
     .input-single {
       width: 100%;
-      max-width: 900px; /* Konsistente Breite für alle Inputfelder */
+      max-width: 900px;
       display: flex;
       margin-top: 10px;
       margin-bottom: 10px;
@@ -569,14 +563,13 @@ ul li a:hover {
 
     .p-inputGroup {
       display: flex;
-      flex-direction: column; /* Sorgt dafür, dass die Elemente vertikal gestapelt werden */
-      align-items: flex-start; /* Richtet die Elemente linksbündig aus */
-      width: 100%; /* Stellt sicher, dass die Gruppe die volle Breite einnimmt */
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
     }
 
     .p-inputGroup label {
-      margin-bottom: 8px; /* Abstand zwischen Label und Eingabefeld */
-      /* Weitere Label-Stile nach Bedarf */
+      margin-bottom: 8px;
     }
   }
 
@@ -621,15 +614,15 @@ ul li a:hover {
     grid-gap: 25px;
     text-align: left;
     align-items: stretch;
-    margin-top: 100px;
+    margin-top: 90px;
   }
 
 
   .portfolio-header{
     display: flex;
     align-items: center;
-    margin-top: 200px;
-    heigh:300px;
+    margin-top: 400px;
+
   }
 
 .portfolio-header h1 {
@@ -639,22 +632,6 @@ ul li a:hover {
   white-space: nowrap;
   align-items: center;
 }
-
-/*  .portfolio-component .custom-card {
-    display: flex;
-    flex-direction: column;
-    height: 300px;
-    margin:0;
-    padding:10px;
-    justify-content: space-between;
-    background-color: #f0f0f0;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  }*/
-
-/*  .custom-card .p-card-body {
-    flex-grow: 1;
-    overflow: auto;
-  }*/
 
 .portfolio-header .header-line {
   flex-grow: 1;

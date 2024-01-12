@@ -936,3 +936,9 @@ h
 8Frontend/src/app/TopMenu/home/intro/intro.component.html,7\f\7fbe7cc801bcf2d427d7637b0dbed894edd79e45
 h
 8Frontend/src/app/TopMenu/home/intro/intro.component.scss,a\6\a6aa2c8532f0237628a91e64b183b84d4b85516e
+p
+@Frontend/src/app/TopMenu/home/techstack/techstack.component.html,a\f\af1440bfc27330d3fc8d1abd751dea92eb6c48da
+n
+>Frontend/src/app/TopMenu/home/techstack/techstack.component.ts,b\8\b8b07c9de3510603025542f18b12c1fbed50fe23
+p
+@Frontend/src/app/TopMenu/home/techstack/techstack.component.scss,a\d\add4b27f87b84bd07407354ca6106e4de3442a87
