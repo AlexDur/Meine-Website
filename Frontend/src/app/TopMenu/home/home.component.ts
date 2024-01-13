@@ -38,7 +38,6 @@ export class HomeComponent implements OnInit, OnDestroy {
   loaded: boolean = false;
   private subscription: Subscription | null = null;
 
-
   constructor(private translateService: TranslateService, private router: Router) {
   }
 
@@ -48,9 +47,9 @@ export class HomeComponent implements OnInit, OnDestroy {
     });
   }
 
-  navigateToContact() {
+ /* navigateToContact() {
     this.router.navigateByUrl('/contact');
-  }
+  }*/
 
   ngOnDestroy() {
     if (this.subscription) {

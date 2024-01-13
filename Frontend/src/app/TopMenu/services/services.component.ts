@@ -19,9 +19,7 @@ export class ServicesComponent implements OnInit, OnDestroy {
   loaded: boolean = false;
   private subscription: Subscription | null = null;
 
-
-  constructor(private translateService: TranslateService) {
-  }
+  constructor(private translateService: TranslateService) {}
 
   ngOnInit() {
     this.subscription = this.translateService.areTranslationsLoaded().subscribe(loaded => {

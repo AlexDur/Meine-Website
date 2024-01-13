@@ -14,6 +14,10 @@ export class AppComponent implements OnInit {
   constructor(private translateService: TranslateService) { }
 
   ngOnInit() {
+    this.translateService.use('de').subscribe(() => {
+      this.loaded = true;
+    });
+
     this.subscription = this.translateService.areTranslationsLoaded().subscribe(loaded => {
       this.loaded = loaded;
     });

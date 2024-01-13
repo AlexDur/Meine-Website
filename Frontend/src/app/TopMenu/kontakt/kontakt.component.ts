@@ -5,8 +5,8 @@ import { InputTextareaModule } from 'primeng/inputtextarea';
 import {TranslateService} from '../../shared/services/translate.service';
 import {SharedModule} from '../../shared/shared.module';
 import {Subscription} from 'rxjs';
-import {HttpClient} from '@angular/common/http';
-import {ButtonModule} from "primeng/button";
+import {ButtonModule} from 'primeng/button';
+import {CheckboxModule} from 'primeng/checkbox';
 
 
 @Component({
@@ -17,7 +17,8 @@ import {ButtonModule} from "primeng/button";
     InputGroupModule,
     InputTextareaModule,
     SharedModule,
-    ButtonModule
+    ButtonModule,
+    CheckboxModule
   ],
   templateUrl: './kontakt.component.html',
   styleUrl: './kontakt.component.scss'
@@ -27,7 +28,7 @@ export class KontaktComponent implements OnInit, OnDestroy {
   loaded: boolean = false;
   private subscription: Subscription | null = null;
 
-  constructor(private translateService: TranslateService,private http: HttpClient) {
+  constructor(private translateService: TranslateService) {
   }
 
   ngOnInit() {
@@ -36,19 +37,19 @@ export class KontaktComponent implements OnInit, OnDestroy {
     });
   }
 
-  anfrage = {
+  /*  anfrage = {
     name: '',
     email: '',
     message: ''
-  };
+  };*/
 
 
-  onSubmit() { this.http.post('URL_DES_BACKEND-SERVERS', this.anfrage)
+  /* onSubmit() { this.http.post('URL_DES_BACKEND-SERVERS', this.anfrage)
     .subscribe(response => {
       console.log('Serverantwort:', response);
     });
 
-  }
+  }*/
 
 
   ngOnDestroy() {
