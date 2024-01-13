@@ -1,11 +1,12 @@
+<div *ngIf="loaded; else loading">
 <div class="footer-component">
   <div class="box">
     <img src="assets/images/logo1_pixel.png" alt="Logo">
   </div>
   <div class="box">
-    <p style="font-size:35px;margin-bottom:0px">+49 1573 0755 475</p>
-    <p style="font-size:15px; color:#424242;margin-top:0px;">Mo-Fr 17:00-20:00 und Sa 12:00-20:00</p>
-    <p style="font-size:25px">adurach&#64;hotmail.de</p>
+    <p>+49 1573 0755 475</p>
+    <p>Mo-Fr 17:00-20:00 und Sa 12:00-20:00</p>
+    <p>adurach&#64;hotmail.de</p>
     <div>
       <i class="pi pi-linkedin" style="font-size: 2rem"></i>
       <i class="pi pi-github" style="font-size: 2rem"></i>
@@ -13,4 +14,8 @@
     </div>
   </div>
 </div>
+</div>
 
+<ng-template #loading>
+  <p>Lädt...</p>
+</ng-template>

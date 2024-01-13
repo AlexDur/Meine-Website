@@ -1,8 +1,5 @@
-<div *ngIf="loaded; else loading">
-  <div>
-    <p style="margin-top:150px; font-size:90px; font-weight:bold;margin:0; color:#333333">{{ 'contact.title' | translate | async }}</p>
-  </div>
-
+<div class="component-width" *ngIf="loaded; else loading">
+  <h1> {{ 'contact.title' | translate | async }}</h1>
   <div class="contact-component">
     <!-- Umhüllung für die ersten beiden Inputfelder -->
     <div class="container">

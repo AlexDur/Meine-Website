@@ -1,7 +1,5 @@
-<div *ngIf="loaded; else loading">
-  <div>
-    <h1 style="font-size: 30px;">{{ 'about.title' | translate | async }}</h1>
-  </div>
+<div class="component-width" *ngIf="loaded; else loading">
+    <h1> {{ 'about.title' | translate | async }}</h1>
   <div class="about-component">
   <div class="square-block">
     <img src="dishlist1.png" alt="Logo Beschreibung">

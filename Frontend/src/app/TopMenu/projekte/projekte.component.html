@@ -1,6 +1,7 @@
-<div *ngIf="loaded; else loading">
+<div class="component-width" *ngIf="loaded; else loading">
+  <h1>Portfolio</h1>
   <div class="portfolio-header">
-    <h1>{{ 'portfolio.title' | translate | async }}</h1>
+    <h2>{{ 'portfolio.title' | translate | async }}</h2>
     <hr class="header-line" />
   </div>
   <div class="portfolio-component">

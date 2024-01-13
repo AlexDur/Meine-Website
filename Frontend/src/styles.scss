@@ -20,12 +20,17 @@ $text-color-text-dunkel:#7f7f7f;
 
 :root {
   --base-font-size: 16px;
+  margin:0;
 }
 
-body, html {
+body,html{
+  margin: 0;
+  padding: 0;
+}
+
+.homepage-background {
   height: 200%;
   font-family: "Calibri", sans-serif;
-  margin:0;
   /*  margin-left:150px;
     margin-right:150px;*/
   background: linear-gradient(
@@ -50,7 +55,7 @@ body, html {
   font-family: "Calibri","proxima nova light", "Helvetica Neue", "Swiss 7","Verdana", sans-serif;
 }
 
-body::after {
+.homeback-background::after {
   content: '';
   position: absolute;
   z-index: -1;
@@ -61,9 +66,12 @@ body::after {
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
-h1{}
+.component-width{
+  margin-left: 350px!important;
+  margin-right: 350px!important;
+}
 
-h2{}
+
 
 h3{}
 
@@ -73,6 +81,23 @@ p {
   margin-top: 10px;
   margin-bottom: 10px;
   padding: 0;
+}
+
+h1{
+  font-size:90px;
+  font-weight: bold;
+  color:$text-color-ueberschrift;
+  padding-bottom:0;
+  margin-bottom:0;
+  margin-top:150px;
+}
+
+h2{
+  font-size:30px;
+  color:$text-color-unterueberschrift-dunkel;
+  margin-bottom:20px;
+  margin-top:20px;
+  font-weight:lighter;
 }
 
 .ueberschrift-dunkel{
@@ -103,8 +128,6 @@ ul li a:hover {
 .router-outlet-container {
   padding: 20px;
   /*border: 1px solid #ccc;*/
-  margin-left: 350px;
-  margin-right: 350px;
   display: flex;
   flex-direction: column;
   min-height: 100%;
@@ -118,7 +141,7 @@ ul li a:hover {
   margin: 0;
   justify-content: center;
   width: 100%;
-  background-color: $tertiary-color;
+  background-color: $secondary-color;
 }
 
 .field {
@@ -215,23 +238,23 @@ ul li a:hover {
 /*Header-Komponente*/
 
 .header-component {
+  display:flex;
   align-items: center;
+  height:12vh;
   width: 100%;
-  background-color: $primary-color;
+  background-color: $text-color-ueberschrift;
   position: sticky;
   top: 0;
   z-index: 9000;
 
   .header-content {
-
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: row;
-    padding-top: 10px;
-    padding-bottom: 10px;
     padding-left: 22rem;
     padding-right: 22rem;
+    width:100%;
     /*    margin-right: 250px;*/
   }
 }
@@ -240,6 +263,7 @@ ul li a:hover {
     color: #d9d9d9;
     margin-right: 30px;
     font-size:20px;
+    align-items: center;
   }
 
   a {
@@ -250,7 +274,7 @@ ul li a:hover {
   .logo {
     flex: 1;
     display: flex;
-    align-items:  start;
+    align-items: center;
   }
 
   .logo img {
@@ -263,7 +287,7 @@ ul li a:hover {
     flex-direction:row;
     justify-content:right;
     align-items: center;
-    flex: 2;
+    flex: 1;
   }
 
   .custom-button {
@@ -289,7 +313,6 @@ ul li a:hover {
     background-color: black;
     color: white ;
   }
-
 
   .p-toggleButton .p-button {
     border-radius: 50px !important;
@@ -336,12 +359,10 @@ ul li a:hover {
   .square-block-intro {
     /* border: 3px solid black;*/
     min-height: 60vh;
-    padding: 50px;
     padding-left:0;
     flex-direction: column;
     display: flex;
     align-items: flex-start;
-    margin-top:50px;
 
   }
 
@@ -382,12 +403,12 @@ ul li a:hover {
 
 .circle-container {
   display: grid;
-  grid-template-columns: 1fr 400px 1fr;
+  grid-template-columns: 1fr 450px 1fr;
   justify-items: center;
   align-items: center;
-  gap: 80px;
   margin-top: 350px;
-  height: 400px;
+  margin-bottom: 300px;
+  height: 450px;
 }
 
 .circle {
@@ -406,7 +427,6 @@ ul li a:hover {
   height: 100%;
   position: absolute;
   top: 0;
-
 }
 
 .half-circle::before {
@@ -437,7 +457,7 @@ ul li a:hover {
 
 .logo-container {
   background-color: $secondary-color;
-  padding: 10px;
+  padding: 0;
   border-radius: 5px;
 /*  box-shadow: 0 4px 8px rgba(0,0,0,0.1);*/
   width: 200px;
@@ -446,12 +466,14 @@ ul li a:hover {
 
 .logo-container.left {
   grid-column: 1;
-  margin-right:-50px;
+  right: -90px;
+  position: relative;
 }
 
 .logo-container.right {
   grid-column: 3;
-  margin-left:50px;
+  position: relative;
+  left: -90px;
 }
 
 
@@ -619,15 +641,13 @@ ul li a:hover {
     grid-gap: 25px;
     text-align: left;
     align-items: stretch;
-    margin-top: 90px;
+    margin-top: 60px;
   }
-
 
   .portfolio-header{
     display: flex;
     align-items: center;
-    margin-top: 400px;
-
+    margin-top: 100px;
   }
 
 .portfolio-header h1 {
@@ -765,17 +785,15 @@ ul li a:hover {
     display: flex;
     z-index: 1;
     margin-top: 200px;
-    margin-left: 400px;
-    margin-right: 400px;
-    height: 15vh;
+    height: 25vh;
     justify-content: center;
+    background:$secondary-color;
   }
 
   .box {
     padding-top:10px;
     border: 1px solid $tertiary-color;
     width: 30%;
-    margin-top: -80px;
   }
 
   .box:nth-child(2) {
