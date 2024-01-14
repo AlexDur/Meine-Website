@@ -8,7 +8,7 @@
   },
   "menu": {
     "home": "Home",
-    "about": "Über mich",
+    "about": "Über",
     "services": "Services",
     "portfolio": "Portfolio",
     "contact": "Kontakt"
@@ -21,10 +21,11 @@
     "email": "E-Mail-Adresse",
     "phone": "Telefonnummer",
     "message": "Nachricht",
-    "send": "Senden"
+    "send": "Senden",
+    "data-protection-declaration": "{\n  \"text\": \"Durch das Absenden meiner Anfrage stimme ich der Erfassung, Verarbeitung und Nutzung meiner personenbezogenen Daten gemäß den Datenschutzbestimmungen</a> dieser Website zu. Ich habe die <a href='/legal-notice'> Datenschutzerklärung und die Widerrufshinweise</a> gelesen und verstanden.\"\n}\n"
   },
   "about": {
-    "title": "Über mich",
+    "title": "Über",
     "company": "adurach WEB ENTWICKLUNG",
     "description-title": "Ihr Partner für innovative Softwarelösungen",
     "description-intro": "Hallo und willkommen! Ich bin Alexander Durach, ein leidenschaftlicher und erfahrener Softwareentwickler, spezialisiert auf Web-Entwicklung und Mobile Apps. Seit 2020 helfe ich Unternehmen und Einzelpersonen dabei, ihre technologischen Wünsche zu verwirklichen.",
@@ -41,7 +42,7 @@
     }
   },
   "services": {
-    "title": "Meine Services",
+    "title": "Services",
     "description-title": "Moderne und starke Anwendungsentwicklung für das Web",
     "description": "Ich biete Ihnen eine Vielzahl von Services rund um die Entwicklung von Webseiten und Webanwendungen. Dabei setze ich auf die neuesten Technologien und Standards, um Ihnen eine Webseite zu bieten, die nicht nur gut aussieht, sondern auch schnell und sicher ist.",
     "web-development": {
@@ -86,5 +87,13 @@
   "code-principles": {
     "offer": "Mein Angebot",
     "description": "Ich habe mich auf Webdesign und -entwicklung für kleine Unternehmen im deutsch- und englischsprachigem Raum spezialisiert. Jede Zeile des Codes wird von Hand geschrieben, um die beste Leistung zu gewährleisten, die dazu beiträgt, mehr Kunden auf Ihre Website zu bringen und mehr Einnahmen für Ihr Unternehmen zu erzielen."
+  },
+  "footer": {
+    "legal-notice": "Impressum",
+    "address": "Adresse"
+  },
+  "data-protection":{
+    "title": "Datenschutz",
+    "description": "Ich freue mich über Ihr Interesse an meiner Website. Der Schutz Ihrer Privatsphäre ist für mich sehr wichtig. Nachstehend informiere ich Sie ausführlich über den Umgang mit Ihren Daten."
   }
 }

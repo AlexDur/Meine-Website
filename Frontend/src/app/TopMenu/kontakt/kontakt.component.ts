@@ -7,6 +7,7 @@ import {SharedModule} from '../../shared/shared.module';
 import {Subscription} from 'rxjs';
 import {ButtonModule} from 'primeng/button';
 import {CheckboxModule} from 'primeng/checkbox';
+import {FormControl, FormGroup, FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 
 @Component({
@@ -18,7 +19,9 @@ import {CheckboxModule} from 'primeng/checkbox';
     InputTextareaModule,
     SharedModule,
     ButtonModule,
-    CheckboxModule
+    CheckboxModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   templateUrl: './kontakt.component.html',
   styleUrl: './kontakt.component.scss'
@@ -26,6 +29,7 @@ import {CheckboxModule} from 'primeng/checkbox';
 export class KontaktComponent implements OnInit, OnDestroy {
   value!: string;
   loaded: boolean = false;
+  formGroup?: FormGroup;
   private subscription: Subscription | null = null;
 
   constructor(private translateService: TranslateService) {
@@ -35,7 +39,12 @@ export class KontaktComponent implements OnInit, OnDestroy {
     this.subscription = this.translateService.areTranslationsLoaded().subscribe(loaded => {
       this.loaded = loaded;
     });
+    this.formGroup = new FormGroup({
+      city: new FormControl<string | null>(null)
+    });
   }
+
+
 
   /*  anfrage = {
     name: '',
@@ -57,4 +66,6 @@ export class KontaktComponent implements OnInit, OnDestroy {
       this.subscription.unsubscribe();
     }
   }
+
+  protected readonly onsubmit = onsubmit;
 }

@@ -5,6 +5,8 @@ import {AboutComponent} from './TopMenu/about/about.component';
 import {ServicesComponent} from './TopMenu/services/services.component';
 import {ProjekteComponent} from './TopMenu/projekte/projekte.component';
 import {KontaktComponent} from './TopMenu/kontakt/kontakt.component';
+import {ImpressumComponent} from './impressum/impressum.component';
+import {DatenschutzComponent} from './datenschutz/datenschutz.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -13,6 +15,8 @@ const routes: Routes = [
   { path: 'services', component: ServicesComponent },
   { path: 'portfolio', component: ProjekteComponent },
   { path: 'contact', component: KontaktComponent },
+  { path: 'legal-notice', component: ImpressumComponent },
+  { path: 'data-protection', component: DatenschutzComponent },
 ];
 
 @NgModule({

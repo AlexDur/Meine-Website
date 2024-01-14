@@ -28,10 +28,15 @@
               <label for="message" name="message" style="color:#898989;">{{'contact.message' | translate | async }}</label>
               <input id="message" type="text" pInputText class="custom-textarea" required ngModel/>
           </div>
-          <p-checkbox></p-checkbox>
+          <ng-container *ngIf="formGroup">
+          <form [formGroup]="formGroup">
+            <p-checkbox formControlName="city" value="New York" inputId="ny"></p-checkbox>
+          <label>{{ 'contact.data-protection-declaration' | translate | async}}</label>
+          </form>
+          </ng-container>
           <br>
           <br>
-          <p-button class="mt-3"></p-button>
+          <button  class="intro-button">Kontaktieren Sie mich</button>
       </div>
       </div>
 
