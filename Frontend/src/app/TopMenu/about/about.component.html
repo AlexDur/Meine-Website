@@ -1,3 +1,36 @@
+<body class="about-background">
+<div class="home-component" *ngIf="loaded; else loading">
+  <app-intro></app-intro>
+</div>
+
+<div>
+  <app-techstack></app-techstack>
+</div>
+<div>
+  <app-projekte></app-projekte>
+</div>
+<!--<div>
+  &lt;!&ndash;  Leistungsversprechen&ndash;&gt;
+/<div>-->
+<!--  <div>
+  <app-code-prinzipien></app-code-prinzipien>
+</div>-->
+<!--<div>
+  <app-kurz-vorstellung></app-kurz-vorstellung>
+</div>-->
+<div>
+  <!--  Preise-->
+</div>
+
+
+<ng-template #loading>
+  <p>Lädt...</p>
+</ng-template>
+</body>
+
+
+<!--
+
 <div class="component-width" *ngIf="loaded; else loading">
     <h1> {{ 'about.title' | translate | async }}</h1>
   <div class="about-component">
@@ -16,3 +49,4 @@
 <ng-template #loading>
   <p>Lädt...</p>
 </ng-template>
+-->

@@ -15,16 +15,16 @@ import {KontaktComponent} from './TopMenu/kontakt/kontakt.component';
 import {ProjekteComponent} from './TopMenu/projekte/projekte.component';
 import {InputTextModule} from 'primeng/inputtext';
 import {InputTextareaModule} from 'primeng/inputtextarea';
-import {CodePrinzipienComponent} from './TopMenu/home/code-prinzipien/code-prinzipien.component';
+import {CodePrinzipienComponent} from './TopMenu/about/code-prinzipien/code-prinzipien.component';
 import {FooterComponent} from './footer/footer.component';
 import {ButtonModule} from 'primeng/button';
-import {KurzVorstellungComponent} from './TopMenu/home/kurz-vorstellung/kurz-vorstellung.component';
+import {KurzVorstellungComponent} from './TopMenu/about/kurz-vorstellung/kurz-vorstellung.component';
 import {BadgeModule} from 'primeng/badge';
 import {CommonModule} from '@angular/common';
 import {ToggleButtonModule} from 'primeng/togglebutton';
 import {FormsModule} from '@angular/forms';
-import {IntroComponent} from './TopMenu/home/intro/intro.component';
-import {TechstackComponent} from './TopMenu/home/techstack/techstack.component';
+import {IntroComponent} from './TopMenu/about/intro/intro.component';
+import {TechstackComponent} from './TopMenu/about/techstack/techstack.component';
 
 @NgModule({
   declarations: [

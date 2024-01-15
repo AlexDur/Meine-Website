@@ -1,6 +1,7 @@
 {
-  "home": {
-    "title": "Ich bin Webentwickler wohnhaft in Bonn",
+  "about": {
+    "title": "About",
+    "subtitle": "Ich bin Webentwickler wohnhaft in Bonn",
     "description": "Seit 2020 setze ich regelmäßig die Ideen meiner Kunden für ihre individuellen Geschäftsziele um.",
     "description_two": "Mein Aufgabe ist es, eine Vision in eine ansprechende sowie nutzerfreundliche Webseite und bzw. oder mobile Anwendung zu verwandeln.",
     "description_three": "Was schwebt Ihnen vor?",
@@ -15,31 +16,15 @@
   },
   "contact": {
     "title": "Kontakt",
-    "first_name": "Vorname",
-    "last_name": "Nachname",
+    "text-eins": "Haben Sie Fragen oder möchten Sie ein Projekt mit mir besprechen?",
+    "text-zwei": "Ich freue mich auf Ihre Nachricht!",
+    "name": "Name (Pflichtfeld)",
     "business": "Firma",
-    "email": "E-Mail-Adresse",
+    "email": "E-Mail-Adresse (Pflichtfeld)",
     "phone": "Telefonnummer",
-    "message": "Nachricht",
+    "message": "Nachricht (Pflichtfeld)",
     "send": "Senden",
-    "data-protection-declaration": "{\n  \"text\": \"Durch das Absenden meiner Anfrage stimme ich der Erfassung, Verarbeitung und Nutzung meiner personenbezogenen Daten gemäß den Datenschutzbestimmungen</a> dieser Website zu. Ich habe die <a href='/legal-notice'> Datenschutzerklärung und die Widerrufshinweise</a> gelesen und verstanden.\"\n}\n"
-  },
-  "about": {
-    "title": "Über",
-    "company": "adurach WEB ENTWICKLUNG",
-    "description-title": "Ihr Partner für innovative Softwarelösungen",
-    "description-intro": "Hallo und willkommen! Ich bin Alexander Durach, ein leidenschaftlicher und erfahrener Softwareentwickler, spezialisiert auf Web-Entwicklung und Mobile Apps. Seit 2020 helfe ich Unternehmen und Einzelpersonen dabei, ihre technologischen Wünsche zu verwirklichen.",
-    "description-attitude": "In einer Welt, die sich ständig weiterentwickelt, ist es meine volle Überzeugung, dass die Entwicklung von Software mehr ist als nur das Schreiben von Code. Es geht darum, innovative Lösungen zu schaffen, die Menschen in ihrem Alltag unterstützen und Unternehmen dabei helfen, effizienter zu werden. Mein Ziel ist es, Technologie nicht nur zugänglich, sondern auch sinnvoll zu machen. Wesentlicher Baustein zum Gelingen ist meiner Erfahrung nach eine klare und präzise Kommunikation.",
-    "skills": {
-      "title": "Meine Fähigkeiten",
-      "frontend": "Frontend-Entwicklung",
-      "backend": "Backend-Entwicklung",
-      "design": "Webdesign",
-      "seo": "SEO",
-      "responsive": "Responsive Design",
-      "performance": "Performance-Optimierung",
-      "security": "Sicherheit"
-    }
+    "data-protection-declaration": "Durch das Absenden meiner Anfrage stimme ich der Erfassung, Verarbeitung und Nutzung meiner personenbezogenen Daten gemäß den Datenschutzbestimmungen</a> dieser Website zu. Ich habe die <a href='/legal-notice'> Datenschutzerklärung und die Widerrufshinweise</a> gelesen und verstanden."
   },
   "services": {
     "title": "Services",

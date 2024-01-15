@@ -3,13 +3,19 @@ import {AsyncPipe} from '@angular/common';
 import {SharedModule} from '../../shared/shared.module';
 import {TranslateService} from '../../shared/services/translate.service';
 import {Subscription} from 'rxjs';
+import {IntroComponent} from './intro/intro.component';
+import {ProjekteComponent} from '../projekte/projekte.component';
+import {TechstackComponent} from './techstack/techstack.component';
 
 @Component({
   selector: 'app-about',
   standalone: true,
   imports: [
     AsyncPipe,
-    SharedModule
+    SharedModule,
+    IntroComponent,
+    ProjekteComponent,
+    TechstackComponent
   ],
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss'

@@ -4,7 +4,7 @@ import {InputGroupModule} from 'primeng/inputgroup';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import {TranslateService} from '../../shared/services/translate.service';
 import {SharedModule} from '../../shared/shared.module';
-import {Subscription} from 'rxjs';
+import {async, Subscription} from 'rxjs';
 import {ButtonModule} from 'primeng/button';
 import {CheckboxModule} from 'primeng/checkbox';
 import {FormControl, FormGroup, FormsModule, ReactiveFormsModule} from "@angular/forms";
@@ -68,4 +68,5 @@ export class KontaktComponent implements OnInit, OnDestroy {
   }
 
   protected readonly onsubmit = onsubmit;
+    protected readonly async = async;
 }

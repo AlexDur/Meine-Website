@@ -7,8 +7,6 @@ import {CommonModule} from '@angular/common';
 import {Subscription} from 'rxjs';
 import { DomSanitizer } from '@angular/platform-browser';
 
-
-
 @Component({
   selector: 'app-kurz-vorstellung',
   standalone: true,

@@ -1,29 +1,7 @@
 <!--Inhalt der Komponente wird erst gezeigt, wenn translationLoaded =true-->
 <body class="homepage-background">
 <div class="home-component" *ngIf="loaded; else loading">
-  <app-intro></app-intro>
 </div>
-
-<div>
-  <app-techstack></app-techstack>
-</div>
-<div>
-  <app-projekte></app-projekte>
-</div>
-<!--<div>
-  &lt;!&ndash;  Leistungsversprechen&ndash;&gt;
-/<div>-->
-<!--  <div>
-  <app-code-prinzipien></app-code-prinzipien>
-</div>-->
-<!--<div>
-  <app-kurz-vorstellung></app-kurz-vorstellung>
-</div>-->
-<div>
-  <!--  Preise-->
-</div>
-
-
 <ng-template #loading>
   <p>Lädt...</p>
 </ng-template>
