@@ -1,1 +1,7 @@
-<p>dialog works!</p>
+<p-dialog [(visible)]="dialogVisible" header="Willkommen" [modal]="true">
+  <p>Willkommen auf unserer Webseite!</p>
+  <p-footer>
+    <button type="button" pButton label="Button 1" (click)="closeDialog()"></button>
+    <button type="button" pButton label="Button 2" (click)="closeDialog()"></button>
+  </p-footer>
+</p-dialog>

@@ -1,18 +1,28 @@
 <div *ngIf="loaded; else loading">
 <div class="footer-component">
+
   <div class="box">
-    <img src="assets/images/logo1_pixel.png" alt="Logo">
+    <div>
+      <img src="assets/images/ad_bu_schw_bau_skal_footer.png" alt="Logo">
+      <div class="footer-logo-feld">
+        <a routerLink="/data-protection">Datenschutz</a> &nbsp;|&nbsp; <a routerLink="/legal-notice">Impressum</a>
+      <p>Made in Bonn</p>
+      </div>
+    </div>
   </div>
   <div class="box">
-    <p class="p-bright-background">+49 1573 0755 475</p>
-    <p>adurach&#64;hotmail.de</p>
-    <p class="p-bright-background">Carl-Justi-Strasse 23</p>
-    <p class="p-bright-background">D-53121 Bonn</p>
     <div>
-      <i class="pi pi-linkedin" style="font-size: 2rem"></i>
-      <i class="pi pi-github" style="font-size: 2rem"></i>
-      <i class="pi pi-whatsapp" style="font-size: 2rem"></i>
+    <p >+49 1573 0755 475</p>
+    <p>adurach&#64;hotmail.de</p>
+    <p>Carl-Justi-Strasse 23</p>
+    <p>D-53121 Bonn</p>
     </div>
+    <div class="box-social-icons">
+      <i class="pi pi-linkedin" style="font-size: 2rem; margin:0;"></i>
+      <i class="pi pi-github" style="font-size: 2rem; margin:0;"></i>
+      <i class="pi pi-whatsapp" style="font-size: 2rem; margin:0;"></i>
+    </div>
+
   </div>
   <div class="box">
     <div class="listing">
@@ -23,7 +33,7 @@
       </ul>
     </div>
   </div>
-</div>
+  </div>
 </div>
 <ng-template #loading>
   <p>Lädt...</p>

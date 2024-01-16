@@ -7,7 +7,7 @@ import {SharedModule} from '../../shared/shared.module';
 import {async, Subscription} from 'rxjs';
 import {ButtonModule} from 'primeng/button';
 import {CheckboxModule} from 'primeng/checkbox';
-import {FormControl, FormGroup, FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {FormControl, FormGroup, FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 
 @Component({
@@ -68,5 +68,5 @@ export class KontaktComponent implements OnInit, OnDestroy {
   }
 
   protected readonly onsubmit = onsubmit;
-    protected readonly async = async;
+  protected readonly async = async;
 }

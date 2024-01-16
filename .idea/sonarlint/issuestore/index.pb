@@ -372,8 +372,6 @@ _
 /Frontend/src/app/TopMenu/home/home.component.ts,0\e\0edde8940bce3bd723793869195861516759d6b9
 w
 G.idea/sonarlint/issuestore/e/c/ec830ae529ec3451483ae6eb62cf975be661cd8c,6\6\660c8f77a0611f4dfb8029c13490a3a2969120d8
-z
-JFrontend/src/app/TopMenu/home/code-prinzipien/code-prinzipien.component.ts,0\7\07f18f859145308ee62bbb2d93bb89200afb7e2c
 p
 @Frontend/src/app/shared/button-basic/button-basic.component.html,5\d\5d262a692d663c5af0e73d37f04097cbd4344217
 p
@@ -388,16 +386,6 @@ o
 ?Frontend/src/app/shared/card-basic/card-basic.component.spec.ts,a\0\a02892995ae7eea8c0d4c20047f20fc074506e2b
 j
 :Frontend/src/app/shared/card-basic/card-basic.component.ts,8\b\8b95204c6c158653581bf69bd58a0787b4e44431
-|
-LFrontend/src/app/TopMenu/home/code-prinzipien/code-prinzipien.component.html,b\e\bee89760c96032990073ebd4dc952e9eef23ebc7
-|
-LFrontend/src/app/TopMenu/home/code-prinzipien/code-prinzipien.component.scss,6\c\6cbfd2b2f4a5b169ff57d03cb00048272f5e0c0e
-~
-NFrontend/src/app/TopMenu/home/kurz-vorstellung/kurz-vorstellung.component.html,3\e\3ece9803a09970bc3d968b1242ab481930204fa4
-~
-NFrontend/src/app/TopMenu/home/kurz-vorstellung/kurz-vorstellung.component.scss,4\1\413e33b42050307c5f5cbfc6e0cf322e3238f04e
-|
-LFrontend/src/app/TopMenu/home/kurz-vorstellung/kurz-vorstellung.component.ts,b\d\bdc5cbf75100b67ca5550a91a90ed2bba6185ce9
 C
 Frontend/.gitignore,6\6\663059bfd1b29d4d14f841241270ae94c4065a6b
 
@@ -436,8 +424,6 @@ Q.idea/sonarlint/securityhotspotstore/2/d/2d5ea5a465d065c24aa46dc9e1543176cdf6ae
 Q.idea/sonarlint/securityhotspotstore/9/e/9ec1dcf6d07cf9a7bd12a5f1a0bbaf2f51e0eb8c,2\d\2d81db7bc1e72dd96d2f921557619d43db48459b
 
 Q.idea/sonarlint/securityhotspotstore/a/8/a803cae73f24feb7ad876337c94524837f9908ed,b\7\b7d86a5a1c7b61a2bbd61afafe6ffff2044742f2
-
-Q.idea/sonarlint/securityhotspotstore/0/7/07f18f859145308ee62bbb2d93bb89200afb7e2c,7\c\7c73cdec90fb1e853ea5a5a6c156877e1707faa9
 
 Q.idea/sonarlint/securityhotspotstore/c/4/c4ce9e3a6a28db496e38ce6b52af62256bc62f19,9\e\9e23bf462e3ad53ff4636b4230f2be5a6046e474
 w
@@ -479,8 +465,6 @@ G.idea/sonarlint/issuestore/6/d/6d0657ffd0c4dd668a57902a56b0963e018a18b5,0\d\0d
 w
 G.idea/sonarlint/issuestore/b/1/b1bb02487c8770b72834d1e4828a2c327d53d917,d\0\d0f9d5a0c87f83c362b15a8f09530a92624a6704
 
-Q.idea/sonarlint/securityhotspotstore/3/e/3ece9803a09970bc3d968b1242ab481930204fa4,5\c\5ccd11149cfa720b17d331344f5f7e793bdf3442
-
 Q.idea/sonarlint/securityhotspotstore/c/c/cc11a601eeb05e8078204cb104d4b2f0f199b1f6,8\b\8b6a9092f4ae1e74134db5fad407beb9444b4da2
 w
 G.idea/sonarlint/issuestore/2/f/2f704719d333550c16cf46fe8c1906946a589621,c\d\cd24510c9572da8e0394aec1f3e6ddb3a8ec5b3b
@@ -492,8 +476,6 @@ w
 G.idea/sonarlint/issuestore/6/6/660c8f77a0611f4dfb8029c13490a3a2969120d8,3\7\3713f75520e8404ce15e55b9a53b0cd9ce3428ca
 w
 G.idea/sonarlint/issuestore/6/6/663059bfd1b29d4d14f841241270ae94c4065a6b,a\0\a099aa9f8a8bd25eba26e48dbdfadfdd5d7eb9e1
-
-Q.idea/sonarlint/securityhotspotstore/b/e/bee89760c96032990073ebd4dc952e9eef23ebc7,7\6\76117358f07e409e235667a6d9f777eedb557a7f
 w
 G.idea/sonarlint/issuestore/a/e/ae4d751b54c58ef41096353c865fb757c39492b3,d\3\d3e15f590005a4c84ed379d977d553f20fab3d66
 
@@ -590,8 +572,6 @@ w
 G.idea/sonarlint/issuestore/1/8/184621f7dc862ef087fc3b681c81958d30210a94,a\d\ad5d6c462e681c08aaa0690a97248570be118abb
 w
 G.idea/sonarlint/issuestore/e/6/e620c5d0e2e00286d4e985f882663ae91e3ff71d,5\c\5c3d50403f9d08956dce19f1c6018f1780e7c057
-w
-G.idea/sonarlint/issuestore/6/c/6cbfd2b2f4a5b169ff57d03cb00048272f5e0c0e,9\e\9eaa367eed73f663660d1e83b8c06c6628e2a4d2
 
 Q.idea/sonarlint/securityhotspotstore/b/1/b1bb02487c8770b72834d1e4828a2c327d53d917,8\b\8bffac3331c3a6d43e6560f1ef5fca2d637b4cba
 w
@@ -638,8 +618,6 @@ w
 G.idea/sonarlint/issuestore/1/6/164155c619bdc76733ddf2b898d661c19eab072d,0\6\06dbc5210b435df0a6674168aa2876044c743d73
 w
 G.idea/sonarlint/issuestore/e/0/e00b3f52370213f86b042d477ab5c2b78b042ce7,c\4\c427eafb9ffd0f679e69de6550ffd354dc00d6a1
-w
-G.idea/sonarlint/issuestore/4/1/413e33b42050307c5f5cbfc6e0cf322e3238f04e,3\7\37f1258e293d0ad45df363a41aad178ed50df978
 
 Q.idea/sonarlint/securityhotspotstore/e/6/e620c5d0e2e00286d4e985f882663ae91e3ff71d,3\b\3bec5a00e6c150820a7326dc1cb1bc1fdd4e4345
 
@@ -674,8 +652,6 @@ w
 G.idea/sonarlint/issuestore/4/6/467e25911f24d99f75371f83e979cf5d66f5ce1d,f\5\f58842e141cd5f8b097625d25bc09cb160e48fb8
 w
 G.idea/sonarlint/issuestore/f/9/f9a212ea2d3aa6dbc7899b686b278a0c2d85a61b,e\6\e67250b310e36a9e6cf1afbc95c7e626ac10400b
-w
-G.idea/sonarlint/issuestore/0/7/07f18f859145308ee62bbb2d93bb89200afb7e2c,8\7\877596e990d0bc840f59c38c2bdf60b0454cff44
 
 Q.idea/sonarlint/securityhotspotstore/8/d/8d38ee64eb18ebfa0ebc817236bfbbb3f15e8780,3\9\3936a5360d2df5c8bdadfed8935178f0384e397d
 w
@@ -836,8 +812,6 @@ w
 G.idea/sonarlint/issuestore/8/b/8b95204c6c158653581bf69bd58a0787b4e44431,f\b\fbf9aa2ed1a94b0c85a0bc9fd25f5c2f2515cb03
 
 Q.idea/sonarlint/securityhotspotstore/2/7/27408a30aa4371df0edcb7275c09c8134189a137,c\2\c2cd57940912d9c80ae6714532f7d4269e9f60c5
-
-Q.idea/sonarlint/securityhotspotstore/b/d/bdc5cbf75100b67ca5550a91a90ed2bba6185ce9,4\4\44530488d759842689faf3a7c982cb47b1dc04b1
 w
 G.idea/sonarlint/issuestore/5/4/54b8d0ded693d192cee04e861045ba535f3c0da7,6\9\6935d54a4e2fdfbfc62a81169bba6804d41e8149
 w
@@ -857,8 +831,6 @@ G.idea/sonarlint/issuestore/d/4/d45cf2d870a23ac73bbe502a1b2840e8fc28fc71,6\8\68
 
 Q.idea/sonarlint/securityhotspotstore/c/9/c9a1ba8e84f58808055e54751051121a66316492,a\7\a75e4d2a436061fbe9264cda78990b606042bcf3
 
-Q.idea/sonarlint/securityhotspotstore/4/1/413e33b42050307c5f5cbfc6e0cf322e3238f04e,7\a\7a921bcf092a4f82f58bfa8af8d6a8dc34395ae4
-
 Q.idea/sonarlint/securityhotspotstore/5/e/5eb90fe8b3678826dd7521785c354aaf69dcac43,a\c\ac0ed5cb54b0b4895ff96cfcdee38cd5533a19d8
 
 Q.idea/sonarlint/securityhotspotstore/e/2/e2024d474bdeeb86a8cf4b0bed30305c5bfffc72,4\4\44d4c3854fc50af80eb7dc415778f7f1c08f4193
@@ -868,8 +840,6 @@ L
 .idea/codeStyles/Project.xml,6\e\6ecd6000a7b6f4a2884412ff19f74193ed089648
 
 Q.idea/sonarlint/securityhotspotstore/5/e/5e4805de49b3e0799af661639276d994cb0e08ae,1\8\1875523abe782d2eab913a9a2e33fce5a3dc2cbb
-
-Q.idea/sonarlint/securityhotspotstore/6/c/6cbfd2b2f4a5b169ff57d03cb00048272f5e0c0e,9\b\9bc309420d14c689b44872ab6cf0b997d9dc956a
 
 Q.idea/sonarlint/securityhotspotstore/f/5/f55b4a7a0a838503187c8c4273a549859555ef93,c\e\ce97ef1a9faec26af02681a63543bcedadbd35d6
 T
@@ -925,23 +895,9 @@ Q.idea/sonarlint/securityhotspotstore/d/2/d2d8675dad732d19d1ff1f80dc6a02e90f83f4
 
 Q.idea/sonarlint/securityhotspotstore/f/d/fd55d264d342051f83e6b600b9f289eb49997c5c,8\4\8470105b45c8cdd6693a996c73f705d2eecba90e
 w
-G.idea/sonarlint/issuestore/b/e/bee89760c96032990073ebd4dc952e9eef23ebc7,e\9\e97939e7683d7c34ae17aab17f2f8401d1b507fd
-w
 G.idea/sonarlint/issuestore/9/c/9c458cc15db78432194f81b1babf0575f5181d6b,4\1\41512a482260e2976791b81bf25e251730d18065
 
 Q.idea/sonarlint/securityhotspotstore/e/0/e0df737ce814ecd5327f6345d595d2ac628de165,f\7\f7791b14d8def5d2643a21c380d405e6700f69a6
-f
-6Frontend/src/app/TopMenu/home/intro/intro.component.ts,5\5\558d88ad482bf3dfbf63bfc8d530c4105c36dba6
-h
-8Frontend/src/app/TopMenu/home/intro/intro.component.html,7\f\7fbe7cc801bcf2d427d7637b0dbed894edd79e45
-h
-8Frontend/src/app/TopMenu/home/intro/intro.component.scss,a\6\a6aa2c8532f0237628a91e64b183b84d4b85516e
-p
-@Frontend/src/app/TopMenu/home/techstack/techstack.component.html,a\f\af1440bfc27330d3fc8d1abd751dea92eb6c48da
-n
->Frontend/src/app/TopMenu/home/techstack/techstack.component.ts,b\8\b8b07c9de3510603025542f18b12c1fbed50fe23
-p
-@Frontend/src/app/TopMenu/home/techstack/techstack.component.scss,a\d\add4b27f87b84bd07407354ca6106e4de3442a87
 a
 1Frontend/src/app/impressum/impressum.component.ts,1\f\1feb45a155f7e9843796095484f10d14a73aa4b0
 g
@@ -960,8 +916,6 @@ c
 -Frontend/src/app/dialog/dialog.component.scss,9\4\94a8f75a33e6c67fbafa4c0db3f944c53edfe1ca
 }
 MFrontend/src/app/TopMenu/about/kurz-vorstellung/kurz-vorstellung.component.ts,3\1\31ea9fe9918a7ed01ab9ca834b78d6c94ea2e295
-`
-0Frontend/src/app/dialog/dialog.component.spec.ts,1\a\1a67e71cad00107946d8260c69cd67a1b848c2ff
 [
 +Frontend/src/app/dialog/dialog.component.ts,7\9\794540f200a6954712bc1b2bd0eaa4b42abb1fab
 {

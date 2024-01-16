@@ -9,7 +9,6 @@ import {ImpressumComponent} from './impressum/impressum.component';
 import {DatenschutzComponent} from './datenschutz/datenschutz.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'services', component: ServicesComponent },
