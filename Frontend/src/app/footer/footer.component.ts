@@ -3,13 +3,15 @@ import {Router, RouterLink} from '@angular/router';
 import {NgIf} from '@angular/common';
 import {Subscription} from 'rxjs';
 import {TranslateService} from '../shared/services/translate.service';
+import {ScrollUpButtonComponent} from '../shared/scroll-up-button/scroll-up-button.component';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
   imports: [
     RouterLink,
-    NgIf
+    NgIf,
+    ScrollUpButtonComponent
   ],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss'

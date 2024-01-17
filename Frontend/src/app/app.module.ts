@@ -25,6 +25,7 @@ import {ToggleButtonModule} from 'primeng/togglebutton';
 import {FormsModule} from '@angular/forms';
 import {IntroComponent} from './TopMenu/about/intro/intro.component';
 import {TechstackComponent} from './TopMenu/about/techstack/techstack.component';
+import {ScrollUpButtonComponent} from './shared/scroll-up-button/scroll-up-button.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import {TechstackComponent} from './TopMenu/about/techstack/techstack.component'
     ToggleButtonModule,
     FormsModule,
     IntroComponent,
-    TechstackComponent
+    TechstackComponent,
+    ScrollUpButtonComponent
   ],
   providers: [],
   exports: [
