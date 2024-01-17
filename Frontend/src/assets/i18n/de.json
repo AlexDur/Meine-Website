@@ -7,7 +7,7 @@
   },
 
   "about": {
-    "title": "Über",
+    "title": "Über mich",
     "subtitle": "Ich bin Webentwickler wohnhaft in Bonn",
     "description": "Seit 2020 setze ich regelmäßig die Ideen meiner Kunden für ihre individuellen Geschäftsziele um.",
     "description_two": "Mein Aufgabe ist es, eine Vision in eine ansprechende sowie nutzerfreundliche Webseite und bzw. oder mobile Anwendung zu verwandeln.",
@@ -16,7 +16,7 @@
   },
   "menu": {
     "home": "Home",
-    "about": "Über",
+    "about": "About",
     "services": "Services",
     "portfolio": "Portfolio",
     "contact": "Kontakt"
@@ -25,11 +25,11 @@
     "title": "Kontakt",
     "text-eins": "Haben Sie Fragen oder möchten Sie ein Projekt mit mir besprechen?",
     "text-zwei": "Ich freue mich auf Ihre Nachricht!",
-    "name": "Name (Pflichtfeld)",
+    "name": "Name",
     "business": "Firma",
-    "email": "E-Mail-Adresse (Pflichtfeld)",
+    "email": "E-Mail-Adresse",
     "phone": "Telefonnummer",
-    "message": "Nachricht (Pflichtfeld)",
+    "message": "Nachricht",
     "send": "Senden",
     "data-protection-declaration": "Durch das Absenden meiner Anfrage stimme ich der Erfassung, Verarbeitung und Nutzung meiner personenbezogenen Daten gemäß den Datenschutzbestimmungen</a> dieser Website zu. Ich habe die <a href='/legal-notice'> Datenschutzerklärung und die Widerrufshinweise</a> gelesen und verstanden."
   },
@@ -47,7 +47,7 @@
     }
   },
   "portfolio": {
-    "title": "Was ich bisher programmiert habe",
+    "title": "An diesen Projekten arbeite ich aktuell",
     "description": "....."
   },
   "kurzvorsellung": {

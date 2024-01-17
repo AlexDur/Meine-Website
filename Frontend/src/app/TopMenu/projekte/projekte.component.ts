@@ -46,8 +46,8 @@ export class ProjekteComponent implements OnInit, OnDestroy{
       }
     },
     {
-      image: 'assets/images/dishlist1.png',
-      header: 'Card 3',
+      image: 'assets/images/tokyo.png',
+      header: 'Website',
       title: 'Überschrift 3',
       content: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam',
       button: {

@@ -1,12 +1,13 @@
 <div class="component-width" *ngIf="loaded; else loading">
   <h1> {{ 'contact.title' | translate | async }}</h1>
-  <h2 >{{ 'contact.text-eins' | translate | async }}</h2>
+  <p >{{ 'contact.text-eins' | translate | async }}</p>
+  <p>Ich berate Sie gerne.</p>
   <!--<p class="p-bright-background" >{{ 'contact.text-zwei' | translate | async }}</p>-->
   <div class="contact-component">
     <!-- Umhüllung für die ersten beiden Inputfelder -->
     <div class="container">
 
-        <div class="box-links">
+    <!--    <div class="box-links">
           <div>
             <p class="p-bright-background">+43 1573 0755 475</p>
             <p class="p-bright-background">alexdurach&#64;hotmail.de</p>
@@ -14,38 +15,48 @@
             <img src="assets/images/linkedin_entwurf2_h94.png" alt="email" class="contact-image">
           </div>
 
-        </div>
+        </div>-->
 
       <div class="box-rechts">
-        <h2 style="font-size: 30px; color:#898989;margin-bottom:20px;">Senden Sie mir eine Nachricht</h2>
+<!--        <h2 style="font-size: 30px; color:#898989;margin-bottom:20px;">Senden Sie mir eine Nachricht</h2>-->
         <div class="flex flex-column ">
+          <div class="name-email-row">
           <div class="contact-col">
-              <label class="contact-label" for="firstName" style="color:#898989;">{{'contact.name' | translate | async }}</label>
+              <label class="contact-label" for="firstName" style="color:#898989;">{{'contact.name' | translate | async }}
+              <span class="pflicht-sternchen">*</span>
+              </label>
             <input id="firstName" name="name" type="text" pInputText class="custom-input" required ngModel />
           </div>
           <div class="contact-col">
-              <label class="contact-label" for="email" style="color:#898989;">{{'contact.email' | translate | async }}</label>
+              <label class="contact-label" for="email" style="color:#898989;">{{'contact.email' | translate | async }}
+                <span class="pflicht-sternchen">*</span>
+              </label>
               <input id="email" name="email" type="text" pInputText class="custom-input" required ngModel/>
           </div>
-
-          <div class="contact-col">
+          </div>
+     <!--     <div class="contact-col">
             <label class="contact-label" for="phone">{{'contact.phone' | translate | async }}</label>
             <input id="phone" type="text" pInputText class="custom-input"/>
-          </div>
+          </div>-->
 
           <div class="contact-col">
-              <label class="contact-label" for="message" name="message">{{'contact.message' | translate | async }}</label>
+              <label class="contact-label" for="message" name="message">{{'contact.message' | translate | async }}
+                <span class="pflicht-sternchen">*</span>
+              </label>
             <input id="message" type="text" pInputText class="custom-textarea" required ngModel/>
           </div>
           <ng-container *ngIf="formGroup">
           <form [formGroup]="formGroup">
-            <p-checkbox formControlName="city" value="New York" inputId="ny"></p-checkbox>
-          <div class="contact-label">
-            <label><p class="contact-col">
-              "Durch das Absenden meiner Anfrage stimme ich der Erfassung, Verarbeitung und Nutzung meiner personenbezogenen Daten gemäß den Datenschutz- bestimmungen dieser Website zu. Ich habe die <a href='/data-protection'>Datenschutzerklärung und die Widerrufshinweise</a> gelesen und verstanden."
-            </p>
-            </label>
-          </div>
+<!--            <p-checkbox formControlName="city" value="New York" inputId="ny"></p-checkbox>-->
+            <div class="contact-label">
+              <label class="contact-row">
+                <input type="checkbox" name="data-protection" id="data-protection"> <!-- Checkbox -->
+                <p> "Ich habe die <a href='/data-protection'>Datenschutzerklärung</a> zur Kenntnis genommen."
+                  <span class="pflicht-sternchen">*</span></p>
+
+              </label>
+            </div>
+
           </form>
           </ng-container>
           <br>
