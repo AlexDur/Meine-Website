@@ -9,7 +9,7 @@ import {KurzVorstellungComponent} from '../about/kurz-vorstellung/kurz-vorstellu
 import {BrandingComponent} from '../../branding/branding.component';
 import {ButtonModule} from 'primeng/button';
 import {Router} from '@angular/router';
-import {Subscription} from 'rxjs';
+import {async, Subscription} from 'rxjs';
 import {IntroComponent} from '../about/intro/intro.component';
 import {TechstackComponent} from '../about/techstack/techstack.component';
 
@@ -56,4 +56,6 @@ export class HomeComponent implements OnInit, OnDestroy {
       this.subscription.unsubscribe();
     }
   }
+
+  protected readonly async = async;
 }

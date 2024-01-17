@@ -1,8 +1,17 @@
 <!--Inhalt der Komponente wird erst gezeigt, wenn translationLoaded =true-->
-<body class="homepage-background">
-<div class="home-component" *ngIf="loaded; else loading">
+<div class="component-width" *ngIf="loaded; else loading">
+  <div class="home-intro-box">
+    <div class="home-intro-box-text">
+    <h1> {{ 'home.title' | translate | async }}</h1>
+    <h2> {{ 'home.subtitle' | translate | async }}</h2>
+    <p class="p-bright-background">{{ 'home.description' | translate | async }}</p>
+    </div>
+
+    <div class="home-intro-box-image">
+      <img src="assets/images/tokyo.png" alt="Logo">
+    </div>
+  </div>
 </div>
 <ng-template #loading>
   <p>Lädt...</p>
 </ng-template>
-</body>

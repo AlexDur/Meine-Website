@@ -71,6 +71,11 @@ body,html{
   margin-right: 350px!important;
 }
 
+a:hover{
+  color: $text-color-ueberschrift;
+  text-decoration: none;
+}
+
 h3{}
 
 h4{}
@@ -198,7 +203,7 @@ ul li a:hover {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   list-style: none;
   padding: 0;
 }
@@ -298,7 +303,6 @@ ul li a:hover {
     flex: 1;
     display: flex;
     align-items: center;
-    background:white;
   }
 
 /*  .logo img {
@@ -315,22 +319,22 @@ ul li a:hover {
   }
 
   .custom-button {
-    padding: 10px 20px;
-    border: 1px solid white;
+/*    padding: 10px 20px;*/
+/*    border: 1px solid white;*/
     color: white;
-    font-weight:bold;
     border-radius: 50px !important;
     background-color: transparent;
-    transition: background-color 0.3s ease;
+/*    transition: background-color 0.3s ease;*/
     overflow: hidden;
     position: relative;
     cursor:pointer;
   }
 
   .custom-button:hover {
-    background-color: #fff;
-    color: black;
-    border: 1px solid black;
+    text-decoration:none;
+  /*  background-color: #fff;*/
+   /* color: black;*/
+/*    border: 1px solid black;*/
   }
 
   .custom-tooltip {
@@ -372,6 +376,28 @@ ul li a:hover {
 .home-component {
   display: flex;
   justify-content: space-between;
+}
+
+.home-intro-box{
+  display:flex;
+}
+
+.home-intro-box-text{
+  width:60%;
+}
+
+.home-intro-box-image{
+  display:flex;
+  width:40%;
+  justify-content:center;
+  align-items:center;
+}
+
+.home-intro-box-image img {
+  width: 100%;
+  height:100%;
+  padding:50px;
+  object-fit: cover; /* Optional, um das Bildverhältnis beizubehalten */
 }
 
 /*Intro-Komponente*/
@@ -796,29 +822,39 @@ ul li a:hover {
 
   .footer-component {
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     z-index: 1;
     margin-top: 18.75rem;
-    height: 20vh;
-    justify-content: center;
+    padding-left: 350px;
+    padding-right: 350px;
+    height: 35vh;
     background:$secondary-color;
   }
 
   .box {
     display: flex;
-    padding-top:10px;
+    flex-direction: column;
+    align-items: center;
+  /*  margin-top:12px;*/
     border: 1px solid $tertiary-color;
   }
 
+.right-box-wrapper {
+  display: flex;
+  flex-direction: row;
+}
 
-.box:nth-child(1) {
+/*.box:nth-child(1) {
   display:flex;
   flex-direction:row;
-  align-items:center;
-}
+
+}*/
 
 .box-social-icons{
   display:flex;
-  flex-direction:column;
+  padding-top:10px;
 }
 
 
@@ -829,21 +865,27 @@ ul li a:hover {
 
 .listing {
   display: flex;
-  align-items: center;
+  align-items: start;
   list-style: none;
-  padding: 0;
 }
 
   .listing ul {
     display: flex;
     flex-direction: column;
     list-style-type: none;
-    padding: 0;
     justify-content: left;
   }
 
   .listing li {
-    margin-bottom: 10px;
+
+    a {
+      color: $text-color-text;
+    }
+
+    a:hover{
+    color: $text-color-ueberschrift;
+      text-decoration: none;
+    }
   }
 
 /*  .logo img {
@@ -852,18 +894,24 @@ ul li a:hover {
 }*/
 
 .footer-logo-feld{
-  margin-top:17px;
   text-decoratio:none;
   color: $text-color-text;
 
-  a{
-    text-decoratio:none;
+
+  a {
+    text-decoratio: none;
     color: $text-color-text;
+  }
+
+  a:hover{
+    text-decoration:none;
+    color: $text-color-ueberschrift;
   }
 }
 
   .box > * {
-    margin-left: 20px;
+    margin-left: 15px;
+    color: $text-color-text;
 
   }
 
@@ -871,11 +919,11 @@ ul li a:hover {
     font-size: 2rem;
     margin-right: 5px;
     border-radius: 50%;
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
     align-items: center;
-    justify-content: center;
-    background-color: #f0f0f0;
+    justify-content: left;
+    background-color: black;
     color: #000;
   }
 

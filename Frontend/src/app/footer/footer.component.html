@@ -1,40 +1,56 @@
 <div *ngIf="loaded; else loading">
 <div class="footer-component">
-
   <div class="box">
     <div>
       <img src="assets/images/ad_bu_schw_bau_skal_footer.png" alt="Logo">
       <div class="footer-logo-feld">
-        <a routerLink="/data-protection">Datenschutz</a> &nbsp;|&nbsp; <a routerLink="/legal-notice">Impressum</a>
-      <p>Made in Bonn</p>
+        <p><a routerLink="/data-protection">Datenschutz</a> &nbsp;|&nbsp; <a routerLink="/legal-notice">Impressum</a></p>
+       <p>Made in Bonn</p>
+        <script>
+          document.getElementById('emailButton').addEventListener('click', function() {
+            // Erstellen Sie eine E-Mail-Adresse
+            const email = 'alexdurach@hotmail.de';
+
+            // Öffnen Sie ein E-Mail-Fach mit der E-Mail-Adresse als Empfänger
+            window.location.href = 'mailto:' + email;
+          });
+        </script>
+
       </div>
     </div>
   </div>
-  <div class="box">
-    <div>
-    <p >+49 1573 0755 475</p>
-    <p>adurach&#64;hotmail.de</p>
-    <p>Carl-Justi-Strasse 23</p>
-    <p>D-53121 Bonn</p>
-    </div>
-    <div class="box-social-icons">
-      <i class="pi pi-linkedin" style="font-size: 2rem; margin:0;"></i>
-      <i class="pi pi-github" style="font-size: 2rem; margin:0;"></i>
-      <i class="pi pi-whatsapp" style="font-size: 2rem; margin:0;"></i>
-    </div>
 
+  <div class="right-box-wrapper">
+  <div class="box">
+    <div class="listing">
+      <ul>
+        <li><h3 class="margin-top:0;">Kontakt</h3></li>
+        <li><a href="mailto:alexdurach@hotmail.de" class="custom-button">E-Mail schreiben</a>
+        </li>
+        <li><a routerLink="/contact">Kontaktformular</a></li>
+        </ul>
+    <ul>
+        <li><i class="pi pi-linkedin" style="font-size: 2rem; margin:0;"></i></li>
+        <li><i class="pi pi-linkedin" style="font-size: 2rem; margin:0;"></i></li>
+        <li><i class="pi pi-linkedin" style="font-size: 2rem; margin:0;"></i></li>
+  </ul>
+  </div>
   </div>
   <div class="box">
     <div class="listing">
       <ul>
+        <li><h3>Informationen</h3></li>
         <li><a routerLink="/data-protection">Datenschutz</a></li>
         <li><a routerLink="/legal-notice">Impressum</a></li>
+
         <li>Cookie-Einstellungen</li>
       </ul>
     </div>
   </div>
   </div>
 </div>
+</div>
 <ng-template #loading>
   <p>Lädt...</p>
 </ng-template>
+
