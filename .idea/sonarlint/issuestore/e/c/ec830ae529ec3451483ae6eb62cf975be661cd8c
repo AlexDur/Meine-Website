@@ -3,33 +3,38 @@
 1	css:S4658Q"Unexpected empty block(‰Ñ¢8ïŸºÌÏ1
 8	css:S4658·"Unexpected empty block(£¾£Òşÿÿÿÿ8ÆÆ³Ï1
 C	css:S46567""Unexpected duplicate "font-family"(—ôãÔÿÿÿÿÿ8ïŸºÌÏ1
-w	css:S4666Í"[Unexpected duplicate selector ".contact-component .custom-textarea", first used at line 561(Î˜»L8öÖëÔĞ1
-b	css:S4666â"@Unexpected duplicate selector ".listing", first used at line 202(ˆƒ—©ÿÿÿÿÿ8ÆÆ³Ï1
-`	css:S4666è"CUnexpected duplicate selector ".listing ul", first used at line 211( ¸‡—8ÆÆ³Ï1
-`	css:S4666ï"CUnexpected duplicate selector ".listing li", first used at line 217(Ñßù8ÆÆ³Ï1
-f	css:S4666­"DUnexpected duplicate selector ".field-fixed", first used at line 258(øê–»ÿÿÿÿÿ8ÀìÓ®Ğ1
-I	css:S4654’"'Unexpected unknown property "in-height"(€øÊûÿÿÿÿ8¢ îÎ1
-I	css:S4654",Unexpected unknown property "text-decoratio"(±ñ°Ë8Çú šÑ1
-I	css:S4654†",Unexpected unknown property "text-decoratio"(±ñ°Ë8Çú šÑ1
-F	css:S4654¼"*Unexpected unknown property "margin-botom"(ôû²+8ÀìÓ®Ğ1
+>	css:S4656Ì"Unexpected duplicate "width"(ÇÛ£öşÿÿÿÿ8ŞìÀÆÑ1
+w	css:S4666î"[Unexpected duplicate selector ".contact-component .custom-textarea", first used at line 571(Î˜»L8öÖëÔĞ1
+b	css:S4666–"@Unexpected duplicate selector ".listing", first used at line 212(ˆƒ—©ÿÿÿÿÿ8ÆÆ³Ï1
+`	css:S4666"CUnexpected duplicate selector ".listing ul", first used at line 221( ¸‡—8ÆÆ³Ï1
+`	css:S4666¤"CUnexpected duplicate selector ".listing li", first used at line 227(Ñßù8ÆÆ³Ï1
+I	css:S4654œ"'Unexpected unknown property "in-height"(€øÊûÿÿÿÿ8¢ îÎ1
+I	css:S4654¶",Unexpected unknown property "text-decoratio"(±ñ°Ë8Çú šÑ1
+I	css:S4654»",Unexpected unknown property "text-decoratio"(±ñ°Ë8Çú šÑ1
+M	css:S4654Ù"+Unexpected unknown property "paddin-bottom"(¼ø†üÿÿÿÿ8ŞìÀÆÑ1
+F	css:S4654ä"*Unexpected unknown property "margin-botom"(ôû²+8ÀìÓ®Ğ1
 :css:S125""Remove this commented out code.(ÊÏÍ»8ÆÆ³Ï1
-;css:S125 "Remove this commented out code.(ø£ß³8‹ì¢‰Ï1
-@css:S125"Remove this commented out code.(¬Îëÿÿÿÿÿ8ÏÆ³Ï1
-:css:S125´"Remove this commented out code.(¡âß[8Çú šÑ1
-@css:S125Â"Remove this commented out code.(¨íàòıÿÿÿÿ8®›ø¥Ñ1
-:css:S125Ã"Remove this commented out code.(ª¥x8®›ø¥Ñ1
-@css:S125Ç"Remove this commented out code.(º²şêøÿÿÿÿ8®›ø¥Ñ1
-;css:S125Ï"Remove this commented out code.(ÿüÕ™8®›ø¥Ñ1
-:css:S125Ğ"Remove this commented out code.(¸ˆŞ8®›ø¥Ñ1
-;css:S125Ñ"Remove this commented out code.(ÕÆœù8®›ø¥Ñ1
-;css:S125š"Remove this commented out code.(Ì­¬Ã8‹ì¢‰Ï1
-@css:S125á"Remove this commented out code.(èèé¨úÿÿÿÿ8ûŸºÌÏ1
-@css:S125é"Remove this commented out code.(èèé¨úÿÿÿÿ8ûŸºÌÏ1
-@css:S125ñ"Remove this commented out code.(Ï©Çøÿÿÿÿ8ÏÆ³Ï1
-@css:S125Õ"Remove this commented out code.(ÂÅÚÿÿÿÿÿ8ûŸºÌÏ1
-;css:S125£"Remove this commented out code.(óÚ¾À8‹ì¢‰Ï1
-@css:S125©"Remove this commented out code.(ÅşÙ¹ùÿÿÿÿ8‹ì¢‰Ï1
-@css:S125È"Remove this commented out code.(ĞÌˆ³ıÿÿÿÿ8®›ø¥Ñ1
-@css:S125Ñ"Remove this commented out code.(ÿ®£•ÿÿÿÿÿ8®›ø¥Ñ1
-:css:S125Ş"Remove this commented out code.(­¥œj8Çú šÑ1
-:css:S125û"Remove this commented out code.(¡âß[8Çú šÑ1
+;css:S125Ÿ"Remove this commented out code.(ø£ß³8‹ì¢‰Ï1
+@css:S125¨"Remove this commented out code.(¬Îëÿÿÿÿÿ8ÏÆ³Ï1
+:css:S125¾"Remove this commented out code.(¡âß[8Çú šÑ1
+@css:S125Ì"Remove this commented out code.(¨íàòıÿÿÿÿ8®›ø¥Ñ1
+:css:S125Í"Remove this commented out code.(ª¥x8®›ø¥Ñ1
+@css:S125Ñ"Remove this commented out code.(º²şêøÿÿÿÿ8®›ø¥Ñ1
+;css:S125Ù"Remove this commented out code.(ÿüÕ™8®›ø¥Ñ1
+:css:S125Ú"Remove this commented out code.(¸ˆŞ8®›ø¥Ñ1
+;css:S125Û"Remove this commented out code.(ÕÆœù8âìÀÆÑ1
+;css:S125¤"Remove this commented out code.(Ì­¬Ã8‹ì¢‰Ï1
+@css:S125ë"Remove this commented out code.(èèé¨úÿÿÿÿ8ûŸºÌÏ1
+@css:S125ó"Remove this commented out code.(èèé¨úÿÿÿÿ8ûŸºÌÏ1
+@css:S125û"Remove this commented out code.(Ï©Çøÿÿÿÿ8ÏÆ³Ï1
+;css:S125Ÿ"Remove this commented out code.(ŸéŒ¥8âìÀÆÑ1
+@css:S125ù"Remove this commented out code.(ÂÅÚÿÿÿÿÿ8ûŸºÌÏ1
+;css:S125Ç"Remove this commented out code.(óÚ¾À8‹ì¢‰Ï1
+@css:S125Í"Remove this commented out code.(ÅşÙ¹ùÿÿÿÿ8®›ø¥Ñ1
+@css:S125í"Remove this commented out code.(ĞÌˆ³ıÿÿÿÿ8âìÀÆÑ1
+;css:S125î"Remove this commented out code.(€ªÊ™8âìÀÆÑ1
+@css:S125ö"Remove this commented out code.(ÿ®£•ÿÿÿÿÿ8®›ø¥Ñ1
+@css:S125"Remove this commented out code.(ÅşÙ¹ùÿÿÿÿ8‹ì¢‰Ï1
+:css:S125’"Remove this commented out code.(­¥œj8Çú šÑ1
+:css:S125°"Remove this commented out code.(¡âß[8Çú šÑ1
+@css:S125Ó"Remove this commented out code.(¥ÿÃ ûÿÿÿÿ8âìÀÆÑ1

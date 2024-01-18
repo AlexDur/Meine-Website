@@ -940,3 +940,9 @@ MFrontend/src/app/TopMenu/about/code-prinzipien/code-prinzipien.component.scss,
 OFrontend/src/app/TopMenu/about/kurz-vorstellung/kurz-vorstellung.component.scss,1\a\1ae2c401cca3eb37ee19853087f2c7de65d5f103
 
 OFrontend/src/app/TopMenu/about/kurz-vorstellung/kurz-vorstellung.component.html,5\2\52f6b71f382458963e1a539c01f2772112d30c63
+x
+HFrontend/src/app/shared/scroll-up-button/scroll-up-button.component.html,d\8\d88946236ae953c983c846d43b4028a6f7b225aa
+v
+FFrontend/src/app/shared/scroll-up-button/scroll-up-button.component.ts,7\2\723a699ead3b46cd7c2467d1136edbde159610cf
+x
+HFrontend/src/app/shared/scroll-up-button/scroll-up-button.component.scss,4\6\4683191799d7b002cf0f1b3c85d1ba239e6aa3e9

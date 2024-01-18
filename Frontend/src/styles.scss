@@ -579,7 +579,7 @@ ul li a:hover {
 
     .contact-col {
       flex: 1;
-      margin-top:20px;
+      margin-top:10px;
       margin-bottom:10px;
       width:200px;
       margin-right: 10px;
@@ -589,7 +589,7 @@ ul li a:hover {
     }
 
     .contact-row{
-      gap: 10px;
+      gap: 5px;
       display: flex;
       flex-direction: row;
       align-items:center;
@@ -609,6 +609,10 @@ ul li a:hover {
 
     .pflicht-sternchen {
       color: red;
+    }
+
+    .contact-checkbox{
+      margin:0;
     }
 
     .contact-col:last-child {
@@ -631,6 +635,7 @@ ul li a:hover {
       height: 80vh;
       justify-content: center;
       align-items: start;
+      margin-top:50px;
     }
 
     .box-links {
