@@ -2,9 +2,12 @@
 <div class="component-width" *ngIf="loaded; else loading">
   <div class="home-intro-box">
     <div class="home-intro-box-text">
+      <div class="home-block-text">
     <h1> {{ 'home.title' | translate | async }}</h1>
     <h2> {{ 'home.subtitle' | translate | async }}</h2>
     <p class="p-bright-background">{{ 'home.description' | translate | async }}</p>
+      <button (click)="navigateToContact()" class="generic-button">Kontaktieren Sie mich</button>
+    </div>
     </div>
 
     <div class="home-intro-box-image">

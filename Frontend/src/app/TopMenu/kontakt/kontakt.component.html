@@ -1,43 +1,33 @@
 <div class="component-width" *ngIf="loaded; else loading">
-  <h1> {{ 'contact.title' | translate | async }}</h1>
-  <p >{{ 'contact.text-eins' | translate | async }}</p>
-  <p>Ich berate Sie gerne.</p>
+  <!--<h1> {{ 'contact.title' | translate | async }}</h1>-->
+  <h1 >{{ 'contact.text-one' | translate | async }}</h1>
+  <div class="contact-text">
+    <!--<p class="p-bright-background">{{ 'contact.text-two' | translate | async }}</p>-->
+    <p class="p-bright-background">Sie interessieren sich für eine neue Website, eine Webanwendung oder haben eine Frage? Schreiben Sie mir gerne eine Nachricht! Sie erhalten innerhalb von <strong>24 Stunden</strong> eine Antwort.</p>
+  </div>
+
   <!--<p class="p-bright-background" >{{ 'contact.text-zwei' | translate | async }}</p>-->
   <div class="contact-component">
     <!-- Umhüllung für die ersten beiden Inputfelder -->
     <div class="container">
-
-    <!--    <div class="box-links">
-          <div>
-            <p class="p-bright-background">+43 1573 0755 475</p>
-            <p class="p-bright-background">alexdurach&#64;hotmail.de</p>
-            <img src="assets/images/whatsapp_entwurf2_skal100.png" alt="phone" class="contact-image">
-            <img src="assets/images/linkedin_entwurf2_h94.png" alt="email" class="contact-image">
-          </div>
-
-        </div>-->
-
-      <div class="box-rechts">
+      <div class="box-links">
 <!--        <h2 style="font-size: 30px; color:#898989;margin-bottom:20px;">Senden Sie mir eine Nachricht</h2>-->
-        <div class="flex flex-column ">
+        <div>
           <div class="name-email-row">
-          <div class="contact-col">
-              <label class="contact-label" for="firstName" style="color:#898989;">{{'contact.name' | translate | async }}
-              <span class="pflicht-sternchen">*</span>
-              </label>
-            <input id="firstName" name="name" type="text" pInputText class="custom-input" required ngModel />
-          </div>
-          <div class="contact-col">
-              <label class="contact-label" for="email" style="color:#898989;">{{'contact.email' | translate | async }}
+
+            <div class="contact-col">
+                <label class="contact-label" for="firstName" style="color:#898989;">{{'contact.name' | translate | async }}
                 <span class="pflicht-sternchen">*</span>
-              </label>
-              <input id="email" name="email" type="text" pInputText class="custom-input" required ngModel/>
+                </label>
+              <input id="firstName" name="name" type="text" pInputText class="custom-input" required ngModel />
+            </div>
+            <div class="contact-col">
+                <label class="contact-label" for="email" style="color:#898989;">{{'contact.email' | translate | async }}
+                  <span class="pflicht-sternchen">*</span>
+                </label>
+                <input id="email" name="email" type="text" pInputText class="custom-input" required ngModel/>
+            </div>
           </div>
-          </div>
-     <!--     <div class="contact-col">
-            <label class="contact-label" for="phone">{{'contact.phone' | translate | async }}</label>
-            <input id="phone" type="text" pInputText class="custom-input"/>
-          </div>-->
 
           <div class="contact-col">
               <label class="contact-label" for="message" name="message">{{'contact.message' | translate | async }}
@@ -45,13 +35,14 @@
               </label>
             <input id="message" type="text" pInputText class="custom-textarea" required ngModel/>
           </div>
+
           <ng-container *ngIf="formGroup">
           <form [formGroup]="formGroup">
 <!--            <p-checkbox formControlName="city" value="New York" inputId="ny"></p-checkbox>-->
             <div class="contact-label">
               <label class="contact-row">
                 <input type="checkbox" name="data-protection" id="data-protection" class="contact-checkbox"> <!-- Checkbox -->
-                <p> "Ich habe die <a href='/data-protection'>Datenschutzerklärung</a> zur Kenntnis genommen."
+                <p> Ich habe die <a href='/data-protection'>Datenschutzerklärung</a> zur Kenntnis genommen.
                   <span class="pflicht-sternchen">*</span></p>
               </label>
             </div>
@@ -59,10 +50,12 @@
           </ng-container>
           <br>
           <br>
-          <button  class="generic-button">Kontaktieren Sie mich</button>
+          <button  class="button-tertiary">Kontaktieren Sie mich</button>
       </div>
       </div>
-
+      <!--<div class="box-rechts">
+        <img src="assets/images/ich_rund.jpg" alt="Logo">
+      </div>-->
   </div>
 </div>
 </div>

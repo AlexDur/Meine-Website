@@ -25,9 +25,11 @@ export class HeaderComponent implements OnInit, OnDestroy {
         this.initializeMenuItems();
       }
     });
+    const savedActiveItem = localStorage.getItem('activeMenuItem');
+    if (savedActiveItem) {
+      this.setActiveItem(savedActiveItem);
+    }
   }
-
-
 
   private initializeMenuItems() {
     const menuKeys = ['home', 'about', 'services', 'portfolio', 'contact'];
@@ -43,6 +45,9 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   setActiveItem(url: string | undefined) {
     this.activeItem = url;
+    if (typeof url === 'string') {
+      localStorage.setItem('activeMenuItem', url);
+    }
   }
 
   openEmailClient() {

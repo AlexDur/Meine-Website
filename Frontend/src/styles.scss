@@ -6,6 +6,8 @@ $text-color-ueberschrift: #333333;
 $text-color-unterueberschrift:#606060;
 $text-color-text:#898989;
 
+$detail-color:#fe6a2f;
+
 /*Text-Colors festlegen für Schrift vor dunkleren Hintergrund*/
 $text-color-ueberschrift-dunkel:#333333;
 $text-color-unterueberschrift-dunkel:#757575;
@@ -28,29 +30,20 @@ body,html{
   padding: 0;
 }
 
-.about-background {
-  height: 200%;
+.services-background {
+  height: 300%;
+  width:100vw;
   font-family: "Calibri", sans-serif;
   /*  margin-left:150px;
     margin-right:150px;*/
   background: linear-gradient(
       to bottom,
       $tertiary-color 0%,
-      $tertiary-color 16.5%,
-      #d2cece 16.53%,
-      $secondary-color 16.56%,
-      $secondary-color 31.5%,
-      #d2cece 31.53%,
-      $tertiary-color 31.56%,
-      $tertiary-color 49%,
-      #d2cece 49.03%,
-      $secondary-color 49.06%,
-      $secondary-color 70%,
-      #d2cece 70.03%,
-      $tertiary-color 70.06%,
-      $tertiary-color 100%
+      $tertiary-color 60%,
+      $secondary-color 60%,
+      $secondary-color 100%,
   );
-  background-size: 100% 600vh;
+  background-size:  600vh;
   font-size: var(--base-font-size);
   font-family: "Calibri","proxima nova light", "Helvetica Neue", "Swiss 7","Verdana", sans-serif;
 }
@@ -89,15 +82,16 @@ p {
 .p-bright-background {
   color: $text-color-text;
   font-size:20px;
+  padding: 7px 0;
 }
 
 h1{
-  font-size:6rem;
+  font-size:4rem;
   font-weight: bold;
   color:$text-color-ueberschrift;
   padding-bottom:0;
   margin-bottom:0;
-  margin-top:3rem;
+  margin-top:5rem;
 }
 
 h2{
@@ -137,17 +131,16 @@ ul li a:hover {
 .generic-button {
   width:200px;
   height:50px;
-  padding: 10px 20px;
   border: none;
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
   color:$tertiary-color;
-  background-color:#3e57cd;
+  background-color: $detail-color;
   transition: background-color 0.3s, color 0.3s;
 
   &:hover {
-    background-color: darken($tertiary-color, 10%);
+    background-color: darken($detail-color, 10%);
   }
 }
 
@@ -204,7 +197,7 @@ ul li a:hover {
   font-size: 20px;
   background-color:$text-color-unterueberschrift;
   color:white;
-  border-radius: 5px;
+  border-radius: 50px;
   transition: background 0.4s ease;
   animation: popUp 0.5s ease forwards;
 }
@@ -304,6 +297,8 @@ ul li a:hover {
     align-items: center;
   }
 
+
+
   a {
     text-decoration: none;
     display: inline-block;
@@ -362,7 +357,7 @@ ul li a:hover {
 
   .p-togglebutton.p-button.p-highlight {
     background-color: black;
-    border: 1px solid black;
+    border: 1px solid white;
     color:white;
   }
 
@@ -374,9 +369,13 @@ ul li a:hover {
   }
 
 .active-menu-item {
-  color:white;
-  padding:0px;
-  padding-bottom:2px;
+  color: #fe6a2f;
+  padding: 0px;
+  padding-bottom: 2px;
+}
+
+  a:hover {
+    color: #fe6a2f;
 }
 
 
@@ -393,7 +392,7 @@ ul li a:hover {
 }
 
 .home-intro-box-text{
-  width:60%;
+  width:50%;
 }
 
 .home-intro-box-image{
@@ -410,33 +409,41 @@ ul li a:hover {
   object-fit: cover; /* Optional, um das Bildverhältnis beizubehalten */
 }
 
+.home-block-text {
+  width:90%;
+}
+
 /*Intro-Komponente*/
 
 .intro-component {
   display: flex;
   justify-content: space-between;
 
-  .square-block-intro {
+  .intro-block {
     /* border: 3px solid black;*/
     min-height: 60vh;
     padding-left:0;
     flex-direction: column;
     display: flex;
-    align-items: flex-start;
 
-  }
 
-  .box-links {
-    flex: 1;
   }
 
   .box-rechts {
     flex: 1;
   }
 
+  .box-links {
+    flex: 1;
+  }
+
+  .block-text {
+    width:80%;
+  }
+
   .box-rechts img {
     width: 100%;
-    max-width: 500px;
+    max-width: 400px;
     height: auto;
   }
 
@@ -450,24 +457,27 @@ ul li a:hover {
   grid-template-columns: 1fr 450px 1fr;
   justify-items: center;
   align-items: center;
-  margin-top: 350px;
   margin-bottom: 300px;
   height: 450px;
 }
 
 .circle {
   grid-column: 2;
-  width: 100%;
-  height: 100%;
+  width: 450px;
+  height: 450px;
   border-radius: 50%;
   position: relative;
   overflow: hidden;
+  background-color:transparent;
   cursor:pointer;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+  background-image: linear-gradient(to right, #fe682c, #fba401, #feb500, #fec501, #17cbb2, #07b9b8, #06a2b8, #0067cc,#014bac,#004195, black );
 }
 
 
-.half-circle {
+
+
+/*.half-circle {
   width: 50%;
   height: 100%;
   position: absolute;
@@ -482,28 +492,29 @@ ul li a:hover {
   transform: translate(-50%, -50%);
   font-size: 28px;
   color: #ffffff;
-}
+}*/
 
-.half-circle-left {
+/*.half-circle-left {
   left: 0;
   font-weight:bold;
   clip-path: circle(50% at 100% 50%);
-  /*clip-path: ellipse(50% 100% at 50%);*/
-  background-image: linear-gradient(to top, #57ba84, #01b497, #00a597, #019392);
+  !*clip-path: ellipse(50% 100% at 50%);*!
+  background-image: linear-gradient(to right, #fe682c, #fba401, #feb500, #fec501, #ffd000 );
 }
 
 .half-circle-right {
   right: 0;
   font-weight:bold;
   clip-path: circle(50% at 0% 50%);
-  /*clip-path: ellipse(50% 100% at  50%);*/
-  background-image: linear-gradient(to bottom, #f77d28, #f27a2e, #f08527, #eb9532, #f77d18)
-}
+  !*clip-path: ellipse(50% 100% at  50%);*!
+  background-image:linear-gradient(to left, black,#17cbb2, #07b9b8, #06a2b8, #0178d7, #0067cc,#014bac,#004195);
+}*/
 
 .logo-container {
   background-color: $secondary-color;
   padding: 0;
   border-radius: 5px;
+
 /*  box-shadow: 0 4px 8px rgba(0,0,0,0.1);*/
   width: 200px;
   position: relative;
@@ -558,8 +569,15 @@ ul li a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-bottom: 8rem;
     width: 100%;
+
+    .container {
+      display: flex;
+      width: 60%;
+      height: 60vh;
+      justify-content: center;
+      align-items: start;
+    }
 
     .custom-input {
       width: 100%;
@@ -577,15 +595,28 @@ ul li a:hover {
       padding-bottom:28px;
     }
 
+    .contact-text{
+      width:55%;
+      display:flex;
+      justify-content:center;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .contact-text h1,
+    .contact-text p {
+      width: 50%;
+      text-align: center;
+    }
+
     .contact-col {
       flex: 1;
       margin-top:10px;
       margin-bottom:10px;
-      width:200px;
       margin-right: 10px;
       display: flex;
       flex-direction: column;
-      width: calc(50% - 20px);
+      width: 100%;
     }
 
     .contact-row{
@@ -593,13 +624,21 @@ ul li a:hover {
       display: flex;
       flex-direction: row;
       align-items:center;
+
+      a{
+        color: $detail-color;
+        text-decoration: none;
+        text-weight:bold;
+      }
     }
+
+
 
     .name-email-row{
       display:flex;
       flex-direction:row;
       justify-content:space-between;
-      width: calc(50% - 20px);
+      width: 100%
     }
 
     .contact-label {
@@ -608,7 +647,7 @@ ul li a:hover {
     }
 
     .pflicht-sternchen {
-      color: red;
+      color: $detail-color;
     }
 
     .contact-checkbox{
@@ -629,28 +668,19 @@ ul li a:hover {
       }
     }
 
-    .container {
-      display: flex;
-      width: 100%;
-      height: 80vh;
-      justify-content: center;
-      align-items: start;
-      margin-top:50px;
-    }
-
     .box-links {
-      border: 3px solid black;
+      /*border: 3px solid black;*/
       flex:1;
       margin-right: 25px;
-      padding: 50px;
-      height:60%;
+      padding: 50px 25px;
     }
 
     .box-rechts {
       flex:1;
-      padding-left: 25px;
+      display:flex;
+      padding-top:75px;
+      align-items:center;
       flex-direction:column;
-      height:60%;
     }
 
     .p-inputGroup {
@@ -695,9 +725,11 @@ ul li a:hover {
   .services-component {
     display: flex;
     justify-content: space-between;
+    height: 75vh;
 
     .square-block {
       flex: 1;
+      height:40%;
       flex-direction: column;
       margin: 10px;
       aspect-ratio: 1 / 1;
@@ -706,8 +738,6 @@ ul li a:hover {
       justify-content: center;
     }
   }
-
-
 
   /*Portfolio-Komponente*/
   .portfolio-component {
@@ -865,7 +895,7 @@ ul li a:hover {
     margin-top: 18.75rem;
     padding-left: 350px;
     padding-right: 350px;
-    height: 17rem;
+    height: 18rem;
     background:$secondary-color;
   }
 

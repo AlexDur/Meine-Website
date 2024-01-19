@@ -47,9 +47,10 @@ export class HomeComponent implements OnInit, OnDestroy {
     });
   }
 
-  /* navigateToContact() {
+
+  navigateToContact() {
     this.router.navigateByUrl('/contact');
-  }*/
+  }
 
   ngOnDestroy() {
     if (this.subscription) {

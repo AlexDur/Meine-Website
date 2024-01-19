@@ -3,6 +3,7 @@ import {TranslateService} from '../../shared/services/translate.service';
 import {AsyncPipe, NgIf} from '@angular/common';
 import {SharedModule} from '../../shared/shared.module';
 import {Subscription} from 'rxjs';
+import {TechstackComponent} from '../about/techstack/techstack.component';
 
 @Component({
   selector: 'app-services',
@@ -10,7 +11,8 @@ import {Subscription} from 'rxjs';
   imports: [
     AsyncPipe,
     NgIf,
-    SharedModule
+    SharedModule,
+    TechstackComponent
   ],
   templateUrl: './services.component.html',
   styleUrl: './services.component.scss'

@@ -27,9 +27,6 @@ export class IntroComponent implements OnInit, OnDestroy{
     });
   }
 
-  navigateToContact() {
-    this.router.navigateByUrl('/contact');
-  }
 
   ngOnDestroy() {
     if (this.subscription) {

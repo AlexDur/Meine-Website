@@ -1,5 +1,5 @@
 <!--TODO: Hier Angaben zur Softwareauswahl (Tech Stack) unterbringen-->
-
+<div class="services-background">
 <div class="component-width" *ngIf="loaded; else loading">
     <h1>{{ 'services.title' | translate | async }}</h1>
 <div class="services-component" >
@@ -14,6 +14,10 @@
 </div>
 </div>
 
+<div>
+  <app-techstack></app-techstack>
+</div>
+</div>
 <ng-template #loading>
   <p>Lädt...</p>
 </ng-template>

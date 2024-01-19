@@ -1,15 +1,15 @@
 <div class="component-width" *ngIf="loaded; else loading">
 <h1>{{ 'about.title' | translate | async }}</h1>
 <div class="intro-component">
-<div class="square-block-intro box-links">
-  <h2>{{ 'about.subtitle' | translate | async }}</h2>
+<div class="intro-block box-links">
+  <div class="block-text">
+  <p class="p-bright-background">{{ 'about.subtitle' | translate | async }}</p>
   <p class="p-bright-background">{{ 'about.description' | translate | async }}</p>
   <p class="p-bright-background">{{ 'about.description_two' | translate | async }}</p>
-  <p class="p-bright-background">{{ 'about.description_three' | translate | async }}</p>
-  <button   (click)="navigateToContact()" class="generic-button">Kontaktieren Sie mich</button>
+  </div>
 </div>
 <div class="square-block-intro box-rechts">
-  <img src="assets/images/logo1_pixel.png" alt="Logo">
+  <img src="assets/images/ich_rund.jpg" alt="Logo">
 </div>
 </div>
 </div>
