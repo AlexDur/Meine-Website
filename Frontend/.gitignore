@@ -39,6 +39,7 @@ testem.log
 
 # SonarLint-spezifische Dateien
 sonarlint/
+.sonarlint/
 sonar-report.json
 
 
