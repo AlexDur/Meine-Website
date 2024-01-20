@@ -26,6 +26,11 @@ import {FormsModule} from '@angular/forms';
 import {IntroComponent} from './TopMenu/about/intro/intro.component';
 import {TechstackComponent} from './TopMenu/about/techstack/techstack.component';
 import {ScrollUpButtonComponent} from './shared/scroll-up-button/scroll-up-button.component';
+import {ServicesGrafikComponent} from './TopMenu/services/services-grafik/services-grafik.component';
+import {ServicesTechstackComponent} from './TopMenu/services/services-techstack/services-techstack.component';
+import {
+  ServicesOptimierungHostingComponent
+} from './TopMenu/services/services-optimierung-hosting/services-optimierung-hosting.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +62,10 @@ import {ScrollUpButtonComponent} from './shared/scroll-up-button/scroll-up-butto
     FormsModule,
     IntroComponent,
     TechstackComponent,
-    ScrollUpButtonComponent
+    ScrollUpButtonComponent,
+    ServicesGrafikComponent,
+    ServicesTechstackComponent,
+    ServicesOptimierungHostingComponent
   ],
   providers: [],
   exports: [

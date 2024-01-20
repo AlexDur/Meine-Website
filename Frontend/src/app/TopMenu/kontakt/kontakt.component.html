@@ -1,11 +1,9 @@
 <div class="component-width" *ngIf="loaded; else loading">
   <!--<h1> {{ 'contact.title' | translate | async }}</h1>-->
-  <h1 >{{ 'contact.text-one' | translate | async }}</h1>
   <div class="contact-text">
-    <!--<p class="p-bright-background">{{ 'contact.text-two' | translate | async }}</p>-->
-    <p class="p-bright-background">Sie interessieren sich für eine neue Website, eine Webanwendung oder haben eine Frage? Schreiben Sie mir gerne eine Nachricht! Sie erhalten innerhalb von <strong>24 Stunden</strong> eine Antwort.</p>
+    <h1 class="h1-abweichung">{{ 'contact.text-one' | translate | async }}</h1>
+    <p class="p-bright-background">Sie interessieren sich für eine neue Website, eine Webanwendung oder haben eine Frage?<br>Schreiben Sie mir gerne eine Nachricht! Sie erhalten innerhalb von <strong>24 Stunden </strong> eine Antwort. </p>
   </div>
-
   <!--<p class="p-bright-background" >{{ 'contact.text-zwei' | translate | async }}</p>-->
   <div class="contact-component">
     <!-- Umhüllung für die ersten beiden Inputfelder -->
@@ -46,16 +44,19 @@
                   <span class="pflicht-sternchen">*</span></p>
               </label>
             </div>
+
           </form>
           </ng-container>
           <br>
           <br>
+          <div class="button-container">
           <button  class="button-tertiary">Kontaktieren Sie mich</button>
       </div>
       </div>
-      <!--<div class="box-rechts">
+      </div>
+      <div class="box-rechts">
         <img src="assets/images/ich_rund.jpg" alt="Logo">
-      </div>-->
+      </div>
   </div>
 </div>
 </div>

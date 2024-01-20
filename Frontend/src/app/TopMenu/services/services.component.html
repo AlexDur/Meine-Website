@@ -1,23 +1,23 @@
 <!--TODO: Hier Angaben zur Softwareauswahl (Tech Stack) unterbringen-->
-<div class="services-background">
+<!--<div class="services-background">-->
 <div class="component-width" *ngIf="loaded; else loading">
-    <h1>{{ 'services.title' | translate | async }}</h1>
+  <!--  <h1>{{ 'services.title' | translate | async }}</h1>-->
 <div class="services-component" >
-
-  <div class="square-block">
-    <!--TODO: Grafik einfügen-->
+  <div class="service-square-block">
+    <p>Bei mir können sie ihr Produkt aus einer Hand erhalten. Über die Jahre habe ich mich im beruflichen Umfeld zum Fullstackentwickler fortgebildet. Da ich dort auch häufig mit gestalterischen Aufgaben vertraut wurde, habe ich auch ein Verständnis für gutes Webdesign entwickelt.</p>
   </div>
-  <div class="square-block">
-    <p style="font-size: 30px;">{{ 'services.description-title' | translate | async }}</p>
-    <p style="font-size: 15px;">{{ 'services.description' | translate | async }}</p>
+  <div class="service-square-block">
+<!--    <p style="font-size: 30px;">{{ 'services.description-title' | translate | async }}</p>
+    <p style="font-size: 15px;">{{ 'services.description' | translate | async }}</p>-->
   </div>
 </div>
+<app-services-grafik></app-services-grafik>
+  <app-services-techstack></app-services-techstack>
+<app-services-optimierung-hosting></app-services-optimierung-hosting>
 </div>
+<!--</div>-->
 
-<div>
-  <app-techstack></app-techstack>
-</div>
-</div>
+
 <ng-template #loading>
   <p>Lädt...</p>
 </ng-template>

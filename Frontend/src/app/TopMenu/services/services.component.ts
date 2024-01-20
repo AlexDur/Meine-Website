@@ -4,6 +4,12 @@ import {AsyncPipe, NgIf} from '@angular/common';
 import {SharedModule} from '../../shared/shared.module';
 import {Subscription} from 'rxjs';
 import {TechstackComponent} from '../about/techstack/techstack.component';
+import {AccordionModule} from 'primeng/accordion';
+import {ServicesGrafikComponent} from "./services-grafik/services-grafik.component";
+import {ServicesTechstackComponent} from "./services-techstack/services-techstack.component";
+import {
+  ServicesOptimierungHostingComponent
+} from "./services-optimierung-hosting/services-optimierung-hosting.component";
 
 @Component({
   selector: 'app-services',
@@ -12,7 +18,11 @@ import {TechstackComponent} from '../about/techstack/techstack.component';
     AsyncPipe,
     NgIf,
     SharedModule,
-    TechstackComponent
+    TechstackComponent,
+    AccordionModule,
+    ServicesGrafikComponent,
+    ServicesTechstackComponent,
+    ServicesOptimierungHostingComponent
   ],
   templateUrl: './services.component.html',
   styleUrl: './services.component.scss'
@@ -28,8 +38,6 @@ export class ServicesComponent implements OnInit, OnDestroy {
       this.loaded = loaded;
     });
   }
-
-
 
   ngOnDestroy() {
     if (this.subscription) {
