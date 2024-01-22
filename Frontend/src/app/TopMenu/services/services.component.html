@@ -1,22 +1,34 @@
 <!--TODO: Hier Angaben zur Softwareauswahl (Tech Stack) unterbringen-->
 <!--<div class="services-background">-->
+<div class="services-background">
 <div class="component-width" *ngIf="loaded; else loading">
-  <!--  <h1>{{ 'services.title' | translate | async }}</h1>-->
+    <h1>{{ 'services.title' | translate | async }}</h1>
+  <h2>Fullstack-Entwicklung</h2>
 <div class="services-component" >
-  <div class="service-square-block">
-    <p>Bei mir können sie ihr Produkt aus einer Hand erhalten. Über die Jahre habe ich mich im beruflichen Umfeld zum Fullstackentwickler fortgebildet. Da ich dort auch häufig mit gestalterischen Aufgaben vertraut wurde, habe ich auch ein Verständnis für gutes Webdesign entwickelt.</p>
+  <!--<div class="service-square-block">-->
+  <div class="services-text">
+
+    <p>Über die Jahre habe ich mich im beruflichen Umfeld zum Fullstackentwickler fortgebildet. Dadurch kann ich Ihnen ihr Produkt komplett aus eigener Hand bereistellen. Technisch grob vereinfacht besteht eine Webanwendung aus drei Schlüsselkomponenten</p>
+  <ul>
+    <li><strong>Webdesign:</strong> Wie die Seite gestaltet sein soll</li>
+    <br>
+    <li><strong>Frontend:</strong>  Design in Code umgesetzt werden kann und ermöglichen mit Nutzerinteraktionen</li>
+    <br>
+    <li><strong> Backend:</strong> Datenspeicherung und -verwaltung Im technischen Sinn entwnd erhalten. .  Da ich dort auch häufig mit gestalterischen Aufgaben vertraut wurde, habe ich auch ein Verständnis für gutes Webdesign entwickelt.</li>
+  </ul>
+
   </div>
-  <div class="service-square-block">
-<!--    <p style="font-size: 30px;">{{ 'services.description-title' | translate | async }}</p>
-    <p style="font-size: 15px;">{{ 'services.description' | translate | async }}</p>-->
-  </div>
+<div>
+  <app-services-grafik></app-services-grafik>
 </div>
-<app-services-grafik></app-services-grafik>
+
+</div>
+
   <app-services-techstack></app-services-techstack>
 <app-services-optimierung-hosting></app-services-optimierung-hosting>
 </div>
 <!--</div>-->
-
+</div>
 
 <ng-template #loading>
   <p>Lädt...</p>

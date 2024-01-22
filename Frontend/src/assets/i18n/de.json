@@ -1,7 +1,7 @@
 {
   "home": {
     "title": "Software damit Ihr Geschäft floriert.",
-    "subtitle": "Ich entwickle moderne Webseiten und Webanwendungen für Kleinunternehmen.",
+    "subtitle": "Moderne Webseiten und Webanwendungen für Kleinunternehmen und Start-Ups.",
     "description": "Dabei setze ich auf die neuesten Technologien und Standards, um Ihnen eine Webseite zu bieten, die nicht nur gut aussieht, sondern auch schnell und sicher ist.",
     "button": "Kontaktieren Sie mich"
   },
@@ -48,32 +48,6 @@
   "portfolio": {
     "title": "An diesen Projekten arbeite ich aktuell",
     "description": "....."
-  },
-  "kurzvorsellung": {
-    "tabmenu": {
-      "who": "Wer bin ich?",
-      "what": "Was mache ich?",
-      "whatdone": "Was habe ich gemacht?",
-      "location": "Mein Standort"
-    },
-    "tabs": {
-      "tab1": {
-        "title": "Wer bin ich?",
-        "text": "Inhalt für Tab 1"
-      },
-      "tab2": {
-        "title": "Was mache ich?",
-        "text": "Inhalt für Tab 2"
-      },
-      "tab3": {
-        "title": "Was habe ich gemacht?",
-        "text": "Inhalt für Tab 3"
-      },
-      "tab4": {
-        "title": "Mein Standort",
-        "text": "Inhalt für Tab 4"
-      }
-    }
   },
   "code-principles": {
     "offer": "Mein Angebot",

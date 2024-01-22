@@ -1,4 +1,5 @@
-<body class="about-background">
+<div class="about-background">
+  <div class="component-width">
 <div class="home-component" *ngIf="loaded; else loading">
   <app-intro></app-intro>
 </div>
@@ -18,17 +19,16 @@
 <!--<div>
   <app-kurz-vorstellung></app-kurz-vorstellung>
 </div>-->
-<div class="ml-8">
-  <p>Warum Programmierung?</p>
-  <p>Werdegang</p>
+<div>
+  <app-kurz-vorstellung></app-kurz-vorstellung>
 </div>
 
 
 <ng-template #loading>
   <p>Lädt...</p>
 </ng-template>
-</body>
-
+</div>
+</div>
 
 <!--
 

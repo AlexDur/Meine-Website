@@ -6,6 +6,7 @@ import {Subscription} from 'rxjs';
 import {IntroComponent} from './intro/intro.component';
 import {ProjekteComponent} from '../projekte/projekte.component';
 import {TechstackComponent} from './techstack/techstack.component';
+import {KurzVorstellungComponent} from './kurz-vorstellung/kurz-vorstellung.component';
 
 @Component({
   selector: 'app-about',
@@ -15,7 +16,8 @@ import {TechstackComponent} from './techstack/techstack.component';
     SharedModule,
     IntroComponent,
     ProjekteComponent,
-    TechstackComponent
+    TechstackComponent,
+    KurzVorstellungComponent
   ],
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss'

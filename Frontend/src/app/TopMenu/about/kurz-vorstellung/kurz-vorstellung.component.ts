@@ -35,42 +35,38 @@ export class KurzVorstellungComponent implements OnInit, OnDestroy{
     this.subscription = this.translateService.areTranslationsLoaded().subscribe(loaded => {
       if (loaded) {
         this.updateActiveTabContent();
-        this.sanitizeUrlsInTabContents();
       }
     });
 
-
-    /*TODO: Dynamisch aus Jsons ladbar machen*/
     this.items = [
-      { label: 'Wer bin ich?', icon: 'pi pi-user' },
-      { label: 'Was mache ich?', icon: 'pi pi-play' },
-      { label: 'Was habe ich gemacht?', icon: 'pi pi-table' },
-      { label: 'Mein Standort', icon: 'pi pi-home' },
+      { label: 'Mein Weg'/*, icon: 'pi pi-user'*/ },
+      { label: 'Ausbildung'/*, icon: 'pi pi-play' */},
+      { label: 'Berufliche Stationen'/*, icon: 'pi pi-table' */},
+      /*{ label: 'Mein Standort', icon: 'pi pi-home' },*/
     ];
 
     this.activeItem = this.items[0];
   }
 
   tabContents = [
-    { left: 'image', right: 'text', imageUrl: 'assets/images/ich_rund.jpg', title: 'Wer bin ich?', description: 'Ich bin Webentwickler mit über drei Jahren professioneller Erfahrung. Meine Expertise liegt sowohl im Frontend als auch im Backend. Das bedeutet, dass ich sowohl die Benutzeroberfläche einer Seite bzw. Anwendung, als auch eine eventuell nötige Datenbankanbindung selbstständig programmiere. Zeit der aufgrund seiner Erfahrung sowohl das Frontend als auch das Backend programmieren kann. Sie erhalten so Ihre Webseite oder App aus einer Hand. Auf diese Weise kann ich Sie beim Erreichen Ihrer Ziele schnell und umfassend unterstützen.' },
-    { left: 'text', right: 'image', imageUrl: 'Generische Darstellung', title: 'Was mache ich?', description: 'Meine Ziel ist es, die bestmöglichen Weblösungen zu liefern, die ihre unmittelbaren Bedürfnisse erfüllen und Sie gleichzeitig für zukünftige Chancen positionieren, indem ich Technologie mit Ihrem Geschäftsplänen verknüpfe.' },
-    { left: 'image', right: 'text', imageUrl: 'Generische Darstellung', title: 'Was habe ich bereits gemacht?', description: 'In meiner hauptberuflichen Tätigkeit als Fullstack-Entwickler war ich bereits in der Programmierung verschiedener Anwendungen beteiligt. Sowohl im Bereich "Automotive", als auch im staatlichen Kontext sammelte ich bereits weitreichende Erfahrung. Nebenberuflich habe ich für Menschen aus meinem privaten Umfeld verschiedene Programmierarbeiten übernommen, ehe ich nun vor allem auf der Online-Plattform "Upwork" meine Dienstleistung anbiete.' },
-    { left: 'text', right: 'map', SafeResourceUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16348.165232134992!2d7.05995756358069!3d50.72780644341006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bee18c168524cb%3A0x63ee0ad03934db43!2sEndenich%2C%20Bonn-Hardtberg!5e0!3m2!1sde!2sde!4v1704769235699!5m2!1sde!2sde',  title: 'Mein Standort', description: 'Ich bin ansäßig in Bonn und profitiere dadurch von der Infrastruktur, die die Region Köln/Bonn Softwareentwicklern bietet. Regelmäßige lokale Entwickler-Treffen und Schulungen ermöglichen es mir im persönlichen Austausch mit anderen IT-Vernarrten neueste Trends und Entwicklungen zu antizipieren.' },
+    {
+      type: 'text',
+      title: 'Mein Weg',
+      description: 'Meine Leidenschaft für die Softwareentwicklung im Bereich der Webanwendungen, entfachte während meiner Zeit bei einer strategischen Unternehmensberatung, wo ich an der Entwicklung einer App für Smart Farming mitwirkte. Dieses Engagement führte mich zu einem Lebensmittel-Startup, wo ich als Business Development Manager begann und zunehmend in die Welt des Programmierens eintauchte. Nachdem ich mich dort intensiv mit Softwareentwicklung beschäftigt hatte, widmete ich mich vollständig dieser Disziplin als angestellter Software-Entwickler.\n\nMeine Reise begann jedoch weit vor meiner Faszination für das Programmieren. Schon immer interessierten mich Themen rund um unsere Ernährung und der Herstellung von Nahrungsmitteln. Mein agrarwissenschaftliches Studium in Stuttgart brachte mir Einblicke in technische Innovationen, die eine effizientere und nachhaltigere Landwirtschaft ermöglichen. Besonders die Möglichkeiten des Smart Farmings weckten mein Interesse. Im landwirtschaftlichen Masterstudium mit ökonomischem Schwerpunkt in Wien und Indiana, USA, vertiefte ich mich in Datenmodellierung. Diese Kombination von landwirtschaftlichem Wissen und Programmierkenntnissen treibt mich auch heute an, nebenberuflich eigene Softwarelösungen für ernährungsbezogene Themen zu entwickeln.'
+    },
+    {
+      type: 'text',
+      title: 'Ausbildung',
+      description: 'Uni Hohenheim Agrarwissenschaften 2011-2015 | Universität Wien und Purdue 2015-2020.'
+    },
+    {
+      type: 'text',
+      title: 'Berufliche Stationen',
+      description: 'In meiner hauptberuflichen Tätigkeit als Fullstack-Entwickler war ich bereits in der Programmierung verschiedener Anwendungen beteiligt. Sowohl im Bereich "Automotive", als auch im staatlichen Kontext sammelte ich bereits weitreichende Erfahrung. Nebenberuflich habe ich für Menschen aus meinem privaten Umfeld verschiedene Programmierarbeiten übernommen, ehe ich nun vor allem auf der Online-Plattform "Upwork" meine Dienstleistung anbiete.'
+    }
   ];
 
 
-  sanitizeUrlsInTabContents() {
-    this.tabContents = this.tabContents.map(tabContent => {
-      if (tabContent.SafeResourceUrl) {
-        return { ...tabContent, mapUrl: this.sanitizeUrl(tabContent.SafeResourceUrl) };
-      }
-      return tabContent;
-    });
-  }
-
-  sanitizeUrl(url: string) {
-    return this.sanitizer.bypassSecurityTrustResourceUrl(url);
-  }
 
   updateActiveTabContent() {
     this.activeTabContent = this.getActiveTabContent();

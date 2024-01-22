@@ -1,37 +1,96 @@
 <div class="kurzvorstellung-component">
   <div class="kurzvorstellung-container">
     <!-- Tab Menu -->
-    <div class="tab-menu custom-tabmenu">
+    <div class="tab-menu ">
       <p-tabMenu [model]="items" [(activeItem)]="activeItem" (activeItemChange)="onTabChange($event)">
       </p-tabMenu>
     </div>
     <div>
       <div class="content-container">
-      <div class="content-box-left">
-        <!-- Anzeigen des Bildes, wenn 'left' 'image' ist -->
-        <div class="content-box image">
-        <img *ngIf="activeTabContent?.left === 'image'" [src]="activeTabContent?.imageUrl">
+        <div class="content-box-center">
+          <!-- Anzeigen des Inhalts für 'Meine Story', wenn der entsprechende Tab aktiv ist -->
+          <div *ngIf="activeTabContent?.title === 'Mein Weg'">
+            <p style="text-align:center;">Meine Leidenschaft für die Softwareentwicklung im Bereich der Webanwendungen, entfachte während meiner Zeit bei einer strategischen Unternehmensberatung, wo ich an der Entwicklung einer App für Smart Farming mitwirkte. <br><br> Dieses Engagement führte mich zu einem Lebensmittel-Startup, wo ich als Business Development Manager begann und zunehmend in die Welt des Programmierens eintauchte. Nachdem ich mich dort intensiv mit Softwareentwicklung beschäftigt hatte, widmete ich mich vollständig dieser Disziplin als angestellter Software-Entwickler. <br><br> Meine Reise begann jedoch weit vor meiner Faszination für das Programmieren. Schon immer interessierten mich Themen rund um unsere Ernährung und der Herstellung von Nahrungsmitteln. Mein agrarwissenschaftliches Studium in Stuttgart brachte mir Einblicke in technische Innovationen, die eine effizientere und nachhaltigere Landwirtschaft ermöglichen. Besonders die Möglichkeiten des Smart Farmings weckten mein Interesse.  <br><br> Im landwirtschaftlichen Masterstudium mit ökonomischem Schwerpunkt in Wien und Indiana, USA, vertiefte ich mich in Datenmodellierung.  <br><br> Diese Kombination von landwirtschaftlichem Wissen und Programmierkenntnissen treibt mich auch heute an, nebenberuflich eigene Softwarelösungen für ernährungsbezogene Themen zu entwickeln ("s. Portfolio").</p>
+          </div>
+
+          <div *ngIf="activeTabContent?.title === 'Ausbildung'">
+            <table style="width:100%; text-align:left;">
+              <tr>
+                <td style="width:700%; vertical-align:top; text-align:left;">
+                  <p style="padding-right: 20px;font-size:20px;margin-top:0">Universität für Bodenkultur Wien</p>
+                  <p style="padding-right: 20px;margin-bottom:30px;">Dipl.-Ingenieur Agrarökonomie (äqui. Master of Science)</p>
+                </td>
+                <td style="width:30%; vertical-align:top; text-align:right;">
+                  <p style="margin-top: 0;font-size:20px;">2015-2020</p>
+                </td>
+              </tr>
+              <tr>
+                <td style="width:70%; vertical-align:top; text-align:left;">
+                  <p style="padding-right: 20px;font-size:20px;margin-top:0;">Purdue University, Indiana (USA)</p>
+                  <p style="padding-right: 20px;margin-bottom:30px;">Agricultural Economics (Master of Science)</p>
+                </td>
+                <td style="width:30%; vertical-align:top; text-align:right;">
+                  <p style="margin-top: 0;font-size:20px;">2017</p>
+                </td>
+              </tr>
+              <tr>
+                <td style="width:70%; vertical-align:top; text-align:left;">
+                  <p style="padding-right: 20px;font-size:20px;margin-top:0;">Universität Hohenheim (Stuttgart)</p>
+                  <p style="padding-right: 20px;">Agrarwissenschaften (Bachelor of Science)</p>
+                </td>
+                <td style="width:30%; vertical-align:top; text-align:right;">
+                  <p style="margin-top: 0;font-size:20px;">2011-2015</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+
+          <div *ngIf="activeTabContent?.title === 'Berufliche Stationen'">
+            <table style="width:100%; text-align:left;">
+              <tr>
+                <td style="width:70%; vertical-align:top; text-align:left;">
+                  <p style="padding-right: 20px;font-size:20px;margin-top:0;font-weight:bold;">Fullstack-Entwickler bei Conet Solutions (Bonn)</p>
+                  <p style="padding-right: 20px;margin-top:0;">Neuentwicklung dreier Apps für eine große Behörde im Zuge eines 2022 erlassenen Gesetzes</p>
+                </td>
+                <td style="width:30%; vertical-align:top; text-align:right;">
+                  <p style="margin-top: 0;font-size:20px;">Seit 2022</p>
+                </td>
+              </tr>
+
+              <tr>
+                <td style="width:80%; vertical-align:top; text-align:left;">
+                  <p style="padding-right: 20px;font-size:20px;margin-top:10px;font-weight:bold;">Frontend-Entwickler bei IT-Manufactory (Bonn, Passau)</p>
+                  <p style="padding-right: 20px;margin-top:0;">Erstellung von Features im Frontend innerhalb verschiedener Module der Digital Automotive Software</p>
+                </td>
+                <td style="width:20%; vertical-align:top; text-align:right;">
+                  <p style="margin-top: 0;font-size:20px;margin-top:10px;">2022</p>
+                </td>
+              </tr>
+
+              <tr>
+                <td style="width:70%; vertical-align:top; text-align:left;">
+                  <p style="padding-right: 20px;font-size:20px;margin-top:10px;font-weight:bold;">Business Development Manager / Software-Entwickler bei Tiendita (Bonn)</p>
+                  <p style="padding-right: 20px;margin-top:0;">Markt- und Wettbewerbsanalyse, Nutzerdatenanalyse, Zielgruppendefinition</p>
+                </td>
+                <td style="width:30%; vertical-align:top; text-align:right;">
+                  <p style="margin-top: 0;font-size:20px;margin-top:10px;">2020-2022</p>
+                </td>
+              </tr>
+
+              <tr>
+                <td style="width:70%; vertical-align:top; text-align:left;">
+                  <p style="padding-right: 20px;font-size:20px;margin-top:10px;font-weight:bold;">Unternehmensberater bei AFC Consulting (Bonn)</p>
+                  <p style="padding-right: 20px;margin-top:0;">Agronomische Beratung im Bereich Smart Farming</p>
+                </td>
+                <td style="width:30%; vertical-align:top; text-align:right;">
+                  <p style="margin-top: 0;font-size:20px;margin-top:10px">2018-2020</p>
+                </td>
+              </tr>
+            </table>
+
+          </div>
         </div>
-        <p *ngIf="activeTabContent?.left === 'text'">{{ activeTabContent?.description }}</p>
       </div>
-      <div class="content-box-right">
-        <!-- Anzeigen des Bildes, wenn 'right' 'image' ist -->
-        <div class="content-box image">
-        <img *ngIf="activeTabContent?.right === 'image'" [src]="activeTabContent?.imageUrl">
-      </div>
-        <p *ngIf="activeTabContent?.right === 'text'">{{ activeTabContent?.description }}</p>
-        <iframe *ngIf="activeTabContent?.right === 'map'"
-                [src]="activeTabContent?.mapUrl"
-                safeUrl
-                width="600"
-                height="450"
-                style="border:0;"
-                allowfullscreen=""
-                loading="lazy">
-        </iframe>
-      </div>
-    </div>
-  </div>
 </div>
 
 <!-- width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">-->

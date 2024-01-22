@@ -1,15 +1,11 @@
 <div class="component-width" *ngIf="loaded; else loading">
   <!--<h1> {{ 'contact.title' | translate | async }}</h1>-->
-  <div class="contact-text">
-    <h1 class="h1-abweichung">{{ 'contact.text-one' | translate | async }}</h1>
-    <p class="p-bright-background">Sie interessieren sich für eine neue Website, eine Webanwendung oder haben eine Frage?<br>Schreiben Sie mir gerne eine Nachricht! Sie erhalten innerhalb von <strong>24 Stunden </strong> eine Antwort. </p>
+  <div>
+    <h1>{{ 'contact.text-one' | translate | async }}</h1>
+    <span>Sie interessieren sich für eine neue Website, eine Webanwendung oder haben eine Frage?<br>Schreiben Sie mir gerne eine Nachricht! Sie erhalten innerhalb von <strong>24 Stunden </strong> eine Antwort. </span>
   </div>
-  <!--<p class="p-bright-background" >{{ 'contact.text-zwei' | translate | async }}</p>-->
   <div class="contact-component">
-    <!-- Umhüllung für die ersten beiden Inputfelder -->
     <div class="container">
-      <div class="box-links">
-<!--        <h2 style="font-size: 30px; color:#898989;margin-bottom:20px;">Senden Sie mir eine Nachricht</h2>-->
         <div>
           <div class="name-email-row">
 
@@ -28,7 +24,7 @@
           </div>
 
           <div class="contact-col">
-              <label class="contact-label" for="message" name="message">{{'contact.message' | translate | async }}
+              <label class="contact-label" for="message" name="message" style="color:#898989;">{{'contact.message' | translate | async }}
                 <span class="pflicht-sternchen">*</span>
               </label>
             <input id="message" type="text" pInputText class="custom-textarea" required ngModel/>
@@ -53,10 +49,10 @@
           <button  class="button-tertiary">Kontaktieren Sie mich</button>
       </div>
       </div>
-      </div>
-      <div class="box-rechts">
+     <!-- </div>-->
+    <!--  <div class="box-rechts">
         <img src="assets/images/ich_rund.jpg" alt="Logo">
-      </div>
+      </div>-->
   </div>
 </div>
 </div>

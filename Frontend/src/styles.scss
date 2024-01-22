@@ -3,8 +3,8 @@ $secondary-color: #f5f5f5;
 $tertiary-color: white;
 
 $text-color-ueberschrift: #333333;
-$text-color-unterueberschrift:#606060;
-$text-color-text:#898989;
+$text-color-unterueberschrift:#757575;
+$text-color-text:#333333;
 
 $detail-color:#fe6a2f;
 
@@ -17,6 +17,7 @@ $text-color-text-dunkel:#7f7f7f;
   @extend .generic-button;
   background-color: $tertiary-color;
   color: black;
+
 }
 
 
@@ -28,6 +29,7 @@ $text-color-text-dunkel:#7f7f7f;
 body,html{
   margin: 0;
   padding: 0;
+  text-rendering: optimizeLegibility;
 }
 
 .services-background {
@@ -39,9 +41,12 @@ body,html{
   background: linear-gradient(
       to bottom,
       $tertiary-color 0%,
-      $tertiary-color 60%,
-      $secondary-color 60%,
-      $secondary-color 100%,
+      $tertiary-color 35%,
+      $secondary-color 35%,
+      $secondary-color 75%,
+      $tertiary-color 75%,
+      $tertiary-color 100%,
+
   );
   background-size:  600vh;
   font-size: var(--base-font-size);
@@ -95,7 +100,7 @@ h1{
 }
 
 h2{
-  font-size:2.2rem;
+  font-size:2.0rem;
   color:$text-color-unterueberschrift-dunkel;
   margin-bottom:20px;
   margin-top:20px;
@@ -129,6 +134,7 @@ ul li a:hover {
 /*Generische Komponenten*/
 
 .generic-button {
+  margin-top:2rem;
   width:200px;
   height:50px;
   border: none;
@@ -389,28 +395,38 @@ ul li a:hover {
 
 .home-intro-box{
   display:flex;
+  width:100%;
+  position: relative
+}
+
+.home-block-text{
+  z-index:5;
+  width:100%;
 }
 
 .home-intro-box-text{
-  width:50%;
+  position: absolute; /* Absolut positioniert innerhalb des relativen Containers */
+  left: 0; /* Positionierung nach links */
+  z-index: 2;
+  width: 50%; /* oder angepasste Breite für die Überlappung */
 }
 
 .home-intro-box-image{
-  display:flex;
-  width:40%;
-  justify-content:center;
-  align-items:center;
+  position: relative; /* Relativ positioniert */
+  z-index: 1;
+  margin-left: 30%; /* oder angepasster Wert für die gewünschte Überlappung */
+  width: 70%; /* oder angepasste Breite */
+  margin-top: 6rem;
 }
 
 .home-intro-box-image img {
   width: 100%;
   height:100%;
-  padding:50px;
   object-fit: cover; /* Optional, um das Bildverhältnis beizubehalten */
 }
 
 .home-block-text {
-  width:90%;
+  width:100%;
 }
 
 /*Intro-Komponente*/
@@ -572,10 +588,9 @@ ul li a:hover {
     width: 100%;
 
 
-
     .container {
       display: flex;
-      width: 100%;
+      width: 50%;
       height: 60vh;
       justify-content: center;
       align-items: start;
@@ -615,11 +630,6 @@ ul li a:hover {
     }
 
 
-    .contact-text{
-      width:55%;
-
-    }
-
     .contact-col {
       flex: 1;
       margin-top:10px;
@@ -647,11 +657,15 @@ ul li a:hover {
     }
 
 
+
+
+
     .name-email-row{
       display:flex;
       flex-direction:row;
       justify-content:space-between;
       width: 100%;
+      margin-top:5rem;
     }
 
     .contact-label {
@@ -732,19 +746,38 @@ ul li a:hover {
     }
   }
 
+  .about-background{
+    height: 300%;
+    width:100vw;
+    font-family: "Calibri", sans-serif;
+    /*  margin-left:150px;
+      margin-right:150px;*/
+    background: linear-gradient(
+        to bottom,
+        $tertiary-color 0%,
+        $tertiary-color 50%,
+        $tertiary-color 50.3%,
+        $secondary-color 50.6%,
+        $secondary-color 100%,
+    );
+    background-size:  600vh;
+    font-size: var(--base-font-size);
+    font-family: "Calibri","proxima nova light", "Helvetica Neue", "Swiss 7","Verdana", sans-serif;
+  }
+
+
   /*services-Komponente*/
 
   .services-component {
     display: flex;
-    justify-content: space-between;
-    height: 75vh;
+    height: 45vh;
+    width:100%;
 
 
     .service-square-block {
       flex: 1;
       height:40%;
       flex-direction: column;
-      margin-top: 150px;
       aspect-ratio: 1 / 1;
       display: flex;
       align-items: flex-start;
@@ -752,9 +785,14 @@ ul li a:hover {
     }
   }
 
-  .service-graph{
-    height:30vh;
+  .services-text{
+    width:50%;
   }
+
+/*  .service-graph{
+    height:30vh;
+    margin-top:5rem;
+  }*/
 
   #myWord{
     cursor:pointer;
@@ -779,7 +817,7 @@ ul li a:hover {
 
 .upper-buttons{
   display:flex;
-  justify-content:space-between;
+
 }
 
 .lower-button{
@@ -802,7 +840,7 @@ ul li a:hover {
 
 
 .techstack-services{
-  margin-top:20rem;
+  margin-top:15rem;
 }
 
 .techstack-graph{
@@ -821,14 +859,29 @@ ul li a:hover {
 
 .button-tech{
   width:200px;
-  height:100px;
-  border: none;
+  height:75px;
   border-radius: 5px;
-  font-size: 16px;
   cursor: pointer;
   color:$primary-color;
   border:1px solid $primary-color;
   background-color: transparent;
+  padding:0;
+  font-size:2rem;
+}
+
+.button-tech.wd{
+  border:3px solid orange;
+  color:orange
+}
+
+.button-tech.fe{
+  border:3px solid green;
+  color:green;
+}
+
+.button-tech.be{
+  border:3px solid black;
+  color:black;
 }
 
 .tech{
@@ -838,13 +891,13 @@ ul li a:hover {
 /*Optimierung-Hosting-Komponente*/
 
 .seo-hosting{
-  margin-top:10rem;
+  margin-top:300px;
   width:100%;
 }
 
 .container-seo-hosting{
   display: flex;
-
+  margin-top:200px;
 }
 
 .seo-hosting-box-links{
@@ -936,7 +989,7 @@ ul li a:hover {
 
 
   .kurzvorstellung-component {
-    margin-top: 450px;
+    margin-top: 35rem;
     display: flex;
     justify-content: space-between;
     text-align: left;
@@ -950,59 +1003,84 @@ ul li a:hover {
 
     .tab-menu {
       flex: 0 0 auto;
-      padding-top: 50px;
-      padding-bottom: 100px;
+      padding-bottom: 30px;
       display: flex;
       align-items: flex-start;
       justify-content: center;
     }
 
-    .custom-tabmenu .p-tabmenu .p-tabmenu-nav .p-tabmenuitem {
-      margin-right: 30px; /* Änderung des Abstands */
-      background-color: blue; /* Änderung der Hintergrundfarbe */
-    }
-
-
-    .mcustom-tabmenu .p-tabmenu .p-tabmenu-nav .p-tabmenuitem:hover {
-      background-color: green;
-    }
-
-    .p-tabmenu .p-tabmenu-nav .p-tabmenuitem {
-      margin-right: 20px;
-    }
-
-    .tab-content {
+/*    .tab-content {
       display: flex;
       justify-content: space-between;
       flex-direction: row;
       border: 3px solid black;
       flex: 1 1 auto;
+    }*/
+
+    .p-tabmenu .p-tabmenu-nav .p-tabmenuitem .p-menuitem-link{
+      border:none;
+      background-color:$secondary-color;
+    }
+
+    .p-tabmenu-nav .p-menuitem-text{
+      font-size: 2rem;
+      color:$text-color-unterueberschrift;
+      font-weight:lighter;
+      text-decoration:none;
+      margin:22px;
+    }
+
+    .p-tabmenu .p-tabmenu-nav .p-tabmenuitem:hover .p-menuitem-link {
+      text-decoration: none;
+    }
+
+    .p-tabmenu .p-tabmenu-nav .p-tabmenuitem.p-highlight .p-menuitem-link{
+     border: none;
+     text-decoration:none;
+     background-color:$text-color-ueberschrift;
+     border-radius:5px;
+    }
+
+    .p-tabmenu .p-tabmenu-nav .p-tabmenuitem.p-highlight .p-menuitem-text {
+      color: white; // Textfarbe auf Weiß setzen
+    }
+
+    .p-tabmenu-nav .p-menuitem-text.p-highlight{
+      color:$tertiary-color;
     }
 
     .content-container {
       display: flex;
-      justify-content: center;
-      align-items: flex-start;
+      justify-content: space-between;
+      align-items: center;
       padding: 20px;
-      color: white;
-
+      color: $text-color-text;
+     /* border: 3px solid black;*/
     }
 
-    .content-box-left, .content-box-right {
-      flex: 1;
-      height: 450px;
+    .content-box-left{
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      width:100%;
+    }
+
+    .content-box-center{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width:100%;
     }
 
     .content-box-right {
     /*  background-color: $primary-color;*/
       border: 5px solid $primary-color;
-      padding:50px;
+      padding:20px;
     }
 
     .content-box-left {
      /* background-color: $tertiary-color;*/
       border: 5px solid $tertiary-color;
-      padding:50px;
     }
 
     .content-box.image {
@@ -1065,8 +1143,6 @@ ul li a:hover {
     margin-right:20px;
   }
   }
-
-
 
 
 /*  .box:nth-child(2) {

@@ -65,7 +65,7 @@ import {
     ScrollUpButtonComponent,
     ServicesGrafikComponent,
     ServicesTechstackComponent,
-    ServicesOptimierungHostingComponent
+    ServicesOptimierungHostingComponent,
   ],
   providers: [],
   exports: [
