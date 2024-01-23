@@ -2,23 +2,23 @@
 <!--<div class="services-background">-->
 <div class="services-background">
 <div class="component-width" *ngIf="loaded; else loading">
-    <h1>{{ 'services.title' | translate | async }}</h1>
-  <h2>Fullstack-Entwicklung</h2>
+    <div class="h1-abweichung">{{ 'services.title' | translate | async }}</div>
+  <div class="h2-abweichung">Fullstack-Entwicklung</div>
 <div class="services-component" >
   <!--<div class="service-square-block">-->
-  <div class="services-text">
+  <div class="services-text-box">
 
     <p>Über die Jahre habe ich mich im beruflichen Umfeld zum Fullstackentwickler fortgebildet. Dadurch kann ich Ihnen ihr Produkt komplett aus eigener Hand bereistellen. Technisch grob vereinfacht besteht eine Webanwendung aus drei Schlüsselkomponenten</p>
   <ul>
-    <li><strong>Webdesign:</strong> Wie die Seite gestaltet sein soll</li>
+    <li><strong>Webdesign:</strong> Gibt mit großer Präzision vor, wie die Benutzeroberfläche gestaltet sein soll</li>
     <br>
-    <li><strong>Frontend:</strong>  Design in Code umgesetzt werden kann und ermöglichen mit Nutzerinteraktionen</li>
+    <li><strong>Frontend:</strong>  Hier wird das Design in Code umgesetzt und Interaktion des Nutzer mit der Anwendung erst ermöglicht.</li>
     <br>
-    <li><strong> Backend:</strong> Datenspeicherung und -verwaltung Im technischen Sinn entwnd erhalten. .  Da ich dort auch häufig mit gestalterischen Aufgaben vertraut wurde, habe ich auch ein Verständnis für gutes Webdesign entwickelt.</li>
+    <li><strong> Backend:</strong> Die Datenspeicherung und -verwaltung wird hier implementiert.</li>
   </ul>
 
   </div>
-<div>
+<div class="service-graph-box">
   <app-services-grafik></app-services-grafik>
 </div>
 

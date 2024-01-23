@@ -13,12 +13,11 @@ $text-color-ueberschrift-dunkel:#333333;
 $text-color-unterueberschrift-dunkel:#757575;
 $text-color-text-dunkel:#7f7f7f;
 
-.button-tertiary {
+/*.button-tertiary {
   @extend .generic-button;
   background-color: $tertiary-color;
   color: black;
-
-}
+}*/
 
 
 :root {
@@ -43,8 +42,8 @@ body,html{
       $tertiary-color 0%,
       $tertiary-color 35%,
       $secondary-color 35%,
-      $secondary-color 75%,
-      $tertiary-color 75%,
+      $secondary-color 70%,
+      $tertiary-color 70%,
       $tertiary-color 100%,
 
   );
@@ -82,6 +81,17 @@ p {
   margin-top: 10px;
   margin-bottom: 10px;
   padding: 0;
+  font-size:1.2rem;
+  line-height:1.5;
+}
+
+.p-abweichung {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 0;
+  font-size:1.2rem;
+  line-height:1.5;
+  text-align:center;
 }
 
 .p-bright-background {
@@ -97,6 +107,16 @@ h1{
   padding-bottom:0;
   margin-bottom:0;
   margin-top:5rem;
+  text-align:center;
+}
+
+.h1-abweichung{
+  font-size:4rem;
+  font-weight: bold;
+  color:$text-color-ueberschrift;
+  padding-bottom:0;
+  margin-bottom:0;
+  margin-top:5rem;
 }
 
 h2{
@@ -105,7 +125,19 @@ h2{
   margin-bottom:20px;
   margin-top:20px;
   font-weight:lighter;
+  text-align:center;
+
 }
+
+.h2-abweichung{
+  font-size:2.0rem;
+  color:$text-color-unterueberschrift-dunkel;
+  margin-bottom:20px;
+  margin-top:20px;
+  font-weight:lighter;
+}
+
+
 
 .ueberschrift-dunkel{
   color: $text-color-ueberschrift-dunkel;
@@ -121,8 +153,14 @@ h2{
   color: $text-color-text-dunkel;
 }
 
+ul li {
+  font-size:1.2rem;
+  line-height:1.5;
+}
+
 ul li a {
   color: black;
+
   text-decoration: none;
 }
 
@@ -134,19 +172,20 @@ ul li a:hover {
 /*Generische Komponenten*/
 
 .generic-button {
-  margin-top:2rem;
   width:200px;
   height:50px;
-  border: none;
+  border: 2px solid $detail-color;
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
-  color:$tertiary-color;
-  background-color: $detail-color;
+  color:$detail-color;
+  background-color: transparent;
   transition: background-color 0.3s, color 0.3s;
+  margin-top:1.3rem;
 
   &:hover {
     background-color: darken($detail-color, 10%);
+  color:$tertiary-color;
   }
 }
 
@@ -405,17 +444,17 @@ ul li a:hover {
 }
 
 .home-intro-box-text{
-  position: absolute; /* Absolut positioniert innerhalb des relativen Containers */
-  left: 0; /* Positionierung nach links */
+  position: absolute;
+  left: 0;
   z-index: 2;
-  width: 50%; /* oder angepasste Breite für die Überlappung */
+  width: 50%;
 }
 
 .home-intro-box-image{
-  position: relative; /* Relativ positioniert */
+  position: relative;
   z-index: 1;
-  margin-left: 30%; /* oder angepasster Wert für die gewünschte Überlappung */
-  width: 70%; /* oder angepasste Breite */
+  margin-left: 40%;
+  width: 70%;
   margin-top: 6rem;
 }
 
@@ -656,7 +695,22 @@ ul li a:hover {
       }
     }
 
+    .form-button {
+      width:200px;
+      height:50px;
+      border: 2px solid $detail-color;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      color:$detail-color;
+      background-color: transparent;
+      transition: background-color 0.3s, color 0.3s;
 
+      &:hover {
+        background-color: darken($detail-color, 10%);
+        color:$tertiary-color;
+      }
+    }
 
 
 
@@ -665,7 +719,7 @@ ul li a:hover {
       flex-direction:row;
       justify-content:space-between;
       width: 100%;
-      margin-top:5rem;
+      margin-top:3rem;
     }
 
     .contact-label {
@@ -774,7 +828,7 @@ ul li a:hover {
     width:100%;
 
 
-    .service-square-block {
+   /* .service-square-block {
       flex: 1;
       height:40%;
       flex-direction: column;
@@ -782,17 +836,27 @@ ul li a:hover {
       display: flex;
       align-items: flex-start;
       justify-content: center;
-    }
+    }*/
   }
 
-  .services-text{
-    width:50%;
+  .services-text-box{
+    /*border:1px solid black;*/
   }
 
-/*  .service-graph{
-    height:30vh;
+.service-graph-box{
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  /*border:1px solid black;*/
+  width:100%;
+  margin-top:-220px;
+  padding-top:-220px;
+}
+
+  .service-graph{
+    width:100%;
     margin-top:5rem;
-  }*/
+  }
 
   #myWord{
     cursor:pointer;
@@ -840,11 +904,11 @@ ul li a:hover {
 
 
 .techstack-services{
-  margin-top:15rem;
+  margin-top:21rem;
 }
 
 .techstack-graph{
-  margin-top:6rem;
+  margin-top:7rem;
   gap:3rem;
   padding-right:6rem;
   display:flex;
@@ -891,7 +955,7 @@ ul li a:hover {
 /*Optimierung-Hosting-Komponente*/
 
 .seo-hosting{
-  margin-top:300px;
+  margin-top:20rem;
   width:100%;
 }
 
@@ -927,7 +991,7 @@ ul li a:hover {
     grid-gap: 25px;
     text-align: left;
     align-items: stretch;
-    margin-top: 60px;
+    margin-top: 5rem;
   }
 
   .portfolio-header{
@@ -942,6 +1006,10 @@ ul li a:hover {
   margin: 0;
   white-space: nowrap;
   align-items: center;
+}
+
+.portfolio-text-box{
+  width:50%;
 }
 
 .portfolio-header .header-line {
@@ -961,7 +1029,7 @@ ul li a:hover {
     display:flex;
     justify-content: center;
     border-radius: 5px;
-    width: 100%;
+    width: 60%;
     height: auto;
     cursor:pointer;
     padding-top: 5px;
@@ -1101,7 +1169,7 @@ ul li a:hover {
     margin-top: 18.75rem;
     padding-left: 350px;
     padding-right: 350px;
-    height: 18rem;
+    height: 21rem;
     background:$secondary-color;
   }
 

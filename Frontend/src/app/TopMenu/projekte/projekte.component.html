@@ -1,12 +1,10 @@
 <div class="component-width" *ngIf="loaded; else loading">
-  <h1>Portfolio</h1>
-  <p class="p-bright-background">In meinen Projekten als angestellter Softwareentwickler lernte ich viel wie im Sinne der “Beste Practice” Anwendungen von A-Z entwickelt werden. Unten finden sie jedoch meine eigenen Projekte die ich kontinuierlich immer dann vorantreibe, wenn ich zeitlich dazu komme.</p>
+  <div class="h1-abweichung">Portfolio</div>
+  <div class="h2-abweichung">Schauen sie sich meine neusten Projekte an.</div>
+  <div class="portfolio-text-box">
+    <p >In meinen Projekten als angestellter Softwareentwickler lernte ich viel wie im Sinne der “Beste Practice” Anwendungen von A-Z entwickelt werden. Unten finden sie jedoch meine eigenen Projekte die ich kontinuierlich immer dann vorantreibe, wenn ich zeitlich dazu komme.</p>
+  </div>
 
-<!--  <div class="portfolio-header">
-
-     <h2>{{ 'portfolio.title' | translate | async }}</h2>
-    <hr class="header-line" />
-  </div>-->
   <div class="portfolio-component">
   <p-card *ngFor="let card of cards"  class="custom-card">
     <img src="{{card.image}}" alt="{{card.title}}" class="card-image">

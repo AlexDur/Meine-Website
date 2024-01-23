@@ -1,14 +1,11 @@
 <div class="component-width" *ngIf="loaded; else loading">
-  <!--<h1> {{ 'contact.title' | translate | async }}</h1>-->
-  <div>
+  <div class="contact-center-text">
     <h1>{{ 'contact.text-one' | translate | async }}</h1>
-    <span>Sie interessieren sich für eine neue Website, eine Webanwendung oder haben eine Frage?<br>Schreiben Sie mir gerne eine Nachricht! Sie erhalten innerhalb von <strong>24 Stunden </strong> eine Antwort. </span>
-  </div>
+    <div class="p-abweichung">Sie interessieren sich für eine neue Website, eine Webanwendung oder haben eine Frage?<br>Schreiben Sie mir gerne eine Nachricht!<br> Sie erhalten innerhalb von <strong>24 Stunden </strong> eine Antwort.</div>
   <div class="contact-component">
     <div class="container">
         <div>
           <div class="name-email-row">
-
             <div class="contact-col">
                 <label class="contact-label" for="firstName" style="color:#898989;">{{'contact.name' | translate | async }}
                 <span class="pflicht-sternchen">*</span>
@@ -46,7 +43,7 @@
           <br>
           <br>
           <div class="button-container">
-          <button  class="button-tertiary">Kontaktieren Sie mich</button>
+          <button  class="form-button">Kontaktieren Sie mich</button>
       </div>
       </div>
      <!-- </div>-->
@@ -54,6 +51,7 @@
         <img src="assets/images/ich_rund.jpg" alt="Logo">
       </div>-->
   </div>
+</div>
 </div>
 </div>
 <ng-template #loading>
