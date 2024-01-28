@@ -31,6 +31,7 @@ import {ServicesTechstackComponent} from './TopMenu/services/services-techstack/
 import {
   ServicesOptimierungHostingComponent
 } from './TopMenu/services/services-optimierung-hosting/services-optimierung-hosting.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -66,6 +67,7 @@ import {
     ServicesGrafikComponent,
     ServicesTechstackComponent,
     ServicesOptimierungHostingComponent,
+    BrowserAnimationsModule
   ],
   providers: [],
   exports: [
