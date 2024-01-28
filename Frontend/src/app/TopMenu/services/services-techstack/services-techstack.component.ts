@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
+import {Subscription} from 'rxjs';
+import {TranslateService} from '../../../shared/services/translate.service';
 
 @Component({
   selector: 'app-services-techstack',
@@ -7,6 +9,24 @@ import { Component } from '@angular/core';
   templateUrl: './services-techstack.component.html',
   styleUrl: './services-techstack.component.scss'
 })
-export class ServicesTechstackComponent {
+export class ServicesTechstackComponent implements OnInit, OnDestroy{
+  loaded: boolean = false;
+  private subscription: Subscription | null = null;
+
+  constructor(private translateService: TranslateService) {}
+
+  ngOnInit() {
+    this.subscription = this.translateService.areTranslationsLoaded().subscribe(loaded => {
+      this.loaded = loaded;
+    });
+  }
+
+
+
+  ngOnDestroy() {
+    if (this.subscription) {
+      this.subscription.unsubscribe();
+    }
+  }
 
 }

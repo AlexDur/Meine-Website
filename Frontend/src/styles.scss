@@ -443,11 +443,37 @@ ul li a:hover {
   width:100%;
 }
 
+/* Keyframes für Animation von links */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Keyframes für Animation von rechts */
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
 .home-intro-box-text{
   position: absolute;
   left: 0;
   z-index: 2;
   width: 50%;
+  animation: 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.8) 0s 1 slideInFromLeft;
 }
 
 .home-intro-box-image{
@@ -456,6 +482,7 @@ ul li a:hover {
   margin-left: 40%;
   width: 70%;
   margin-top: 6rem;
+  animation: 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.8) 0s 1 slideInFromRight
 }
 
 .home-intro-box-image img {
@@ -485,11 +512,17 @@ ul li a:hover {
   }
 
   .box-rechts {
+    display:flex;
+    align-items:center;
+    justify-content:center;
     flex: 1;
+    animation: 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.8) 0s 1 slideInFromRight;
+
   }
 
   .box-links {
     flex: 1;
+    /*animation: 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.8) 0s 1 slideInFromLeft;*/
   }
 
   .block-text {
@@ -851,6 +884,7 @@ ul li a:hover {
   width:100%;
   margin-top:-220px;
   padding-top:-220px;
+  animation: 0.5s ease-out 0s 1 slideUp;
 }
 
   .service-graph{
@@ -905,7 +939,14 @@ ul li a:hover {
 
 .techstack-services{
   margin-top:21rem;
+/*  transform: translateX(-100%);
+  opacity: 0;*/
+/*  animation: 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.8) 0s 1 slideInFromLeft;*/
 }
+
+/*.techstack-services-visible {
+  animation: 1s cubic-bezier(0.55, 0.085, 0.68, 0.8) 0s 1 slideInFromLeft;
+}*/
 
 .techstack-graph{
   margin-top:7rem;
@@ -973,7 +1014,13 @@ ul li a:hover {
   width:50%;
   justify-content:center;
   align-items:center;
+  transform: translateX(100%); /* Startet außerhalb des Bildschirms */
+  opacity: 0;
+}
 
+.seo-hosting-animate {
+  animation: 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.8) 0s 1 slideInFromRight;
+  animation-fill-mode: forwards;
 }
 
 
@@ -992,6 +1039,7 @@ ul li a:hover {
     text-align: left;
     align-items: stretch;
     margin-top: 5rem;
+    animation: 0.5s ease-out 0s 1 slideUp;
   }
 
   .portfolio-header{
@@ -1007,6 +1055,11 @@ ul li a:hover {
   white-space: nowrap;
   align-items: center;
 }
+
+
+/*.portfolio-top{
+  animation: 1s ease-out 1.5s 1 slideInFromLeft;
+}*/
 
 .portfolio-text-box{
   width:50%;
@@ -1035,25 +1088,17 @@ ul li a:hover {
     padding-top: 5px;
   }
 
-  /*TODO: Kann verschlankt werden, wenn p-button richtig funktioniert*/
-
-/*  .portfolio-component .custom-card .custom-button {
-    background-color: $primary-color;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: auto;
-
-    &:hover {
-      background-color: #0056b3;
-    }
-  }*/
-
-
-  /*Kurzvorstellung-Komponente*/
+/* Keyframes für die Animation */
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 
 
   .kurzvorstellung-component {
@@ -1067,6 +1112,7 @@ ul li a:hover {
       margin-top: -300px;
       margin-bottom: 100px;
       position: relative;
+      animation: 0.5s ease-out 0s 1 slideUp;
     }
 
     .tab-menu {
@@ -1075,6 +1121,7 @@ ul li a:hover {
       display: flex;
       align-items: flex-start;
       justify-content: center;
+      animation: 0.5s ease-out 0s 1 slideUp;
     }
 
 /*    .tab-content {
