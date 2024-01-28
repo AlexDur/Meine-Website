@@ -964,3 +964,9 @@ NFrontend/src/app/TopMenu/services/services-grafik/services-grafik.component.ts
 PFrontend/src/app/TopMenu/services/services-grafik/services-grafik.component.scss,b\d\bdb7b0bb6724e3042d6cdeed427fb67448db7afd
 €
 PFrontend/src/app/TopMenu/services/services-grafik/services-grafik.component.html,d\c\dc89e11b2510c2f09e348852d376c929e961aa54
+^
+.Frontend/src/app/footer/faq/faq.component.html,c\e\cee7a4f458bdd582fef0c44e266b8293c97e44d5
+\
+,Frontend/src/app/footer/faq/faq.component.ts,3\4\3427fd24455f93e99746720f9313ae6b4b8215f4
+^
+.Frontend/src/app/footer/faq/faq.component.scss,6\1\61e8797f92b4f1733fb31233b10898e6ce6dcbb1
