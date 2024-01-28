@@ -970,3 +970,5 @@ PFrontend/src/app/TopMenu/services/services-grafik/services-grafik.component.htm
 ,Frontend/src/app/footer/faq/faq.component.ts,3\4\3427fd24455f93e99746720f9313ae6b4b8215f4
 ^
 .Frontend/src/app/footer/faq/faq.component.scss,6\1\61e8797f92b4f1733fb31233b10898e6ce6dcbb1
+F
+Frontend/tsconfig.json,e\c\ec8762ee5bc0a6ebd3363c83a67109bfd941489c

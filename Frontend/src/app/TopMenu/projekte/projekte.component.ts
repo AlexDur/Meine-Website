@@ -46,9 +46,9 @@ export class ProjekteComponent implements OnInit, OnDestroy{
       }
     },
     {
-      image: 'assets/images/tokyo.png',
-      header: 'Website',
-      title: 'Überschrift 3',
+      image: 'assets/images/ad_rund.png',
+      header: 'Chatbot',
+      title: 'Anwendung in Konzeptionsphase',
       content: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam',
       button: {
         text: 'Mehr Informationen',
