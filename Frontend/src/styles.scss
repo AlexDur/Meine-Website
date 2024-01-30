@@ -68,6 +68,13 @@ body,html{
   margin-right: 350px!important;
 }
 
+@media screen and (max-width: 600px) {
+  .component-width {
+    margin-left: 1rem!important;
+    margin-right: 1rem!important;
+  }
+}
+
 a:hover{
   color: $text-color-ueberschrift;
   text-decoration: none;
@@ -119,6 +126,14 @@ h1{
   margin-top:5rem;
 }
 
+@media screen and (max-width: 600px) {
+  .h1-abweichung {
+    font-size: 1.75rem;
+  }
+}
+
+
+
 h2{
   font-size:2.0rem;
   color:$text-color-unterueberschrift-dunkel;
@@ -135,6 +150,12 @@ h2{
   margin-bottom:20px;
   margin-top:20px;
   font-weight:lighter;
+}
+
+@media screen and (max-width: 600px) {
+  .h2-abweichung {
+    font-size: 1.0rem;
+  }
 }
 
 .h2-abweichung-dunkel{
@@ -259,7 +280,7 @@ ul li a:hover {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: start;
+  align-items: flex-start;
   list-style: none;
   padding: 0;
 }
@@ -339,7 +360,13 @@ ul li a:hover {
     padding-left: 22rem;
     padding-right: 22rem;
     width:100%;
-    /*    margin-right: 250px;*/
+  }
+
+  @media screen and (max-width: 600px) {
+    .header-content {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
   }
 }
 
@@ -350,7 +377,28 @@ ul li a:hover {
     align-items: center;
   }
 
+.hamburger-menu {
+  display: none;
+}
 
+@media screen and (max-width: 600px) {
+  .hamburger-menu {
+    display: block;
+    justify-content:center;
+    color:white;
+    cursor: pointer;
+
+    .pi {
+      font-size: 24px; /* Beispiel für die Größeneinstellung */
+      color: white; /* Beispiel für die Farbeinstellung */
+    }
+
+  }
+
+  .items-und-toggle > div {
+    display: none;
+  }
+}
 
   a {
     text-decoration: none;
@@ -522,7 +570,7 @@ ul li a:hover {
   .box-rechts {
     display:flex;
     align-items:center;
-    justify-content:center;
+    justify-content:flex-end;
     flex: 1;
     animation: 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.8) 0s 1 slideInFromRight;
 
@@ -673,7 +721,7 @@ ul li a:hover {
       width: 50%;
       height: 60vh;
       justify-content: center;
-      align-items: start;
+      align-items: flex-start;
     }
 
     .button-container {
@@ -850,9 +898,9 @@ ul li a:hover {
     background: linear-gradient(
         to bottom,
         $tertiary-color 0%,
-        $tertiary-color 50%,
-        $tertiary-color 50.3%,
-        $secondary-color 50.6%,
+        $tertiary-color 45%,
+        $tertiary-color 45.3%,
+        $secondary-color 45.6%,
         $secondary-color 100%,
     );
     background-size:  600vh;
@@ -1125,6 +1173,7 @@ ul li a:hover {
 
     .tab-menu {
       flex: 0 0 auto;
+      margin-top:20rem;
       padding-bottom: 30px;
       display: flex;
       align-items: flex-start;
@@ -1150,7 +1199,7 @@ ul li a:hover {
       color:$text-color-unterueberschrift;
       font-weight:lighter;
       text-decoration:none;
-      margin:22px;
+      margin:3rem;
     }
 
     .p-tabmenu .p-tabmenu-nav .p-tabmenuitem:hover .p-menuitem-link {
@@ -1160,7 +1209,7 @@ ul li a:hover {
     .p-tabmenu .p-tabmenu-nav .p-tabmenuitem.p-highlight .p-menuitem-link{
      border: none;
      text-decoration:none;
-     background-color:$text-color-ueberschrift;
+     background-color:#d55020;;
      border-radius:5px;
     }
 
@@ -1193,6 +1242,15 @@ ul li a:hover {
       justify-content: center;
       align-items: center;
       width:100%;
+      margin-top:2rem;
+    }
+
+
+    .ichUndSoftware{
+      display:flex;
+      justify-content:center;
+      width:55%;
+      text-align:justify;
     }
 
     .content-box-right {
@@ -1228,13 +1286,27 @@ ul li a:hover {
     background:$secondary-color;
   }
 
+@media screen and (max-width: 600px) {
+  .footer-component {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    flex-direction: column;
+  }
+  .box {
+    width: 100%;
+  }
+
+  .right-box-wrapper {
+    display:flex;
+    flex-direction: column;
+  }
+}
+
   .box {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-right:30px;
-  /*  margin-top:12px;*/
-  /*  border: 1px solid $tertiary-color;*/
   }
 
 .right-box-wrapper {
@@ -1242,11 +1314,7 @@ ul li a:hover {
   flex-direction: row;
 }
 
-/*.box:nth-child(1) {
-  display:flex;
-  flex-direction:row;
 
-}*/
 
 .box-social-icons{
   display:flex;
@@ -1274,7 +1342,7 @@ ul li a:hover {
 
 .listing {
    display: flex;
-   align-items: start;
+   align-items: flex-start;
    flex-direction: column;
    list-style: none;
  }

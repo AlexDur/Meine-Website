@@ -5,13 +5,19 @@
     <img  src="assets/images/ad_rund_85.ico" alt="Logo">
     </a>
   </div>
-  <div class="items-und-toggle">
-    <div>
-      <a class="header-font" *ngFor="let item of items" [routerLink]="item.url"
-         (click)="setActiveItem(item.url)"
-         [ngClass]="{'active-menu-item': activeItem === item.url}">
-        {{ item.label }}
-      </a>
+
+    <div class="hamburger-menu" (click)="toggleMenu()">
+      <i class="pi pi-hashtag"></i>
+    </div>
+
+    <div class="items-und-toggle">
+      <div *ngIf="menuOpen">
+        <a class="header-font" *ngFor="let item of items" [routerLink]="item.url"
+           (click)="setActiveItem(item.url)"
+           [ngClass]="{'active-menu-item': activeItem === item.url}">
+          {{ item.label }}
+        </a>
+      </div>
     </div>
     <div>
       <p-toggleButton [(ngModel)]="checked"
@@ -21,4 +27,3 @@
     </div>
   </div>
   </div>
-</div>

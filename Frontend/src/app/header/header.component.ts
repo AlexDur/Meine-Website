@@ -13,9 +13,11 @@ export class HeaderComponent implements OnInit, OnDestroy {
   activeItem: string | undefined;
   loaded: boolean = false;
   checked: boolean = false;
+  menuOpen = false;
   private subscription: Subscription | null = null;
 
   constructor(private translateService: TranslateService) {
+
     this.emailButton = new ElementRef(null);
   }
 
@@ -50,13 +52,11 @@ export class HeaderComponent implements OnInit, OnDestroy {
     }
   }
 
-  openEmailClient() {
-    // Erstellen Sie eine E-Mail-Adresse
-    const email = 'alexdurach@hotmail.de';
-
-    // Öffnen Sie ein E-Mail-Fach mit der E-Mail-Adresse als Empfänger
-    window.location.href = `mailto:${  email}`;
+  toggleMenu() {
+    console.log('Menu toggled');
+    this.menuOpen = !this.menuOpen;
   }
+
 
   ngOnDestroy() {
     if (this.subscription) {
