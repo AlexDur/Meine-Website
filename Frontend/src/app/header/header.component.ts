@@ -13,7 +13,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   activeItem: string | undefined;
   loaded: boolean = false;
   checked: boolean = false;
-  menuOpen = false;
+  menuOpen = true;
   private subscription: Subscription | null = null;
 
   constructor(private translateService: TranslateService) {

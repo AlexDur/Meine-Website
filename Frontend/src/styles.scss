@@ -389,8 +389,8 @@ ul li a:hover {
     cursor: pointer;
 
     .pi {
-      font-size: 24px; /* Beispiel für die Größeneinstellung */
-      color: white; /* Beispiel für die Farbeinstellung */
+      font-size: 24px;
+      color: white;
     }
 
   }
@@ -692,7 +692,7 @@ ul li a:hover {
     .content-block {
       max-width: 300px;
       text-align: center;
-      in-height: 100vh;
+      min-height: 100vh;
       margin-right: 100px;
       flex: 0 1 calc(33.33% - 50px);
       color: white;
@@ -1336,10 +1336,6 @@ ul li a:hover {
   }
 
 
-/*  .box:nth-child(2) {
-    width: 40%;
-  }*/
-
 .listing {
    display: flex;
    align-items: flex-start;
@@ -1366,18 +1362,14 @@ ul li a:hover {
     }
   }
 
-/*  .logo img {
-  width: 50px;
-  height: 50px;
-}*/
 
 .footer-logo-feld{
-  text-decoratio:none;
+  text-decoration:none;
   color: $text-color-text;
 
 
   a {
-    text-decoratio: none;
+    text-decoration: none;
     color: $text-color-text;
   }
 
@@ -1390,7 +1382,6 @@ ul li a:hover {
   .box > * {
     margin-left: 15px;
     color: $text-color-text;
-
   }
 
 
@@ -1407,7 +1398,7 @@ ul li a:hover {
   }*/
 
 .madeInBonn-Text{
- paddin-bottom:5px;
+ padding-bottom:5px;
 }
 
 
@@ -1418,7 +1409,7 @@ ul li a:hover {
 
   .impressum-adresse{
    margin-top:100px;
-   margin-botom:20px;
+   margin-bottom:20px;
   }
 
   .impressum-block{
