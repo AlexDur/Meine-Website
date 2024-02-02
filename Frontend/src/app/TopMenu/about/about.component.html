@@ -3,51 +3,13 @@
 <div class="home-component" *ngIf="loaded; else loading">
   <app-intro></app-intro>
 </div>
-
-<!--<div>
-  <app-techstack></app-techstack>
-</div>-->
-<!--<div>
-  <app-projekte></app-projekte>
-</div>-->
-<!--<div>
-  &lt;!&ndash;  Leistungsversprechen&ndash;&gt;
-/<div>-->
-<!--  <div>
-  <app-code-prinzipien></app-code-prinzipien>
-</div>-->
-<!--<div>
-  <app-kurz-vorstellung></app-kurz-vorstellung>
-</div>-->
 <div>
   <app-kurz-vorstellung></app-kurz-vorstellung>
 </div>
 
-
 <ng-template #loading>
   <p>Lädt...</p>
 </ng-template>
 </div>
 </div>
 
-<!--
-
-<div class="component-width" *ngIf="loaded; else loading">
-    <h1> {{ 'about.title' | translate | async }}</h1>
-  <div class="about-component">
-  <div class="square-block">
-    <img src="dishlist1.png" alt="Logo Beschreibung">
-  </div>
-  <div class="square-block">
-    <p style="color: black;">{{ 'about.company' | translate | async }}</p>
-    <p style="font-size: 30px;">{{ 'about.description-title' | translate | async }}</p>
-    <p style="white-space: pre-line;">{{ 'about.description-intro' | translate | async }}</p>
-    <p style="white-space: pre-line;">{{ 'about.description-attitude' | translate | async }}</p>
-  </div>
-</div>
-</div>
-
-<ng-template #loading>
-  <p>Lädt...</p>
-</ng-template>
--->

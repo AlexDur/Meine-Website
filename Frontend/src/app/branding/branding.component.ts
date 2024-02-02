@@ -1,6 +1,6 @@
 import { Component, HostListener, NgZone   } from '@angular/core';
 import {NgClass, NgIf} from '@angular/common';
-import {RouterLink} from "@angular/router";
+import {RouterLink} from '@angular/router';
 
 @Component({
   selector: 'app-branding',

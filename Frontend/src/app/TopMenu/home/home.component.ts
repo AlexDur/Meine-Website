@@ -2,7 +2,6 @@ import {Component, OnDestroy, OnInit} from '@angular/core';
 
 import {SharedModule} from '../../shared/shared.module';
 import {TranslateService} from '../../shared/services/translate.service';
-import {CodePrinzipienComponent} from '../about/code-prinzipien/code-prinzipien.component';
 import {FooterComponent} from '../../footer/footer.component';
 import {ProjekteComponent} from '../projekte/projekte.component';
 import {KurzVorstellungComponent} from '../about/kurz-vorstellung/kurz-vorstellung.component';
@@ -18,7 +17,6 @@ import {TechstackComponent} from '../about/techstack/techstack.component';
   standalone: true,
   imports: [
     SharedModule,
-    CodePrinzipienComponent,
     FooterComponent,
     ProjekteComponent,
     KurzVorstellungComponent,

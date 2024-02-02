@@ -7,18 +7,16 @@
   </div>
 
     <div class="hamburger-menu" (click)="toggleMenu()">
-      <i class="pi pi-hashtag"></i>
+      <i class="pi pi-align-justify"></i>
     </div>
-
-    <div class="items-und-toggle">
-      <div *ngIf="menuOpen">
+    <div class="menu" [ngClass]="{'open': menuOpen}">>
         <a class="header-font" *ngFor="let item of items" [routerLink]="item.url"
            (click)="setActiveItem(item.url)"
            [ngClass]="{'active-menu-item': activeItem === item.url}">
           {{ item.label }}
         </a>
-      </div>
     </div>
+
     <div>
       <p-toggleButton [(ngModel)]="checked"
                       pTooltip="Language switching feature is currently under development"
