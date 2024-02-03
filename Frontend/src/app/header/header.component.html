@@ -1,7 +1,7 @@
 <div class="header-component">
   <div class="header-content">
   <div class="logo">
-    <a [routerLink]="['/home']">
+    <a [routerLink]="['/']">
     <img  src="assets/images/ad_rund_85.ico" alt="Logo">
     </a>
   </div>
@@ -9,6 +9,7 @@
     <div class="hamburger-menu" (click)="toggleMenu()">
       <i class="pi pi-align-justify"></i>
     </div>
+
     <div class="menu" [ngClass]="{'open': menuOpen}">>
         <a class="header-font" *ngFor="let item of items" [routerLink]="item.url"
            (click)="setActiveItem(item.url)"

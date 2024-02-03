@@ -58,11 +58,11 @@ export class TranslateService {
 
         for (const k of keys) {
           translation = translation?.[k];
-          if (!translation) break;
+          if (!translation) {break;}
         }
 
         // Fallback, wenn keine Übersetzung gefunden wird
-        return translation || `N. gefundene Übersetzung: ${key}`;
+        return translation !== undefined ? translation : 'Home';
       })
     );
   }

@@ -10,39 +10,9 @@
         <div class="content-box-center">
           <!-- Anzeigen des Inhalts für 'Meine Story', wenn der entsprechende Tab aktiv ist -->
           <div *ngIf="activeTabContent?.title === 'Ich und die Software'" class="ichUndSoftware">
-            <p>Meine Leidenschaft für die Softwareentwicklung im Bereich der Webanwendungen, entfachte während meiner Zeit bei einer strategischen Unternehmensberatung, wo ich an der Entwicklung einer App für Smart Farming mitwirkte. <br><br> Dieses Engagement führte mich zu einem Lebensmittel-Startup, wo ich als Business Development Manager begann und zunehmend in die Welt des Programmierens eintauchte. Nachdem ich mich dort intensiv mit Softwareentwicklung beschäftigt hatte, widmete ich mich vollständig dieser Disziplin als angestellter Software-Entwickler. <br><br> Meine Reise begann jedoch weit vor meiner Faszination für das Programmieren. Schon immer interessierten mich Themen rund um unsere Ernährung und der Herstellung von Nahrungsmitteln. Mein agrarwissenschaftliches Studium in Stuttgart brachte mir Einblicke in technische Innovationen, die eine effizientere und nachhaltigere Landwirtschaft ermöglichen. Besonders die Möglichkeiten des Smart Farmings weckten mein Interesse.  <br><br> Im landwirtschaftlichen Masterstudium mit ökonomischem Schwerpunkt in Wien und Indiana, USA, vertiefte ich mich in Datenmodellierung.  <br><br> Diese Kombination von landwirtschaftlichem Wissen und Programmierkenntnissen treibt mich auch heute an, nebenberuflich eigene Softwarelösungen für ernährungsbezogene Themen zu entwickeln ("s. Portfolio").</p>
-          </div>
-
-          <div *ngIf="activeTabContent?.title === 'Ausbildung'">
-            <table style="width:100%; text-align:left;">
-              <tr>
-                <td style="width:700%; vertical-align:top; text-align:left;">
-                  <p style="padding-right: 20px;font-size:20px;margin-top:0;color:#d55020;">Universität für Bodenkultur Wien</p>
-                  <p style="padding-right: 20px;margin-bottom:30px;">Dipl.-Ingenieur Agrarökonomie (äqui. Master of Science)</p>
-                </td>
-                <td style="width:30%; vertical-align:top; text-align:right;">
-                  <p style="margin-top: 0;font-size:20px;color:#d55020;">2015-2020</p>
-                </td>
-              </tr>
-              <tr>
-                <td style="width:70%; vertical-align:top; text-align:left;">
-                  <p style="padding-right: 20px;font-size:20px;margin-top:0;color:#d55020;">Purdue University, Indiana (USA)</p>
-                  <p style="padding-right: 20px;margin-bottom:30px;">Agricultural Economics (Master of Science)</p>
-                </td>
-                <td style="width:30%; vertical-align:top; text-align:right;">
-                  <p style="margin-top: 0;font-size:20px;color:#d55020;">2017</p>
-                </td>
-              </tr>
-              <tr>
-                <td style="width:70%; vertical-align:top; text-align:left;">
-                  <p style="padding-right: 20px;font-size:20px;margin-top:0;color:#d55020;">Universität Hohenheim (Stuttgart)</p>
-                  <p style="padding-right: 20px;">Agrarwissenschaften (Bachelor of Science)</p>
-                </td>
-                <td style="width:30%; vertical-align:top; text-align:right;">
-                  <p style="margin-top: 0;font-size:20px;color:#d55020;">2011-2015</p>
-                </td>
-              </tr>
-            </table>
+            <p>Während meines Studiums der Agrarwissenschaften wurde mir die zentrale Rolle neuer Technologien für die Zukunft der globalen Landwirtschaft bewusst – sowohl für Steigerung der Quantität als auch Qualität unserer Nahrungsmittel. Diese Erkenntnis weckte in mir ein tiefes Interesse an der Softwareentwicklung, das sich neben meiner agrarwissenschaftlichen Ausbildung zu einem zweiten Schwerpunkt entwickelte.
+              <br><br>Bei meinem ersten Job arbeitete ich als  strategischen Unternehmensberater eng mit Anbietern von "Smart Farming"-Lösungen zusammen. Seitdem bewege ich mich auch beruflich im Umfeld der Software-Entwicklung. Nach einer Zwischenstation in einem Lebensmittel-Startup in ähnlicher Rolle, widmete ich mich beruflich vollständig der Software-Entwicklung.
+              <br><br>Heute ermöglicht mir diese Entscheidung eigenständig Anwendungen zu entwickeln, welche meinen Kunden und mir einen konkreten Mehrwert liefern (s. "Portfolio").</p>
           </div>
 
           <div *ngIf="activeTabContent?.title === 'Berufliche Stationen'">
@@ -87,7 +57,38 @@
                 </td>
               </tr>
             </table>
+          </div>
 
+          <div *ngIf="activeTabContent?.title === 'Ausbildung'">
+            <table style="width:100%; text-align:left;">
+              <tr>
+                <td style="width:70%; vertical-align:top; text-align:left;">
+                  <p style="padding-right: 20px;font-size:20px;margin-top:0;color:#d55020;">Universität für Bodenkultur Wien</p>
+                  <p style="padding-right: 20px;margin-bottom:30px;">Dipl.-Ingenieur Agrarökonomie (äqui. Master of Science)</p>
+                </td>
+                <td style="width:30%; vertical-align:top; text-align:right;">
+                  <p style="margin-top: 0;font-size:20px;color:#d55020;">2015-2020</p>
+                </td>
+              </tr>
+              <tr>
+                <td style="width:70%; vertical-align:top; text-align:left;">
+                  <p style="padding-right: 20px;font-size:20px;margin-top:0;color:#d55020;">Purdue University, Indiana (USA)</p>
+                  <p style="padding-right: 20px;margin-bottom:30px;">Agricultural Economics (Master of Science)</p>
+                </td>
+                <td style="width:30%; vertical-align:top; text-align:right;">
+                  <p style="margin-top: 0;font-size:20px;color:#d55020;">2017</p>
+                </td>
+              </tr>
+              <tr>
+                <td style="width:70%; vertical-align:top; text-align:left;">
+                  <p style="padding-right: 20px;font-size:20px;margin-top:0;color:#d55020;">Universität Hohenheim (Stuttgart)</p>
+                  <p style="padding-right: 20px;">Agrarwissenschaften (Bachelor of Science)</p>
+                </td>
+                <td style="width:30%; vertical-align:top; text-align:right;">
+                  <p style="margin-top: 0;font-size:20px;color:#d55020;">2011-2015</p>
+                </td>
+              </tr>
+            </table>
           </div>
         </div>
       </div>

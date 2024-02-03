@@ -5,7 +5,6 @@ import {TranslateService} from '../../shared/services/translate.service';
 import {FooterComponent} from '../../footer/footer.component';
 import {ProjekteComponent} from '../projekte/projekte.component';
 import {KurzVorstellungComponent} from '../about/kurz-vorstellung/kurz-vorstellung.component';
-import {BrandingComponent} from '../../branding/branding.component';
 import {ButtonModule} from 'primeng/button';
 import {Router} from '@angular/router';
 import {async, Subscription} from 'rxjs';
@@ -20,7 +19,6 @@ import {TechstackComponent} from '../about/techstack/techstack.component';
     FooterComponent,
     ProjekteComponent,
     KurzVorstellungComponent,
-    BrandingComponent,
     ButtonModule,
     IntroComponent,
     TechstackComponent

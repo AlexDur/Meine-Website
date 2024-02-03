@@ -6,7 +6,6 @@ import {MenubarModule} from 'primeng/menubar';
 import {HeaderComponent} from './header/header.component';
 import {TabViewModule} from 'primeng/tabview';
 import {SharedModule} from 'primeng/api';
-import {BrandingComponent} from './branding/branding.component';
 import {HttpClientModule} from '@angular/common/http';
 import {ServicesComponent} from './TopMenu/services/services.component';
 import {KontaktComponent} from './TopMenu/kontakt/kontakt.component';
@@ -43,7 +42,6 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     MenubarModule,
     TabViewModule,
     SharedModule,
-    BrandingComponent,
     ServicesComponent,
     KontaktComponent,
     ProjekteComponent,

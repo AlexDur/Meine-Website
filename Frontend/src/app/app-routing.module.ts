@@ -9,7 +9,7 @@ import {DatenschutzComponent} from './datenschutz/datenschutz.component';
 import {FaqComponent} from './footer/faq/faq.component';
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
+  { path: '', component: HomeComponent },
   { path: 'about', loadChildren: () => import('./TopMenu/about/about.module').then(m => m.AboutModule) },
   { path: 'services', component: ServicesComponent },
   { path: 'portfolio', component: ProjekteComponent },

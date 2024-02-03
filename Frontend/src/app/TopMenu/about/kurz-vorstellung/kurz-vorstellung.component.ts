@@ -40,9 +40,8 @@ export class KurzVorstellungComponent implements OnInit, OnDestroy{
 
     this.items = [
       { label: 'Ich und die Software'/*, icon: 'pi pi-user'*/ },
-      { label: 'Ausbildung'/*, icon: 'pi pi-play' */},
       { label: 'Berufliche Stationen'/*, icon: 'pi pi-table' */},
-      /*{ label: 'Mein Standort', icon: 'pi pi-home' },*/
+      { label: 'Ausbildung'/*, icon: 'pi pi-play' */},
     ];
 
     this.activeItem = this.items[0];
@@ -56,13 +55,13 @@ export class KurzVorstellungComponent implements OnInit, OnDestroy{
     },
     {
       type: 'text',
-      title: 'Ausbildung',
-      description: 'Uni Hohenheim Agrarwissenschaften 2011-2015 | Universität Wien und Purdue 2015-2020.'
+      title: 'Berufliche Stationen',
+      description: 'In meiner hauptberuflichen Tätigkeit als Fullstack-Entwickler war ich bereits in der Programmierung verschiedener Anwendungen beteiligt. Sowohl im Bereich "Automotive", als auch im staatlichen Kontext sammelte ich bereits weitreichende Erfahrung. Nebenberuflich habe ich für Menschen aus meinem privaten Umfeld verschiedene Programmierarbeiten übernommen, ehe ich nun vor allem auf der Online-Plattform "Upwork" meine Dienstleistung anbiete.'
     },
     {
       type: 'text',
-      title: 'Berufliche Stationen',
-      description: 'In meiner hauptberuflichen Tätigkeit als Fullstack-Entwickler war ich bereits in der Programmierung verschiedener Anwendungen beteiligt. Sowohl im Bereich "Automotive", als auch im staatlichen Kontext sammelte ich bereits weitreichende Erfahrung. Nebenberuflich habe ich für Menschen aus meinem privaten Umfeld verschiedene Programmierarbeiten übernommen, ehe ich nun vor allem auf der Online-Plattform "Upwork" meine Dienstleistung anbiete.'
+      title: 'Ausbildung',
+      description: 'Uni Hohenheim Agrarwissenschaften 2011-2015 | Universität Wien und Purdue 2015-2020.'
     }
   ];
 
