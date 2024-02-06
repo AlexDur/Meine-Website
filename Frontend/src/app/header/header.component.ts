@@ -12,8 +12,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   items: MenuItem[] = [];
   activeItem: string | undefined;
   loaded: boolean = false;
-  checked: boolean = false;
-  menuOpen = true;
+  menuOpen = false;
   private subscription: Subscription | null = null;
 
   constructor(private translateService: TranslateService) {

@@ -1,22 +1,19 @@
 
-2	css:S4658L"Unexpected empty block(µ¨İõ8ïŸºÌÏ1
-1	css:S4658N"Unexpected empty block(‰Ñ¢8ïŸºÌÏ1
-8	css:S4658ì"Unexpected empty block(£¾£Òşÿÿÿÿ8ÆÆ³Ï1
-8	css:S4658Ø"Unexpected empty block(¤şòöûÿÿÿÿ8¨éŸàÖ1
-3	css:S4658à"Unexpected empty block(ó¾×8ÅÚïƒÖ1
-C	css:S4656-""Unexpected duplicate "font-family"(—ôãÔÿÿÿÿÿ8ïŸºÌÏ1
-@	css:S4656Ö"Unexpected duplicate "display"(“¿Ü’şÿÿÿÿ8Æ×Ñ§Ò1
-D	css:S4656Ô""Unexpected duplicate "font-family"(—ôãÔÿÿÿÿÿ8ßÕÔšÓ1
-[	css:S4666­">Unexpected duplicate selector "a:hover", first used at line 71(¡ÙËê8”¿€Ò1
-j	css:S4666"HUnexpected duplicate selector ".home-block-text", first used at line 491(ü£¢êıÿÿÿÿ8ßÕÔšÓ1
-w	css:S4666”"[Unexpected duplicate selector ".contact-component .custom-textarea", first used at line 698(Î˜»L8öÖëÔĞ1
-‡	css:S4666‚	"eUnexpected duplicate selector ".kurzvorstellung-component .content-box-left", first used at line 1126(‡±ş×úÿÿÿÿ8ßÕÔšÓ1
-b	css:S4666Í	"@Unexpected duplicate selector ".listing", first used at line 265(ˆƒ—©ÿÿÿÿÿ8ÆÆ³Ï1
-`	css:S4666Ô	"CUnexpected duplicate selector ".listing ul", first used at line 274( ¸‡—8ÆÆ³Ï1
-`	css:S4666Û	"CUnexpected duplicate selector ".listing li", first used at line 280(Ñßù8ÆÆ³Ï1
-<	css:S1116Ò"Unexpected extra semicolon(‡‹†°üÿÿÿÿ8í—¤¾Õ1
-F	css:S4654ä")Unexpected unknown property "text-weight"(‹ÖïÀ8˜¿€Ò1
-;css:S125Õ"Remove this commented out code.(ø£ß³8‹ì¢‰Ï1
-;css:S125ğ"Remove this commented out code.(·ô•8¨éŸàÖ1
-;css:S125°"Remove this commented out code.(Ì­¬Ã8‹ì¢‰Ï1
-@css:S125ì"Remove this commented out code.(Ï©Çøÿÿÿÿ8ÏÆ³Ï1
+2	css:S4658J"Unexpected empty block(µ¨İõ8ïŸºÌÏ1
+1	css:S4658L"Unexpected empty block(‰Ñ¢8ïŸºÌÏ1
+8	css:S4658ê"Unexpected empty block(£¾£Òşÿÿÿÿ8ÆÆ³Ï1
+3	css:S4658â"Unexpected empty block(ó¾×8ÅÚïƒÖ1
+C	css:S4656+""Unexpected duplicate "font-family"(—ôãÔÿÿÿÿÿ8ïŸºÌÏ1
+@	css:S4656Ø"Unexpected duplicate "display"(“¿Ü’şÿÿÿÿ8Æ×Ñ§Ò1
+D	css:S4656Ö""Unexpected duplicate "font-family"(—ôãÔÿÿÿÿÿ8ßÕÔšÓ1
+j	css:S4666"HUnexpected duplicate selector ".home-block-text", first used at line 492(ü£¢êıÿÿÿÿ8ßÕÔšÓ1
+w	css:S4666–"[Unexpected duplicate selector ".contact-component .custom-textarea", first used at line 700(Î˜»L8öÖëÔĞ1
+‡	css:S4666„	"eUnexpected duplicate selector ".kurzvorstellung-component .content-box-left", first used at line 1128(‡±ş×úÿÿÿÿ8ßÕÔšÓ1
+b	css:S4666Ï	"@Unexpected duplicate selector ".listing", first used at line 263(ˆƒ—©ÿÿÿÿÿ8ÆÆ³Ï1
+`	css:S4666Ö	"CUnexpected duplicate selector ".listing ul", first used at line 272( ¸‡—8ÆÆ³Ï1
+`	css:S4666İ	"CUnexpected duplicate selector ".listing li", first used at line 278(Ñßù8ÆÆ³Ï1
+<	css:S1116Ô"Unexpected extra semicolon(‡‹†°üÿÿÿÿ8í—¤¾Õ1
+F	css:S4654æ")Unexpected unknown property "text-weight"(‹ÖïÀ8˜¿€Ò1
+;css:S125Ó"Remove this commented out code.(ø£ß³8‹ì¢‰Ï1
+;css:S125±"Remove this commented out code.(Ì­¬Ã8‹ì¢‰Ï1
+@css:S125î"Remove this commented out code.(Ï©Çøÿÿÿÿ8ÏÆ³Ï1

@@ -10,7 +10,7 @@
       <i class="pi pi-align-justify"></i>
     </div>
 
-    <div class="menu" [ngClass]="{'open': menuOpen}">>
+    <div class="menu" [ngClass]="{'open': menuOpen}">
         <a class="header-font" *ngFor="let item of items" [routerLink]="item.url"
            (click)="setActiveItem(item.url)"
            [ngClass]="{'active-menu-item': activeItem === item.url}">
@@ -18,11 +18,11 @@
         </a>
     </div>
 
-    <div>
+  <!--  <div>
       <p-toggleButton [(ngModel)]="checked"
                       pTooltip="Language switching feature is currently under development"
                       tooltipPosition="right" onLabel="EN" offLabel="DE" class="custom-tooltip">
       </p-toggleButton>
-    </div>
+    </div>-->
   </div>
   </div>
