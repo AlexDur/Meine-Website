@@ -1,7 +1,7 @@
 {
   "home": {
     "title": "Innovative Software aus einer Hand.",
-    "subtitle": "Moderne Webseiten und Webanwendungen für Kleinunternehmen und Start-Ups.",
+    "subtitle": "Moderne Webseiten und Webapps für Kleinunternehmen und Start-Ups.",
     "description": "Dabei setze ich auf die neuesten Technologien und Standards, um Ihnen eine Webseite zu bieten, die nicht nur gut aussieht, sondern auch schnell und sicher ist.",
     "button": "Kontaktieren Sie mich"
   },
@@ -26,7 +26,7 @@
     "text-two": "Sie interessieren sich für eine neue Website, eine Webanwendung oder haben eine Frage?\\n Schreiben Sie mir gerne eine Nachricht! Sie erhalten innerhalb von 24 Stunden eine Antwort.",
     "name": "Name",
     "business": "Firma",
-    "email": "E-Mail-Adresse",
+    "email": "E-Mail",
     "phone": "Telefonnummer",
     "message": "Nachricht",
     "send": "Senden",

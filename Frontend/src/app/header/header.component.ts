@@ -56,7 +56,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
     this.menuOpen = !this.menuOpen;
   }
 
-
   ngOnDestroy() {
     if (this.subscription) {
       this.subscription.unsubscribe();

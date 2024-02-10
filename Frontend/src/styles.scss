@@ -145,11 +145,33 @@ h2{
 @media screen and (max-width: 600px) {
 
   .h1-abweichung {
-    font-size: 1.5rem;
+    font-size: 2rem;
+    margin-top:4rem;
+    width:90vw;
   }
 
   .h2-abweichung {
-    font-size: 1.0rem;
+    font-size: 1.5rem;
+    width:80vw;
+    margin-top:1rem;
+  }
+
+
+  .home-box-image {
+    padding-top: 21rem; /* oder anpassen, wie benötigt */
+    padding-right: 3rem; /* oder anpassen, wie benötigt */
+    height: auto; /* Behält das Seitenverhältnis bei */
+    max-width: none; /* Entfernt die maximale Breite Beschränkung */
+  }
+
+  .home-box-image img { /* Korrektur hier, um das img-Tag anzusprechen */
+    width: 90vw; /* Erhöht die Breite des Bildes */
+    height: auto; /* Behält das Seitenverhältnis bei */
+    max-width: none; /* Stellt sicher, dass 'max-width' nicht begrenzt */
+  }
+
+  .home-box-text{
+width:100%;
   }
 }
 
@@ -862,6 +884,24 @@ ul li a:hover {
     }
   }
 
+@media screen and (max-width: 600px) {
+  .contact-component {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-bottom:11rem;
+  }
+
+  .datenschutz-p{
+   font-size:.8rem;
+  }
+
+}
+
+  /*About-Komponente*/
+
   .about-component {
     display: flex;
     justify-content: space-between;
@@ -893,6 +933,7 @@ ul li a:hover {
     font-size: var(--base-font-size);
     font-family: "Calibri","proxima nova light", "Helvetica Neue", "Swiss 7","Verdana", sans-serif;
   }
+
 
 
   /*services-Komponente*/
@@ -962,11 +1003,43 @@ ul li a:hover {
   width: 100%;
 }
 
+@media screen and (max-width: 600px) {
+  .portfolio-p{
+   font-size: 1rem;
+  }
+
+  .service-graph img{
+    margin-top:5rem;
+  }
+
+  .services-background {
+    height: 300%;
+    width:100vw;
+    font-family: "Calibri", sans-serif;
+    background: linear-gradient(
+        to bottom,
+        $tertiary-color 0%,
+        $tertiary-color 29%,
+        $secondary-color 29%,
+        $secondary-color 62%,
+        $tertiary-color 62%,
+        $tertiary-color 100%,
+    );
+    background-size:  600vh;
+    font-size: var(--base-font-size);
+    font-family: "Calibri","proxima nova light", "Helvetica Neue", "Swiss 7","Verdana", sans-serif;
+  }
+
+  .service-graph{
+    display:none;
+  }
+}
+
 
 /*Techstack-Services*/
 
 .techstack-services{
-  margin-top:20rem;
+  margin-top:26rem;
 }
 
 .techstack-graph{
@@ -1013,6 +1086,21 @@ ul li a:hover {
   margin-left:2rem;
 }
 
+@media screen and (max-width: 600px) {
+
+
+  .techstack-services{
+    padding-top:10rem;
+  }
+
+  .techstack-container{
+    display:flex;
+    flex-direction:column;
+  }
+
+}
+
+
 /*Optimierung-Hosting-Komponente*/
 
 .seo-hosting{
@@ -1043,6 +1131,16 @@ ul li a:hover {
   animation-fill-mode: forwards;
 }
 
+@media screen and (max-width: 600px){
+  .seo-hosting-box-rechts{
+    display:none;
+  }
+
+  .seo-hosting-box-links{
+    width:100%;
+  }
+}
+
   /*Portfolio-Komponente*/
   .portfolio-component {
     display: grid;
@@ -1064,7 +1162,7 @@ ul li a:hover {
 }
 
 .p-card-body{
-  height:275px;
+  height:300px;
 }
 
 .portfolio-p{
@@ -1090,7 +1188,17 @@ ul li a:hover {
     object-fit: cover;
   }
 
-
+@media screen and (max-width: 600px){
+  .portfolio-component {
+    display: flex;
+    flex-direction:column;
+    grid-gap: 25px;
+    text-align: left;
+    align-items: stretch;
+    margin-top: 5rem;
+    animation: 0.5s ease-out 0s 1 slideUp;
+  }
+}
 
 
 @keyframes slideUp {
@@ -1139,7 +1247,7 @@ ul li a:hover {
       color:$text-color-unterueberschrift;
       font-weight:lighter;
       text-decoration:none;
-      margin:3rem;
+      margin:1rem;
     }
 
     .p-tabmenu .p-tabmenu-nav .p-tabmenuitem:hover .p-menuitem-link {
@@ -1188,7 +1296,7 @@ ul li a:hover {
     .ichUndSoftware{
       display:flex;
       justify-content:center;
-      width:55%;
+      width:65%;
       text-align:justify;
     }
 
@@ -1208,6 +1316,18 @@ ul li a:hover {
     }
   }
 
+@media screen and (max-width: 600px){
+
+  .p-tabmenu-nav .p-menuitem-text{
+    font-size: .6rem;
+    color:$text-color-unterueberschrift;
+    font-weight:lighter;
+    text-decoration:none;
+    margin: .4rem;
+  }
+
+}
+
   /*Footer-Komponente*/
 
   .footer-component {
@@ -1223,12 +1343,11 @@ ul li a:hover {
     background:$secondary-color;
   }
 
-
   .box {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin-right:30px;
+    align-items: flex-start;
+    margin-left: 50px;
   }
 
 .right-box-wrapper {
@@ -1250,7 +1369,7 @@ ul li a:hover {
     }
 
   a{
-    margin-right:20px;
+    margin-right:10px;
   }
   }
 
@@ -1269,19 +1388,6 @@ ul li a:hover {
     justify-content: left;
   }
 
-.listing-nav {
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  list-style: none;
-}
-
-.listing-nav ul {
-  display: flex;
-  flex-direction: column;
-  list-style-type: none;
-  justify-content: left;
-}
 
   .listing li {
 
@@ -1342,6 +1448,7 @@ ul li a:hover {
     justify-content:flex-start;
     align-items: flex-start;
     margin-top:4rem;
+    margin-left: 0px;
   }
 
   .right-box-wrapper {
@@ -1352,14 +1459,14 @@ ul li a:hover {
     padding-left: 0rem;
   }
 
-    .listing-nav {
-      display: none;
-      list-style: none;
-    }
+#nav {
+  display: none;
+}
 
-  .listing-nav li {
 
-    list-style: none;
+  #info{
+    margin-bottom:3rem;
+    padding-bottom:3rem;
   }
 }
 
