@@ -26,34 +26,25 @@ export class ProjekteComponent implements OnInit, OnDestroy{
 
   cards = [
     {
-      image: 'assets/images/dishlist.webp',
-      header: 'Desktop/mobile App',
+      image: 'assets/images/dishlist-red75.webp',
+      header: 'Desktop/Mobile App',
       title: 'DishList',
       content: 'Eine Webanwendung mit der Rezepte, die man im Web findet, in einer Sammlung anlegen und mit zusätzlichen Information beschreiben kann.',
-      button: {
-        text: 'Mehr erfahren',
-        link: '/dishlist'
-      }
+      link: 'https://github.com/AlexDur/Dishlist_2_2024/tree/Branches-vereint'
     },
     {
-      image: 'assets/images/komprimiert_beetgott1.webp',
+      image: 'assets/images/komprimiert_beetgott1-red75.webp',
       header: 'Mobile App',
-      title: 'Beetgott',
+      title: 'Beetguru',
       content: 'Eine mobile App, mit deren Hilfe das eigene Beet so geplant werden kann, dass der Anbau einen höheren Ertrag liefert.',
-      button: {
-        text: 'Jetzt starten',
-        link: '/beetgott'
-      }
+      link: 'https://github.com/AlexDur/Beetguru'
     },
     {
-      image: 'assets/images/ad_rund.png',
+      image: 'assets/images/ad_rund-red75.png',
       header: 'Chatbot',
-      title: 'Anwendung in Konzeptionsphase',
+      title: 'In Konzeptionsphase',
       content: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam',
-      button: {
-        text: 'Mehr Informationen',
-        link: '/link-zu-card-3'
-      }
+      link: ''
     }
   ];
 
@@ -64,6 +55,12 @@ export class ProjekteComponent implements OnInit, OnDestroy{
       this.loaded = true;
     });
   }
+
+  onCardImageClick(i: number) {
+    const url = this.cards[i].link;
+    window.open(url, '_blank');  // Öffnet den Link in einem neuen Tab
+  }
+
 
   ngOnDestroy() {
     if(this.subscription){

@@ -10,6 +10,7 @@ import {ServicesTechstackComponent} from './services-techstack/services-techstac
 import {
   ServicesOptimierungHostingComponent
 } from './services-optimierung-hosting/services-optimierung-hosting.component';
+import {ServicesArbeitsweiseComponent} from './services-arbeitsweise/services-arbeitsweise.component';
 
 @Component({
   selector: 'app-services',
@@ -22,7 +23,8 @@ import {
     AccordionModule,
     ServicesGrafikComponent,
     ServicesTechstackComponent,
-    ServicesOptimierungHostingComponent
+    ServicesOptimierungHostingComponent,
+    ServicesArbeitsweiseComponent
   ],
   templateUrl: './services.component.html',
   styleUrl: './services.component.scss'

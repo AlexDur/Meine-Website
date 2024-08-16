@@ -28,6 +28,7 @@ import {
   ServicesOptimierungHostingComponent
 } from './TopMenu/services/services-optimierung-hosting/services-optimierung-hosting.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {ServicesArbeitsweiseComponent} from './TopMenu/services/services-arbeitsweise/services-arbeitsweise.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +60,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     ServicesGrafikComponent,
     ServicesTechstackComponent,
     ServicesOptimierungHostingComponent,
+    ServicesArbeitsweiseComponent,
     BrowserAnimationsModule
   ],
   providers: [],

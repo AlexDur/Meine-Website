@@ -34,6 +34,7 @@ export class KurzVorstellungComponent implements OnInit, OnDestroy{
   ngOnInit() {
     this.subscription = this.translateService.areTranslationsLoaded().subscribe(loaded => {
       if (loaded) {
+        this.loaded = true;
         this.updateActiveTabContent();
       }
     });
