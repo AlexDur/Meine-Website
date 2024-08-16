@@ -1,12 +1,14 @@
 $primary-color: #424242;
 $secondary-color: #f5f5f5;
-$tertiary-color: white;
+$tertiary-color: #ffffff;
 
 $text-color-ueberschrift: #333333;
 $text-color-unterueberschrift:#757575;
 $text-color-text:#333333;
 
-$detail-color: #fe6a2f;
+$detail-color: #f36b3f;
+$detail-color-2: #0e9fae;
+
 
 $text-color-ueberschrift-dunkel:#333333;
 $text-color-unterueberschrift-dunkel:#757575;
@@ -19,26 +21,26 @@ $text-color-text-dunkel:#7f7f7f;
   margin:0;
 }
 
+
 body,html{
   margin: 0;
   padding: 0;
   text-rendering: optimizeLegibility;
+
 }
 
 .services-background {
-  height: 300%;
+  height: 100%;
   width:100vw;
   font-family: "Calibri", sans-serif;
   background: linear-gradient(
       to bottom,
       $tertiary-color 0%,
-      $tertiary-color 35%,
-      $secondary-color 35%,
-      $secondary-color 70%,
-      $tertiary-color 70%,
-      $tertiary-color 100%,
+      $tertiary-color 50%,
+      $secondary-color 50%,
+      $secondary-color 100%,
   );
-  background-size:  600vh;
+  background-size:  500vh;
   font-size: var(--base-font-size);
   font-family: "Calibri","proxima nova light", "Helvetica Neue", "Swiss 7","Verdana", sans-serif;
 }
@@ -55,8 +57,8 @@ body,html{
 }
 
 .component-width{
-  margin-left: 350px!important;
-  margin-right: 350px!important;
+  margin-left: 450px!important;
+  margin-right: 450px!important;
 }
 
 @media screen and (max-width: 600px) {
@@ -158,20 +160,20 @@ h2{
 
 
   .home-box-image {
-    padding-top: 21rem; /* oder anpassen, wie benötigt */
-    padding-right: 3rem; /* oder anpassen, wie benötigt */
-    height: auto; /* Behält das Seitenverhältnis bei */
-    max-width: none; /* Entfernt die maximale Breite Beschränkung */
+    padding-top: 21rem;
+    padding-right: 3rem;
+    height: auto;
+    max-width: none;
   }
 
-  .home-box-image img { /* Korrektur hier, um das img-Tag anzusprechen */
-    width: 90vw; /* Erhöht die Breite des Bildes */
-    height: auto; /* Behält das Seitenverhältnis bei */
-    max-width: none; /* Stellt sicher, dass 'max-width' nicht begrenzt */
+  .home-box-image img {
+    width: 90vw;
+    height: auto;
+    max-width: none;
   }
 
   .home-box-text{
-width:100%;
+    width:100%;
   }
 }
 
@@ -369,30 +371,44 @@ ul li a:hover {
 }
 
 /*Header-Komponente*/
-.header-component {
-  display:flex;
-  align-items: center;
+
+.header-background {
+  background-color: #ffffff;
   height:7rem;
+  display:flex;
+  justify-content: center;
+  width: 60%;
+  margin: 1rem auto;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  position:sticky;
+  top: 1rem;
+  z-index: 1000;
+}
+
+
+.header-component {
+  display: flex;
+  align-items: center;
   width: 100%;
-  background-color: black;
   top: 0;
   z-index: 9000;
+}
 
   .header-content {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    padding-left: 22rem;
-    padding-right: 22rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
     width:100%;
   }
 
   .header-font {
-    color: #d9d9d9;
     margin-right: 30px;
     font-size:20px;
     align-items: center;
+    color: rgba(0, 0, 0, 0.4);
   }
 
   a {
@@ -501,31 +517,31 @@ ul li a:hover {
   }
 
   .menu {
-    visibility: hidden;  /* Menü standardmäßig ausblenden */
+    visibility: hidden;
     opacity: 0;
     position: absolute;
-    top: 7rem; /* Direkt unter dem Header positionieren, angenommen der Header ist 3rem hoch */
+    top: 7rem;
     left: 0;
     width: 100%;
-    background-color: #fff; /* Hintergrundfarbe des Menüs */
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Schatten für das Menü */
-    z-index: 1000; /* Stellt sicher, dass das Menü über anderen Elementen erscheint */
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1000;
     flex-direction: column;
     overflow-y: auto;
     transition: visibility 0s linear 0.3s;
   }
 
   .menu a {
-    padding-top: 1rem; /* Erhöht den oberen Abstand */
-    padding-bottom: 1rem; /* Erhöht den unteren Abstand */
-    display: block; /* Stellt sicher, dass das Padding korrekt angewendet wird */
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: block;
   }
 
   .menu.open, .dropdown-panel.open {
-    visibility: visible; /* Menü wird sichtbar */
-    opacity: 1; /* Menü ist nicht mehr transparent */
-    max-height: 500px; /* oder ein Wert, der hoch genug ist, um das gesamte Menü zu zeigen */
-    transition:  .3s linear; /* Entfernen der Verzögerung für visibility beim Öffnen */
+    visibility: visible;
+    opacity: 1;
+    max-height: 500px;
+    transition:  .3s linear;
   }
 
   .header-component {
@@ -536,7 +552,7 @@ ul li a:hover {
     height: 1.5rem;
   }
 }
-}
+
 
 
 /*home-Komponente*/
@@ -578,11 +594,21 @@ ul li a:hover {
   }
 }
 
+.home-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  height: 200%;
+  padding: 20px;
+}
+
 .home-box-text{
   position: absolute;
   left: 0;
   z-index: 2;
-  width: 60%;
+  width: 45%;
   animation: 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.8) 0s 1 slideInFromLeft;
 }
 
@@ -590,7 +616,7 @@ ul li a:hover {
   position: relative;
   z-index: 1;
   margin-left: 40%;
-  width: 40%;
+  width: 55%;
   margin-top: 6rem;
   animation: 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.8) 0s 1 slideInFromRight
 }
@@ -613,32 +639,32 @@ ul li a:hover {
 }
 
 
-
 /*Intro-Komponente*/
 .intro-component {
   display: flex;
+  gap: 50px;
   justify-content: space-between;
+}
 
-  .intro-block {
-    /* border: 3px solid black;*/
-    min-height: 60vh;
-    padding-left:0;
-    display: flex;
-  }
+.intro-block {
+  width: 50%;
+  padding: 20px;
+  box-sizing: border-box;
+}
 
-  .box-rechts {
+.box-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-    display:flex;
-    align-items:center;
-    justify-content:flex-start;
-    flex: 1;
-    animation: 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.8) 0s 1 slideInFromRight;
-  }
+.box-rechts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
-  .box-links{
-    flex: 3;
-    flex-direction:column;
-  }
 
   .block-text {
     width:80%;
@@ -648,9 +674,6 @@ ul li a:hover {
     width: 100%;
     height: auto;
   }
-
-}
-
 
 
 /*Techstack-Komponente*/
@@ -918,49 +941,73 @@ ul li a:hover {
   }
 
   .about-background{
-    height: 300%;
+    height: 100%;
     width:100vw;
     font-family: "Calibri", sans-serif;
     background: linear-gradient(
         to bottom,
         $tertiary-color 0%,
         $tertiary-color 45%,
-        $tertiary-color 45.3%,
         $secondary-color 45.6%,
         $secondary-color 100%,
     );
-    background-size:  600vh;
+    background-size:  300vh;
     font-size: var(--base-font-size);
     font-family: "Calibri","proxima nova light", "Helvetica Neue", "Swiss 7","Verdana", sans-serif;
   }
 
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 10px;
+  margin-top: 20px;
+}
+
+.image-square {
+  width: 100px;
+  height: 100px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
 
 
   /*services-Komponente*/
 
-  .services-component {
-    display: flex;
-    height: 45vh;
-    width:100%;
-  }
-
-  .services-text-box{
-  }
-
-.service-graph-box{
+.services-component {
   display: flex;
-  justify-content:center;
-  align-items:center;
-  width:100%;
-  margin-top:-220px;
-  padding-top:-220px;
-  animation: 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.8) 0s 1 slideInFromRight;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  width: 100%;
 }
 
-  .service-graph{
+.services-text-box {
+  flex: 1;
+  max-width: 60%;
+}
+
+.service-graph-box {
+  max-width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-graph-box img {
+  max-width: 100%;
+  max-height: 550px;
+  height: auto;
+  width: auto;
+  object-fit: contain;
+  border-radius: 15px;
+  box-shadow: 0 0 20px 20px white;
+}
+
+ /* .service-graph{
     width:100%;
     margin-top:5rem;
-  }
+  }*/
 
   #myWord{
     cursor:pointer;
@@ -1021,9 +1068,7 @@ ul li a:hover {
         $tertiary-color 0%,
         $tertiary-color 29%,
         $secondary-color 29%,
-        $secondary-color 62%,
-        $tertiary-color 62%,
-        $tertiary-color 100%,
+        $secondary-color 100%,
     );
     background-size:  600vh;
     font-size: var(--base-font-size);
@@ -1039,7 +1084,9 @@ ul li a:hover {
 /*Techstack-Services*/
 
 .techstack-services{
-  margin-top:26rem;
+  margin-top:12rem;
+  padding-top:2rem;
+  padding-bottom:10rem;
 }
 
 .techstack-graph{
@@ -1175,6 +1222,7 @@ ul li a:hover {
   align-items: center;
   width: 100%;
   margin: 0 auto;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
   .portfolio-component .custom-card .card-image {
@@ -1214,23 +1262,20 @@ ul li a:hover {
 
 
   .kurzvorstellung-component {
-    margin-top: 35rem;
     display: flex;
     justify-content: space-between;
     text-align: left;
     flex-direction: column;
 
     .kurzvorstellung-container {
-      margin-top: -300px;
-      margin-bottom: 100px;
       position: relative;
       animation: 0.5s ease-out 0s 1 slideUp;
     }
 
     .tab-menu {
       flex: 0 0 auto;
-      margin-top:20rem;
-      padding-bottom: 30px;
+      margin-top:15rem;
+      padding-bottom: 40px;
       display: flex;
       align-items: flex-start;
       justify-content: center;
@@ -1257,12 +1302,12 @@ ul li a:hover {
     .p-tabmenu .p-tabmenu-nav .p-tabmenuitem.p-highlight .p-menuitem-link{
      border: none;
      text-decoration:none;
-     background-color:#d55020;;
      border-radius:5px;
     }
 
     .p-tabmenu .p-tabmenu-nav .p-tabmenuitem.p-highlight .p-menuitem-text {
-      color: white;
+
+      color:$detail-color-2;
     }
 
     .p-tabmenu-nav .p-menuitem-text.p-highlight{
@@ -1336,11 +1381,11 @@ ul li a:hover {
     justify-content: space-between;
     align-items: center;
     z-index: 1;
-    margin-top: 18.75rem;
+    margin-top: 10rem;
     padding-left: 20vw;
     padding-right: 20vw;
     height: 21rem;
-    background:$secondary-color;
+    background:  $detail-color;
   }
 
   .box {

@@ -1,39 +1,25 @@
-<!--<div class="services-background">-->
 <div class="services-background">
-<div class="component-width" *ngIf="loaded; else loading">
+  <div class="component-width" *ngIf="loaded; else loading">
     <div class="h1-abweichung">{{ 'services.title' | translate | async }}</div>
-  <div class="h2-abweichung">Fullstack-Entwicklung</div>
-<div class="services-component" >
-  <!--<div class="service-square-block">-->
-  <div class="services-text-box">
+    <div class="h2-abweichung-dunkel">Fullstack-Entwicklung</div>
+    <div class="services-component">
+      <div class="services-text-box">
+        <p>Über die Jahre bin ich durch mein berufliches Umfeld zum Full-Stack-Entwickler geworden. Dadurch kann ich Ihnen die Anwendung komplett aus einer Hand bereitstellen. Das vereinfacht die Kommunikation im Entstehungsprozess und spart Ihnen als Kunde die Kosten für mehrere Entwickler.</p>
+        <br><br>
+        <ul>
+          <li><strong>Frontend: </strong>Nachdem ein ansprechender Designentwurf gestaltet wurde, wird dieses Design im Frontend in Code umgesetzt. Das Ergebnis ist eine Benutzeroberfläche, die der Nutzer sieht und mit der er interagiert, um mit der Anwendung zu kommunizieren.</li>
+          <br><br>
+          <li><strong>Backend: </strong>Das Backend ist der für den Nutzer unsichtbare Teil einer Anwendung. Er beinhaltet die Logik, Datenbanken und die Verarbeitung von Daten und kommuniziert mit dem Frontend. Erst durch das Backend wird aus einer hübschen Oberfläche eine lebendige, vollfunktionale Anwendung.</li>
+        </ul>
+      </div>
+      <div class="service-graph-box">
+        <app-services-grafik></app-services-grafik>
+      </div>
+    </div>
 
-    <p>Über die Jahre bin ich durch mein berufliches Umfeld zum Full-Stack-Entwickler geworden. Dadurch kann ich Ihnen ein Produkt komplett aus eigener Hand bereitstellen. Technisch vereinfacht besteht eine Webanwendung aus drei Schlüsselkomponenten:</p>
-  <br>
-    <ul>
-    <li><strong>Webdesign: </strong>Gibt vorab mit großer Präzision vor, wie die Benutzeroberfläche gestaltet sein soll.</li>
-    <br>
-    <li><strong>Frontend: </strong>Hier wird das Design in Code umgesetzt und Interaktion des Nutzers mit der Anwendung erst ermöglicht.</li>
-    <br>
-    <li><strong> Backend: </strong>Verantwortlich für die Datenspeicherung und -verwaltung.</li>
-  </ul>
-
-  <!--  <p>Wichtige Prinzipien die ich bei der Entwicklung beachte:</p>
-    <p>Mobile-First</p>
-    <p>Full Responsive</p>
-    <p>SEO bzw. ASO</p>
-    <p>Barrierefreiheit</p>-->
-
+    <app-services-techstack></app-services-techstack>
+    <!--<app-services-optimierung-hosting></app-services-optimierung-hosting>-->
   </div>
-<div class="service-graph-box">
-  <app-services-grafik></app-services-grafik>
-</div>
-
-</div>
-
-  <app-services-techstack></app-services-techstack>
-<app-services-optimierung-hosting></app-services-optimierung-hosting>
-</div>
-<!--</div>-->
 </div>
 
 <ng-template #loading>

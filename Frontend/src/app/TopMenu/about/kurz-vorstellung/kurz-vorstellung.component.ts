@@ -39,7 +39,6 @@ export class KurzVorstellungComponent implements OnInit, OnDestroy{
     });
 
     this.items = [
-      { label: 'Ich und die Software'/*, icon: 'pi pi-user'*/ },
       { label: 'Berufliche Stationen'/*, icon: 'pi pi-table' */},
       { label: 'Ausbildung'/*, icon: 'pi pi-play' */},
     ];
@@ -48,11 +47,7 @@ export class KurzVorstellungComponent implements OnInit, OnDestroy{
   }
 
   tabContents = [
-    {
-      type: 'text',
-      title: 'Ich und die Software',
-      description: 'Meine Leidenschaft für die Softwareentwicklung im Bereich der Webanwendungen, entfachte während meiner Zeit bei einer strategischen Unternehmensberatung, wo ich an der Entwicklung einer App für Smart Farming mitwirkte. Dieses Engagement führte mich zu einem Lebensmittel-Startup, wo ich als Business Development Manager begann und zunehmend in die Welt des Programmierens eintauchte. Nachdem ich mich dort intensiv mit Softwareentwicklung beschäftigt hatte, widmete ich mich vollständig dieser Disziplin als angestellter Software-Entwickler.\n\nMeine Reise begann jedoch weit vor meiner Faszination für das Programmieren. Schon immer interessierten mich Themen rund um unsere Ernährung und der Herstellung von Nahrungsmitteln. Mein agrarwissenschaftliches Studium in Stuttgart brachte mir Einblicke in technische Innovationen, die eine effizientere und nachhaltigere Landwirtschaft ermöglichen. Besonders die Möglichkeiten des Smart Farmings weckten mein Interesse. Im landwirtschaftlichen Masterstudium mit ökonomischem Schwerpunkt in Wien und Indiana, USA, vertiefte ich mich in Datenmodellierung. Diese Kombination von landwirtschaftlichem Wissen und Programmierkenntnissen treibt mich auch heute an, nebenberuflich eigene Softwarelösungen für ernährungsbezogene Themen zu entwickeln.'
-    },
+
     {
       type: 'text',
       title: 'Berufliche Stationen',

@@ -1,22 +1,22 @@
 {
   "home": {
-    "title": "Innovative Software aus einer Hand.",
-    "subtitle": "Moderne Webseiten und Webapps für Kleinunternehmen und Start-Ups.",
+    "title": "Individuelle Software aus einer Hand.",
+    "subtitle": "Webseiten und Webapps, die Kleinunternehmen und Selbstständige optimal unterstützen.",
     "description": "Dabei setze ich auf die neuesten Technologien und Standards, um Ihnen eine Webseite zu bieten, die nicht nur gut aussieht, sondern auch schnell und sicher ist.",
     "button": "Kontaktieren Sie mich"
   },
 
   "about": {
     "title": "Über mich",
-    "subtitle": "Ich bin freiberuflicher Webentwickler aus Bonn. Seit 2020 setze ich Ideen innerhalb von Kundenprojekten sowie eigenen Vorhaben in moderne Software um.",
-    "description": "Meine Erfahrungen sind weit gefächert, da ich vor der Softwareentwicklung in strategischen Positionen tätig war. Dadurch bin ich in der Lage Ihr Projekt im vollen technischen Umfang zu verwirklichen.",
-    "description_two": "Ich stehe Ihnen als kompetenter Partner für die Entwicklung von erfolgreichen Websites und Webapplikationen zur Seite.",
+    "subtitle": "Ich bin freiberuflicher Webentwickler aus Bonn. Seit 2020 setze ich mittels modernster Software Ideen innerhalb von Kundenprojekten sowie eigenen Vorhaben um.",
+    "description": "Meine Erfahrungen sind weit gefächert, da ich vor der Softwareentwicklung in strategischen Positionen tätig war. Dadurch gelingt es mir Kundenwünsche effizient technisch zu verwirklichen.",
+    "description_two": "Ich stehe Ihnen als kompetenter Partner für die Entwicklung von erfolgreichen Webapplikationen zur Seite.",
     "button": "Kontaktieren Sie mich"
   },
   "menu": {
     "home": "Home",
     "about": "About",
-    "services": "Services",
+    "services": "Angebot",
     "portfolio": "Portfolio",
     "contact": "Kontakt"
   },
@@ -33,9 +33,9 @@
     "data-protection-declaration": "Durch das Absenden meiner Anfrage stimme ich der Erfassung, Verarbeitung und Nutzung meiner personenbezogenen Daten gemäß den Datenschutzbestimmungen</a> dieser Website zu. Ich habe die <a href='/legal-notice'> Datenschutzerklärung und die Widerrufshinweise</a> gelesen und verstanden."
   },
   "services": {
-    "title": "Services",
+    "title": "Angebot",
     "description-title": "Moderne und starke Anwendungsentwicklung für das Web",
-    "description": "Ich biete Ihnen eine Vielzahl von Services rund um die Entwicklung von Webseiten und Webanwendungen. Dabei setze ich auf die neuesten Technologien und Standards, um Ihnen eine Webseite zu bieten, die nicht nur gut aussieht, sondern auch schnell und sicher ist.",
+    "description": "Ich biete Ihnen ein komplettes Angebot rund um die Entwicklung von Webseiten und Webanwendungen. Dabei setze ich auf die neuesten Technologien und Standards, um Ihnen eine Webseite zu bieten, die nicht nur gut aussieht, sondern auch schnell und sicher ist.",
     "web-development": {
       "title": "Web-Entwicklung",
       "description": "Ich entwickle moderne Webseiten und Webanwendungen für Kleinunternehmen. Dabei setze ich auf die neuesten Technologien und Standards, um Ihnen eine Webseite zu bieten, die nicht nur gut aussieht, sondern auch schnell und sicher ist."
