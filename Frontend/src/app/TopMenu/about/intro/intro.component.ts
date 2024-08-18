@@ -16,6 +16,7 @@ import {SharedModule} from '../../../shared/shared.module';
 export class IntroComponent implements OnInit, OnDestroy{
   loaded: boolean = false;
   private subscription: Subscription | null = null;
+  lightboxImageSrc: string | null = null;
 
 
   constructor(private translateService: TranslateService, private router: Router) {
@@ -33,6 +34,16 @@ export class IntroComponent implements OnInit, OnDestroy{
       this.subscription.unsubscribe();
     }
   }
+
+  toggleZoom(event: Event) {
+    const target = event.target as HTMLElement;
+    if (target.classList.contains('zoomed')) {
+      target.classList.remove('zoomed'); // Entfernt die Vergrößerung
+    } else {
+      target.classList.add('zoomed'); // Fügt die Vergrößerung hinzu
+    }
+  }
+
 
   protected readonly async = async;
 }
