@@ -40,7 +40,7 @@ export class ProjekteComponent implements OnInit, OnDestroy{
       link: 'https://github.com/AlexDur/Beetguru'
     },
     {
-      image: 'assets/images/ad_rund-red75.png',
+      image: 'assets/images/ad_rund-red75-quad.webp',
       header: 'Chatbot',
       title: 'In Konzeptionsphase',
       content: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam',

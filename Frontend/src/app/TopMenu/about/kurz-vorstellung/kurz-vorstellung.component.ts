@@ -40,8 +40,8 @@ export class KurzVorstellungComponent implements OnInit, OnDestroy{
     });
 
     this.items = [
-      { label: 'Berufliche Stationen'/*, icon: 'pi pi-table' */},
-      { label: 'Ausbildung'/*, icon: 'pi pi-play' */},
+      { label: 'Berufliche Stationen'},
+      { label: 'Ausbildung'},
     ];
 
     this.activeItem = this.items[0];
@@ -60,7 +60,6 @@ export class KurzVorstellungComponent implements OnInit, OnDestroy{
       description: 'Uni Hohenheim Agrarwissenschaften 2011-2015 | Universität Wien und Purdue 2015-2020.'
     }
   ];
-
 
 
   updateActiveTabContent() {

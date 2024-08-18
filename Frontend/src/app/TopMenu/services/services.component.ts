@@ -7,9 +7,7 @@ import {TechstackComponent} from '../about/techstack/techstack.component';
 import {AccordionModule} from 'primeng/accordion';
 import {ServicesGrafikComponent} from './services-grafik/services-grafik.component';
 import {ServicesTechstackComponent} from './services-techstack/services-techstack.component';
-import {
-  ServicesOptimierungHostingComponent
-} from './services-optimierung-hosting/services-optimierung-hosting.component';
+
 import {ServicesArbeitsweiseComponent} from './services-arbeitsweise/services-arbeitsweise.component';
 
 @Component({
@@ -23,7 +21,6 @@ import {ServicesArbeitsweiseComponent} from './services-arbeitsweise/services-ar
     AccordionModule,
     ServicesGrafikComponent,
     ServicesTechstackComponent,
-    ServicesOptimierungHostingComponent,
     ServicesArbeitsweiseComponent
   ],
   templateUrl: './services.component.html',

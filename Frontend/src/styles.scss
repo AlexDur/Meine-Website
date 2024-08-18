@@ -36,10 +36,10 @@ body,html{
   background: linear-gradient(
       to bottom,
       $tertiary-color 0%,
-      $tertiary-color 36%,
-      $secondary-color 36%,
-      $secondary-color 64%,
-      $tertiary-color 64%,
+      $tertiary-color 33%,
+      $secondary-color 33%,
+      $secondary-color 60%,
+      $tertiary-color 60%,
       $tertiary-color 100%,
   );
   background-size:  500vh;
@@ -290,17 +290,7 @@ ul li a:hover {
   display:flex;
 }
 
-.scroll-top-button {
-  display: flex;
-  padding:10px;
-  cursor: pointer;
-  font-size: 20px;
-  background-color:$text-color-unterueberschrift;
-  color:white;
-  border-radius: 50px;
-  transition: background 0.4s ease;
-  animation: popUp 0.5s ease forwards;
-}
+
 
 .listing {
   display: flex;
@@ -340,6 +330,19 @@ ul li a:hover {
     transform: scale(1);
     opacity: 1;
   }
+}
+
+.scroll-top-button {
+  display: flex;
+  padding:10px;
+  cursor: pointer;
+  font-size: 20px;
+  background-color:black;
+  border:1px solid black;
+  color:white;
+  border-radius: 50px;
+  transition: background 0.4s ease;
+  animation: popUp 0.5s ease forwards;
 }
 
 
@@ -643,18 +646,17 @@ ul li a:hover {
 
 /*Intro-Komponente*/
 .intro-component {
+  margin-top:3rem;
   display: flex;
-  gap: 50px;
   justify-content: space-between;
 }
 
 .intro-block {
-  width: 50%;
-  padding: 20px;
   box-sizing: border-box;
 }
 
 .box-links {
+  width: 43%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -662,14 +664,12 @@ ul li a:hover {
 }
 
 .box-rechts {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  width: 50%;
 }
 
 
   .block-text {
-    width:80%;
+    width:100%;
   }
 
   .box-rechts img {
@@ -944,13 +944,15 @@ ul li a:hover {
 
   .about-background{
     width:100vw;
+    height: auto;
+
     font-family: "Calibri", sans-serif;
     background: linear-gradient(
         to bottom,
         $tertiary-color 0%,
-        $tertiary-color 50%,
-        $secondary-color 50%,
-        $secondary-color 100%
+        $tertiary-color 100%,
+      /*  $secondary-color 50%,
+        $secondary-color 100%*/
     );
     font-size: var(--base-font-size);
     font-family: "Calibri","proxima nova light", "Helvetica Neue", "Swiss 7","Verdana", sans-serif;
@@ -958,17 +960,21 @@ ul li a:hover {
 
 .image-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-gap: 10px;
   margin-top: 20px;
+  justify-items: start;
+  margin-left: 0; /* Entfernen von linken Rändern */
+  padding-left: 0;
 }
 
 .image-square {
   width: 100px;
   height: 100px;
-  background-color: #f0f0f0;
-  border: 1px solid #ccc;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  background-image: url('../src/assets/images/ich_rund.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
 }
 
 
@@ -978,17 +984,18 @@ ul li a:hover {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 2rem;
+
   width: 100%;
 }
 
 .services-text-box {
   flex: 1;
-  max-width: 60%;
+  max-width: 65%;
 }
 
 .service-graph-box {
-  max-width: 50%;
+  max-width: 30%;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -996,7 +1003,7 @@ ul li a:hover {
 
 .service-graph-box img {
   max-width: 100%;
-  max-height: 550px;
+  max-height: 500px;
   height: auto;
   width: auto;
   object-fit: contain;
@@ -1084,7 +1091,7 @@ ul li a:hover {
 /*Techstack-Services*/
 
 .techstack-services{
-  margin-top:12rem;
+  margin-top:11rem;
   padding-top:6rem;
 }
 
@@ -1150,7 +1157,7 @@ ul li a:hover {
 /*Arbeitsweise-Komponente*/
 
 .arbeitsweise-services{
-  margin-top:18rem;
+  margin-top:16rem;
 }
 
 .arbeitsweise-container {
@@ -1202,8 +1209,6 @@ ul li a:hover {
 }
 
 
-
-
   /*Portfolio-Komponente*/
   .portfolio-component {
     display: grid;
@@ -1238,7 +1243,7 @@ ul li a:hover {
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 3rem;
+  padding: .5rem;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -1246,6 +1251,7 @@ ul li a:hover {
   display:flex;
   flex-direction:row;
   justify-content:center;
+  margin-top:1.5em;
 }
 
 
@@ -1256,7 +1262,6 @@ ul li a:hover {
     width: 100%;
     height: auto;
     cursor:pointer;
-    padding-top: 5px;
     object-fit: cover;
   }
 
@@ -1290,15 +1295,15 @@ ul li a:hover {
     text-align: left;
     flex-direction: column;
 
-    .kurzvorstellung-container {
+    /*.kurzvorstellung-container {
       position: relative;
       animation: 0.5s ease-out 0s 1 slideUp;
-    }
+    }*/
 
     .tab-menu {
       flex: 0 0 auto;
       margin-top:15rem;
-      padding-bottom: 40px;
+      /*padding-bottom: 40px;*/
       display: flex;
       align-items: flex-start;
       justify-content: center;
@@ -1307,7 +1312,7 @@ ul li a:hover {
 
     .p-tabmenu .p-tabmenu-nav .p-tabmenuitem .p-menuitem-link{
       border:none;
-      background-color:$secondary-color;
+      background-color:$tertiary-color;
     }
 
     .p-tabmenu-nav .p-menuitem-text{
@@ -1315,7 +1320,7 @@ ul li a:hover {
       color:$text-color-unterueberschrift;
       font-weight:lighter;
       text-decoration:none;
-      margin:1rem;
+
     }
 
     .p-tabmenu .p-tabmenu-nav .p-tabmenuitem:hover .p-menuitem-link {
@@ -1361,13 +1366,6 @@ ul li a:hover {
     }
 
 
-    .ichUndSoftware{
-      display:flex;
-      justify-content:center;
-      width:65%;
-      text-align:justify;
-    }
-
     .content-box-right {
       border: 5px solid $primary-color;
       padding:20px;
@@ -1382,6 +1380,12 @@ ul li a:hover {
       justify-content: center;
       align-items: center;
     }
+  }
+
+  .ausbildung-tabelle{
+    width: 665px;
+    margin: 0 auto;
+    text-align: center;
   }
 
 @media screen and (max-width: 600px){

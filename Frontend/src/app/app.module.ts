@@ -24,9 +24,7 @@ import {TechstackComponent} from './TopMenu/about/techstack/techstack.component'
 import {ScrollUpButtonComponent} from './shared/scroll-up-button/scroll-up-button.component';
 import {ServicesGrafikComponent} from './TopMenu/services/services-grafik/services-grafik.component';
 import {ServicesTechstackComponent} from './TopMenu/services/services-techstack/services-techstack.component';
-import {
-  ServicesOptimierungHostingComponent
-} from './TopMenu/services/services-optimierung-hosting/services-optimierung-hosting.component';
+
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {ServicesArbeitsweiseComponent} from './TopMenu/services/services-arbeitsweise/services-arbeitsweise.component';
 
@@ -59,7 +57,6 @@ import {ServicesArbeitsweiseComponent} from './TopMenu/services/services-arbeits
     ScrollUpButtonComponent,
     ServicesGrafikComponent,
     ServicesTechstackComponent,
-    ServicesOptimierungHostingComponent,
     ServicesArbeitsweiseComponent,
     BrowserAnimationsModule
   ],

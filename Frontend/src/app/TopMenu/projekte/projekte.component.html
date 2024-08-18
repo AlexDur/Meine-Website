@@ -10,7 +10,7 @@
   <p-card *ngFor="let card of cards; let i = index"  class="custom-card">
     <img src="{{card.image}}" alt="{{card.title}}" class="card-image" (click)="onCardImageClick(i)">
     <div class="projekt-beschriftung">
-    <div style="color:black; padding:8px;">{{card.title}}&nbsp;&nbsp;&nbsp;|</div>
+    <div style="color:black; padding:8px;">{{card.title}}</div>
     <div style="color:#1cbc9b; padding:8px;">{{card.header}}</div>
     </div>
   </p-card>
