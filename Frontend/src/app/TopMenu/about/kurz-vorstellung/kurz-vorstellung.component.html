@@ -1,90 +1,89 @@
 <div class="kurzvorstellung-component">
   <div class="kurzvorstellung-container">
     <!-- Tab Menu -->
-    <div class="tab-menu ">
+    <div class="tab-menu">
       <p-tabMenu [model]="items" [(activeItem)]="activeItem" (activeItemChange)="onTabChange($event)">
       </p-tabMenu>
     </div>
-    <div>
-      <div class="content-container">
-        <div class="content-box-center">
-          <div *ngIf="activeTabContent?.title === 'Berufliche Stationen'">
-            <table style="width:100%; text-align:left;">
-              <tr>
-                <td style="width:70%; vertical-align:top; text-align:left;">
-                  <p style="padding-right: 10px;font-size:20px;margin-top:0;color:#0e9fae;">Fullstack-Entwickler bei Conet Solutions (Bonn)</p>
-                  <p style="padding-right: 10px;margin-top:0;font-weight:lighter">Neuentwicklung einer Fullstack-App für eine große Behörde im Zuge eines 2022 erlassenen Gesetzes</p>
-                </td>
-                <td style="width:30%; vertical-align:top; text-align:right;">
-                  <p style="margin-top: 0;font-size:20px;color:#0e9fae;">Seit 2022</p>
-                </td>
-              </tr>
 
-              <tr>
-                <td style="width:80%; vertical-align:top; text-align:left;">
-                  <p style="padding-right: 20px;font-size:20px;margin-top:10px; color:#0e9fae;">Frontend-Entwickler bei IT-Manufactory (Bonn, Passau)</p>
-                  <p style="padding-right: 20px;margin-top:0;font-weight:lighter">Erstellung von Features im Frontend innerhalb verschiedener Module der Digital Automotive Software</p>
-                </td>
-                <td style="width:20%; vertical-align:top; text-align:right;">
-                  <p style="font-size:20px;margin-top:10px;color:#0e9fae;">2022</p>
-                </td>
-              </tr>
-
-              <tr>
-                <td style="width:70%; vertical-align:top; text-align:left;">
-                  <p style="padding-right: 20px;font-size:20px;margin-top:10px; color:#0e9fae;">Business Development Manager / Software-Entwickler bei Tiendita (Bonn)</p>
-                  <p style="padding-right: 20px;margin-top:0;font-weight:lighter">Markt- und Wettbewerbsanalyse, Nutzerdatenanalyse, Zielgruppendefinition</p>
-                </td>
-                <td style="width:30%; vertical-align:top; text-align:right;">
-                  <p style="font-size:20px;margin-top:10px;color:#0e9fae;">2020-2022</p>
-                </td>
-              </tr>
-
-              <tr>
-                <td style="width:70%; vertical-align:top; text-align:left;">
-                  <p style="padding-right: 20px;font-size:20px;margin-top:10px;color:#0e9fae;">Unternehmensberater bei AFC Consulting (Bonn)</p>
-                  <p style="padding-right: 20px;margin-top:0;font-weight:lighter">Agronomische Beratung im Bereich Smart Farming</p>
-                </td>
-                <td style="width:30%; vertical-align:top; text-align:right;">
-                  <p style="font-size:20px;margin-top:10px; color:#0e9fae;">2018-2020</p>
-                </td>
-              </tr>
-            </table>
-          </div>
-
-          <div *ngIf="activeTabContent?.title === 'Ausbildung'">
-            <table class="ausbildung-tabelle" >
-              <tr>
-                <td style="width:70%; vertical-align:top; text-align:left;">
-                  <p style="padding-right: 20px;font-size:20px;margin-top:0;color:#0e9fae;">Universität für Bodenkultur Wien</p>
-                  <p style="padding-right: 20px;margin-bottom:30px;">Dipl.-Ingenieur Agrarökonomie (äqui. Master of Science)</p>
-                </td>
-                <td style="width:30%; vertical-align:top; text-align:right;">
-                  <p style="margin-top: 0;font-size:20px;color:#0e9fae;">2015-2020</p>
-                </td>
-              </tr>
-              <tr>
-                <td style="width:70%; vertical-align:top; text-align:left;">
-                  <p style="padding-right: 20px;font-size:20px;margin-top:0;color:#0e9fae;">Purdue University, Indiana (USA)</p>
-                  <p style="padding-right: 20px;margin-bottom:30px;">Agricultural Economics  (Master of Science)</p>
-                </td>
-                <td style="width:30%; vertical-align:top; text-align:right;">
-                  <p style="margin-top: 0;font-size:20px;color:#0e9fae;">2017</p>
-                </td>
-              </tr>
-              <tr>
-                <td style="width:70%; vertical-align:top; text-align:left;">
-                  <p style="padding-right: 20px;font-size:20px;margin-top:0;color:#0e9fae;">Universität Hohenheim (Stuttgart)</p>
-                  <p style="padding-right: 20px;">Agrarwissenschaften (Bachelor of Science)</p>
-                </td>
-                <td style="width:30%; vertical-align:top; text-align:right;">
-                  <p style="margin-top: 0;font-size:20px;color:#0e9fae;">2011-2015</p>
-                </td>
-              </tr>
-            </table>
-          </div>
-        </div>
+    <!-- Content für Berufliche Stationen -->
+    <div *ngIf="activeTabContent?.title === 'Berufliche Stationen'" class="content-container">
+      <div class="content-box-center">
+        <table class="erfahrung-tabelle">
+          <tr>
+            <td class="left-cell">
+              <p class="position-title">Fullstack-Entwickler bei Conet Solutions (Bonn)</p>
+              <p class="position-description">Neuentwicklung einer Fullstack-App für eine große Behörde im Zuge eines 2022 erlassenen Gesetzes</p>
+            </td>
+            <td class="right-cell">
+              <p class="position-date">Seit 2022</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="left-cell">
+              <p class="position-title">Frontend-Entwickler bei IT-Manufactory (Bonn, Passau)</p>
+              <p class="position-description">Erstellung von Features im Frontend innerhalb verschiedener Module der Digital Automotive Software</p>
+            </td>
+            <td class="right-cell">
+              <p class="position-date">2022</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="left-cell">
+              <p class="position-title">Business Development Manager / Software-Entwickler bei Tiendita (Bonn)</p>
+              <p class="position-description">Markt- und Wettbewerbsanalyse, Nutzerdatenanalyse, Zielgruppendefinition</p>
+            </td>
+            <td class="right-cell">
+              <p class="position-date">2020-2022</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="left-cell">
+              <p class="position-title">Unternehmensberater bei AFC Consulting (Bonn)</p>
+              <p class="position-description">Agronomische Beratung im Bereich Smart Farming</p>
+            </td>
+            <td class="right-cell">
+              <p class="position-date">2018-2020</p>
+            </td>
+          </tr>
+        </table>
       </div>
     </div>
+
+    <!-- Content für Ausbildung -->
+    <div *ngIf="activeTabContent?.title === 'Ausbildung'" class="content-container">
+      <div class="content-box-center">
+        <table class="ausbildung-tabelle">
+          <tr>
+            <td class="left-cell">
+              <p class="position-title">Universität für Bodenkultur Wien</p>
+              <p class="position-description">Dipl.-Ingenieur Agrarökonomie (äqui. Master of Science)</p>
+            </td>
+            <td class="right-cell">
+              <p class="position-date">2015-2020</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="left-cell">
+              <p class="position-title">Purdue University, Indiana (USA)</p>
+              <p class="position-description">Agricultural Economics (Master of Science)</p>
+            </td>
+            <td class="right-cell">
+              <p class="position-date">2017</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="left-cell">
+              <p class="position-title">Universität Hohenheim (Stuttgart)</p>
+              <p class="position-description">Agrarwissenschaften (Bachelor of Science)</p>
+            </td>
+            <td class="right-cell">
+              <p class="position-date">2011-2015</p>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
   </div>
 </div>

@@ -46,9 +46,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   setActiveItem(url: string | undefined) {
     this.activeItem = url;
-    if (typeof url === 'string') {
-      localStorage.setItem('activeMenuItem', url);
-    }
+    this.menuOpen = false;
   }
 
   toggleMenu() {
