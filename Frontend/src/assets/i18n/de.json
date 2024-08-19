@@ -5,7 +5,6 @@
     "description": "Dabei setze ich auf die neuesten Technologien und Standards, um Ihnen eine Webseite zu bieten, die nicht nur gut aussieht, sondern auch schnell und sicher ist.",
     "button": "Kontaktieren Sie mich"
   },
-
   "about": {
     "title": "Über mich",
     "subtitle": "Ich arbeite als freiberuflicher Webentwickler in Bonn und setze seit 2023 Ideen sowohl in Kundenprojekten als auch in eigenen Vorhaben mithilfe modernster Software um.",
@@ -15,7 +14,7 @@
   },
   "menu": {
     "home": "Home",
-    "about": "About",
+    "about": "Über mich",
     "services": "Angebot",
     "portfolio": "Portfolio",
     "contact": "Kontakt"
@@ -23,14 +22,14 @@
   "contact": {
     "title": "Kontakt",
     "text-one": "Ich berate Sie gerne.",
-    "text-two": "Sie interessieren sich für eine neue Website, eine Webanwendung oder haben eine Frage?\\n Schreiben Sie mir gerne eine Nachricht! Sie erhalten innerhalb von 24 Stunden eine Antwort.",
+    "text-two": "Sie interessieren sich für eine neue Website, eine Webanwendung oder haben eine Frage? Schreiben Sie mir gerne eine Nachricht! Sie erhalten innerhalb von 24 Stunden eine Antwort.",
     "name": "Name",
     "business": "Firma",
     "email": "E-Mail",
     "phone": "Telefonnummer",
     "message": "Nachricht",
     "send": "Senden",
-    "data-protection-declaration": "Durch das Absenden meiner Anfrage stimme ich der Erfassung, Verarbeitung und Nutzung meiner personenbezogenen Daten gemäß den Datenschutzbestimmungen</a> dieser Website zu. Ich habe die <a href='/legal-notice'> Datenschutzerklärung und die Widerrufshinweise</a> gelesen und verstanden."
+    "data-protection-declaration": "Durch das Absenden meiner Anfrage stimme ich der Erfassung, Verarbeitung und Nutzung meiner personenbezogenen Daten gemäß den Datenschutzbestimmungen dieser Website zu. Ich habe die Datenschutzerklärung und die Widerrufshinweise gelesen und verstanden."
   },
   "services": {
     "title": "Angebot",
@@ -57,8 +56,316 @@
     "legal-notice": "Impressum",
     "address": "Adresse"
   },
-  "data-protection":{
-    "title": "Datenschutz",
-    "description": "Ich freue mich über Ihr Interesse an meiner Website. Der Schutz Ihrer Privatsphäre ist für mich sehr wichtig. Nachstehend informiere ich Sie ausführlich über den Umgang mit Ihren Daten."
+  "data-protection": {
+    "title": "Datenschutzerklärung",
+    "sections": {
+      "1": {
+        "heading": "1. Datenschutz auf einen Blick",
+        "content": {
+          "general-notice": "Die folgenden Hinweise bieten einen schnellen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können. Ausführliche Informationen finden Sie in der vollständigen Datenschutzerklärung weiter unten.",
+          "data-collection": {
+            "heading": "Datenerfassung auf dieser Website",
+            "items": {
+              "responsible": "Die Datenverarbeitung auf dieser Website erfolgt durch mich als Websitebetreiber. Meine Kontaktdaten finden Sie im Abschnitt „Hinweis zur Verantwortlichen Stelle“.",
+              "collection-methods": {
+                "heading": "Erfassung Ihrer Daten",
+                "direct": "Ihre Daten werden auf zwei Arten erfasst: Direkt, wenn Sie mir diese mitteilen, z. B. durch Eingabe in ein Kontaktformular.",
+                "automatic": "Automatisch, beim Besuch der Website werden technische Daten (z. B. Internetbrowser, Betriebssystem, Uhrzeit des Seitenaufrufs) automatisch durch meine IT-Systeme erfasst. Dies geschieht nach Ihrer Einwilligung."
+              },
+              "purpose": "Ein Teil der Daten wird zur fehlerfreien Bereitstellung der Website benötigt, andere Daten können zur Analyse Ihres Nutzerverhaltens verwendet werden.",
+              "rights": "Sie haben jederzeit das Recht, unentgeltlich Auskunft über die Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten. Sie können die Berichtigung, Löschung oder Einschränkung der Verarbeitung Ihrer Daten verlangen sowie eine erteilte Einwilligung zur Datenverarbeitung für die Zukunft widerrufen. Zudem haben Sie ein Beschwerderecht bei der zuständigen Aufsichtsbehörde."
+            }
+          },
+          "questions": "Fragen zum Datenschutz? Sie können sich jederzeit an mich wenden.",
+          "analysis": "Beim Besuch dieser Website kann Ihr Surf-Verhalten statistisch ausgewertet werden, vor allem durch sogenannte Analyseprogramme. Detaillierte Informationen dazu finden Sie in der vollständigen Datenschutzerklärung."
+        }
+      },
+      "2": {
+        "heading": "2. Hosting",
+        "content": {
+          "external-hosting": {
+            "description": "Die Inhalte meiner Website werden bei einem externen Anbieter gehostet. Das bedeutet, dass personenbezogene Daten, die auf dieser Website erfasst werden, auf den Servern des Hosters gespeichert werden. Dazu können IP-Adressen, Kontaktanfragen, Meta- und Kommunikationsdaten, Vertragsdaten, Kontaktdaten, Namen, Websitezugriffe und andere über die Website generierte Daten gehören.",
+            "data-security": "Der Hoster verarbeitet Ihre Daten nur, soweit dies zur Erfüllung seiner vertraglichen Verpflichtungen notwendig ist, und ausschließlich gemäß meinen Weisungen.",
+            "current-host": "Ich nutze die Dienste von netcup.com als Hosting-Anbieter."
+          }
+        }
+      },
+      "3": {
+        "heading": "3. Allgemeine Hinweise und Pflichtinformationen",
+        "content": {
+          "general-notices-heading": "Allgemeine Hinweise und Pflichtinformationen",
+          "data-protection-heading": "Datenschutz",
+          "data-protection-description": "Der Schutz Ihrer persönlichen Daten ist mir sehr wichtig. Ich behandle Ihre personenbezogenen Daten vertraulich und entsprechend den gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.",
+          "data-collection-description": "Beim Besuch dieser Website werden verschiedene personenbezogene Daten erhoben. Diese Datenschutzerklärung erläutert, welche Daten ich erhebe, wie ich sie nutze und zu welchem Zweck.",
+          "internet-security-warning": "Sicherheitslücken im Internet: Bitte beachten Sie, dass die Datenübertragung im Internet (z. B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.",
+          "responsible-office-heading": "Verantwortliche Stelle",
+          "responsible-office-description": "Verantwortlich für die Datenverarbeitung:",
+          "responsible-person": "Alexander Durach<br>Carl-Justi-Straße 23<br>D-53121 Bonn",
+          "responsible-definition": "Verantwortlich ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten entscheidet.",
+          "data-retention-heading": "Speicherdauer",
+          "data-retention-description": "Ihre personenbezogenen Daten verbleiben bei mir, bis der Zweck für die Datenverarbeitung entfällt. Sollten Sie eine Löschung verlangen oder Ihre Einwilligung zur Datenverarbeitung widerrufen, werden Ihre Daten gelöscht, sofern keine anderen rechtlichen Gründe für die Speicherung vorliegen (z. B. steuerliche Aufbewahrungsfristen).",
+          "legal-basis-heading": "Rechtsgrundlagen der Datenverarbeitung",
+          "legal-basis-description": "Die Datenverarbeitung erfolgt auf verschiedenen Rechtsgrundlagen, je nach Art und Zweck der Verarbeitung:",
+          "legal-basis-items": {
+            "consent": "Einwilligung (Art. 6 Abs. 1 lit. a DSGVO): Wenn Sie in die Datenverarbeitung eingewilligt haben.",
+            "contract": "Vertragserfüllung (Art. 6 Abs. 1 lit. b DSGVO): Wenn die Daten zur Erfüllung eines Vertrags oder vorvertraglicher Maßnahmen erforderlich sind.",
+            "legal-obligation": "Rechtliche Verpflichtungen (Art. 6 Abs. 1 lit. c DSGVO): Wenn ich gesetzlich zur Verarbeitung Ihrer Daten verpflichtet bin.",
+            "legitimate-interest": "Berechtigtes Interesse (Art. 6 Abs. 1 lit. f DSGVO): Wenn die Verarbeitung zur Wahrung meiner berechtigten Interessen oder der eines Dritten erforderlich ist."
+          },
+          "data-transfer-heading": "Datenweitergabe in unsichere Drittstaaten",
+          "data-transfer-description": "In einigen Fällen nutze ich Tools von Anbietern aus datenschutzrechtlich unsicheren Drittstaaten, einschließlich der USA. In solchen Fällen weise ich darauf hin, dass ein vergleichbares Datenschutzniveau nicht immer garantiert werden kann. Datenübertragungen in die USA erfolgen nur, wenn der Empfänger nach dem „EU-US Data Privacy Framework“ (DPF) zertifiziert ist oder über zusätzliche Garantien verfügt.",
+          "data-recipients-heading": "Empfänger von personenbezogenen Daten",
+          "data-recipients-description": "Ich arbeite mit externen Stellen zusammen, die personenbezogene Daten erhalten können, wenn dies zur Vertragserfüllung, aufgrund gesetzlicher Verpflichtungen oder im Rahmen meines berechtigten Interesses erforderlich ist. Eine Weitergabe erfolgt nur auf Grundlage eines gültigen Vertrags über Auftragsverarbeitung oder eines gemeinsamen Verarbeitungsvertrags.",
+          "rights-heading": "Ihre Rechte",
+          "rights-items": {
+            "withdrawal": "Widerruf Ihrer Einwilligung: Sie können eine erteilte Einwilligung jederzeit widerrufen. Die Rechtmäßigkeit der bis zum Widerruf erfolgten Verarbeitung bleibt davon unberührt.",
+            "objection": "Widerspruchsrecht (Art. 21 DSGVO): Sie haben das Recht, aus Gründen, die sich aus Ihrer besonderen Situation ergeben, der Verarbeitung Ihrer personenbezogenen Daten zu widersprechen, wenn diese auf Grundlage von Art. 6 Abs. 1 lit. e oder f DSGVO erfolgt. Wenn Ihre Daten für Direktwerbung genutzt werden, können Sie jederzeit Widerspruch gegen die Verarbeitung einlegen.",
+            "complaint": "Beschwerderecht: Im Falle von Verstößen gegen die DSGVO steht Ihnen ein Beschwerderecht bei der zuständigen Aufsichtsbehörde zu.",
+            "additional-rights": "Weitere Rechte: Sie haben das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung Ihrer personenbezogenen Daten sowie das Recht auf Datenübertragbarkeit."
+          },
+          "encryption-heading": "SSL- bzw. TLS-Verschlüsselung",
+          "encryption-description": "Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte eine SSL- bzw. TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie an der Adresszeile des Browsers („https://“) und am Schloss-Symbol.",
+          "encryption-benefit": "Wenn die SSL- bzw. TLS-Verschlüsselung aktiviert ist, können die Daten, die Sie an mich übermitteln, nicht von Dritten mitgelesen werden."
+        }
+      },
+      "4": {
+        "heading": "4. Datenerfassung auf dieser Website",
+        "content": {
+          "cookies-heading": "Cookies",
+          "cookies-description": "Meine Website verwendet Cookies, um verschiedene Funktionen zu gewährleisten. Cookies sind kleine Datenpakete, die auf Ihrem Endgerät gespeichert werden und keinen Schaden anrichten. Es gibt zwei Arten von Cookies:",
+          "cookies-types": {
+            "session-cookies": "Session-Cookies: Diese werden nur für die Dauer Ihres Besuchs gespeichert und automatisch gelöscht, wenn Sie die Website verlassen.",
+            "permanent-cookies": "Permanente Cookies: Diese bleiben auf Ihrem Endgerät gespeichert, bis Sie sie selbst löschen oder sie automatisch durch Ihren Browser gelöscht werden."
+          },
+          "cookies-sources": "Cookies können entweder direkt von mir (First-Party-Cookies) oder von Drittanbietern (Third-Party-Cookies) stammen. Drittanbieter-Cookies ermöglichen z.B. die Abwicklung von Zahlungsdiensten.",
+          "cookies-functions": {
+            "technical-cookies": "Technisch notwendige Cookies: Ohne diese würden bestimmte Funktionen der Website nicht korrekt funktionieren (z.B. Warenkorb-Funktion, Videoanzeigen).",
+            "analytics-cookies": "Analyse-Cookies: Diese Cookies werden verwendet, um Ihr Nutzerverhalten zu analysieren oder Ihnen gezielte Werbung anzuzeigen."
+          },
+          "cookies-storage-basis": "Die Speicherung notwendiger Cookies erfolgt auf Grundlage meines berechtigten Interesses (Art. 6 Abs. 1 lit. f DSGVO) an der technisch fehlerfreien und optimierten Bereitstellung meiner Dienste. Sofern Ihre Einwilligung erforderlich ist (z.B. für Analyse-Cookies), erfolgt die Verarbeitung ausschließlich auf dieser Grundlage (Art. 6 Abs. 1 lit. a DSGVO). Sie können Ihre Einwilligung jederzeit widerrufen.",
+          "cookies-browser-settings": "Sie haben die Möglichkeit, Ihren Browser so einzustellen, dass Sie über das Setzen von Cookies informiert werden, Cookies nur im Einzelfall erlauben, die Annahme von Cookies für bestimmte Fälle oder generell ausschließen sowie das automatische Löschen der Cookies beim Schließen des Browsers aktivieren. Bei der Deaktivierung von Cookies kann die Funktionalität der Website eingeschränkt sein.",
+          "logfiles-heading": "Server-Log-Dateien",
+          "logfiles-description": "Der Hosting-Provider meiner Website erhebt und speichert automatisch Informationen in sogenannten Server-Log-Dateien, die Ihr Browser automatisch an mich übermittelt. Diese umfassen:",
+          "logfiles-items": {
+            "browser-type": "Browsertyp und Browserversion",
+            "operating-system": "Verwendetes Betriebssystem",
+            "referrer-url": "Referrer URL",
+            "hostname": "Hostname des zugreifenden Rechners",
+            "request-time": "Uhrzeit der Serveranfrage",
+            "ip-address": "IP-Adresse"
+          },
+          "logfiles-processing-basis": "Eine Zusammenführung dieser Daten mit anderen Datenquellen findet nicht statt. Die Verarbeitung erfolgt auf Grundlage meines berechtigten Interesses (Art. 6 Abs. 1 lit. f DSGVO) an der technisch fehlerfreien Darstellung und Optimierung meiner Website.",
+          "contact-form-heading": "Kontaktformular",
+          "contact-form-description": "Wenn Sie mir per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Formular inklusive der von Ihnen angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei mir gespeichert. Diese Daten gebe ich nicht ohne Ihre Einwilligung weiter.",
+          "contact-form-processing-basis": "Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage zur Erfüllung eines Vertrags oder zur Durchführung vorvertraglicher Maßnahmen erforderlich ist. In allen anderen Fällen erfolgt die Verarbeitung auf Grundlage meines berechtigten Interesses (Art. 6 Abs. 1 lit. f DSGVO) an der effektiven Bearbeitung der an mich gerichteten Anfragen oder Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Sie können Ihre Einwilligung jederzeit widerrufen.",
+          "contact-form-retention": "Die von Ihnen im Kontaktformular eingegebenen Daten verbleiben bei mir, bis Sie mich zur Löschung auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck für die Datenspeicherung entfällt (z.B. nach abgeschlossener Bearbeitung Ihrer Anfrage). Zwingende gesetzliche Bestimmungen, insbesondere Aufbewahrungsfristen, bleiben unberührt.",
+          "contact-requests-heading": "Anfragen per E-Mail, Telefon oder Telefax",
+          "contact-requests-description": "Wenn Sie mich per E-Mail, Telefon oder Telefax kontaktieren, werden Ihre Angaben (Name, Anfrage) zum Zwecke der Bearbeitung Ihres Anliegens gespeichert und verarbeitet. Diese Daten gebe ich nicht ohne Ihre Einwilligung weiter.",
+          "contact-requests-processing-basis": "Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage zur Erfüllung eines Vertrags oder zur Durchführung vorvertraglicher Maßnahmen erforderlich ist. Andernfalls erfolgt die Verarbeitung auf Grundlage meines berechtigten Interesses (Art. 6 Abs. 1 lit. f DSGVO) oder Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO), sofern diese abgefragt wurde. Sie können Ihre Einwilligung jederzeit widerrufen.",
+          "contact-requests-retention": "Die von Ihnen an mich gesendeten Daten verbleiben bei mir, bis Sie mich zur Löschung auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck für die Datenspeicherung entfällt (z.B. nach abgeschlossener Bearbeitung Ihres Anliegens). Zwingende gesetzliche Bestimmungen, insbesondere gesetzliche Aufbewahrungsfristen, bleiben unberührt."
+        }
+      },
+      "5": {
+        "heading": "5. Analyse-Tools und Werbung",
+        "content": {
+          "google-analytics-heading": "Google Analytics",
+          "google-analytics-description": "Diese Website nutzt Google Analytics, einen Webanalysedienst der Google Ireland Limited („Google“), Gordon House, Barrow Street, Dublin 4, Irland.",
+          "google-analytics-cookies": "Google Analytics verwendet Cookies – Textdateien, die auf Ihrem Computer gespeichert werden und eine Analyse Ihrer Nutzung der Website ermöglichen. Die durch den Cookie erzeugten Informationen über Ihre Nutzung dieser Website werden in der Regel an einen Server von Google in den USA übertragen und dort gespeichert.",
+          "google-analytics-legal-basis": "Die Speicherung von Google-Analytics-Cookies und die Nutzung dieses Analyse-Tools erfolgen auf Grundlage meines berechtigten Interesses (Art. 6 Abs. 1 lit. f DSGVO) an der Analyse des Nutzerverhaltens zur Optimierung meines Webangebots und meiner Werbung. Sofern Ihre Einwilligung erforderlich ist, erfolgt die Verarbeitung ausschließlich auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO; Ihre Einwilligung können Sie jederzeit widerrufen.",
+          "ip-anonymization-heading": "IP-Anonymisierung",
+          "ip-anonymization-description": "Ich habe die IP-Anonymisierung auf dieser Website aktiviert. Das bedeutet, dass Ihre IP-Adresse von Google innerhalb der Mitgliedstaaten der Europäischen Union oder in anderen Vertragsstaaten des Abkommens über den Europäischen Wirtschaftsraum vor der Übermittlung in die USA gekürzt wird. Nur in Ausnahmefällen wird die volle IP-Adresse an einen Server von Google in den USA übertragen und dort gekürzt. Google verwendet diese Informationen, um Ihre Nutzung der Website auszuwerten, Berichte über die Websiteaktivitäten zu erstellen und weitere Dienstleistungen im Zusammenhang mit der Website- und Internetnutzung zu erbringen. Die im Rahmen von Google Analytics von Ihrem Browser übermittelte IP-Adresse wird nicht mit anderen Daten von Google zusammengeführt.",
+          "browser-plugin-heading": "Browser-Plugin",
+          "browser-plugin-description": "Sie können die Speicherung der Cookies durch eine entsprechende Einstellung Ihrer Browser-Software verhindern. Bitte beachten Sie jedoch, dass in diesem Fall möglicherweise nicht alle Funktionen dieser Website vollumfänglich genutzt werden können. Zusätzlich können Sie die Erfassung der durch den Cookie erzeugten Daten (inkl. Ihrer IP-Adresse) an Google sowie die Verarbeitung dieser Daten durch Google verhindern, indem Sie das unter folgendem Link verfügbare Browser-Plugin herunterladen und installieren:",
+          "browser-plugin-link": "https://tools.google.com/dlpage/gaoptout?hl=de",
+          "data-objection-heading": "Widerspruch gegen Datenerfassung",
+          "data-objection-description": "Um die Erfassung Ihrer Daten durch Google Analytics zu verhindern, können Sie auf folgenden Link klicken. Es wird ein Opt-Out-Cookie gesetzt, der die Erfassung Ihrer Daten bei zukünftigen Besuchen dieser Website verhindert:",
+          "data-objection-link": "javascript:gaOptout()",
+          "google-privacy-policy-heading": "Weitere Informationen",
+          "google-privacy-policy-description": "Weitere Informationen zum Umgang mit Nutzerdaten bei Google Analytics finden Sie in der Datenschutzerklärung von Google:",
+          "google-privacy-policy-link": "https://support.google.com/analytics/answer/6004245?hl=de"
+        }
+      }
+    },
+    "faq": {
+      "heading": "Häufige Fragen",
+      "sections": [
+        {
+          "title": "Zu meiner Dienstleistung",
+          "questions": [
+            {
+              "question": "1. Was kostet die Erstellung einer Website bzw. einer Webanwendung?",
+              "answer": {
+                "description": "Die Kosten für die Erstellung einer Website oder Webanwendung hängen von verschiedenen Faktoren ab, die den Umfang und die Komplexität des Projekts bestimmen. Dazu gehören:",
+                "factors": [
+                  {
+                    "title": "Funktionalität und Umfang:",
+                    "description": "Eine einfache Website mit wenigen statischen Seiten ist wesentlich günstiger als eine komplexe Webanwendung mit dynamischen Inhalten, Benutzerverwaltung, Zahlungsintegration oder anderen speziellen Funktionen."
+                  },
+                  {
+                    "title": "Design und Benutzererfahrung (UX):",
+                    "description": "Ein maßgeschneidertes Design, das auf die spezifischen Bedürfnisse und Markenanforderungen des Kunden abgestimmt ist, erfordert mehr Zeit und Ressourcen als die Verwendung vorgefertigter Templates."
+                  },
+                  {
+                    "title": "Content Management System (CMS):",
+                    "description": "Die Wahl eines CMS (z. B. WordPress, Joomla) oder die Entwicklung einer individuellen Lösung kann ebenfalls die Kosten beeinflussen."
+                  },
+                  {
+                    "title": "Integration von Drittanbieter-Services:",
+                    "description": "Die Anbindung an externe APIs oder Services, wie z. B. Zahlungsdienstleister, CRM-Systeme oder Social-Media-Plattformen, kann zusätzliche Entwicklungszeit und -kosten verursachen."
+                  },
+                  {
+                    "title": "SEO und Performance-Optimierung:",
+                    "description": "Wenn Suchmaschinenoptimierung und Performance-Optimierung eine Rolle spielen, erhöht dies den Aufwand, da diese Maßnahmen spezialisierte Kenntnisse und kontinuierliche Überwachung erfordern."
+                  },
+                  {
+                    "title": "Wartung und Support:",
+                    "description": "Nach der Entwicklung sind auch laufende Wartung, Updates und Support zu berücksichtigen, die ebenfalls budgetiert werden sollten."
+                  }
+                ],
+                "conclusion": "Daher lässt sich der Preis nicht pauschal festlegen. Ich arbeite eng mit meinen Kunden zusammen, um ihre spezifischen Anforderungen zu verstehen und auf dieser Basis ein individuelles Angebot zu erstellen. So stelle ich sicher, dass das Projekt im Rahmen des Budgets bleibt und gleichzeitig die gewünschten Ziele erreicht werden."
+              }
+            },
+            {
+              "question": "2. Wie läuft der typische Entwicklungsprozess bei Ihnen ab?",
+              "answer": {
+                "description": "Mein Entwicklungsprozess umfasst sieben Schritte:",
+                "steps": [
+                  "Anforderungsanalyse: Gemeinsam ermitteln wir Ihre Ziele und Anforderungen, um die passende Lösung zu finden.",
+                  "Konzept & Planung: Basierend auf den Anforderungen erstelle ich ein detailliertes Konzept und einen Zeitplan.",
+                  "Design: Ein maßgeschneidertes, benutzerfreundliches Design wird entwickelt und nach Ihrem Feedback optimiert.",
+                  "Entwicklung: Die Website oder Webanwendung wird programmiert und alle Funktionen werden integriert.",
+                  "Testing: Umfassende Tests stellen sicher, dass alles reibungslos funktioniert.",
+                  "Launch: Die Anwendung wird live geschaltet und ich unterstütze Sie beim Start.",
+                  "Wartung & Support: Auch nach dem Launch stehe ich für Updates, Support und Optimierungen bereit."
+                ],
+                "conclusion": "Dieser Prozess gewährleistet eine effiziente Umsetzung und höchste Qualität."
+              }
+            },
+            {
+              "question": "3. Wie erfolgt die Kommunikation während eines Projekts?",
+              "answer": {
+                "description": "Während eines Projekts ist eine klare und regelmäßige Kommunikation entscheidend für den Erfolg. So gehe ich dabei vor:",
+                "steps": [
+                  "Initiales Briefing: Zu Beginn des Projekts wird ein ausführliches Briefing durchgeführt, um alle Anforderungen und Erwartungen zu klären.",
+                  "Regelmäßige Updates: Während der Entwicklungsphase erhalten Sie regelmäßige Status-Updates, entweder per E-Mail, Telefon oder in Online-Meetings. So bleiben Sie immer auf dem Laufenden und können jederzeit Feedback geben.",
+                  "Feedback-Schleifen: Nach jedem wichtigen Meilenstein wird Feedback eingeholt und in den weiteren Entwicklungsprozess integriert. Diese Rückmeldungen sind wichtig, um sicherzustellen, dass das Projekt in die richtige Richtung geht.",
+                  "Flexible Kommunikation: Ich bin während des gesamten Projekts flexibel erreichbar und stehe für Rückfragen oder Anpassungen jederzeit zur Verfügung. Kommunikation kann je nach Präferenz über verschiedene Kanäle wie E-Mail, Telefon oder Kollaborations-Tools (z.B. Slack, Teams) erfolgen.",
+                  "Abschlussbesprechung: Nach Abschluss des Projekts wird eine Besprechung durchgeführt, um das Endergebnis zu überprüfen und eventuelle letzte Anpassungen zu besprechen.",
+                  "Nachbetreuung: Auch nach Projektabschluss bin ich für weitere Fragen oder Supportanfragen verfügbar und stehe Ihnen bei Bedarf zur Seite."
+                ],
+                "conclusion": "Dieser strukturierte Kommunikationsprozess stellt sicher, dass Sie jederzeit informiert sind und das Projekt erfolgreich abgeschlossen wird."
+              }
+            },
+            {
+              "question": "4. Wie sieht die Betreuung nach Projektabschluss aus?",
+              "answer": "Ich stehe Ihnen auch nach dem Abschluss des Projekts für technischen Support und Wartungsarbeiten zur Verfügung. Der genaue Umfang dieser Leistungen sollte im Vorfeld allerdings klar definiert werden. Dazu gehört die Behebung von Fehlern, das Einspielen von Updates und die Sicherstellung, dass alles reibungslos funktioniert."
+            },
+            {
+              "question": "5. Bieten Sie Ihre Dienstleistung auch englischsprachigen Kunden an?",
+              "answer": "Ja, meine Sprachkenntnisse auf C2-Niveau ermöglichen es mir für ein Projekt auch mit englischsprachigen Kunden zusammenzuarbeiten. Neben der Kommunikation mit dem Kunden, erfolgt die Programmierung dann auch konsequent in englischer Sprache. Anmerkung: Die Übersetzung dieser Website in die englische Sprache ist gegenwärtig noch in der Entwicklung."
+            }
+          ]
+        },
+        {
+          "title": "Technisches",
+          "questions": [
+            {
+              "question": "1. Was ist der Unterschied zwischen einer Website und einer Webanwendung?",
+              "answer": {
+                "description": "Der Unterschied zwischen einer Website und einer Webanwendung kann manchmal fließend sein, aber im Allgemeinen basiert er auf dem Grad der Interaktivität und Funktionalität, die jede bietet.",
+                "details": [
+                  {
+                    "title": "Website:",
+                    "description": "Eine Sammlung von Webseiten mit meist statischen Informationen. Sie dient in der Regel der Informationsvermittlung, wie zum Beispiel Unternehmensinformationen, Nachrichten, Blogs oder Portfolios. Die Interaktion beschränkt sich meist auf das Ansehen von Inhalten und einfaches Navigieren zwischen Seiten."
+                  },
+                  {
+                    "title": "Webanwendung:",
+                    "description": "Eine interaktive und dynamische Anwendung, die im Webbrowser ausgeführt wird. Sie ermöglicht komplexere Interaktionen wie das Bearbeiten von Dokumenten, Online-Einkäufe oder die Verwaltung von Benutzerkonten. Webanwendungen sind meist datengetrieben und erfordern oft eine Benutzeranmeldung."
+                  }
+                ],
+                "conclusion": "Websites sind somit eher für die Darstellung von Inhalten konzipiert, während Webanwendungen interaktive Dienste und Funktionen bereitstellen."
+              }
+            },
+            {
+              "question": "2. Wie garantieren Sie die Sicherheit und Vertraulichkeit von Daten in der von Ihnen entwickelten Anwendung?",
+              "answer": {
+                "description": "Die Sicherheit und Vertraulichkeit von Daten hat in meinen Projekten oberste Priorität. Hier sind die Maßnahmen, die ich ergreife, um dies zu gewährleisten:",
+                "measures": [
+                  "Datenschutzkonforme Entwicklung: Von Anfang an wird darauf geachtet, dass die Anwendung den geltenden Datenschutzgesetzen, wie der DSGVO, entspricht. Dies umfasst die Implementierung von Mechanismen zur Einwilligungserklärung und die Minimierung der Datenerhebung.",
+                  "Verschlüsselung: Alle sensiblen Daten werden sowohl bei der Übertragung als auch bei der Speicherung verschlüsselt. Hierbei kommen bewährte Verschlüsselungstechniken wie SSL/TLS für die Datenübertragung und AES für die Datenspeicherung zum Einsatz.",
+                  "Zugriffskontrollen: Es werden strenge Zugriffskontrollen implementiert, um sicherzustellen, dass nur autorisierte Benutzer auf bestimmte Daten zugreifen können. Dies umfasst rollenbasierte Zugriffskontrollen (RBAC) und sichere Authentifizierungsverfahren, wie Zwei-Faktor-Authentifizierung (2FA).",
+                  "Sicherheitsupdates und Monitoring: Ich stelle sicher, dass die Anwendung stets auf dem neuesten Stand ist, indem regelmäßig Sicherheitsupdates eingespielt werden. Zusätzlich wird die Anwendung kontinuierlich überwacht, um mögliche Sicherheitsbedrohungen frühzeitig zu erkennen und zu beheben.",
+                  "Vertraulichkeit: Alle Daten, die im Rahmen des Projekts verarbeitet werden, werden streng vertraulich behandelt. Dies gilt sowohl für die Entwicklungsphase als auch darüber hinaus. Zudem werden Daten nur auf Servern gespeichert, die den höchsten Sicherheitsstandards entsprechen."
+                ],
+                "conclusion": "Durch diese umfassenden Sicherheitsmaßnahmen stelle ich sicher, dass Ihre Daten in der Anwendung stets geschützt und vertraulich behandelt werden."
+              }
+            },
+            {
+              "title": "Technisches",
+              "questions": [
+                {
+                  "question": "1. Was ist der Unterschied zwischen einer Website und einer Webanwendung?",
+                  "answer": {
+                    "description": "Der Unterschied zwischen einer Website und einer Webanwendung kann manchmal fließend sein, aber im Allgemeinen basiert er auf dem Grad der Interaktivität und Funktionalität, die jede bietet.",
+                    "details": [
+                      {
+                        "title": "Website:",
+                        "description": "Eine Sammlung von Webseiten mit meist statischen Informationen. Sie dient in der Regel der Informationsvermittlung, wie zum Beispiel Unternehmensinformationen, Nachrichten, Blogs oder Portfolios. Die Interaktion beschränkt sich meist auf das Ansehen von Inhalten und einfaches Navigieren zwischen Seiten."
+                      },
+                      {
+                        "title": "Webanwendung:",
+                        "description": "Eine interaktive und dynamische Anwendung, die im Webbrowser ausgeführt wird. Sie ermöglicht komplexere Interaktionen wie das Bearbeiten von Dokumenten, Online-Einkäufe oder die Verwaltung von Benutzerkonten. Webanwendungen sind meist datengetrieben und erfordern oft eine Benutzeranmeldung."
+                      }
+                    ],
+                    "conclusion": "Websites sind somit eher für die Darstellung von Inhalten konzipiert, während Webanwendungen interaktive Dienste und Funktionen bereitstellen."
+                  }
+                },
+                {
+                  "question": "2. Wie garantieren Sie die Sicherheit und Vertraulichkeit von Daten in der von Ihnen entwickelten Anwendung?",
+                  "answer": {
+                    "description": "Die Sicherheit und Vertraulichkeit von Daten hat in meinen Projekten oberste Priorität. Hier sind die Maßnahmen, die ich ergreife, um dies zu gewährleisten:",
+                    "measures": [
+                      "Datenschutzkonforme Entwicklung: Von Anfang an wird darauf geachtet, dass die Anwendung den geltenden Datenschutzgesetzen, wie der DSGVO, entspricht. Dies umfasst die Implementierung von Mechanismen zur Einwilligungserklärung und die Minimierung der Datenerhebung.",
+                      "Verschlüsselung: Alle sensiblen Daten werden sowohl bei der Übertragung als auch bei der Speicherung verschlüsselt. Hierbei kommen bewährte Verschlüsselungstechniken wie SSL/TLS für die Datenübertragung und AES für die Datenspeicherung zum Einsatz.",
+                      "Zugriffskontrollen: Es werden strenge Zugriffskontrollen implementiert, um sicherzustellen, dass nur autorisierte Benutzer auf bestimmte Daten zugreifen können. Dies umfasst rollenbasierte Zugriffskontrollen (RBAC) und sichere Authentifizierungsverfahren, wie Zwei-Faktor-Authentifizierung (2FA).",
+                      "Sicherheitsupdates und Monitoring: Ich stelle sicher, dass die Anwendung stets auf dem neuesten Stand ist, indem regelmäßig Sicherheitsupdates eingespielt werden. Zusätzlich wird die Anwendung kontinuierlich überwacht, um mögliche Sicherheitsbedrohungen frühzeitig zu erkennen und zu beheben.",
+                      "Vertraulichkeit: Alle Daten, die im Rahmen des Projekts verarbeitet werden, werden streng vertraulich behandelt. Dies gilt sowohl für die Entwicklungsphase als auch darüber hinaus. Zudem werden Daten nur auf Servern gespeichert, die den höchsten Sicherheitsstandards entsprechen."
+                    ],
+                    "conclusion": "Durch diese umfassenden Sicherheitsmaßnahmen stelle ich sicher, dass Ihre Daten in der Anwendung stets geschützt und vertraulich behandelt werden."
+                  }
+                },
+                {
+                  "question": "3. Welche Rolle spielt künstliche Intelligenz (KI) bei Ihrer Arbeit?",
+                  "answer": {
+                    "description": "Bekannte KI-Anwendungen wie ChatGPT spielen eine zunehmend wichtige Rolle in der Software-Entwicklung. Sie helfen Prozesse zu automatisieren und Probleme mittels Datenanalyse und Mustererkennung zu lösen.",
+                    "details": [
+                      "Auch ich kann durch den Einsatz von KI meine Arbeit effizienter gestalten. Das wiederum kommt meinen Kunden zugute, da ich durch den reduzierten Arbeitsaufwand weniger Arbeitsstunden in Rechnung stelle.",
+                      "Selbstverständlich ist die \"Zuarbeit\" von KI-basierten Systemen von mir als Entwickler zwingend genaustens zu überprüfen, ehe sie in die Codebasis eingeht. Schon vor dem Aufkommen von KI war es für Entwickler notwendig, den übernommenen Code sorgfältig zu prüfen, da oft Code-Fragmente aus Online-Quellen – beispielsweise stackoverflow.com – genutzt wurden."
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+        ]
+      }
+    }
   }
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
