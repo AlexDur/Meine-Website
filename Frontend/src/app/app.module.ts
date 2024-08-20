@@ -27,6 +27,7 @@ import {ServicesTechstackComponent} from './TopMenu/services/services-techstack/
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {ServicesArbeitsweiseComponent} from './TopMenu/services/services-arbeitsweise/services-arbeitsweise.component';
+import {CookieDialogComponent} from './cookies-dialog/cookies-dialog.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,8 @@ import {ServicesArbeitsweiseComponent} from './TopMenu/services/services-arbeits
     ServicesGrafikComponent,
     ServicesTechstackComponent,
     ServicesArbeitsweiseComponent,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    CookieDialogComponent
   ],
   providers: [],
   exports: [
