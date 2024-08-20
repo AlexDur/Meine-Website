@@ -1102,7 +1102,7 @@ ul li a:hover {
 }
 
 .image-square.pcs {
-  background-image: url('../src/assets/images/arbeitsmittel.webp');
+  background-image: url('../src/assets/images/laptop-2.webp');
 }
 
 .image-square.kirschbleute {
@@ -1110,17 +1110,21 @@ ul li a:hover {
 }
 
 .image-square.gruenblau {
-  background: linear-gradient(to bottom, #41b9e6, #9dd8f0);
+  background: linear-gradient(to bottom, #169f8e, #169f8e);
 }
 
 
 .image-square.gelb {
-  background: linear-gradient(to bottom, #f4f003, #f7f78a);
+  background: linear-gradient(to bottom, #f4f003, #cf6004);
 }
 
+.image-square.blau {
+  background: linear-gradient(to bottom, #0346aa, #1557e6);
+}
 
 .image-square.black {
-  background: #171717;
+  border:10px dot-dash #171717;
+
 }
 
 .lightbox {
