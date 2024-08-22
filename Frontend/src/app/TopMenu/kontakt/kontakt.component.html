@@ -2,57 +2,52 @@
   <div class="contact-center-text">
     <h1>{{ 'contact.text-one' | translate | async }}</h1>
     <div class="p-abweichung">Sie interessieren sich für eine neue Website, eine Webanwendung oder haben eine Frage?<br>Schreiben Sie mir gerne eine Nachricht! Sie erhalten innerhalb von <strong>24 Stunden </strong> eine Antwort.</div>
-  <div class="contact-component">
-    <div class="container">
+    <div class="contact-component">
+      <div class="container">
         <div>
           <div class="name-email-row">
             <div class="contact-col">
-                <label class="contact-label" for="firstName" style="color:#898989;">{{'contact.name' | translate | async }}
+              <label class="contact-label" for="firstName" style="color:#898989;">{{'contact.name' | translate | async }}
                 <span class="pflicht-sternchen">*</span>
-                </label>
+              </label>
               <input id="firstName" name="name" type="text" pInputText class="custom-input" required ngModel />
             </div>
             <div class="contact-col">
-                <label class="contact-label" for="email" style="color:#898989;">{{'contact.email' | translate | async }}
-                  <span class="pflicht-sternchen">*</span>
-                </label>
-                <input id="email" name="email" type="text" pInputText class="custom-input" required ngModel/>
+              <label class="contact-label" for="email" style="color:#898989;">{{'contact.email' | translate | async }}
+                <span class="pflicht-sternchen">*</span>
+              </label>
+              <input id="email" name="email" type="text" pInputText class="custom-input" required ngModel/>
             </div>
           </div>
 
           <div class="contact-col">
-              <label class="contact-label" for="message" name="message" style="color:#898989;">{{'contact.message' | translate | async }}
-                <span class="pflicht-sternchen">*</span>
-              </label>
-            <input id="message" type="text" pInputText class="custom-textarea" required ngModel/>
+            <label class="contact-label" for="message" style="color:#898989;">{{'contact.message' | translate | async }}
+              <span class="pflicht-sternchen">*</span>
+            </label>
+            <textarea id="message" class="custom-textarea" required ngModel></textarea>
           </div>
 
           <ng-container *ngIf="formGroup">
-          <form [formGroup]="formGroup">
-            <div class="contact-label">
-              <label class="contact-row">
-                <input type="checkbox" name="data-protection" id="data-protection" class="contact-checkbox">
-                <br>
-                <p class="datenschutz-p"> Ich habe die <a href='/data-protection'>Datenschutzerklärung</a> zur Kenntnis genommen.
-                  <span class="pflicht-sternchen">*</span></p>
-              </label>
-            </div>
-
-          </form>
+            <form [formGroup]="formGroup">
+              <div class="contact-label">
+                <label class="contact-row">
+                  <input type="checkbox" name="data-protection" id="data-protection" class="contact-checkbox">
+                  <br>
+                  <p class="datenschutz-p"> Ich habe die <a href='/data-protection'>Datenschutzerklärung</a> zur Kenntnis genommen.
+                    <span class="pflicht-sternchen">*</span></p>
+                </label>
+              </div>
+            </form>
           </ng-container>
           <br>
           <br>
           <div class="button-container">
-          <button  class="form-button">Anfrage Abschicken</button>
+            <button class="form-button">Anfrage Abschicken</button>
+          </div>
+        </div>
       </div>
-      </div>
-     <!-- </div>-->
-    <!--  <div class="box-rechts">
-        <img src="assets/images/ich_rund.jpg" alt="Logo">
-      </div>-->
+    </div>
   </div>
-</div>
-</div>
 </div>
 <ng-template #loading>
   <p>Lädt...</p>

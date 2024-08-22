@@ -301,7 +301,6 @@ ul li a:hover {
 /*RouterOutlet*/
 .router-outlet-container {
   padding: 20px;
-  /*border: 1px solid #ccc;*/
   display: flex;
   flex-direction: column;
   min-height: 100%;
@@ -357,16 +356,6 @@ ul li a:hover {
   padding: 0;
   margin: 0;
 }
-
-/*.listing li {
-  margin-bottom: 10px;
-  margin-right: 20px;
-}*/
-
-/*.listing-nav li {
-  margin-bottom: 10px;
-  margin-right: 20px;
-}*/
 
 .listing li:last-child {
   margin-right: 0;
@@ -723,18 +712,18 @@ ul li a:hover {
     display: flex;
     flex-direction: column;
     justify-content:center;
-    align-items: center; /* Zentriert den Inhalt horizontal */
+    align-items: center;
     order: 1;
     width: 100%;
-    text-align: center; /* Text zentrieren */
+    text-align: center;
   }
 
   .home-block-text {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Zentriert den Inhalt horizontal */
-    justify-content: center; /* Zentriert den Inhalt vertikal, falls erforderlich */
-    text-align: center; /* Text zentrieren */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
 
   .generic-button {
@@ -890,12 +879,18 @@ ul li a:hover {
 
     .custom-textarea {
       width: 100%;
-      height: 160px;
-      padding-left: 10px;
-      border-radius: 5px;
+      height: 175px;
+      padding: 10px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+      line-height: 1.5;
+      resize: vertical;
       text-align: left;
-      padding-bottom:28px;
+      vertical-align: top;
     }
+
 
     .contact-ueberschrift {
       font-size: 8rem;
@@ -937,6 +932,7 @@ ul li a:hover {
     .form-button {
       width:200px;
       height:50px;
+      margin-top:-1rem;
       border: 2px solid $detail-color;
       border-radius: 5px;
       font-size: 16px;
@@ -1055,8 +1051,7 @@ ul li a:hover {
         to bottom,
         $tertiary-color 0%,
         $tertiary-color 100%,
-      /*  $secondary-color 50%,
-        $secondary-color 100%*/
+
     );
     font-size: var(--base-font-size);
     font-family: "Calibri","proxima nova light", "Helvetica Neue", "Swiss 7","Verdana", sans-serif;
@@ -1068,7 +1063,7 @@ ul li a:hover {
   grid-gap: 10px;
   margin-top: 20px;
   justify-items: start;
-  margin-left: 0; /* Entfernen von linken Rändern */
+  margin-left: 0;
   padding-left: 0;
 }
 
@@ -1119,7 +1114,7 @@ ul li a:hover {
 }
 
 .image-square.gruenblau {
-  background: linear-gradient(to bottom, #169f8e, #169f8e);
+  background: linear-gradient(to bottom, #169f8e, #12a592);
 }
 
 
@@ -1188,11 +1183,6 @@ ul li a:hover {
   box-shadow: 0 0 20px 20px white;
 }
 
- /* .service-graph{
-    width:100%;
-    margin-top:5rem;
-  }*/
-
   #myWord{
     cursor:pointer;
   }
@@ -1247,7 +1237,7 @@ ul li a:hover {
   }
 
   .services-background {
-    height: auto; /* oder eine passende Höhe */
+    height: auto;
     width: 100%;
     font-family: "Calibri", sans-serif;
     background: linear-gradient(
@@ -1266,8 +1256,7 @@ ul li a:hover {
 
   .services-component {
     display: flex;
-    flex-direction: column; /* Stellt sicher, dass die Elemente vertikal angeordnet sind */
-    /*align-items: center;*/
+    flex-direction: column;
     width: 100%;
   }
 
@@ -1303,10 +1292,6 @@ ul li a:hover {
     order:3;
   }
 }
-
-
-
-
 
 /*Techstack-Services*/
 
@@ -1385,8 +1370,6 @@ ul li a:hover {
   }
 }
 
-
-
 /*Arbeitsweise-Komponente*/
 
 .arbeitsweise-services{
@@ -1404,13 +1387,6 @@ ul li a:hover {
 .arbeitsweise-links {
   width: 80%;
 }
-
-/*.arbeitsweise-rechts {
-  width: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}*/
 
 .arbeitsweise-bild {
   max-width: 100%;
@@ -1455,12 +1431,6 @@ ul li a:hover {
     width: 100%;
   }
 
-
-  /*.arbeitsweise-rechts {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }*/
 
   .p-accordion{
     width:100%;
@@ -1564,15 +1534,9 @@ ul li a:hover {
     text-align: left;
     flex-direction: column;
 
-    /*.kurzvorstellung-container {
-      position: relative;
-      animation: 0.5s ease-out 0s 1 slideUp;
-    }*/
-
     .tab-menu {
       flex: 0 0 auto;
       margin-top:15rem;
-      /*padding-bottom: 40px;*/
       display: flex;
       align-items: flex-start;
       justify-content: center;
@@ -1937,14 +1901,6 @@ ul li a:hover {
 .button-footer .p-button {
   flex: none;
 }
-
-
-/*.cookies-custom-button {
-  width: 100px;
-  margin-right: 10px;
-  text-align: center;
-  border-radius: 5px;
-}*/
 
 
 .p-footer {
