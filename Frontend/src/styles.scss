@@ -114,6 +114,14 @@ h1{
 
 .h1-abweichung{
   color:$detail-color;
+  text-align: left;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 3rem;
+  line-height: 3rem;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .h2-abweichung{
@@ -738,13 +746,6 @@ ul li a:hover {
   }
 
   .home-box-image {
- /*   order: 2;
-    padding-right: 0;
-    padding-top: 2rem;
-    height: auto;
-    max-width: none;
-    width: 90vw;
-    margin: 0 auto; !* Bild in der Mitte zentrieren *!*/
     display:none;
   }
 
