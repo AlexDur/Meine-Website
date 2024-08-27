@@ -41,6 +41,8 @@ testem.log
 sonarlint/
 .sonarlint/
 sonar-report.json
+sonarlint/issuestore
+sonarlint/securityhotspotstore
 
 
 # System files
