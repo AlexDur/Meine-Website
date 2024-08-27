@@ -7,7 +7,8 @@ import {SharedModule} from '../../shared/shared.module';
 import {async, Subscription} from 'rxjs';
 import {ButtonModule} from 'primeng/button';
 import {CheckboxModule} from 'primeng/checkbox';
-import {FormControl, FormGroup, FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {FormControl, FormGroup, FormsModule, ReactiveFormsModule, NgForm} from '@angular/forms';
+import {HttpClient} from '@angular/common/http';
 
 
 @Component({
@@ -27,38 +28,31 @@ import {FormControl, FormGroup, FormsModule, ReactiveFormsModule} from '@angular
   styleUrl: './kontakt.component.scss'
 })
 export class KontaktComponent implements OnInit, OnDestroy {
-  value!: string;
   loaded: boolean = false;
-  formGroup?: FormGroup;
   private subscription: Subscription | null = null;
 
-  constructor(private translateService: TranslateService) {
+  constructor(private translateService: TranslateService, private http: HttpClient) {
   }
 
   ngOnInit() {
     this.subscription = this.translateService.areTranslationsLoaded().subscribe(loaded => {
       this.loaded = loaded;
     });
-    this.formGroup = new FormGroup({
-      city: new FormControl<string | null>(null)
-    });
   }
 
-
-
-  /*  anfrage = {
-    name: '',
-    email: '',
-    message: ''
-  };*/
-
-
-  /* onSubmit() { this.http.post('URL_DES_BACKEND-SERVERS', this.anfrage)
-    .subscribe(response => {
-      console.log('Serverantwort:', response);
-    });
-
-  }*/
+  onSubmit(kontaktForm: NgForm) {
+    console.log('Formular abgesendet');
+    if (kontaktForm.valid) {
+      this.http.post('https://s52tbcrlt5.execute-api.eu-central-1.amazonaws.com/Kontakformular-Emailversand', kontaktForm.value)
+        .subscribe(response => {
+          console.log('Email erfolgreich versendet');
+        }, error => {
+          console.error('Fehler beim Emailversand', error);
+        });
+    } else {
+      console.error('Formular ungültig');
+    }
+  }
 
 
   ngOnDestroy() {
@@ -66,7 +60,4 @@ export class KontaktComponent implements OnInit, OnDestroy {
       this.subscription.unsubscribe();
     }
   }
-
-  protected readonly onsubmit = onsubmit;
-  protected readonly async = async;
 }

@@ -4,19 +4,20 @@
     <div class="p-abweichung">Sie interessieren sich für eine neue Website, eine Webanwendung oder haben eine Frage?<br>Schreiben Sie mir gerne eine Nachricht! Sie erhalten innerhalb von <strong>24 Stunden </strong> eine Antwort.</div>
     <div class="contact-component">
       <div class="container">
-        <div>
+        <!-- Formular beginnt hier -->
+        <form #kontaktForm="ngForm" (ngSubmit)="onSubmit(kontaktForm)">
           <div class="name-email-row">
             <div class="contact-col">
               <label class="contact-label" for="firstName" style="color:#898989;">{{'contact.name' | translate | async }}
                 <span class="pflicht-sternchen">*</span>
               </label>
-              <input id="firstName" name="name" type="text" pInputText class="custom-input" required ngModel />
+              <input id="firstName" name="name" type="text" class="custom-input" required ngModel />
             </div>
             <div class="contact-col">
               <label class="contact-label" for="email" style="color:#898989;">{{'contact.email' | translate | async }}
                 <span class="pflicht-sternchen">*</span>
               </label>
-              <input id="email" name="email" type="text" pInputText class="custom-input" required ngModel/>
+              <input id="email" name="email" type="email" class="custom-input" required ngModel />
             </div>
           </div>
 
@@ -24,27 +25,31 @@
             <label class="contact-label" for="message" style="color:#898989;">{{'contact.message' | translate | async }}
               <span class="pflicht-sternchen">*</span>
             </label>
-            <textarea id="message" class="custom-textarea" required ngModel></textarea>
+            <textarea id="message" name="message" class="custom-textarea" required ngModel></textarea>
           </div>
 
-          <ng-container *ngIf="formGroup">
-            <form [formGroup]="formGroup">
-              <div class="contact-label">
-                <label class="contact-row">
-                  <input type="checkbox" name="data-protection" id="data-protection" class="contact-checkbox">
-                  <br>
-                  <p class="datenschutz-p"> Ich habe die <a href='/data-protection'>Datenschutzerklärung</a> zur Kenntnis genommen.
-                    <span class="pflicht-sternchen">*</span></p>
-                </label>
-              </div>
-            </form>
-          </ng-container>
-          <br>
-          <br>
-          <div class="button-container">
-            <button class="form-button">Anfrage Abschicken</button>
+          <div class="contact-label">
+            <label class="contact-row">
+              <input type="checkbox" name="data-protection" id="data-protection" required ngModel class="contact-checkbox">
+              <br>
+              <p class="datenschutz-p">Ich habe die <a href='/data-protection'>Datenschutzerklärung</a> zur Kenntnis genommen.
+                <span class="pflicht-sternchen">*</span></p>
+            </label>
           </div>
-        </div>
+
+          <br><br>
+          <div class="button-container">
+            <button
+              type="submit"
+              [disabled]="!kontaktForm.valid"
+              class="form-button">
+              Anfrage Abschicken
+            </button>
+
+
+          </div>
+        </form>
+        <!-- Formular endet hier -->
       </div>
     </div>
   </div>
