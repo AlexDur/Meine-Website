@@ -39,8 +39,8 @@ public class LambdaHandler implements RequestHandler<APIGatewayProxyRequestEvent
             return response;
         }
 
-        String to = "alexdurach@hotmail.de";
         String from = "alexdurach@gmail.com";
+        String to = "alexdurach@hotmail.de";
         String subject = "New Contact Form Submission";
         String textBody = "Name: " + name + "\nEmail: " + email + "\nMessage: " + message;
 

@@ -43,7 +43,7 @@ export class KontaktComponent implements OnInit, OnDestroy {
   onSubmit(kontaktForm: NgForm) {
     console.log('Formular abgesendet');
     if (kontaktForm.valid) {
-      this.http.post('https://s52tbcrlt5.execute-api.eu-central-1.amazonaws.com/Kontakformular-Emailversand', kontaktForm.value)
+      this.http.post('https://s52tbcrlt5.execute-api.eu-central-1.amazonaws.com/default/Kontakformular-Emailversand', kontaktForm.value)
         .subscribe(response => {
           console.log('Email erfolgreich versendet');
         }, error => {
