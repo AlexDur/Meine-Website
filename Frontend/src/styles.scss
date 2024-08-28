@@ -947,7 +947,32 @@ ul li a:hover {
       }
     }
 
+    .message {
+      margin-top: -75px;
+      color: green;
+      display:flex;
+      justify-content:center;
+      width:700px
+    }
 
+    .error-message {
+      color: green;
+      margin-top: -75px;
+      display:flex;
+      justify-content:center;
+      width:700px
+    }
+
+    .detail-farbe {
+      color: $detail-color;
+    }
+
+
+
+
+    .datenschutz-p{
+      font-size:1rem;
+    }
 
     .name-email-row{
       display:flex;

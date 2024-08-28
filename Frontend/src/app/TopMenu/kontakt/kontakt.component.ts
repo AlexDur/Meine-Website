@@ -30,6 +30,8 @@ import {HttpClient} from '@angular/common/http';
 export class KontaktComponent implements OnInit, OnDestroy {
   loaded: boolean = false;
   private subscription: Subscription | null = null;
+  submissionSuccess: boolean | null = null; // Neue Variable für den Submission-Status
+  submissionError: string | null = null;
 
   constructor(private translateService: TranslateService, private http: HttpClient) {
   }
@@ -41,18 +43,30 @@ export class KontaktComponent implements OnInit, OnDestroy {
   }
 
   onSubmit(kontaktForm: NgForm) {
-    console.log('Formular abgesendet');
+    console.log('Formular wird validiert');
     if (kontaktForm.valid) {
       this.http.post('https://s52tbcrlt5.execute-api.eu-central-1.amazonaws.com/default/Kontakformular-Emailversand', kontaktForm.value)
-        .subscribe(response => {
-          console.log('Email erfolgreich versendet');
-        }, error => {
-          console.error('Fehler beim Emailversand', error);
+        .subscribe({
+          next: (response) => {
+            console.log('Email erfolgreich versendet');
+            this.submissionSuccess = true;
+            this.submissionError = null; // Setzt die Fehlernachricht zurück
+            kontaktForm.resetForm(); // Setzt das Formular zurück
+          },
+          error: (error) => {
+            console.error('Fehler beim Emailversand', error);
+            this.submissionSuccess = false;
+            this.submissionError = 'Es gab einen Fehler beim Senden der Nachricht. Bitte versuchen Sie es später erneut.';
+          }
         });
     } else {
+      this.submissionSuccess = false;
+      this.submissionError = 'Das Formular ist ungültig. Bitte überprüfen Sie Ihre Eingaben.';
+      kontaktForm.form.markAllAsTouched(); // Markiert alle Felder als "berührt", damit Fehlermeldungen angezeigt werden
       console.error('Formular ungültig');
     }
   }
+
 
 
   ngOnDestroy() {

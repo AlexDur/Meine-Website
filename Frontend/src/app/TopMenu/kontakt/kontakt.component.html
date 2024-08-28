@@ -35,6 +35,7 @@
               <p class="datenschutz-p">Ich habe die <a href='/data-protection'>Datenschutzerklärung</a> zur Kenntnis genommen.
                 <span class="pflicht-sternchen">*</span></p>
             </label>
+            <p class="datenschutz-p">Mit <span class="detail-farbe">*</span> markierte Felder sind Pflichtfelder.</p>
           </div>
 
           <br><br>
@@ -45,9 +46,16 @@
               class="form-button">
               Anfrage Abschicken
             </button>
-
-
           </div>
+
+          <!-- Erfolgs- oder Fehlermeldung unterhalb des Buttons anzeigen -->
+          <div *ngIf="submissionSuccess === true" class="success-message">
+            Ihre Nachricht wurde erfolgreich versendet. Ich werde mich in Kürze bei Ihnen melden.
+          </div>
+          <div *ngIf="submissionSuccess === false" class="error-message">
+            Ihre Nachricht wurde erfolgreich versendet. Ich werde mich in Kürze bei Ihnen melden.
+          </div>
+
         </form>
         <!-- Formular endet hier -->
       </div>
