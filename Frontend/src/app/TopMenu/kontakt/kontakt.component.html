@@ -29,13 +29,15 @@
           </div>
 
           <div class="contact-label">
-            <label class="contact-row">
-              <input type="checkbox" name="data-protection" id="data-protection" required ngModel class="contact-checkbox">
-              <br>
-              <p class="datenschutz-p">Ich habe die <a href='/data-protection'>Datenschutzerklärung</a> zur Kenntnis genommen.
-                <span class="pflicht-sternchen">*</span></p>
+            <label >
+              <div class="contact-row">
+                <input type="checkbox" name="data-protection" id="data-protection" required ngModel class="contact-checkbox">
+                <br>
+                <p class="datenschutz-p">Ich habe die <a href='/data-protection'>Datenschutzerklärung</a> zur Kenntnis genommen.
+                  <span class="pflicht-sternchen">*</span></p>
+              </div>
+              <p class="datenschutz-p">Mit <span class="detail-farbe">*</span> markierte Felder sind Pflichtfelder.</p>
             </label>
-            <p class="datenschutz-p">Mit <span class="detail-farbe">*</span> markierte Felder sind Pflichtfelder.</p>
           </div>
 
           <br><br>
@@ -50,10 +52,10 @@
 
           <!-- Erfolgs- oder Fehlermeldung unterhalb des Buttons anzeigen -->
           <div *ngIf="submissionSuccess === true" class="success-message">
-            Ihre Nachricht wurde erfolgreich versendet. Ich werde mich in Kürze bei Ihnen melden.
+            Ihre Nachricht wurde erfolgreich versendet.
           </div>
           <div *ngIf="submissionSuccess === false" class="error-message">
-            Ihre Nachricht wurde erfolgreich versendet. Ich werde mich in Kürze bei Ihnen melden.
+            Ihre Nachricht wurde erfolgreich versendet.
           </div>
 
         </form>

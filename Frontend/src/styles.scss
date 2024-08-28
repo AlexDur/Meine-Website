@@ -949,18 +949,20 @@ ul li a:hover {
 
     .message {
       margin-top: -75px;
+      padding: 0 20px;
       color: green;
       display:flex;
       justify-content:center;
-      width:700px
+      text-align:center;
     }
 
     .error-message {
       color: green;
       margin-top: -75px;
+      padding: 0 20px;
       display:flex;
       justify-content:center;
-      width:700px
+      text-align:center;
     }
 
     .detail-farbe {
