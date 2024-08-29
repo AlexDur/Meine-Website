@@ -10,6 +10,9 @@ import com.amazonaws.services.simpleemail.model.*;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class LambdaHandler implements RequestHandler<APIGatewayProxyRequestEvent, APIGatewayProxyResponseEvent> {
 
     @Override
@@ -36,6 +39,7 @@ public class LambdaHandler implements RequestHandler<APIGatewayProxyRequestEvent
             APIGatewayProxyResponseEvent response = new APIGatewayProxyResponseEvent();
             response.setStatusCode(400);
             response.setBody("{\"message\":\"Invalid input\"}");
+            addCorsHeaders(response);
             return response;
         }
 
@@ -60,6 +64,7 @@ public class LambdaHandler implements RequestHandler<APIGatewayProxyRequestEvent
             APIGatewayProxyResponseEvent response = new APIGatewayProxyResponseEvent();
             response.setStatusCode(200);
             response.setBody("{\"message\":\"Email sent successfully\"}");
+            addCorsHeaders(response);
             return response;
 
         } catch (Exception e) {
@@ -67,7 +72,17 @@ public class LambdaHandler implements RequestHandler<APIGatewayProxyRequestEvent
             APIGatewayProxyResponseEvent response = new APIGatewayProxyResponseEvent();
             response.setStatusCode(500);
             response.setBody("{\"message\":\"Failed to send email\"}");
+            addCorsHeaders(response);
             return response;
         }
+    }
+
+    // Methode, um CORS-Header zu allen Antworten hinzuzufügen
+    private void addCorsHeaders(APIGatewayProxyResponseEvent response) {
+        Map<String, String> headers = new HashMap<>();
+        headers.put("Access-Control-Allow-Origin", "*");
+        headers.put("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+        headers.put("Access-Control-Allow-Headers", "Content-Type");
+        response.setHeaders(headers);
     }
 }
