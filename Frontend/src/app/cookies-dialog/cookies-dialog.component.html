@@ -1,0 +1,16 @@
+<p-dialog [(visible)]="display" [closable]="false" class="custom-dialog">
+  <p-header>
+    Cookies & Datenschutz
+  </p-header>
+  <div>
+    <p>
+      Diese Website verwendet Cookies, um Ihnen das beste Erlebnis auf dieser Website zu bieten.
+
+    </p>
+    <a href="/data-protection" target="_blank">Mehr erfahren</a>
+  </div>
+  <p-footer class="cookies-button-footer">
+    <button pButton type="button" label="Ablehnen" icon="pi pi-times" class="p-button-icon" (click)="onDecline()"></button>
+    <button pButton type="button" label="Akzeptieren" icon="pi pi-check" class="p-button-icon" (click)="onAccept()"></button>
+  </p-footer>
+</p-dialog>
