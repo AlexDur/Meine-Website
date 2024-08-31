@@ -79,7 +79,10 @@ public class LambdaHandler implements RequestHandler<APIGatewayProxyRequestEvent
 
     // Methode, um CORS-Header zu allen Antworten hinzuzufügen
     private void addCorsHeaders(APIGatewayProxyResponseEvent response) {
-        Map<String, String> headers = new HashMap<>();
+        Map<String, String> headers = response.getHeaders();
+        if (headers == null) {
+            headers = new HashMap<>();
+        }
         headers.put("Access-Control-Allow-Origin", "*");
         headers.put("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
         headers.put("Access-Control-Allow-Headers", "Content-Type");
