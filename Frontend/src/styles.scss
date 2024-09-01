@@ -32,7 +32,6 @@ body,html{
 .services-background {
   height: 100%;
   width:100vw;
-  font-family: "Calibri", sans-serif;
   background: linear-gradient(
       to bottom,
       $tertiary-color 0%,
@@ -55,7 +54,7 @@ body,html{
   left: 0;
   right: 0;
   height: 10px;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 .component-width{
@@ -75,9 +74,6 @@ a:hover{
   text-decoration: none;
 }
 
-h3{}
-
-h4{}
 
 p {
   margin-top: 10px;
@@ -114,6 +110,19 @@ h1{
 
 .h1-abweichung{
   color:$detail-color;
+  text-align: left;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 3rem;
+  line-height: 3rem;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.h1-abweichung-home{
+  color:$detail-color;
+  font-size:2.5rem;
   text-align: left;
   display: flex;
   justify-content: flex-start;
@@ -166,7 +175,7 @@ h2{
     display:flex !important;
     justify-content:center !important;
     text-align:justify !important;
-
+    margin: 0 1rem;
   }
 
   .h1-abweichung {
@@ -174,17 +183,21 @@ h2{
     margin-top:4rem;
     width:90vw;
     color:$detail-color;
-    display:flex;
-    justify-content:center;
+    display:flex !important;
+    justify-content:center !important;
   }
 
-  .h1-abweichung-home {
-    font-size: 2rem;
-    margin-top:4rem;
-    width:90vw;
+  .h1-abweichung-home{
     color:$detail-color;
-    display:flex;
-    justify-content:center;
+    font-size:1.7rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    line-height: 3rem;
+    padding-top: 3rem ;
+    width: 100%;
   }
 
   .h2-abweichung {
@@ -198,6 +211,7 @@ h2{
     font-size: 0.5rem;
     display:flex;
     justify-content:center;
+    text-align:center;
   }
 
   .home-box {
@@ -211,6 +225,7 @@ h2{
     display:flex;
     flex-direction:column;
     justify-content:center;
+    padding-top:4rem;
   }
 
 
@@ -449,7 +464,7 @@ ul li a:hover {
   justify-content: center;
   width: 60%;
   margin: 1rem auto;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   position:sticky;
   top: 1rem;
   z-index: 1000;
@@ -541,7 +556,7 @@ ul li a:hover {
 
 .active-menu-item {
   color: $detail-color;
-  padding: 0px;
+  padding: 0;
   padding-bottom: 2px;
 }
 
@@ -578,7 +593,7 @@ ul li a:hover {
     align-items: center;
     width: 90%;
     margin: 1rem auto;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     position: sticky;
     top: 1rem;
     z-index: 1000;
@@ -779,12 +794,12 @@ ul li a:hover {
   justify-content: space-between;
 }
 
-.intro-block {
+/*.intro-block {
   box-sizing: border-box;
-}
+}*/
 
 .box-links {
-  width: 43%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -809,15 +824,13 @@ ul li a:hover {
 
 
 @media (max-width: 600px) {
+
+
   .intro-component {
     margin-top:3rem;
     display: flex;
     flex-direction:column;
     justify-content: space-between;
-  }
-
-  .intro-block {
-    box-sizing: border-box;
   }
 
   .box-links {
@@ -828,16 +841,6 @@ ul li a:hover {
     align-items: center;
   }
 
-  .box-rechts {
-    margin-top:2rem;
-    width:60%;
-    text-align:justify;
-  }
-
-  .box-rechts img {
-    width: 30%;
-    height: 30%;
-  }
 }
 
 
@@ -936,7 +939,6 @@ ul li a:hover {
       display: flex;
       flex-direction: column;
       width: 100%;
-      display:flex;
       justify-content:center;
     }
 
@@ -963,7 +965,6 @@ ul li a:hover {
       font-size: 16px;
       cursor: pointer;
       color:$detail-color;
-      margin-left:2rem;
       background-color: transparent;
       transition: background-color 0.3s, color 0.3s;
 
@@ -973,9 +974,9 @@ ul li a:hover {
       }
     }
 
-    .message {
-      margin-top: -75px;
-      padding: 0 20px;
+    .success-message {
+      margin-top: -115px;
+      padding:  20px;
       color: green;
       display:flex;
       justify-content:center;
@@ -984,7 +985,7 @@ ul li a:hover {
 
     .error-message {
       color: green;
-      margin-top: -75px;
+      margin-top: -115px;
       padding: 0 20px;
       display:flex;
       justify-content:center;
@@ -996,9 +997,8 @@ ul li a:hover {
     }
 
 
-
-
     .datenschutz-p{
+      margin:.6rem 0;
       font-size:1rem;
     }
 
@@ -1069,13 +1069,20 @@ ul li a:hover {
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding-bottom:11rem;
+    padding-bottom: 11rem;
   }
 
-  .datenschutz-p{
-   font-size:.8rem;
+  .contact-row{
+    display:flex;
+    flex-direction:row;
+    text-align:center;
   }
 
+  .datenschutz-p {
+    text-align:justify;
+    margin-bottom:1rem;
+
+}
 }
 
   /*About-Komponente*/
@@ -1099,7 +1106,7 @@ ul li a:hover {
     width:100vw;
     height: auto;
 
-    font-family: "Calibri", sans-serif;
+
     background: linear-gradient(
         to bottom,
         $tertiary-color 0%,
@@ -1211,8 +1218,8 @@ ul li a:hover {
   }
 
   .image-square {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     background-color: $secondary-color;
     background-size: cover;
     background-position: center;
@@ -1231,6 +1238,9 @@ ul li a:hover {
   .p-bright-background {
     color: $text-color-text;
     font-size:20px;
+    width:300px;
+    margin-top:2rem;
+
   }
 }
 
@@ -1240,7 +1250,7 @@ ul li a:hover {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  width: 100%;
+  width: 90%;
 }
 
 .services-text-box {
@@ -1250,7 +1260,6 @@ ul li a:hover {
 
 .service-graph-box {
   max-width: 30%;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1322,13 +1331,15 @@ ul li a:hover {
   .services-background {
     height: auto;
     width: 100%;
-    font-family: "Calibri", sans-serif;
+
     background: linear-gradient(
         to bottom,
         $tertiary-color 0%,
-        $tertiary-color 37%,
-        $secondary-color 37%,
-        $secondary-color 100%
+        $tertiary-color 40%,
+        $secondary-color 40%,
+        $secondary-color 65%,
+        $tertiary-color 65%,
+        $tertiary-color 100%,
     );
     background-size: cover;
     font-size: var(--base-font-size);
@@ -1339,40 +1350,65 @@ ul li a:hover {
 
   .services-component {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     width: 100%;
   }
 
   .service-graph img {
-    margin: 1rem auto;
-    display: block;
-    max-width: 100%;
+    width:100%;
   }
 
   .services-text-box {
     display: flex;
+    justify-content:center;
     flex-direction: column;
     width: 100%;
+    flex: 1;
+    max-width: 100%;
+
     margin: 0 auto;
     text-align: justify;
   }
 
+  .Absatz_eins {
+
+  }
+
   .service-graph-box {
+    max-width: 75%;
     width: 100%;
-    margin-left:7rem;
     text-align: center;
+  }
+
+  .Absatz_zwei {
+
+    margin: 0 1rem;
   }
 
   .services-text-box ul {
     list-style-type: none;
     padding-left: 0;
     margin-left: 0;
-    order: 3;
   }
 
   .services-text-box ul li {
     margin-bottom: 1rem;
-    order:3;
+  }
+
+  .service-graph-box{
+    width: 100%;
+  }
+
+  .service-graph-box img {
+    margin: 2rem 2.5rem;
+    display: block;
+    max-width: 100%;
+    max-height: none;
+    height: auto;
+    width: auto;
+    object-fit: contain;
+    border-radius: 15px;
+    box-shadow: 0 0 20px 20px white;
   }
 }
 
@@ -1386,9 +1422,10 @@ ul li a:hover {
 .techstack-graph{
   margin-top:4rem;
   gap:3rem;
-  padding-right:6rem;
   display:flex;
+  padding:0;
   flex-direction:column;
+
 }
 
 .techstack-container{
@@ -1430,9 +1467,18 @@ ul li a:hover {
 @media screen and (max-width: 600px) {
 
   .techstack-services {
-    padding-top: 10rem;
-    margin-top:0;
+    text-align: center;
   }
+
+  .techstack-graph {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding:0;
+  }
+
 
   .techstack-container {
     display: flex;
@@ -1440,6 +1486,7 @@ ul li a:hover {
     justify-content: center;
     align-items: center;
     width: 100%;
+    text-align: center;
   }
 
   .tech-list {
@@ -1449,8 +1496,9 @@ ul li a:hover {
   }
 
   .tech {
-    margin: 0.5rem 0;
-    text-align: center;
+    margin: 0.5rem 2rem;
+    text-align: justify;
+
   }
 }
 
@@ -1501,6 +1549,12 @@ ul li a:hover {
   color: #ffffff;
 }
 
+.vorteil-von{
+  color:#0e9fae !important;
+  margin-top:2rem;
+  padding-top:2rem;
+}
+
 @media screen and (max-width: 600px) {
 
   .arbeitsweise-container {
@@ -1515,11 +1569,7 @@ ul li a:hover {
     width: 100%;
   }
 
-  .vorteil-von{
-    color:#0e9fae;
-    margin-top:2rem;
-    padding-top:2rem;
-  }
+
 
   .p-accordion{
     width:100%;
@@ -1565,43 +1615,47 @@ ul li a:hover {
 }
 
 .projekt-beschriftung{
-  display:flex;
-  flex-direction:row;
   justify-content:center;
-  margin-top:1.5em;
+  margin-top:.5rem;
 }
 
-
-  .portfolio-component .custom-card .card-image {
+.portfolio-component .custom-card .card-image {
     display:flex;
     justify-content: center;
     border-radius: 5px;
-    width: 100%;
+    width: 85%;
     height: auto;
     cursor:pointer;
-    object-fit: cover;
   }
 
 @media screen and (max-width: 600px){
   .portfolio-component {
     display: flex;
     flex-direction:column;
-    grid-gap: 25px;
-    text-align: left;
-    align-items: stretch;
+    justify-content:center;
     margin-top: 5rem;
+    width:100%;
     animation: 0.5s ease-out 0s 1 slideUp;
+  }
+
+  .portfolio-component .custom-card .card-image {
+    width: 100%;
   }
 
   .custom-card{
     margin-top:3rem;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    text-align: center;
   }
 
   .projekt-beschriftung{
     display:flex;
-    flex-direction:row;
+    flex-direction:column;
     justify-content:center;
-    margin-top:3rem;
+    text-align:center;
+    margin: .5rem 0;
   }
 }
 
@@ -1762,7 +1816,6 @@ ul li a:hover {
 
   .tab-menu {
     flex: 0 0 auto;
-    margin-top:5rem;
     display: flex;
     flex-direction:column;
     align-items: flex-start;

@@ -27,21 +27,6 @@ export class ServicesGrafikComponent {
     });
   }
 
-  toggleList1() {
-    this.listOpen1 = !this.listOpen1;
-  }
-
-  toggleList2() {
-    this.listOpen2 = !this.listOpen2;
-  }
-
-  toggleList3() {
-    this.listOpen3 = !this.listOpen3;
-  }
-
-
-
-
   ngOnDestroy() {
     if (this.subscription) {
       this.subscription.unsubscribe();

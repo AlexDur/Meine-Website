@@ -7,13 +7,14 @@
   </div>
   </div>
   <div class="portfolio-component">
-  <p-card *ngFor="let card of cards; let i = index"  class="custom-card">
-    <img src="{{card.image}}" alt="{{card.title}}" class="card-image" (click)="onCardImageClick(i)">
-    <div class="projekt-beschriftung">
-    <div style="color:black; padding:8px;">{{card.title}}</div>
-    <div style="color:#1cbc9b; padding:8px;">{{card.header}}</div>
+    <div *ngFor="let card of cards; let i = index"  class="custom-card">
+      <div class="projekt-beschriftung">
+        <div style="color:black; padding:8px;">{{card.title}}</div>
+        <div style="color:#1cbc9b; padding:8px;">{{card.header}}</div>
+      </div>
+      <br>
+      <img src="{{card.image}}" alt="{{card.title}}" class="card-image" (click)="onCardImageClick(i)">
     </div>
-  </p-card>
   </div>
 </div>
 
