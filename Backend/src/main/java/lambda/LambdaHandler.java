@@ -17,6 +17,20 @@ public class LambdaHandler implements RequestHandler<APIGatewayProxyRequestEvent
 
     @Override
     public APIGatewayProxyResponseEvent handleRequest(APIGatewayProxyRequestEvent request, Context context) {
+
+        String httpMethod = request.getHttpMethod();
+
+        // Preflight OPTIONS-Anfrage behandeln
+        if ("OPTIONS".equalsIgnoreCase(httpMethod)) {
+            APIGatewayProxyResponseEvent response = new APIGatewayProxyResponseEvent();
+            response.setStatusCode(200);
+            addCorsHeaders(response);
+            return response;
+        }
+
+
+
+
         // JSON body des Requests
         String body = request.getBody();
 
@@ -83,7 +97,7 @@ public class LambdaHandler implements RequestHandler<APIGatewayProxyRequestEvent
         if (headers == null) {
             headers = new HashMap<>();
         }
-        headers.put("Access-Control-Allow-Origin", "*");
+        headers.put("Access-Control-Allow-Origin", "https://s52tbcrlt5.execute-api.eu-central-1.amazonaws.com");
         headers.put("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
         headers.put("Access-Control-Allow-Headers", "Content-Type");
         response.setHeaders(headers);
