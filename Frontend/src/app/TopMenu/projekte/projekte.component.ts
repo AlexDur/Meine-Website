@@ -26,7 +26,7 @@ export class ProjekteComponent implements OnInit, OnDestroy{
 
   cards = [
     {
-      image: 'assets/images/dishlist-red75.webp',
+      image: 'assets/images/listencontainer_orange.png',
       header: 'Desktop/Mobile App',
       title: 'DishList',
       content: 'Eine Webanwendung mit der Rezepte, die man im Web findet, in einer Sammlung anlegen und mit zusätzlichen Information beschreiben kann.',
