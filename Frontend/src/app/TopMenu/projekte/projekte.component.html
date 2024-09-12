@@ -8,12 +8,18 @@
   </div>
   <div class="portfolio-component">
     <div *ngFor="let card of cards; let i = index"  class="custom-card">
-      <div class="projekt-beschriftung">
-        <div style="color:black; padding:8px;">{{card.title}}</div>
-        <div style="color:#1cbc9b; padding:8px;">{{card.header}}</div>
+      <div>
+        <div class="projekt-beschriftung">{{card.title}}</div>
+        <div class="projekt-beschriftung-detail">
+          <div style="color:#1cbc9b; padding:8px;">{{card.header}}</div>
+          <div class="scroll-symbol" (click)="scrollImages(i)">
+            <i class="fas fa-chevron-circle-down scroll-icon"></i> <!-- Font Awesome Icon -->
+          </div>
+        </div>
+
       </div>
       <br>
-      <img src="{{card.image}}" alt="{{card.title}}" class="card-image" (click)="onCardImageClick(i)">
+      <img [src]="card.images[card.currentImage]" alt="{{card.title}}" class="card-image" (click)="onCardImageClick(i)">
     </div>
   </div>
 </div>

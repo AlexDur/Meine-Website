@@ -1617,6 +1617,27 @@ ul li a:hover {
 .projekt-beschriftung{
   justify-content:center;
   margin-top:.5rem;
+  color:black;
+  padding:8px;
+  font-size:1.3rem
+}
+
+.projekt-beschriftung-detail{
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+  margin-right:40px;
+  font-size:1.3rem
+}
+
+.scroll-symbol {
+  cursor: pointer;
+  color: #1cbc9b;
+  padding: 8px;
+}
+
+.scroll-symbol i {
+  font-size: 20px; /* Größe des Icons */
 }
 
 .portfolio-component .custom-card .card-image {
@@ -1628,6 +1649,8 @@ ul li a:hover {
     cursor:pointer;
   }
 
+
+
 @media screen and (max-width: 600px){
   .portfolio-component {
     display: flex;
@@ -1636,6 +1659,11 @@ ul li a:hover {
     margin-top: 5rem;
     width:100%;
     animation: 0.5s ease-out 0s 1 slideUp;
+  }
+
+  .projekt-beschriftung-detail{
+
+    margin-right:0;
   }
 
   .portfolio-component .custom-card .card-image {

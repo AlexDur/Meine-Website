@@ -6,7 +6,6 @@ import {MenubarModule} from 'primeng/menubar';
 import {HeaderComponent} from './header/header.component';
 import {TabViewModule} from 'primeng/tabview';
 import {SharedModule} from 'primeng/api';
-import {HttpClientModule} from '@angular/common/http';
 import {ServicesComponent} from './TopMenu/services/services.component';
 import {KontaktComponent} from './TopMenu/kontakt/kontakt.component';
 import {ProjekteComponent} from './TopMenu/projekte/projekte.component';
@@ -24,7 +23,7 @@ import {TechstackComponent} from './TopMenu/about/techstack/techstack.component'
 import {ScrollUpButtonComponent} from './shared/scroll-up-button/scroll-up-button.component';
 import {ServicesGrafikComponent} from './TopMenu/services/services-grafik/services-grafik.component';
 import {ServicesTechstackComponent} from './TopMenu/services/services-techstack/services-techstack.component';
-
+import { HttpClientModule } from '@angular/common/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {ServicesArbeitsweiseComponent} from './TopMenu/services/services-arbeitsweise/services-arbeitsweise.component';
 import {CookieDialogComponent} from './cookies-dialog/cookies-dialog.component';
@@ -37,7 +36,6 @@ import {CookieDialogComponent} from './cookies-dialog/cookies-dialog.component';
   imports: [
     CommonModule,
     BrowserModule,
-    HttpClientModule,
     AppRoutingModule,
     MenubarModule,
     TabViewModule,
@@ -60,7 +58,8 @@ import {CookieDialogComponent} from './cookies-dialog/cookies-dialog.component';
     ServicesTechstackComponent,
     ServicesArbeitsweiseComponent,
     BrowserAnimationsModule,
-    CookieDialogComponent
+    CookieDialogComponent,
+    HttpClientModule
   ],
   providers: [],
   exports: [
