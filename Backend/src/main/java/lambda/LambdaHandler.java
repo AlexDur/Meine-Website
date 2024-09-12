@@ -17,22 +17,31 @@ public class LambdaHandler implements RequestHandler<APIGatewayProxyRequestEvent
 
     @Override
     public APIGatewayProxyResponseEvent handleRequest(APIGatewayProxyRequestEvent request, Context context) {
+        context.getLogger().log("Lambda function started");
 
         String httpMethod = request.getHttpMethod();
+        context.getLogger().log("HTTP Method: " + httpMethod);
 
         // Preflight OPTIONS-Anfrage behandeln
         if ("OPTIONS".equalsIgnoreCase(httpMethod)) {
+            context.getLogger().log("Handling preflight OPTIONS request");
             APIGatewayProxyResponseEvent response = new APIGatewayProxyResponseEvent();
             response.setStatusCode(200);
-            addCorsHeaders(response);
             return response;
         }
 
-
-
-
         // JSON body des Requests
         String body = request.getBody();
+        context.getLogger().log("Request body received: " + body);
+
+        // Überprüfen, ob der Body vorhanden ist
+        if (body == null || body.isEmpty()) {
+            context.getLogger().log("Body is empty or null");
+            APIGatewayProxyResponseEvent response = new APIGatewayProxyResponseEvent();
+            response.setStatusCode(400);
+            response.setBody("{\"message\":\"Invalid input: Body is empty or null\"}");
+            return response;
+        }
 
         // JSON Parser (ObjectMapper) initialisieren
         ObjectMapper objectMapper = new ObjectMapper();
@@ -48,12 +57,13 @@ public class LambdaHandler implements RequestHandler<APIGatewayProxyRequestEvent
             name = rootNode.get("name").asText();
             email = rootNode.get("email").asText();
             message = rootNode.get("message").asText();
+            context.getLogger().log("Parsed JSON - Name: " + name + ", Email: " + email + ", Message: " + message);
         } catch (Exception e) {
+            context.getLogger().log("Error parsing JSON: " + e.getMessage());
             e.printStackTrace();
             APIGatewayProxyResponseEvent response = new APIGatewayProxyResponseEvent();
             response.setStatusCode(400);
-            response.setBody("{\"message\":\"Invalid input\"}");
-            addCorsHeaders(response);
+            response.setBody("{\"message\":\"Invalid input: JSON parsing failed\"}");
             return response;
         }
 
@@ -63,6 +73,7 @@ public class LambdaHandler implements RequestHandler<APIGatewayProxyRequestEvent
         String textBody = "Name: " + name + "\nEmail: " + email + "\nMessage: " + message;
 
         try {
+            context.getLogger().log("Sending email to: " + to);
             AmazonSimpleEmailService client = AmazonSimpleEmailServiceClientBuilder.standard()
                     .withRegion("eu-central-1").build();
 
@@ -74,32 +85,34 @@ public class LambdaHandler implements RequestHandler<APIGatewayProxyRequestEvent
                     .withSource(from);
 
             client.sendEmail(sendEmailRequest);
+            context.getLogger().log("Email sent successfully");
 
             APIGatewayProxyResponseEvent response = new APIGatewayProxyResponseEvent();
             response.setStatusCode(200);
             response.setBody("{\"message\":\"Email sent successfully\"}");
-            addCorsHeaders(response);
             return response;
 
         } catch (Exception e) {
+            context.getLogger().log("Failed to send email: " + e.getMessage());
             e.printStackTrace();
             APIGatewayProxyResponseEvent response = new APIGatewayProxyResponseEvent();
             response.setStatusCode(500);
             response.setBody("{\"message\":\"Failed to send email\"}");
-            addCorsHeaders(response);
             return response;
+        } finally {
+            context.getLogger().log("Lambda function finished");
         }
     }
 
     // Methode, um CORS-Header zu allen Antworten hinzuzufügen
-    private void addCorsHeaders(APIGatewayProxyResponseEvent response) {
+/*    private void addCorsHeaders(APIGatewayProxyResponseEvent response) {
         Map<String, String> headers = response.getHeaders();
         if (headers == null) {
             headers = new HashMap<>();
         }
-        headers.put("Access-Control-Allow-Origin", "https://s52tbcrlt5.execute-api.eu-central-1.amazonaws.com");
+        headers.put("Access-Control-Allow-Origin", "https://adurach.com");
         headers.put("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
         headers.put("Access-Control-Allow-Headers", "Content-Type");
         response.setHeaders(headers);
-    }
+    }*/
 }
