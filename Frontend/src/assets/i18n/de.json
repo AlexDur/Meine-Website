@@ -350,8 +350,43 @@
         }
         ]
       }
+    },
+  "arbeitsweise": {
+    "heading": "Effiziente Softwareentwicklung",
+    "description": "In Software-Projekten ist es entscheidend, das optimale Zusammenspiel zwischen hoher Codequalität und effizienter Entwicklungszeit zu erreichen. Gemeinsam mit meinen Kunden stimme ich diese Aspekte sorgfältig ab. Dadurch können langlebige Lösungen programmiert werden, die sowohl aktuellen Anforderungen als auch zukünftigen Entwicklungen gerecht werden.",
+    "vorteile": {
+      "heading": "Die Vorteile von qualitativ hochwertigem Code für eine Anwendung:",
+      "details": [
+        {
+          "title": "Zuverlässigkeit und Stabilität",
+          "description": "Eine stabile Anwendung ist weniger anfällig für Fehler und Abstürze. Dadurch lassen sich Ausfallzeiten vermeiden und ein konsistenteres Nutzererlebnis erzielen."
+        },
+        {
+          "title": "Kostenersparnis",
+          "description": "Gut strukturierter und dokumentierter Code ist einfacher zu warten und zu erweitern. Das reduziert langfristig die Wartungskosten, da Änderungen oder Erweiterungen schneller und weniger risikobehaftet implementiert werden können."
+        },
+        {
+          "title": "Verbesserte Nutzererfahrung",
+          "description": "Die Leistung und somit Geschwindigkeit, mit der die App auf Nutzereingaben reagiert, werden durch klaren und gut strukturierten Code verbessert. Der Nutzer profitiert von kürzeren Ladeezeiten."
+        },
+        {
+          "title": "Schnellere Markteinführung",
+          "description": "Mit gut strukturiertem und dokumentiertem Code können neue Features und Anpassungen schneller entwickelt und ausgeliefert werden. Das ermöglicht dem Kunden, schneller auf Marktanforderungen zu reagieren und Wettbewerbsvorteile zu sichern."
+        },
+        {
+          "title": "Sicherheit",
+          "description": "Durch geeignete Schutzmaßnahmen beim Programmieren werden Sicherheitslücken geschlossen. Für den Kunden bedeutet dies einen besseren Schutz vor Cyberangriffen und eine erhöhte Sicherheit der Daten"
+        },
+        {
+          "title": "Langfristiger Projekterfolg",
+          "description": "Die Nachhaltigkeit einer Anwendung hängt stark von ihrer Programmierung ab. Modularer und verständlicher Code erleichtert zukünftige Anpassungen und Erweiterungen."
+        }
+      ]
     }
   }
+}
+
+
 
 
 

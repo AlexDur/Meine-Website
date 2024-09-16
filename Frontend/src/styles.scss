@@ -8,6 +8,7 @@ $text-color-text:#333333;
 
 $detail-color: #f36b3f;
 $detail-color-2: #0e9fae;
+$detail-color-3:black;
 
 
 $text-color-ueberschrift-dunkel:#333333;
@@ -67,6 +68,7 @@ body,html{
     margin-left: 1rem!important;
     margin-right: 1rem!important;
   }
+
 }
 
 a:hover{
@@ -149,7 +151,6 @@ h1{
     margin-top: 5rem;
   }
 
-
 }
 
 
@@ -171,6 +172,13 @@ h2{
     justify-content:center;
   }
 
+  .button-container {
+    flex-direction: column;
+    width:300px;
+    position: relative;
+    margin-bottom:1rem;
+  }
+
   p{
     display:flex !important;
     justify-content:center !important;
@@ -180,7 +188,7 @@ h2{
 
   .h1-abweichung {
     font-size: 2rem;
-    margin-top:4rem;
+    margin-top:8rem;
     width:90vw;
     color:$detail-color;
     display:flex !important;
@@ -189,6 +197,7 @@ h2{
 
   .h1-abweichung-home{
     color:$detail-color;
+    margin-top:8rem;
     font-size:1.7rem;
     text-align: center;
     display: flex;
@@ -197,14 +206,16 @@ h2{
     height: 3rem;
     line-height: 3rem;
     padding-top: 3rem ;
-    width: 100%;
+    width: 90%;
+
   }
+
 
   .h2-abweichung {
     font-size: 1.5rem;
     width:80vw;
     margin-top:1rem;
-
+    padding-bottom:1rem;
   }
 
   .h2-abweichung-dunkel {
@@ -587,17 +598,17 @@ ul li a:hover {
 
   .header-background{
     background-color: #ffffff;
-    height: 7rem;
+    height:5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 90%;
-    margin: 1rem auto;
+    width: 100%;
+    margin: 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    position: sticky;
-    top: 1rem;
+    position: fixed;
     z-index: 1000;
-    padding: 0 1rem;
+    top: 0;
+    padding: 0 1.7rem;
   }
 
   .header-content{
@@ -629,10 +640,10 @@ ul li a:hover {
     width: 100%;
     background-color: #fff;
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    z-index: 1000;
     flex-direction: column;
     overflow-y: auto;
-    transition: visibility 0s linear 0.3s, opacity 0.3s ease-in-out;
+    z-index: 999;
+   /* transition: visibility 0s linear 0.3s, opacity 0.3s ease-in-out;*/
   }
 
   .menu a {
@@ -647,17 +658,13 @@ ul li a:hover {
     transition: opacity 0.3s ease-in-out;
   }
 
-  .header-component {
-    height: 3rem ;
-  }
 
-  .logo {
-    flex: 1;
-    height: 1.5rem;
+  .logo img {
+display:flex;
+    align-items:center;
+    height: 4rem;
   }
 }
-
-
 
 /*home-Komponente*/
 .home-component {
@@ -756,6 +763,7 @@ ul li a:hover {
     order: 1;
     width: 100%;
     text-align: center;
+
   }
 
   .home-block-text {
@@ -1072,6 +1080,15 @@ ul li a:hover {
     padding-bottom: 11rem;
   }
 
+  .contact-titel{
+    padding-top:2rem;
+    padding-bottom:1rem;
+  }
+
+  .contact-component .container{
+    width: 90%
+  }
+
   .contact-row{
     display:flex;
     flex-direction:row;
@@ -1083,6 +1100,10 @@ ul li a:hover {
     margin-bottom:1rem;
 
 }
+
+  .contact-component .name-email-row{
+    margin-top:1rem;
+  }
 }
 
   /*About-Komponente*/
@@ -1212,6 +1233,7 @@ ul li a:hover {
 
 @media screen and (max-width: 600px) {
 
+
   .intro-component {
     flex-direction: column;
     align-items: center;
@@ -1256,6 +1278,10 @@ ul li a:hover {
 .services-text-box {
   flex: 1;
   max-width: 65%;
+}
+
+.Absatz_zwei ul li {
+  margin-top: 2rem;
 }
 
 .service-graph-box {
@@ -1316,6 +1342,7 @@ ul li a:hover {
   width: 100%;
 }
 
+
 @media screen and (max-width: 600px) {
   * {
     box-sizing: border-box;
@@ -1331,7 +1358,6 @@ ul li a:hover {
   .services-background {
     height: auto;
     width: 100%;
-
     background: linear-gradient(
         to bottom,
         $tertiary-color 0%,
@@ -1370,9 +1396,7 @@ ul li a:hover {
     text-align: justify;
   }
 
-  .Absatz_eins {
 
-  }
 
   .service-graph-box {
     max-width: 75%;
@@ -1380,9 +1404,11 @@ ul li a:hover {
     text-align: center;
   }
 
-  .Absatz_zwei {
 
-    margin: 0 1rem;
+
+  .Absatz_zwei {
+    margin-left:  1rem;
+    margin-right: 1rem;
   }
 
   .services-text-box ul {
@@ -1391,9 +1417,6 @@ ul li a:hover {
     margin-left: 0;
   }
 
-  .services-text-box ul li {
-    margin-bottom: 1rem;
-  }
 
   .service-graph-box{
     width: 100%;
@@ -1460,14 +1483,22 @@ ul li a:hover {
   color:black;
 }
 
-.tech{
+.tech-fe{
   margin-left:2rem;
+  color:$detail-color-2;
+}
+
+.tech-be{
+  margin-left:2rem;
+  color:$detail-color-3;
 }
 
 @media screen and (max-width: 600px) {
 
   .techstack-services {
     text-align: center;
+      margin-top:5rem;
+      padding-top:6rem;
   }
 
   .techstack-graph {
@@ -1482,11 +1513,12 @@ ul li a:hover {
 
   .techstack-container {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-wrap:wrap;
+    justify-content: space-evenly;
     align-items: center;
+    gap: 0.5rem;
     width: 100%;
-    text-align: center;
+    margin-bottom:1rem;
   }
 
   .tech-list {
@@ -1498,7 +1530,6 @@ ul li a:hover {
   .tech {
     margin: 0.5rem 2rem;
     text-align: justify;
-
   }
 }
 
@@ -1506,6 +1537,7 @@ ul li a:hover {
 
 .arbeitsweise-services{
   margin-top:16rem;
+
 }
 
 .arbeitsweise-container {
@@ -1516,16 +1548,16 @@ ul li a:hover {
   padding-bottom:5rem;
 }
 
-.arbeitsweise-links {
-  width: 80%;
+.arbeitsweise {
+  width: 100%;
 }
 
-.arbeitsweise-bild {
+/*.arbeitsweise-bild {
   max-width: 100%;
   height: auto;
   border-radius: 10px;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
-}
+}*/
 
 
 .arbeitsweise-container p-accordion p {
@@ -1539,7 +1571,7 @@ ul li a:hover {
 
 .p-accordion .p-accordion-header .p-accordion-header-link {
   background-color: $secondary-color;
-  color: black;
+  color: $text-color-text;
   border: none;
   border-radius:10px;
 }
@@ -1557,6 +1589,11 @@ ul li a:hover {
 
 @media screen and (max-width: 600px) {
 
+  .arbeitsweise-services{
+    display:flex;
+    flex-direction:column;
+  }
+
   .arbeitsweise-container {
     display: flex;
     justify-content: space-between;
@@ -1569,7 +1606,9 @@ ul li a:hover {
     width: 100%;
   }
 
-
+  .vorteil-von{
+    margin-bottom:1rem;
+  }
 
   .p-accordion{
     width:100%;
@@ -1656,7 +1695,7 @@ ul li a:hover {
     display: flex;
     flex-direction:column;
     justify-content:center;
-    margin-top: 5rem;
+    margin-top: 3rem;
     width:100%;
     animation: 0.5s ease-out 0s 1 slideUp;
   }
@@ -1683,7 +1722,7 @@ ul li a:hover {
     flex-direction:column;
     justify-content:center;
     text-align:center;
-    margin: .5rem 0;
+    margin:  0;
   }
 }
 

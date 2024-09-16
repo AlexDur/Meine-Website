@@ -1,6 +1,6 @@
 <div class="component-width" *ngIf="loaded; else loading">
   <div class="contact-center-text">
-    <h1>{{ 'contact.text-one' | translate | async }}</h1>
+    <h1 class="contact-titel">{{ 'contact.text-one' | translate | async }}</h1>
     <div class="p-abweichung">Sie interessieren sich für eine neue Website, eine Webanwendung oder haben eine Frage?<br>Schreiben Sie mir gerne eine Nachricht! Sie erhalten innerhalb von <strong>24 Stunden </strong> eine Antwort.</div>
     <div class="contact-component">
       <div class="container">
@@ -34,7 +34,7 @@
                 <input type="checkbox" name="data-protection" id="data-protection" required ngModel class="contact-checkbox">
                 <br>
                 <div class="datenschutz-p">Ich habe die
-                  <a href='/data-protection'>Datenschutzerklärung</a>&nbsp; zur Kenntnis genommen.
+                  <a href='/data-protection'>Erklärung zum Datenschutz</a>&nbsp; zur Kenntnis genommen.
                   <span class="pflicht-sternchen">*</span>
                 </div>
 
