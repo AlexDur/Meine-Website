@@ -36,10 +36,10 @@ body,html{
   background: linear-gradient(
       to bottom,
       $tertiary-color 0%,
-      $tertiary-color 34%,
-      $secondary-color 34%,
-      $secondary-color 63%,
-      $tertiary-color 63%,
+      $tertiary-color 31%,
+      $secondary-color 31%,
+      $secondary-color 65%,
+      $tertiary-color 65%,
       $tertiary-color 100%,
   );
   background-size:  500vh;
@@ -774,13 +774,14 @@ display:flex;
     text-align: center;
   }
 
-  .generic-button {
+/*  .generic-button {
     margin-top: 2rem;
+    padding-bottom:3rem;
     width: 200px;
     display:flex;
     align-items:center;
     justify-content:center;
-  }
+  }*/
 
   .home-box-image {
     display:none;
@@ -1361,10 +1362,10 @@ display:flex;
     background: linear-gradient(
         to bottom,
         $tertiary-color 0%,
-        $tertiary-color 40%,
-        $secondary-color 40%,
-        $secondary-color 65%,
-        $tertiary-color 65%,
+        $tertiary-color 36%,
+        $secondary-color 36%,
+        $secondary-color 70%,
+        $tertiary-color 70%,
         $tertiary-color 100%,
     );
     background-size: cover;
@@ -1474,23 +1475,37 @@ display:flex;
 }
 
 .button-tech.fe{
-  border:3px solid $detail-color-2;
-  color:$detail-color-2;
+  border:3px solid $detail-color;
+  color:$detail-color;
+  cursor:auto;
 }
 
 .button-tech.be{
   border:3px solid black;
   color:black;
+  cursor:auto;
 }
+
+.button-tech.tool{
+  border:3px solid $detail-color-2;
+  color:$detail-color-2;
+  cursor:auto;
+}
+
 
 .tech-fe{
   margin-left:2rem;
-  color:$detail-color-2;
+  color:$detail-color;
 }
 
 .tech-be{
   margin-left:2rem;
   color:$detail-color-3;
+}
+
+.tech-tool{
+  margin-left:2rem;
+  color:$detail-color-2;
 }
 
 @media screen and (max-width: 600px) {
@@ -1536,7 +1551,7 @@ display:flex;
 /*Arbeitsweise-Komponente*/
 
 .arbeitsweise-services{
-  margin-top:16rem;
+  margin-top:16.5rem;
 
 }
 
@@ -1584,12 +1599,12 @@ display:flex;
 .vorteil-von{
   color:#0e9fae !important;
   margin-top:2rem;
-  padding-top:2rem;
 }
 
 @media screen and (max-width: 600px) {
 
   .arbeitsweise-services{
+    margin-top:13rem;
     display:flex;
     flex-direction:column;
   }
@@ -1998,7 +2013,7 @@ display:flex;
 
   .box > * {
     /*margin-left: 15px;*/
-    color: $text-color-text;
+    color: $text-color-text;<<<<<<kons
   }
 
 
@@ -2026,7 +2041,7 @@ display:flex;
     display:flex;
     justify-content:flex-start;
     align-items: flex-start;
-    margin-top:4rem;
+    margin-top:3rem;
     margin-left: 0px;
   }
 
