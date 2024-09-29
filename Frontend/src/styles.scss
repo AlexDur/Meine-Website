@@ -6,9 +6,10 @@ $text-color-ueberschrift: #333333;
 $text-color-unterueberschrift:#757575;
 $text-color-text:#333333;
 
-$detail-color: #f36b3f;
+$detail-color: #f46031;
 $detail-color-2: #0e9fae;
 $detail-color-3:black;
+$detail-color-4: #1cbc9b;
 
 
 $text-color-ueberschrift-dunkel:#333333;
@@ -259,24 +260,7 @@ h2{
     width:100%;
     text-align: center;
   }
-  .generic-button {
-    width: 200px;
-    height: 50px;
-    border: 2px solid $detail-color;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    color: $detail-color;
-    background-color: transparent;
-    transition: background-color 0.3s, color 0.3s;
-    margin-top: 1.3rem;
-    display: inline-block;
 
-    &:hover {
-      background-color: darken($detail-color, 10%);
-      color: $tertiary-color;
-    }
-  }
 }
 
 @media screen and (min-width: 601px) and (max-width: 1024px) {
@@ -774,14 +758,6 @@ display:flex;
     text-align: center;
   }
 
-/*  .generic-button {
-    margin-top: 2rem;
-    padding-bottom:3rem;
-    width: 200px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-  }*/
 
   .home-box-image {
     display:none;
@@ -1597,7 +1573,7 @@ display:flex;
 }
 
 .vorteil-von{
-  color:#0e9fae !important;
+  color:$detail-color-2 !important;
   margin-top:2rem;
 }
 
@@ -1670,11 +1646,36 @@ display:flex;
 
 .projekt-beschriftung{
   justify-content:center;
+
   margin-top:.5rem;
   color:black;
   padding:8px;
+  padding-left:0;
   font-size:1.3rem
 }
+
+.card-header{
+  color:$detail-color-4;
+  padding:8px;
+  padding-left:0;
+}
+
+.link-container {
+  display: flex;
+  justify-content: flex-start;
+  margin: 8px 0;
+}
+
+.link-item {
+  margin-right: 16px;
+}
+
+.link {
+  color: $detail-color-4;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 
 .projekt-beschriftung-detail{
   display:flex;
@@ -1686,7 +1687,7 @@ display:flex;
 
 .scroll-symbol {
   cursor: pointer;
-  color: #1cbc9b;
+  color: $detail-color-4;
   padding: 8px;
 }
 
@@ -1700,7 +1701,6 @@ display:flex;
     border-radius: 5px;
     width: 85%;
     height: auto;
-    cursor:pointer;
   }
 
 
@@ -1862,7 +1862,7 @@ display:flex;
   padding-right: 20px;
   font-size: 20px;
   margin-top: 0;
-  color: #0e9fae;
+  color: $detail-color-2;
 }
 
 .position-description {
@@ -1874,7 +1874,7 @@ display:flex;
 .position-date {
   margin-top: 0;
   font-size: 20px;
-  color: #0e9fae;
+  color: $detail-color-2;
 }
 
 
@@ -1941,6 +1941,11 @@ display:flex;
     flex-direction: column;
     align-items: flex-start;
     margin-left: 50px;
+  }
+
+  .schriftzug_footer{
+    width: 300px;
+    height: auto;
   }
 
 .right-box-wrapper {
@@ -2013,7 +2018,7 @@ display:flex;
 
   .box > * {
     /*margin-left: 15px;*/
-    color: $text-color-text;<<<<<<kons
+    color: $text-color-text;
   }
 
 

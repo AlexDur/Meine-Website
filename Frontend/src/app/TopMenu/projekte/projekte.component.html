@@ -3,23 +3,31 @@
   <div class="h1-abweichung">Portfolio</div>
   <div class="h2-abweichung-dunkel">Aktuelle Projekte</div>
   <div class="portfolio-text-box">
-    <p class="portfolio-p" >In eigenen Software-Projekten gehe ich stets Ideen nach, deren Umsetzung mir selbst im Alltag nutzen kann. Dabei arbeite ich in einem iterativen Prozess mittels Ticketsystem kontinuierlich an der Erweiterung der App-Funktionen.</p>
+    <p class="portfolio-p" > In meinen Software-Projekten verfolge ich stets Ideen, die mir im Alltag einen praktischen Nutzen bieten. Sobald ich dann eine funktionsfähige Version entwickelt habe, setze ich mir das Ziel, die Anwendung so weiter auszubauen, dass sie für eine breitere Nutzerbasis attraktiv wird.</p>
   </div>
   </div>
   <div class="portfolio-component">
     <div *ngFor="let card of cards; let i = index"  class="custom-card">
       <div>
         <div class="projekt-beschriftung">{{card.title}}</div>
+        <div class="link-container" *ngIf="card.live || card.link">
+          <div *ngIf="card.live" class="link-item">
+            <a href="{{ card.live }}" target="_blank" (click)="$event.stopPropagation()" class="link">Live-Version</a>
+          </div>
+          <div *ngIf="card.link" class="link-item">
+            <a href="{{ card.link }}" target="_blank" (click)="$event.stopPropagation()" class="link">Github</a>
+          </div>
+        </div>
         <div class="projekt-beschriftung-detail">
-          <div style="color:#1cbc9b; padding:8px;">{{card.header}}</div>
+          <div class="card-header" >{{card.header}}</div>
           <div class="scroll-symbol" (click)="scrollImages(i)">
-            <i class="fas fa-chevron-circle-down scroll-icon"></i> <!-- Font Awesome Icon -->
+            <i class="fas fa-chevron-circle-down scroll-icon"></i>
           </div>
         </div>
 
       </div>
       <br>
-      <img [src]="card.images[card.currentImage]" alt="{{card.title}}" class="card-image" (click)="onCardImageClick(i)">
+      <img [src]="card.images[card.currentImage]" alt="{{card.title}}" class="card-image" >
     </div>
   </div>
 </div>

@@ -5,6 +5,7 @@ import {SharedModule} from '../../shared/shared.module';
 import {CardModule} from 'primeng/card';
 import {ButtonModule} from 'primeng/button';
 import {Subscription} from 'rxjs';
+import {RouterLink} from '@angular/router';
 
 @Component({
   selector: 'app-projekte',
@@ -14,7 +15,8 @@ import {Subscription} from 'rxjs';
     NgIf,
     SharedModule,
     CardModule,
-    ButtonModule
+    ButtonModule,
+    RouterLink
   ],
   templateUrl: './projekte.component.html',
   styleUrl: './projekte.component.scss'
@@ -29,6 +31,7 @@ export class ProjekteComponent implements OnInit, OnDestroy{
       images: ['assets/images/splash_orange.png', 'assets/images/neues_rezept.png','assets/images/neue_rezept_gefiltert_mitPfeil.png'],
       header: 'Mobile App/Desktop',
       title: 'DishList',
+      live: 'https://www.dish-list.de/',
       content: 'Eine Webanwendung mit der Rezepte, die man im Web findet, in einer Sammlung anlegen und mit zusätzlichen Information beschreiben kann.',
       link: 'https://github.com/AlexDur/Dishlist_2_2024/tree/Branches-vereint',
       currentImage: 0
@@ -37,6 +40,7 @@ export class ProjekteComponent implements OnInit, OnDestroy{
       images: ['assets/images/komprimiert_beetgott1-red75.webp', 'assets/images/komprimiert_beetgott1-red75.webp'],
       header: 'Mobile App',
       title: 'Beetguru',
+      live: '',
       content: 'Eine mobile App, mit deren Hilfe das eigene Beet so geplant werden kann, dass der Anbau einen höheren Ertrag liefert.',
       link: 'https://github.com/AlexDur/Beetguru',
       currentImage: 0
@@ -45,6 +49,7 @@ export class ProjekteComponent implements OnInit, OnDestroy{
       images:['assets/images/ad_rund-red75-quad.webp','assets/images/ad_rund-red75-quad.webp'],
       header: 'Mobile App/Desktop',
       title: 'In Konzeptionsphase (Chatbot)',
+      live: '',
       content: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam',
       link: '',
       currentImage: 0
@@ -61,7 +66,7 @@ export class ProjekteComponent implements OnInit, OnDestroy{
 
   onCardImageClick(i: number) {
     const url = this.cards[i].link;
-    window.open(url, '_blank');  // Öffnet den Link in einem neuen Tab
+    window.open(url, '_blank');
   }
 
   scrollImages(index: number) {
