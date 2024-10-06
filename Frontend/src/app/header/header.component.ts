@@ -33,7 +33,8 @@ export class HeaderComponent implements OnInit, OnDestroy {
   }
 
   private initializeMenuItems() {
-    const menuKeys = ['', 'about', 'services', 'portfolio', 'contact'];
+    /*const menuKeys = ['', 'about', 'services', 'portfolio', 'contact'];*/
+    const menuKeys = ['about', 'services', 'portfolio'];
 
     menuKeys.forEach(key => {
       this.translateService.translate(`menu.${key}`).subscribe(translation => {

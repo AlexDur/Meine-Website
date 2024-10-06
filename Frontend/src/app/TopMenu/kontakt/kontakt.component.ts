@@ -45,13 +45,13 @@ export class KontaktComponent implements OnInit, OnDestroy {
   onSubmit(kontaktForm: NgForm) {
     console.log('Formular wird validiert');
     if (kontaktForm.valid) {
-      this.http.post('https://s52tbcrlt5.execute-api.eu-central-1.amazonaws.com/default/Kontakformular-Emailversand', kontaktForm.value)
+      this.http.post('https://s52tbcrlt5.execute-api.eu-central-1.amazonaws.com/default/Kontakformular1', kontaktForm.value)
         .subscribe({
           next: (response) => {
             console.log('Email erfolgreich versendet');
             this.submissionSuccess = true;
-            this.submissionError = null; // Setzt die Fehlernachricht zurück
-            kontaktForm.resetForm(); // Setzt das Formular zurück
+            this.submissionError = null;
+            kontaktForm.resetForm();
           },
           error: (error) => {
             console.error('Fehler beim Emailversand', error);
@@ -62,14 +62,14 @@ export class KontaktComponent implements OnInit, OnDestroy {
     } else {
       this.submissionSuccess = false;
       this.submissionError = 'Das Formular ist ungültig. Bitte überprüfen Sie Ihre Eingaben.';
-      kontaktForm.form.markAllAsTouched(); // Markiert alle Felder als "berührt", damit Fehlermeldungen angezeigt werden
+      kontaktForm.form.markAllAsTouched();
       console.error('Formular ungültig');
     }
   }
 
 
 
-  ngOnDestroy() {
+  ngOnDestroy() {;
     if (this.subscription) {
       this.subscription.unsubscribe();
     }

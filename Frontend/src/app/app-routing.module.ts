@@ -9,11 +9,12 @@ import {DatenschutzComponent} from './datenschutz/datenschutz.component';
 import {FaqComponent} from './footer/faq/faq.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+/*  { path: '', component: HomeComponent },*/
+  { path: '', redirectTo: '/about', pathMatch: 'full' },
   { path: 'about', loadChildren: () => import('./TopMenu/about/about.module').then(m => m.AboutModule) },
   { path: 'services', component: ServicesComponent },
   { path: 'portfolio', component: ProjekteComponent },
-  { path: 'contact', component: KontaktComponent },
+  /* { path: 'contact', component: KontaktComponent },*/
   { path: 'legal-notice', component: ImpressumComponent },
   { path: 'data-protection', component: DatenschutzComponent },
   { path: 'faq', component: FaqComponent },
