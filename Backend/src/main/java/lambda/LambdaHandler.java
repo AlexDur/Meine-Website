@@ -9,7 +9,6 @@ import com.amazonaws.services.simpleemail.AmazonSimpleEmailServiceClientBuilder;
 import com.amazonaws.services.simpleemail.model.*;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -17,39 +16,38 @@ public class LambdaHandler implements RequestHandler<APIGatewayProxyRequestEvent
 
     @Override
     public APIGatewayProxyResponseEvent handleRequest(APIGatewayProxyRequestEvent request, Context context) {
-        context.getLogger().log("Lambda function started");
 
+        String path = request.getPath();
         String httpMethod = request.getHttpMethod();
-        context.getLogger().log("HTTP Method: " + httpMethod);
 
-        // Preflight OPTIONS-Anfrage behandeln
-        if ("OPTIONS".equalsIgnoreCase(httpMethod)) {
-            context.getLogger().log("Handling preflight OPTIONS request");
-            APIGatewayProxyResponseEvent response = new APIGatewayProxyResponseEvent();
-            response.setStatusCode(200);
-            return response;
+
+        APIGatewayProxyResponseEvent response = new APIGatewayProxyResponseEvent();
+        response.setHeaders(getCORSHeaders()); // Setze CORS-Header
+
+        if ("POST".equals(httpMethod) && "/Kontakformular-Emailversand".equals(path)) {
+            response = handlePostRoute(request);
+        } else if ("OPTIONS".equals(httpMethod) && path.matches("^/.*")){
+            response = handleOptionsRoute(request);
+        } else {
+            response.setStatusCode(404);
+            response.setBody("{\"message\":\"Route not found\"}");
         }
 
+        return response;
+    }
+
+    // POST Route bearbeiten
+    private APIGatewayProxyResponseEvent handlePostRoute(APIGatewayProxyRequestEvent request) {
         // JSON body des Requests
         String body = request.getBody();
-        context.getLogger().log("Request body received: " + body);
-
-        // Überprüfen, ob der Body vorhanden ist
-        if (body == null || body.isEmpty()) {
-            context.getLogger().log("Body is empty or null");
-            APIGatewayProxyResponseEvent response = new APIGatewayProxyResponseEvent();
-            response.setStatusCode(400);
-            response.setBody("{\"message\":\"Invalid input: Body is empty or null\"}");
-            return response;
-        }
-
-        // JSON Parser (ObjectMapper) initialisieren
         ObjectMapper objectMapper = new ObjectMapper();
 
-        // Variablen für den Name, die Email und die Nachricht
         String name = "";
         String email = "";
         String message = "";
+
+        APIGatewayProxyResponseEvent response = new APIGatewayProxyResponseEvent();
+        response.setHeaders(getCORSHeaders()); // Setze CORS-Header
 
         try {
             // JSON body parsen
@@ -57,25 +55,21 @@ public class LambdaHandler implements RequestHandler<APIGatewayProxyRequestEvent
             name = rootNode.get("name").asText();
             email = rootNode.get("email").asText();
             message = rootNode.get("message").asText();
-            context.getLogger().log("Parsed JSON - Name: " + name + ", Email: " + email + ", Message: " + message);
         } catch (Exception e) {
-            context.getLogger().log("Error parsing JSON: " + e.getMessage());
             e.printStackTrace();
-            APIGatewayProxyResponseEvent response = new APIGatewayProxyResponseEvent();
             response.setStatusCode(400);
-            response.setBody("{\"message\":\"Invalid input: JSON parsing failed\"}");
+            response.setBody("{\"message\":\"Invalid input\"}");
             return response;
         }
 
-        String from = "alexdurach@gmail.com";
         String to = "alexdurach@hotmail.de";
+        String from = "alexdurach@gmail.com"; // Habe ich in AWS SES verifiziert sein
         String subject = "New Contact Form Submission";
         String textBody = "Name: " + name + "\nEmail: " + email + "\nMessage: " + message;
 
         try {
-            context.getLogger().log("Sending email to: " + to);
             AmazonSimpleEmailService client = AmazonSimpleEmailServiceClientBuilder.standard()
-                    .withRegion("eu-central-1").build();
+                    .withRegion("us-west-2").build();
 
             SendEmailRequest sendEmailRequest = new SendEmailRequest()
                     .withDestination(new Destination().withToAddresses(to))
@@ -85,34 +79,36 @@ public class LambdaHandler implements RequestHandler<APIGatewayProxyRequestEvent
                     .withSource(from);
 
             client.sendEmail(sendEmailRequest);
-            context.getLogger().log("Email sent successfully");
 
-            APIGatewayProxyResponseEvent response = new APIGatewayProxyResponseEvent();
             response.setStatusCode(200);
-            response.setBody("{\"message\":\"Email sent successfully\"}");
-            return response;
+            response.setBody("{\"message\": \"Erfolgreich\"}");
 
         } catch (Exception e) {
-            context.getLogger().log("Failed to send email: " + e.getMessage());
             e.printStackTrace();
-            APIGatewayProxyResponseEvent response = new APIGatewayProxyResponseEvent();
             response.setStatusCode(500);
             response.setBody("{\"message\":\"Failed to send email\"}");
-            return response;
-        } finally {
-            context.getLogger().log("Lambda function finished");
         }
+
+        return response;
     }
 
-    // Methode, um CORS-Header zu allen Antworten hinzuzufügen
-/*    private void addCorsHeaders(APIGatewayProxyResponseEvent response) {
-        Map<String, String> headers = response.getHeaders();
-        if (headers == null) {
-            headers = new HashMap<>();
-        }
-        headers.put("Access-Control-Allow-Origin", "https://adurach.com");
-        headers.put("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+
+    // OPTIONS Route bearbeiten
+    private APIGatewayProxyResponseEvent handleOptionsRoute(APIGatewayProxyRequestEvent request) {
+        APIGatewayProxyResponseEvent response = new APIGatewayProxyResponseEvent();
+        response.setStatusCode(200);
+        response.setBody("{\"message\":\"CORS preflight successful\"}");
+        response.setHeaders(getCORSHeaders()); // CORS-Header setzen
+        return response;
+    }
+
+
+    // Methode zum Erstellen der CORS-Header
+    private Map<String, String> getCORSHeaders() {
+        Map<String, String> headers = new HashMap<>();
         headers.put("Access-Control-Allow-Headers", "Content-Type");
-        response.setHeaders(headers);
-    }*/
+        headers.put("Access-Control-Allow-Origin", "https://adurach.com");
+        headers.put("Access-Control-Allow-Methods", "OPTIONS,POST,GET");
+        return headers;
+    }
 }
