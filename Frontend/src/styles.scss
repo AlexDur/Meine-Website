@@ -1973,8 +1973,11 @@ display:flex;
 
   a{
     margin-right:10px;
+    }
   }
-  }
+
+
+
 
 
 .listing {
@@ -2037,35 +2040,59 @@ display:flex;
 
 
 @media screen and (max-width: 600px) {
-  .footer-component {
-    padding-left: 1.5rem;
+/*  .footer-component {
+    width:100%;
     flex-direction: column;
     background-color:$detail-color;
     min-height: 100vh;
     margin-top:3rem;
 
+  }*/
+
+  .footer-component {
+    display: flex;
+    width:100%;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+    background:  $detail-color;
+    padding:0px;
   }
 
   .box {
     width: 100%;
     display:flex;
-    justify-content:flex-start;
-    align-items: flex-start;
-    margin-top:3rem;
-    margin-left: 0px;
+    align-items: center;
+    margin-left:0
+  }
+
+  /*.box {
+    display: flex;
+    flex-direction: column;
+
+    margin-left: 50px;
+  }*/
+
+  .foot-logo-container{
+    display:flex;
+    justify-content: center;
+    flex-direction:column;
+    margin-top:4rem;
+    margin-bottom:2rem;
   }
 
   .right-box-wrapper {
     display:flex;
     justify-content:flex-start;
+    align-items:flex-start;
     flex-direction: column;
     width:100%;
-    padding-left: 0rem;
+    margin-top:5rem;
   }
 
-#nav {
-  display: none;
-}
+/*  #nav {
+    display: none;
+  }*/
 
 
   #info{
@@ -2073,6 +2100,14 @@ display:flex;
     padding-bottom:3rem;
   }
 }
+
+
+.listing {
+  margin-bottom:3rem;
+}
+
+
+
 
   /*Impressum-Komponente*/
 
